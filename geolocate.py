@@ -1,3 +1,4 @@
+import os
 import sys
 import json
 import googlemaps
@@ -9,6 +10,8 @@ memory = Memory(cachedir='.cache', verbose=0)
 
 from blessings import Terminal
 t = Terminal()
+
+GOOGLE_MAPS_API_KEY = os.environ['GOOGLE_MAPS_API_KEY']
 
 gmaps = googlemaps.Client(key=GOOGLE_MAPS_API_KEY)
 
