@@ -1,28 +1,36 @@
 import sys
 import json
-import datetime
 import googlemaps
-from tempfile import mkdtemp
 from joblib import Memory
+
+from utils import find_nearest_weekday
 
 memory = Memory(cachedir='.cache', verbose=0)
 
 from blessings import Terminal
 t = Terminal()
 
-gmaps = googlemaps.Client(key='AIzaSyChd4ESsjuPQDQSuX11pLGrsca3_3XYmfI')
-
-def find_nearest_weekday(now=datetime.datetime.now()):
-    MONDAY = 0
-    FRIDAY = 5
-    current = now
-    while current.weekday() > FRIDAY:
-        current += datetime.timedelta(days=1)
-    return current
+gmaps = googlemaps.Client(key=GOOGLE_MAPS_API_KEY)
 
 @memory.cache
 def geocode(address):
     return gmaps.geocode(address)
+
+# rm -rf .cache/joblib/geolocate/get_driving_directions
+@memory.cache
+def get_driving_directions(source, destination):
+    departure_time = find_nearest_weekday().replace(hour=6) # 6 am nearest weekday
+    try:
+        directions_result = gmaps.directions(source,
+                                             destination,
+                                             mode="driving",
+                                             departure_time=departure_time)
+    # *** googlemaps.exceptions.ApiError: INVALID_REQUEST
+    # (departure_time is in the past. Traffic information is only available for future and current times.)
+    except googlemaps.exceptions.ApiError as e:
+        directions_result = []
+
+    return directions_result
 
 @memory.cache
 def get_transit_directions(source, destination):
@@ -76,8 +84,13 @@ park_and_rides = {
 
 #     return directions_result
 
-def get_directions(source, destination):
-    directions_result = get_transit_directions(source, destination)
+def get_directions(source, destination, mode='transit'):
+    if mode == 'transit':
+        directions_result = get_transit_directions(source, destination)
+    elif mode == 'driving':
+        directions_result = get_driving_directions(source, destination)
+    else:
+        raise Exception(f'unknown mode {mode}')
     if not directions_result: return None
     leg = directions_result[0]['legs'][0]
 
@@ -87,12 +100,12 @@ def get_directions(source, destination):
             "duration": step['duration']['text'],
             "distance": step['distance']['text'],
             "instructions": step['html_instructions'],
+            "transit_details": step['transit_details'] if step.get('transit_details') else None,
             "travel_mode": step['travel_mode']
             })
 
     return {
         "duration": leg['duration'],
-
         "instructions": instructions
     }
 
@@ -101,7 +114,7 @@ if __name__ == "__main__":
     from blessings import Terminal
     t = Terminal()
 
-    source = "116 N 19th St, Hawthorne, NJ 07506"
+    source = "408 Pine St Boonton Town, NJ"
     destination = "Port Authority Bus Terminal"
 
     legs = get_transit_directions(source, destination)[0]['legs']
@@ -112,3 +125,5 @@ if __name__ == "__main__":
     print("In", leg['duration']['text'], "with a distance of", leg['distance']['text'])
     for i, step in enumerate(leg['steps']):
         print(i, step['duration']['text'], step['travel_mode'], step['distance']['text'], step['html_instructions'], sep=" | ")
+        if 'transit_details' in step:
+            print(step['transit_details']['line']['name'], step['transit_details']['line']['short_name'], step['transit_details']['departure_stop']['name'], step['transit_details']['arrival_stop']['name'])

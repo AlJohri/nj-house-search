@@ -18,6 +18,9 @@ tqdm = "*"
 pandas = "*"
 numpy = "*"
 "html2text" = "*"
+ipywidgets = "*"
+geopy = "*"
+gsmls = "==0.0.2"
 
 
 [dev-packages]

@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "6617daf2d536919f1804c2e40cdf5e6e2e0a31a611eb0e0ae096c15c02982cfe"
+            "sha256": "9b90b86fe0dc97190914454e1a273b5eaff4ee2e3abb8d7237406e57b335952f"
         },
         "host-environment-markers": {
             "implementation_name": "cpython",
@@ -85,12 +85,26 @@
             ],
             "version": "==0.2.3"
         },
+        "geopy": {
+            "hashes": [
+                "sha256:5215b360f524118a468c13bf97ecbff6136a1876bf4b11d624916e9c9e0f7c17",
+                "sha256:4250e5a9e9f7abb990eddf01d1491fc112755e14f76060011c607ba759a74112"
+            ],
+            "version": "==1.11.0"
+        },
         "googlemaps": {
             "hashes": [
                 "sha256:8091b8362691063ce8a82a352c901f16be3d9a516a2c04e039e1e78bc0c8d8b4",
                 "sha256:fcd5792aa5dae3c5d7200da64dd6494ff0a1b9ac4d1ff50c0b4f7ad788a3f10f"
             ],
             "version": "==2.5.1"
+        },
+        "gsmls": {
+            "hashes": [
+                "sha256:fffbc4e8b66ce347c183e145a220b4810e9d61e55467f7cc6283feaf0142a652",
+                "sha256:c99f5e88db7d808e6e5bee57619fc4385baa86a01eb09e48892d9e98277e4d3d"
+            ],
+            "version": "==0.0.2"
         },
         "html2text": {
             "hashes": [
@@ -260,10 +274,10 @@
         },
         "notebook": {
             "hashes": [
-                "sha256:7ed09a3007ad6f39e112598edad951c35c85799d928bea831f3ecd5c95100688",
-                "sha256:4ae5b81dd39b37cdd99dcffe83a5182c849947b92d46ac4d2b5093af2bb9f224"
+                "sha256:8d63d3370800e41888e186af68a49ba7cfa1b2155a5de7fc167969c458872587",
+                "sha256:7bb54fb61b9c5426bc116f840541b973431198e00ea2896122d05fc122dbbd67"
             ],
-            "version": "==5.2.1"
+            "version": "==5.2.2"
         },
         "numpy": {
             "hashes": [
@@ -442,11 +456,11 @@
         },
         "terminado": {
             "hashes": [
-                "sha256:a32546459dcb3bf4e6648d77126d1f282d0c59ff6d62f077851e4dbb502f5b03",
-                "sha256:984c914303fcd1642c1783cdc6727db24b0bc1494fa6363e6ae46696335e2944"
+                "sha256:65011551baff97f5414c67018e908110693143cfbaeb16831b743fe7cad8b927",
+                "sha256:55abf9ade563b8f9be1f34e4233c7b7bde726059947a593322e8a553cc4c067a"
             ],
             "markers": "sys_platform != 'win32'",
-            "version": "==0.8"
+            "version": "==0.8.1"
         },
         "testpath": {
             "hashes": [

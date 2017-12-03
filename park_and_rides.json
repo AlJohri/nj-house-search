@@ -1,0 +1,2776 @@
+[
+    {
+        "id": "38229",
+        "line": "HBLR",
+        "name": "22nd Street (Bayonne)",
+        "location": [
+            40.661968,
+            -74.116641
+        ],
+        "type": "light_rail"
+    },
+    {
+        "id": "38441",
+        "line": "HBLR",
+        "name": "2nd Street (Hoboken)",
+        "location": [
+            40.740827,
+            -74.042511
+        ],
+        "type": "light_rail"
+    },
+    {
+        "id": "37005",
+        "line": "HBLR",
+        "name": "34th Street (Bayonne)",
+        "location": [
+            40.671932,
+            -74.108095
+        ],
+        "type": "light_rail"
+    },
+    {
+        "id": "38306",
+        "line": "343",
+        "name": "36th Street",
+        "location": [
+            39.96144,
+            -75.079222
+        ],
+        "type": "light_rail"
+    },
+    {
+        "id": "37004",
+        "line": "HBLR",
+        "name": "45th Street (Bayonne)",
+        "location": [
+            40.67867,
+            -74.102511
+        ],
+        "type": "light_rail"
+    },
+    {
+        "id": "42673",
+        "line": "HBLR",
+        "name": "8th Street (Bayonne)",
+        "location": [
+            40.654298,
+            -74.129142
+        ],
+        "type": "light_rail"
+    },
+    {
+        "id": "38442",
+        "line": "HBLR",
+        "name": "9th Street - Congress Street",
+        "location": [
+            40.748797,
+            -74.038496
+        ],
+        "type": "light_rail"
+    },
+    {
+        "id": "38309",
+        "line": "343",
+        "name": "Aquarium",
+        "location": [
+            39.944548,
+            -75.130022
+        ],
+        "type": "light_rail"
+    },
+    {
+        "id": "39133",
+        "line": "7",
+        "name": "Atlantic Street",
+        "location": [
+            40.744162,
+            -74.168489
+        ],
+        "type": "light_rail"
+    },
+    {
+        "id": "38578",
+        "line": "HBLR",
+        "name": "Bergenline Avenue",
+        "location": [
+            40.782082,
+            -74.021819
+        ],
+        "type": "light_rail"
+    },
+    {
+        "id": "38299",
+        "line": "343",
+        "name": "Beverly/Edgewater Park",
+        "location": [
+            40.061188,
+            -74.915793
+        ],
+        "type": "light_rail"
+    },
+    {
+        "id": "14984",
+        "line": "7",
+        "name": "Bloomfield Ave",
+        "location": [
+            40.765978,
+            -74.180212
+        ],
+        "type": "light_rail"
+    },
+    {
+        "id": "38294",
+        "line": "343",
+        "name": "Bordentown",
+        "location": [
+            40.148088,
+            -74.714751
+        ],
+        "type": "light_rail"
+    },
+    {
+        "id": "26316",
+        "line": "7",
+        "name": "Branch Brook Park",
+        "location": [
+            40.780531,
+            -74.175614
+        ],
+        "type": "light_rail"
+    },
+    {
+        "id": "39130",
+        "line": "7",
+        "name": "Broad Street",
+        "location": [
+            40.747206,
+            -74.171506
+        ],
+        "type": "light_rail"
+    },
+    {
+        "id": "38298",
+        "line": "343",
+        "name": "Burlington South",
+        "location": [
+            40.072878,
+            -74.865361
+        ],
+        "type": "light_rail"
+    },
+    {
+        "id": "38297",
+        "line": "343",
+        "name": "Burlington Towne Centre",
+        "location": [
+            40.077679,
+            -74.858171
+        ],
+        "type": "light_rail"
+    },
+    {
+        "id": "38293",
+        "line": "343",
+        "name": "Cass Street",
+        "location": [
+            40.205959,
+            -74.754642
+        ],
+        "type": "light_rail"
+    },
+    {
+        "id": "38302",
+        "line": "343",
+        "name": "Cinnaminson",
+        "location": [
+            40.016859,
+            -74.999302
+        ],
+        "type": "light_rail"
+    },
+    {
+        "id": "38308",
+        "line": "343",
+        "name": "Cooper St/Rutgers",
+        "location": [
+            39.947618,
+            -75.12471
+        ],
+        "type": "light_rail"
+    },
+    {
+        "id": "37003",
+        "line": "HBLR",
+        "name": "Danforth Avenue",
+        "location": [
+            40.693588,
+            -74.088971
+        ],
+        "type": "light_rail"
+    },
+    {
+        "id": "6907",
+        "line": "7",
+        "name": "Davenport Ave",
+        "location": [
+            40.772658,
+            -74.178761
+        ],
+        "type": "light_rail"
+    },
+    {
+        "id": "38300",
+        "line": "343",
+        "name": "Delanco",
+        "location": [
+            40.048109,
+            -74.950821
+        ],
+        "type": "light_rail"
+    },
+    {
+        "id": "38310",
+        "line": "343",
+        "name": "Entertainment Center",
+        "location": [
+            39.941868,
+            -75.129352
+        ],
+        "type": "light_rail"
+    },
+    {
+        "id": "36995",
+        "line": "HBLR",
+        "name": "Essex Street",
+        "location": [
+            40.712948,
+            -74.03642
+        ],
+        "type": "light_rail"
+    },
+    {
+        "id": "36994",
+        "line": "HBLR",
+        "name": "Exchange Place",
+        "location": [
+            40.716277,
+            -74.032866
+        ],
+        "type": "light_rail"
+    },
+    {
+        "id": "38296",
+        "line": "343",
+        "name": "Florence",
+        "location": [
+            40.100048,
+            -74.805112
+        ],
+        "type": "light_rail"
+    },
+    {
+        "id": "36999",
+        "line": "HBLR",
+        "name": "Garfield Avenue",
+        "location": [
+            40.708528,
+            -74.072403
+        ],
+        "type": "light_rail"
+    },
+    {
+        "id": "38065",
+        "line": "7",
+        "name": "Grove Street",
+        "location": [
+            40.779186,
+            -74.189311
+        ],
+        "type": "light_rail"
+    },
+    {
+        "id": "38292",
+        "line": "343",
+        "name": "Hamilton Avenue",
+        "location": [
+            40.213388,
+            -74.756413
+        ],
+        "type": "light_rail"
+    },
+    {
+        "id": "37376",
+        "line": "HBLR",
+        "name": "Harborside",
+        "location": [
+            40.719059,
+            -74.03407
+        ],
+        "type": "light_rail"
+    },
+    {
+        "id": "37377",
+        "line": "HBLR",
+        "name": "Harsimus Cove",
+        "location": [
+            40.722668,
+            -74.037281
+        ],
+        "type": "light_rail"
+    },
+    {
+        "id": "39348",
+        "line": "HBLR",
+        "name": "Hoboken",
+        "location": [
+            40.734048,
+            -74.029207
+        ],
+        "type": "light_rail"
+    },
+    {
+        "id": "36997",
+        "line": "HBLR",
+        "name": "Jersey Avenue",
+        "location": [
+            40.716568,
+            -74.048893
+        ],
+        "type": "light_rail"
+    },
+    {
+        "id": "36998",
+        "line": "HBLR",
+        "name": "Liberty State Park",
+        "location": [
+            40.707799,
+            -74.05848
+        ],
+        "type": "light_rail"
+    },
+    {
+        "id": "17699",
+        "line": "HBLR",
+        "name": "Lincoln Harbor",
+        "location": [
+            40.75936,
+            -74.023901
+        ],
+        "type": "light_rail"
+    },
+    {
+        "id": "36996",
+        "line": "HBLR",
+        "name": "Marin Boulevard",
+        "location": [
+            40.71588,
+            -74.042662
+        ],
+        "type": "light_rail"
+    },
+    {
+        "id": "37000",
+        "line": "HBLR",
+        "name": "Martin Luther King Drive",
+        "location": [
+            40.71234,
+            -74.077504
+        ],
+        "type": "light_rail"
+    },
+    {
+        "id": "6900",
+        "line": "7",
+        "name": "Military Park",
+        "location": [
+            40.737429,
+            -74.171133
+        ],
+        "type": "light_rail"
+    },
+    {
+        "id": "39134",
+        "line": "7",
+        "name": "NJPAC/Center Street",
+        "location": [
+            40.739501,
+            -74.16558
+        ],
+        "type": "light_rail"
+    },
+    {
+        "id": "26326",
+        "line": "7",
+        "name": "Newark Penn Station",
+        "location": [
+            40.734223,
+            -74.16455
+        ],
+        "type": "light_rail"
+    },
+    {
+        "id": "37378",
+        "line": "HBLR",
+        "name": "Newport",
+        "location": [
+            40.726819,
+            -74.036233
+        ],
+        "type": "light_rail"
+    },
+    {
+        "id": "6957",
+        "line": "7",
+        "name": "Norfolk St",
+        "location": [
+            40.745349,
+            -74.183351
+        ],
+        "type": "light_rail"
+    },
+    {
+        "id": "14986",
+        "line": "7",
+        "name": "Orange St",
+        "location": [
+            40.751328,
+            -74.185822
+        ],
+        "type": "light_rail"
+    },
+    {
+        "id": "38304",
+        "line": "343",
+        "name": "Palmyra",
+        "location": [
+            40.00404,
+            -75.021713
+        ],
+        "type": "light_rail"
+    },
+    {
+        "id": "6966",
+        "line": "7",
+        "name": "Park Ave",
+        "location": [
+            40.758538,
+            -74.185061
+        ],
+        "type": "light_rail"
+    },
+    {
+        "id": "43288",
+        "line": "343",
+        "name": "Pennsauken Transit Center",
+        "location": [
+            39.978278,
+            -75.061962
+        ],
+        "type": "light_rail"
+    },
+    {
+        "id": "38305",
+        "line": "343",
+        "name": "Pennsauken/Route 73",
+        "location": [
+            39.993404,
+            -75.039083
+        ],
+        "type": "light_rail"
+    },
+    {
+        "id": "9878",
+        "line": "HBLR",
+        "name": "Port Imperial",
+        "location": [
+            40.775931,
+            -74.012769
+        ],
+        "type": "light_rail"
+    },
+    {
+        "id": "37002",
+        "line": "HBLR",
+        "name": "Richard St",
+        "location": [
+            40.700159,
+            -74.07988
+        ],
+        "type": "light_rail"
+    },
+    {
+        "id": "39131",
+        "line": "7",
+        "name": "Riverfront Stadium",
+        "location": [
+            40.746015,
+            -74.16966
+        ],
+        "type": "light_rail"
+    },
+    {
+        "id": "38301",
+        "line": "343",
+        "name": "Riverside",
+        "location": [
+            40.03891,
+            -74.959444
+        ],
+        "type": "light_rail"
+    },
+    {
+        "id": "38303",
+        "line": "343",
+        "name": "Riverton",
+        "location": [
+            40.009748,
+            -75.011992
+        ],
+        "type": "light_rail"
+    },
+    {
+        "id": "38295",
+        "line": "343",
+        "name": "Roebling",
+        "location": [
+            40.115837,
+            -74.786092
+        ],
+        "type": "light_rail"
+    },
+    {
+        "id": "38064",
+        "line": "7",
+        "name": "Silver Lake",
+        "location": [
+            40.780893,
+            -74.1808
+        ],
+        "type": "light_rail"
+    },
+    {
+        "id": "38579",
+        "line": "HBLR",
+        "name": "Tonnelle Avenue",
+        "location": [
+            40.78754,
+            -74.03156
+        ],
+        "type": "light_rail"
+    },
+    {
+        "id": "38291",
+        "line": "343",
+        "name": "Trenton Transit Center",
+        "location": [
+            40.216282,
+            -74.754523
+        ],
+        "type": "light_rail"
+    },
+    {
+        "id": "38307",
+        "line": "343",
+        "name": "Walter Rand Trans. Center",
+        "location": [
+            39.942428,
+            -75.119171
+        ],
+        "type": "light_rail"
+    },
+    {
+        "id": "6995",
+        "line": "7",
+        "name": "Warren St",
+        "location": [
+            40.74208,
+            -74.181592
+        ],
+        "type": "light_rail"
+    },
+    {
+        "id": "39132",
+        "line": "7",
+        "name": "Washington Park",
+        "location": [
+            40.743944,
+            -74.169849
+        ],
+        "type": "light_rail"
+    },
+    {
+        "id": "6997",
+        "line": "7",
+        "name": "Washington St",
+        "location": [
+            40.738249,
+            -74.173811
+        ],
+        "type": "light_rail"
+    },
+    {
+        "id": "37001",
+        "line": "HBLR",
+        "name": "West Side Avenue",
+        "location": [
+            40.714784,
+            -74.087708
+        ],
+        "type": "light_rail"
+    },
+    {
+        "id": "37169",
+        "name": "Aberdeen Matawan",
+        "location": [
+            40.420161,
+            -74.223702
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "2",
+        "name": "Absecon",
+        "location": [
+            39.424333,
+            -74.502091
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "3",
+        "name": "Allendale",
+        "location": [
+            41.030902,
+            -74.130957
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "4",
+        "name": "Allenhurst",
+        "location": [
+            40.237659,
+            -74.006769
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "5",
+        "name": "Anderson Street",
+        "location": [
+            40.894458,
+            -74.043781
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "6",
+        "name": "Annandale",
+        "location": [
+            40.645173,
+            -74.878569
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "8",
+        "name": "Asbury Park",
+        "location": [
+            40.215359,
+            -74.014782
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "9",
+        "name": "Atco",
+        "location": [
+            39.783549,
+            -74.907588
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "10",
+        "name": "Atlantic City",
+        "location": [
+            39.3633,
+            -74.44148
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "11",
+        "name": "Avenel",
+        "location": [
+            40.57762,
+            -74.27753
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "12",
+        "name": "Basking Ridge",
+        "location": [
+            40.71138,
+            -74.555267
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "13",
+        "name": "Bay Head",
+        "location": [
+            40.077178,
+            -74.046201
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "14",
+        "name": "Bay Street",
+        "location": [
+            40.808178,
+            -74.208681
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "15",
+        "name": "Belmar",
+        "location": [
+            40.18059,
+            -74.027301
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "17",
+        "name": "Berkeley Heights",
+        "location": [
+            40.682345,
+            -74.442649
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "18",
+        "name": "Bernardsville",
+        "location": [
+            40.716847,
+            -74.571023
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "19",
+        "name": "Bloomfield",
+        "location": [
+            40.792709,
+            -74.200043
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "20",
+        "name": "Boonton",
+        "location": [
+            40.903378,
+            -74.407733
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "21",
+        "name": "Bound Brook",
+        "location": [
+            40.560931,
+            -74.530614
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "22",
+        "name": "Bradley Beach",
+        "location": [
+            40.203753,
+            -74.018891
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "23",
+        "name": "Brick Church",
+        "location": [
+            40.765136,
+            -74.218609
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "24",
+        "name": "Bridgewater",
+        "location": [
+            40.559909,
+            -74.551741
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "25",
+        "name": "Broadway",
+        "location": [
+            40.922507,
+            -74.115233
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "26",
+        "name": "Campbell Hall",
+        "location": [
+            41.450919,
+            -74.266551
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "27",
+        "name": "Chatham",
+        "location": [
+            40.740137,
+            -74.384812
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "28",
+        "name": "Cherry Hill",
+        "location": [
+            39.928449,
+            -75.041661
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "29",
+        "name": "Clifton",
+        "location": [
+            40.867998,
+            -74.153199
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "30",
+        "name": "Convent Station",
+        "location": [
+            40.779043,
+            -74.443435
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "32",
+        "name": "Cranford",
+        "location": [
+            40.655523,
+            -74.303226
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "33",
+        "name": "Delawanna",
+        "location": [
+            40.831369,
+            -74.131262
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "34",
+        "name": "Denville",
+        "location": [
+            40.8839,
+            -74.481513
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "35",
+        "name": "Dover",
+        "location": [
+            40.883417,
+            -74.555884
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "36",
+        "name": "Dunellen",
+        "location": [
+            40.590869,
+            -74.463043
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "37",
+        "name": "East Orange",
+        "location": [
+            40.760979,
+            -74.210461
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "38",
+        "name": "Edison",
+        "location": [
+            40.519148,
+            -74.410972
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "39",
+        "name": "Egg Harbor City",
+        "location": [
+            39.526443,
+            -74.648025
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "40",
+        "name": "Elberon",
+        "location": [
+            40.265292,
+            -73.997617
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "41",
+        "name": "Elizabeth",
+        "location": [
+            40.667859,
+            -74.215171
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "42",
+        "name": "Emerson",
+        "location": [
+            40.975038,
+            -74.027467
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "43",
+        "name": "Essex Street",
+        "location": [
+            40.878973,
+            -74.05189
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "44",
+        "name": "Fanwood",
+        "location": [
+            40.641062,
+            -74.385003
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "45",
+        "name": "Far Hills",
+        "location": [
+            40.685715,
+            -74.633734
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "46",
+        "name": "Garfield",
+        "location": [
+            40.866669,
+            -74.10556
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "47",
+        "name": "Garwood",
+        "location": [
+            40.652569,
+            -74.324794
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "48",
+        "name": "Gillette",
+        "location": [
+            40.678256,
+            -74.468314
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "49",
+        "name": "Gladstone",
+        "location": [
+            40.720284,
+            -74.666368
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "50",
+        "name": "Glen Ridge",
+        "location": [
+            40.80059,
+            -74.204652
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "51",
+        "name": "Glen Rock Boro Hall",
+        "location": [
+            40.96137,
+            -74.1293
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "52",
+        "name": "Glen Rock Main Line",
+        "location": [
+            40.962208,
+            -74.133485
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "54",
+        "name": "Hackettstown",
+        "location": [
+            40.851444,
+            -74.835352
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "32905",
+        "name": "Hamilton",
+        "location": [
+            40.255309,
+            -74.70412
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "55",
+        "name": "Hammonton",
+        "location": [
+            39.631673,
+            -74.799457
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "57",
+        "name": "Harriman",
+        "location": [
+            41.293359,
+            -74.139863
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "58",
+        "name": "Hawthorne",
+        "location": [
+            40.942539,
+            -74.152411
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "59",
+        "name": "Hazlet",
+        "location": [
+            40.415385,
+            -74.190393
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "60",
+        "name": "High Bridge",
+        "location": [
+            40.666884,
+            -74.895863
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "61",
+        "name": "Highland Avenue",
+        "location": [
+            40.766865,
+            -74.24374
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "62",
+        "name": "Hillsdale",
+        "location": [
+            41.002416,
+            -74.041033
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "64",
+        "name": "Ho-Ho-Kus",
+        "location": [
+            40.997369,
+            -74.113521
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "63",
+        "name": "Hoboken",
+        "location": [
+            40.734843,
+            -74.028043
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "32906",
+        "name": "Jersey Avenue",
+        "location": [
+            40.476912,
+            -74.46736
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "66",
+        "name": "Kingsland",
+        "location": [
+            40.810121,
+            -74.117334
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "67",
+        "name": "Lake Hopatcong",
+        "location": [
+            40.904219,
+            -74.665694
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "68",
+        "name": "Lebanon",
+        "location": [
+            40.636908,
+            -74.835766
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "69",
+        "name": "Lincoln Park",
+        "location": [
+            40.924138,
+            -74.301823
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "70",
+        "name": "Linden",
+        "location": [
+            40.629487,
+            -74.251772
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "71",
+        "name": "Lindenwold",
+        "location": [
+            39.833811,
+            -75.000314
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "72",
+        "name": "Little Falls",
+        "location": [
+            40.880669,
+            -74.235372
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "73",
+        "name": "Little Silver",
+        "location": [
+            40.326715,
+            -74.041054
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "74",
+        "name": "Long Branch",
+        "location": [
+            40.297145,
+            -73.988331
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "75",
+        "name": "Lyndhurst",
+        "location": [
+            40.816478,
+            -74.124161
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "76",
+        "name": "Lyons",
+        "location": [
+            40.684849,
+            -74.549467
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "77",
+        "name": "Madison",
+        "location": [
+            40.757028,
+            -74.415102
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "78",
+        "name": "Mahwah",
+        "location": [
+            41.094416,
+            -74.146617
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "79",
+        "name": "Manasquan",
+        "location": [
+            40.120573,
+            -74.047685
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "81",
+        "name": "Maplewood",
+        "location": [
+            40.731149,
+            -74.275424
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "40570",
+        "name": "Meadowlands Sports Complex",
+        "location": [
+            40.820569,
+            -74.071861
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "83",
+        "name": "Metropark",
+        "location": [
+            40.56864,
+            -74.329391
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "84",
+        "name": "Metuchen",
+        "location": [
+            40.540738,
+            -74.360671
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "85",
+        "name": "Middletown New Jersey",
+        "location": [
+            40.38978,
+            -74.116131
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "86",
+        "name": "Middletown New York",
+        "location": [
+            41.457488,
+            -74.37039
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "87",
+        "name": "Millburn",
+        "location": [
+            40.725622,
+            -74.303752
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "88",
+        "name": "Millington",
+        "location": [
+            40.673518,
+            -74.523603
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "31696",
+        "name": "Monmouth Park",
+        "location": [
+            40.313427,
+            -74.015172
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "89",
+        "name": "Montclair Heights",
+        "location": [
+            40.857538,
+            -74.202493
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "38081",
+        "name": "Montclair State University",
+        "location": [
+            40.869782,
+            -74.197436
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "90",
+        "name": "Montvale",
+        "location": [
+            41.040879,
+            -74.029152
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "91",
+        "name": "Morris Plains",
+        "location": [
+            40.828642,
+            -74.478194
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "92",
+        "name": "Morristown",
+        "location": [
+            40.797118,
+            -74.474086
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "39472",
+        "name": "Mount Arlington",
+        "location": [
+            40.89659,
+            -74.632731
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "93",
+        "name": "Mount Olive",
+        "location": [
+            40.907378,
+            -74.730653
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "94",
+        "name": "Mount Tabor",
+        "location": [
+            40.875906,
+            -74.481912
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "95",
+        "name": "Mountain Avenue",
+        "location": [
+            40.848717,
+            -74.205303
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "96",
+        "name": "Mountain Lakes",
+        "location": [
+            40.885949,
+            -74.433601
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "97",
+        "name": "Mountain Station",
+        "location": [
+            40.75537,
+            -74.253024
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "98",
+        "name": "Mountain View",
+        "location": [
+            40.914407,
+            -74.268155
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "99",
+        "name": "Murray Hill",
+        "location": [
+            40.695073,
+            -74.403134
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "100",
+        "name": "Nanuet",
+        "location": [
+            41.090017,
+            -74.014791
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "101",
+        "name": "Netcong",
+        "location": [
+            40.897557,
+            -74.707317
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "102",
+        "name": "Netherwood",
+        "location": [
+            40.629148,
+            -74.403455
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "110",
+        "name": "New Bridge Landing",
+        "location": [
+            40.910856,
+            -74.035044
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "103",
+        "name": "New Brunswick",
+        "location": [
+            40.497278,
+            -74.445751
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "104",
+        "name": "New Providence",
+        "location": [
+            40.712024,
+            -74.386498
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "105",
+        "name": "New York Penn Station",
+        "location": [
+            40.750051,
+            -73.992358
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "37953",
+        "name": "Newark Airport",
+        "location": [
+            40.704417,
+            -74.190714
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "106",
+        "name": "Newark Broad Street",
+        "location": [
+            40.747626,
+            -74.17194
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "107",
+        "name": "Newark Penn Station",
+        "location": [
+            40.734223,
+            -74.16455
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "108",
+        "name": "North Branch",
+        "location": [
+            40.592022,
+            -74.683802
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "109",
+        "name": "North Elizabeth",
+        "location": [
+            40.68027,
+            -74.206165
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "111",
+        "name": "Oradell",
+        "location": [
+            40.953478,
+            -74.029983
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "112",
+        "name": "Orange",
+        "location": [
+            40.771883,
+            -74.233103
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "113",
+        "name": "Otisville",
+        "location": [
+            41.471789,
+            -74.529211
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "114",
+        "name": "Park Ridge",
+        "location": [
+            41.032307,
+            -74.036161
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "115",
+        "name": "Passaic",
+        "location": [
+            40.849416,
+            -74.133926
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "116",
+        "name": "Paterson",
+        "location": [
+            40.914889,
+            -74.167327
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "117",
+        "name": "Peapack",
+        "location": [
+            40.708796,
+            -74.658469
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "118",
+        "name": "Pearl River",
+        "location": [
+            41.058181,
+            -74.022313
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "43298",
+        "name": "Pennsauken Transit Center",
+        "location": [
+            39.977769,
+            -75.061796
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "119",
+        "name": "Perth Amboy",
+        "location": [
+            40.509398,
+            -74.273752
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "1",
+        "name": "Philadelphia 30th Street",
+        "location": [
+            39.956567,
+            -75.182327
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "120",
+        "name": "Plainfield",
+        "location": [
+            40.618425,
+            -74.42016
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "121",
+        "name": "Plauderville",
+        "location": [
+            40.88492,
+            -74.10269
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "122",
+        "name": "Point Pleasant Beach",
+        "location": [
+            40.092718,
+            -74.048191
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "123",
+        "name": "Port Jervis",
+        "location": [
+            41.374899,
+            -74.694622
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "124",
+        "name": "Princeton",
+        "location": [
+            40.342088,
+            -74.65887
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "125",
+        "name": "Princeton Junction",
+        "location": [
+            40.316316,
+            -74.623753
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "126",
+        "name": "Radburn",
+        "location": [
+            40.939919,
+            -74.121613
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "127",
+        "name": "Rahway",
+        "location": [
+            40.606338,
+            -74.276692
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "128",
+        "name": "Ramsey",
+        "location": [
+            41.056422,
+            -74.141877
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "38417",
+        "name": "Ramsey Route 17",
+        "location": [
+            41.07513,
+            -74.145485
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "129",
+        "name": "Raritan",
+        "location": [
+            40.57101,
+            -74.634361
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "130",
+        "name": "Red Bank",
+        "location": [
+            40.348284,
+            -74.074535
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "131",
+        "name": "Ridgewood",
+        "location": [
+            40.980631,
+            -74.120592
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "132",
+        "name": "River Edge",
+        "location": [
+            40.935148,
+            -74.02914
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "31",
+        "name": "Roselle Park",
+        "location": [
+            40.667155,
+            -74.266319
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "134",
+        "name": "Rutherford",
+        "location": [
+            40.828248,
+            -74.100556
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "135",
+        "name": "Salisbury Mills Cornwall",
+        "location": [
+            41.437078,
+            -74.101871
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "38174",
+        "name": "Secaucus Junction",
+        "location": [
+            40.76119,
+            -74.075821
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "136",
+        "name": "Short Hills",
+        "location": [
+            40.725249,
+            -74.323751
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "137",
+        "name": "Sloatsburg",
+        "location": [
+            41.157138,
+            -74.191304
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "138",
+        "name": "Somerville",
+        "location": [
+            40.566075,
+            -74.61397
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "139",
+        "name": "South Amboy",
+        "location": [
+            40.48431,
+            -74.28014
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "140",
+        "name": "South Orange",
+        "location": [
+            40.745952,
+            -74.260538
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "141",
+        "name": "Spring Lake",
+        "location": [
+            40.150559,
+            -74.035481
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "142",
+        "name": "Spring Valley",
+        "location": [
+            41.111978,
+            -74.043991
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "143",
+        "name": "Stirling",
+        "location": [
+            40.674584,
+            -74.49372
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "144",
+        "name": "Suffern",
+        "location": [
+            41.11354,
+            -74.153442
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "145",
+        "name": "Summit",
+        "location": [
+            40.716549,
+            -74.357807
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "146",
+        "name": "Teterboro",
+        "location": [
+            40.86486,
+            -74.062676
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "147",
+        "name": "Towaco",
+        "location": [
+            40.922809,
+            -74.343839
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "148",
+        "name": "Trenton Transit Center",
+        "location": [
+            40.218518,
+            -74.753923
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "149",
+        "name": "Tuxedo",
+        "location": [
+            41.194208,
+            -74.18446
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "38105",
+        "name": "Union",
+        "location": [
+            40.683668,
+            -74.238602
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "150",
+        "name": "Upper Montclair",
+        "location": [
+            40.842006,
+            -74.209365
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "151",
+        "name": "Waldwick",
+        "location": [
+            41.012736,
+            -74.123412
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "152",
+        "name": "Walnut Street",
+        "location": [
+            40.817218,
+            -74.20963
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "153",
+        "name": "Watchung Avenue",
+        "location": [
+            40.829519,
+            -74.206931
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "154",
+        "name": "Watsessing Avenue",
+        "location": [
+            40.782743,
+            -74.198451
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "39635",
+        "name": "Wayne/Route 23 Transit Center",
+        "location": [
+            40.900259,
+            -74.256971
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "43599",
+        "name": "Wesmont ",
+        "location": [
+            40.854979,
+            -74.096951
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "155",
+        "name": "Westfield",
+        "location": [
+            40.649453,
+            -74.347629
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "156",
+        "name": "Westwood",
+        "location": [
+            40.990817,
+            -74.032693
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "157",
+        "name": "White House",
+        "location": [
+            40.615616,
+            -74.77066
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "160",
+        "name": "Wood Ridge",
+        "location": [
+            40.843974,
+            -74.078716
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "158",
+        "name": "Woodbridge",
+        "location": [
+            40.55661,
+            -74.27775
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "159",
+        "name": "Woodcliff Lake",
+        "location": [
+            41.021078,
+            -74.040772
+        ],
+        "type": "rail"
+    },
+    {
+        "id": "38104",
+        "county": "13",
+        "name": "Aldrich Road",
+        "location": [
+            40.15616,
+            -74.22714
+        ],
+        "type": "bus"
+    },
+    {
+        "id": "4098",
+        "county": "16",
+        "name": "Allwood Road",
+        "location": [
+            40.853828,
+            -74.175212
+        ],
+        "type": "bus"
+    },
+    {
+        "id": "297",
+        "county": "1",
+        "name": "Atlantic City Bus Terminal",
+        "location": [
+            39.36012,
+            -74.43546
+        ],
+        "type": "bus"
+    },
+    {
+        "id": "1582",
+        "county": "4",
+        "name": "Avandale",
+        "location": [
+            39.71195,
+            -74.97614
+        ],
+        "type": "bus"
+    },
+    {
+        "id": "4643",
+        "county": "20",
+        "name": "Bonnel Court - Union Twp",
+        "location": [
+            40.696076,
+            -74.272277
+        ],
+        "type": "bus"
+    },
+    {
+        "id": "3625",
+        "county": "15",
+        "name": "Brick",
+        "location": [
+            40.09668,
+            -74.139457
+        ],
+        "type": "bus"
+    },
+    {
+        "id": "3897",
+        "county": "16",
+        "name": "Broadway Bus Terminal - Paterson",
+        "location": [
+            40.918638,
+            -74.17447
+        ],
+        "type": "bus"
+    },
+    {
+        "id": "23216",
+        "county": "5",
+        "name": "Cape May Bus Terminal",
+        "location": [
+            38.93514,
+            -74.92269
+        ],
+        "type": "bus"
+    },
+    {
+        "id": "37509",
+        "county": "12",
+        "name": "Carteret",
+        "location": [
+            40.59084,
+            -74.22844
+        ],
+        "type": "bus"
+    },
+    {
+        "id": "4137",
+        "county": "16",
+        "name": "Clifton Commons",
+        "location": [
+            40.827067,
+            -74.141111
+        ],
+        "type": "bus"
+    },
+    {
+        "id": "27345",
+        "county": "13",
+        "name": "Craig Road",
+        "location": [
+            40.28746,
+            -74.29654
+        ],
+        "type": "bus"
+    },
+    {
+        "id": "37008",
+        "county": "15",
+        "name": "Dorado",
+        "location": [
+            40.0946,
+            -74.14632
+        ],
+        "type": "bus"
+    },
+    {
+        "id": "700",
+        "county": "2",
+        "name": "Dumont A",
+        "location": [
+            40.94144,
+            -73.99204
+        ],
+        "type": "bus"
+    },
+    {
+        "id": "688",
+        "county": "2",
+        "name": "Dumont B - West Shore",
+        "location": [
+            40.94139,
+            -73.9957
+        ],
+        "type": "bus"
+    },
+    {
+        "id": "850",
+        "county": "2",
+        "name": "Fairlawn DPW",
+        "location": [
+            40.94969,
+            -74.10528
+        ],
+        "type": "bus"
+    },
+    {
+        "id": "1033",
+        "county": "2",
+        "name": "Fort Lee",
+        "location": [
+            40.85211,
+            -73.97125
+        ],
+        "type": "bus"
+    },
+    {
+        "id": "9729",
+        "county": "13",
+        "name": "Freehold Center",
+        "location": [
+            40.259178,
+            -74.276451
+        ],
+        "type": "bus"
+    },
+    {
+        "id": "27394",
+        "county": "13",
+        "name": "Freehold Mall",
+        "location": [
+            40.24592,
+            -74.28257
+        ],
+        "type": "bus"
+    },
+    {
+        "id": "17392",
+        "county": "12",
+        "name": "Garden State Parkway Exit 120",
+        "location": [
+            40.43282,
+            -74.25197
+        ],
+        "type": "bus"
+    },
+    {
+        "id": "37234",
+        "county": "2",
+        "name": "Garden State Parkway Exit 165 - Paramus",
+        "location": [
+            40.96402,
+            -74.0642
+        ],
+        "type": "bus"
+    },
+    {
+        "id": "3512",
+        "county": "23",
+        "name": "George Washington Bridge Terminal",
+        "location": [
+            40.848833,
+            -73.93854
+        ],
+        "type": "bus"
+    },
+    {
+        "id": "3277",
+        "county": "22",
+        "name": "Greenwood Lake",
+        "location": [
+            41.222465,
+            -74.294358
+        ],
+        "type": "bus"
+    },
+    {
+        "id": "237",
+        "county": "24",
+        "name": "Greyhound Bus Terminal",
+        "location": [
+            39.95304,
+            -75.15725
+        ],
+        "type": "bus"
+    },
+    {
+        "id": "1252",
+        "county": "2",
+        "name": "Hackensack Terminal",
+        "location": [
+            40.8818,
+            -74.04201
+        ],
+        "type": "bus"
+    },
+    {
+        "id": "17082",
+        "county": "9",
+        "name": "Hoboken Terminal Bus Lanes",
+        "location": [
+            40.735611,
+            -74.028985
+        ],
+        "type": "bus"
+    },
+    {
+        "id": "27400",
+        "county": "13",
+        "name": "Howell",
+        "location": [
+            40.211307,
+            -74.258007
+        ],
+        "type": "bus"
+    },
+    {
+        "id": "27358",
+        "county": "12",
+        "name": "Inverness",
+        "location": [
+            40.38673,
+            -74.30704
+        ],
+        "type": "bus"
+    },
+    {
+        "id": "28555",
+        "county": "7",
+        "name": "Irvington Bus Terminal",
+        "location": [
+            40.726389,
+            -74.22733
+        ],
+        "type": "bus"
+    },
+    {
+        "id": "27363",
+        "county": "12",
+        "name": "Jake Brown",
+        "location": [
+            40.416716,
+            -74.303947
+        ],
+        "type": "bus"
+    },
+    {
+        "id": "2916",
+        "county": "9",
+        "name": "Journal Square Transportation Center",
+        "location": [
+            40.73205,
+            -74.06199
+        ],
+        "type": "bus"
+    },
+    {
+        "id": "37607",
+        "county": "15",
+        "name": "Lakewood Terminal",
+        "location": [
+            40.09077,
+            -74.21264
+        ],
+        "type": "bus"
+    },
+    {
+        "id": "38455",
+        "county": "13",
+        "name": "Lloyd Road - Aberdeen",
+        "location": [
+            40.41643,
+            -74.21318
+        ],
+        "type": "bus"
+    },
+    {
+        "id": "17360",
+        "county": "13",
+        "name": "Marlboro",
+        "location": [
+            40.313465,
+            -74.249645
+        ],
+        "type": "bus"
+    },
+    {
+        "id": "29037",
+        "county": "2",
+        "name": "Midland Park",
+        "location": [
+            40.997538,
+            -74.151753
+        ],
+        "type": "bus"
+    },
+    {
+        "id": "38063",
+        "county": "16",
+        "name": "Mothers Park & Ride",
+        "location": [
+            40.92231,
+            -74.26771
+        ],
+        "type": "bus"
+    },
+    {
+        "id": "2275",
+        "county": "7",
+        "name": "Newark Penn Station Bus Lanes",
+        "location": [
+            40.73416,
+            -74.16348
+        ],
+        "type": "bus"
+    },
+    {
+        "id": "37801",
+        "county": "16",
+        "name": "Newfoundland - West Milford NJ",
+        "location": [
+            41.04607,
+            -74.43596
+        ],
+        "type": "bus"
+    },
+    {
+        "id": "2935",
+        "county": "9",
+        "name": "North Bergen",
+        "location": [
+            40.778135,
+            -74.043366
+        ],
+        "type": "bus"
+    },
+    {
+        "id": "1851",
+        "county": "5",
+        "name": "Ocean City Transportation Center",
+        "location": [
+            39.27914,
+            -74.57808
+        ],
+        "type": "bus"
+    },
+    {
+        "id": "27367",
+        "county": "12",
+        "name": "Old Bridge",
+        "location": [
+            40.44685,
+            -74.29936
+        ],
+        "type": "bus"
+    },
+    {
+        "id": "3942",
+        "county": "16",
+        "name": "Passaic Bus Terminal",
+        "location": [
+            40.863048,
+            -74.12732
+        ],
+        "type": "bus"
+    },
+    {
+        "id": "43282",
+        "county": "4",
+        "name": "Pennsauken Bus Terminal",
+        "location": [
+            39.977859,
+            -75.06136
+        ],
+        "type": "bus"
+    },
+    {
+        "id": "4622",
+        "county": "20",
+        "name": "Pine Avenue - Union Twp",
+        "location": [
+            40.697766,
+            -74.270541
+        ],
+        "type": "bus"
+    },
+    {
+        "id": "3511",
+        "county": "23",
+        "name": "Port Authority Bus Terminal",
+        "location": [
+            40.756367,
+            -73.990753
+        ],
+        "type": "bus"
+    },
+    {
+        "id": "37730",
+        "county": "2",
+        "name": "Ridgewood Bus Terminal",
+        "location": [
+            40.9785,
+            -74.11842
+        ],
+        "type": "bus"
+    },
+    {
+        "id": "27578",
+        "county": "16",
+        "name": "Ringwood",
+        "location": [
+            41.08853,
+            -74.26608
+        ],
+        "type": "bus"
+    },
+    {
+        "id": "16619",
+        "county": "20",
+        "name": "Rutgers Lane Hospital - Union Twp",
+        "location": [
+            40.673928,
+            -74.266296
+        ],
+        "type": "bus"
+    },
+    {
+        "id": "40358",
+        "county": "12",
+        "name": "Sayreville",
+        "location": [
+            40.477599,
+            -74.298288
+        ],
+        "type": "bus"
+    },
+    {
+        "id": "27344",
+        "county": "13",
+        "name": "Schibanoff",
+        "location": [
+            40.27402,
+            -74.29362
+        ],
+        "type": "bus"
+    },
+    {
+        "id": "4575",
+        "county": "20",
+        "name": "Springfield Center - Springfield Twp",
+        "location": [
+            40.71051,
+            -74.31266
+        ],
+        "type": "bus"
+    },
+    {
+        "id": "38360",
+        "county": "19",
+        "name": "Stockholm - Hardyston",
+        "location": [
+            41.09763,
+            -74.53098
+        ],
+        "type": "bus"
+    },
+    {
+        "id": "27439",
+        "county": "13",
+        "name": "Symmes Drive - Manalapan Mall",
+        "location": [
+            40.292883,
+            -74.301645
+        ],
+        "type": "bus"
+    },
+    {
+        "id": "27354",
+        "county": "13",
+        "name": "Texas Road",
+        "location": [
+            40.362033,
+            -74.304553
+        ],
+        "type": "bus"
+    },
+    {
+        "id": "3603",
+        "county": "15",
+        "name": "Toms River Park & Ride",
+        "location": [
+            39.95164,
+            -74.20524
+        ],
+        "type": "bus"
+    },
+    {
+        "id": "25104",
+        "county": "11",
+        "name": "Trenton Transit Center",
+        "location": [
+            40.218839,
+            -74.754974
+        ],
+        "type": "bus"
+    },
+    {
+        "id": "4633",
+        "county": "20",
+        "name": "Union Center - Union Twp",
+        "location": [
+            40.695224,
+            -74.265734
+        ],
+        "type": "bus"
+    },
+    {
+        "id": "27427",
+        "county": "13",
+        "name": "Union Hill",
+        "location": [
+            40.339072,
+            -74.304902
+        ],
+        "type": "bus"
+    },
+    {
+        "id": "615",
+        "county": "2",
+        "name": "Vince Lombardi",
+        "location": [
+            40.82698,
+            -74.02824
+        ],
+        "type": "bus"
+    },
+    {
+        "id": "197",
+        "county": "6",
+        "name": "Vineland Terminal",
+        "location": [
+            39.48707,
+            -75.03389
+        ],
+        "type": "bus"
+    },
+    {
+        "id": "11519",
+        "county": "4",
+        "name": "Walter Rand Transportation Center",
+        "location": [
+            39.94336,
+            -75.11843
+        ],
+        "type": "bus"
+    },
+    {
+        "id": "27561",
+        "county": "22",
+        "name": "Warwick - NY",
+        "location": [
+            41.2479,
+            -74.33877
+        ],
+        "type": "bus"
+    },
+    {
+        "id": "1813",
+        "county": "18",
+        "name": "Watchung Park & Ride",
+        "location": [
+            40.644537,
+            -74.410339
+        ],
+        "type": "bus"
+    },
+    {
+        "id": "39635",
+        "county": "16",
+        "name": "Wayne/Route 23 Transit Center",
+        "location": [
+            40.900259,
+            -74.256971
+        ],
+        "type": "bus"
+    },
+    {
+        "id": "38407",
+        "county": "16",
+        "name": "West Milford - Greenwood Lake NJ",
+        "location": [
+            41.149641,
+            -74.34741
+        ],
+        "type": "bus"
+    },
+    {
+        "id": "2076",
+        "county": "5",
+        "name": "Wildwood Terminal",
+        "location": [
+            38.98593,
+            -74.82303
+        ],
+        "type": "bus"
+    },
+    {
+        "id": "3921",
+        "county": "16",
+        "name": "Willowbrook Mall",
+        "location": [
+            40.887139,
+            -74.261191
+        ],
+        "type": "bus"
+    }
+]
