@@ -23,28 +23,25 @@ def geocode(address):
 @memory.cache
 def get_driving_directions(source, destination):
     departure_time = find_nearest_weekday().replace(hour=6) # 6 am nearest weekday
-    try:
-        directions_result = gmaps.directions(source,
-                                             destination,
-                                             mode="driving",
-                                             departure_time=departure_time)
+    directions_result = gmaps.directions(source,
+                                         destination,
+                                         mode="driving",
+                                         departure_time=departure_time)
+    # ApiError: INVALID_REQUEST (departure_time is in the past. Traffic information is only available for future and current times.)
     # *** googlemaps.exceptions.ApiError: INVALID_REQUEST
     # (departure_time is in the past. Traffic information is only available for future and current times.)
-    except googlemaps.exceptions.ApiError as e:
-        directions_result = []
-
     return directions_result
 
 @memory.cache
 def get_transit_directions(source, destination):
     departure_time = find_nearest_weekday().replace(hour=6) # 6 am nearest weekday
-    try:
-        directions_result = gmaps.directions(source,
-                                             destination,
-                                             mode="transit",
-                                             departure_time=departure_time)
-    except googlemaps.exceptions.ApiError as e:
-        directions_result = []
+    # try:
+    directions_result = gmaps.directions(source,
+                                         destination,
+                                         mode="transit",
+                                         departure_time=departure_time)
+    # except googlemaps.exceptions.ApiError as e:
+    #     directions_result = []
 
     return directions_result
 

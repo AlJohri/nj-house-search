@@ -6,6 +6,19 @@ Collection of scripts and notebooks to assist in searching for a house in NJ. Ma
 
 Entrypoint is [analysis.ipynb](https://github.com/AlJohri/nj-house-search/blob/master/analysis.ipynb).
 
+#### Setup
+
+```
+pipenv install
+pipenv run jupyter nbextension enable --py widgetsnbextension --sys-prefix
+```
+
+#### Usage
+
+``` 
+pipenv run jupyter notebook analysis.ipynb
+```
+
 #### Future Work?
 
 - handle addresses that google maps can't handle properly by first adding drive time to nearest park and ride and then transit time from there. google maps can't handle drive + transit very well
