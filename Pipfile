@@ -22,6 +22,7 @@ ipywidgets = "*"
 geopy = "*"
 gsmls = "==0.0.2"
 njmls = "*"
+njactb = "*"
 
 
 [dev-packages]
