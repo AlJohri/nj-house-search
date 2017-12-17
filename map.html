@@ -15,7 +15,7 @@
     <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
     <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
     
-            <style> #map_39c8affb561543c2bb4bc5ad5930d99a {
+            <style> #map_861770d22bf24fd9bfce430bd7c6e0d2 {
                 position : relative;
                 width : 100.0%;
                 height: 100.0%;
@@ -27,7 +27,7 @@
 </head>
 <body>    
     
-            <div class="folium-map" id="map_39c8affb561543c2bb4bc5ad5930d99a" ></div>
+            <div class="folium-map" id="map_861770d22bf24fd9bfce430bd7c6e0d2" ></div>
         
 </body>
 <script>    
@@ -37,19 +37,21 @@
                 var bounds = null;
             
 
-            var map_39c8affb561543c2bb4bc5ad5930d99a = L.map(
-                                  'map_39c8affb561543c2bb4bc5ad5930d99a',
+            var map_861770d22bf24fd9bfce430bd7c6e0d2 = L.map(
+                                  'map_861770d22bf24fd9bfce430bd7c6e0d2',
                                   {center: [40.8961863,-74.1726829],
                                   zoom: 12,
                                   maxBounds: bounds,
                                   layers: [],
                                   worldCopyJump: false,
-                                  crs: L.CRS.EPSG3857
+                                  crs: L.CRS.EPSG3857,
+                                  tileSize: 1024,
+                                  zoomOffset: -1
                                  });
             
         
     
-            var tile_layer_6bc4810e080646f5946323036b3560a6 = L.tileLayer(
+            var tile_layer_e1066f0bd6874196a370a7d4f2ba1f01 = L.tileLayer(
                 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
                 {
   "attribution": null,
@@ -60,855 +62,855 @@
   "noWrap": false,
   "subdomains": "abc"
 }
-                ).addTo(map_39c8affb561543c2bb4bc5ad5930d99a);
+                ).addTo(map_861770d22bf24fd9bfce430bd7c6e0d2);
         
     
 
-            var marker_44477ce019964b2798bebf9e3e4198ac = L.marker(
+            var marker_0d25e3426b044a029b86499317b97209 = L.marker(
                 [40.8961863, -74.1726829],
                 {
                     icon: new L.Icon.Default()
                     }
                 )
                 .bindTooltip("<i>115 Dumont Ave. Clifton, NJ</i>")
-                .addTo(map_39c8affb561543c2bb4bc5ad5930d99a);
+                .addTo(map_861770d22bf24fd9bfce430bd7c6e0d2);
             
     
 
-                var icon_5181153ce33749ed9387f88eccffa716 = L.AwesomeMarkers.icon({
+                var icon_7a7c8411ed394f12a7bcbc88e67897d2 = L.AwesomeMarkers.icon({
                     icon: 'info-sign',
                     iconColor: 'white',
                     markerColor: 'green',
                     prefix: 'glyphicon',
                     extraClasses: 'fa-rotate-0'
                     });
-                marker_44477ce019964b2798bebf9e3e4198ac.setIcon(icon_5181153ce33749ed9387f88eccffa716);
+                marker_0d25e3426b044a029b86499317b97209.setIcon(icon_7a7c8411ed394f12a7bcbc88e67897d2);
             
     
 
-            var marker_c9286311fcf34a48896b27ae11294244 = L.marker(
-                [40.7849792, -74.20863059999999],
-                {
-                    icon: new L.Icon.Default()
-                    }
-                )
-                .bindTooltip("<i>35 Morse Ave, Bloomfield, NJ - 4.0</i>")
-                .addTo(map_39c8affb561543c2bb4bc5ad5930d99a);
-            
-    
-            var popup_2b37ec93afda46d089f381ac85e7d1c6 = L.popup({maxWidth: '300'});
-
-            
-                var html_fffbe1984a7540ecba637e1e59fdcaed = $('<div id="html_fffbe1984a7540ecba637e1e59fdcaed" style="width: 100.0%; height: 100.0%;"><i>     Address: 35 Morse Ave, Bloomfield, NJ<br/>     MLS: <a target="_blank" href="https://gsmls.herokuapp.com/properties/3374522">3374522</a><br/>     Rating: 4.0<br/>     Comments:<br/>     - no pictures of bedrooms<br/>- price is very low, could be something wrong<br/>- looks nice outside<br/>- parkway exit 148     </i></div>')[0];
-                popup_2b37ec93afda46d089f381ac85e7d1c6.setContent(html_fffbe1984a7540ecba637e1e59fdcaed);
-            
-
-            marker_c9286311fcf34a48896b27ae11294244.bindPopup(popup_2b37ec93afda46d089f381ac85e7d1c6);
-
-            
-        
-    
-
-            var marker_b165c0bdc0d7488c8ff0b187072f8ec3 = L.marker(
-                [40.8305208, -74.1815068],
-                {
-                    icon: new L.Icon.Default()
-                    }
-                )
-                .bindTooltip("<i>79 Winding Ln, Bloomfield, NJ - 3.5</i>")
-                .addTo(map_39c8affb561543c2bb4bc5ad5930d99a);
-            
-    
-            var popup_3ae1d701a77f4d5f802414c2fd8a07eb = L.popup({maxWidth: '300'});
-
-            
-                var html_294a26e5670b414a8b3b005b77025bfc = $('<div id="html_294a26e5670b414a8b3b005b77025bfc" style="width: 100.0%; height: 100.0%;"><i>     Address: 79 Winding Ln, Bloomfield, NJ<br/>     MLS: <a target="_blank" href="https://gsmls.herokuapp.com/properties/3434778">3434778</a><br/>     Rating: 3.5<br/>     Comments:<br/>     - large (long, 24&#x27;) kitchen<br/>- dining room, living room, and family room all decent size<br/>- rec room in basement     </i></div>')[0];
-                popup_3ae1d701a77f4d5f802414c2fd8a07eb.setContent(html_294a26e5670b414a8b3b005b77025bfc);
-            
-
-            marker_b165c0bdc0d7488c8ff0b187072f8ec3.bindPopup(popup_3ae1d701a77f4d5f802414c2fd8a07eb);
-
-            
-        
-    
-
-            var marker_3ba3bb0ece1e473d9d73f4e507053d39 = L.marker(
-                [40.7836892, -74.1945653],
-                {
-                    icon: new L.Icon.Default()
-                    }
-                )
-                .bindTooltip("<i>21 Grace Street, Bloomfield, NJ - 3.0</i>")
-                .addTo(map_39c8affb561543c2bb4bc5ad5930d99a);
-            
-    
-            var popup_94d8d149cc114afa92c46039b2f25345 = L.popup({maxWidth: '300'});
-
-            
-                var html_cfa77e8a77154fccaa20f7dab0034f43 = $('<div id="html_cfa77e8a77154fccaa20f7dab0034f43" style="width: 100.0%; height: 100.0%;"><i>     Address: 21 Grace Street, Bloomfield, NJ<br/>     MLS: <a target="_blank" href="http://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1732338">1732338</a><br/>     Rating: 3.0<br/>     Comments:<br/>     - living room small?<br/>- no actual foyer     </i></div>')[0];
-                popup_94d8d149cc114afa92c46039b2f25345.setContent(html_cfa77e8a77154fccaa20f7dab0034f43);
-            
-
-            marker_3ba3bb0ece1e473d9d73f4e507053d39.bindPopup(popup_94d8d149cc114afa92c46039b2f25345);
-
-            
-        
-    
-
-            var marker_9ef13fa9accc4b28aebf4022c1fcda90 = L.marker(
-                [40.8375418, -74.18636],
-                {
-                    icon: new L.Icon.Default()
-                    }
-                )
-                .bindTooltip("<i>13 Bellevue Avenue, Bloomfield, NJ - 1.0</i>")
-                .addTo(map_39c8affb561543c2bb4bc5ad5930d99a);
-            
-    
-            var popup_ca0ae3d4fab94cf8bd63b29e86fec899 = L.popup({maxWidth: '300'});
-
-            
-                var html_8a16c013e8f94539a3091f428b04e084 = $('<div id="html_8a16c013e8f94539a3091f428b04e084" style="width: 100.0%; height: 100.0%;"><i>     Address: 13 Bellevue Avenue, Bloomfield, NJ<br/>     MLS: <a target="_blank" href="http://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1738410">1738410</a><br/>     Rating: 1.0<br/>     Comments:<br/>     - open house 12/7 (12pm-4pm)<br/>- no bedrooms shown?     </i></div>')[0];
-                popup_ca0ae3d4fab94cf8bd63b29e86fec899.setContent(html_8a16c013e8f94539a3091f428b04e084);
-            
-
-            marker_9ef13fa9accc4b28aebf4022c1fcda90.bindPopup(popup_ca0ae3d4fab94cf8bd63b29e86fec899);
-
-            
-        
-    
-
-            var marker_13d3d0f494cf4cf29e5dce9463f7959d = L.marker(
+            var marker_927b523ab7f94c61b5709bf65e2f800b = L.marker(
                 [40.867199, -74.2512859],
                 {
                     icon: new L.Icon.Default()
                     }
                 )
                 .bindTooltip("<i>6 Colony Dr, Caldwell, NJ - nan</i>")
-                .addTo(map_39c8affb561543c2bb4bc5ad5930d99a);
+                .addTo(map_861770d22bf24fd9bfce430bd7c6e0d2);
             
     
-            var popup_3ef3ec1cd51e4a67a153ca2a06979595 = L.popup({maxWidth: '300'});
+            var popup_321b1fadd67e4cb792de5aa45c9f0ec5 = L.popup({maxWidth: '300'});
 
             
-                var html_08c83284a0c04bb99e5c6a451dbf473a = $('<div id="html_08c83284a0c04bb99e5c6a451dbf473a" style="width: 100.0%; height: 100.0%;"><i>     Address: 6 Colony Dr, Caldwell, NJ<br/>     MLS: <a target="_blank" href="https://gsmls.herokuapp.com/properties/3430823">3430823</a><br/>     Rating: nan<br/>     Comments:<br/>     - short sale<br/>- no pictures of the interior     </i></div>')[0];
-                popup_3ef3ec1cd51e4a67a153ca2a06979595.setContent(html_08c83284a0c04bb99e5c6a451dbf473a);
+                var html_66b713c5d3fe424aa121077b024b1e46 = $('<div id="html_66b713c5d3fe424aa121077b024b1e46" style="width: 100.0%; height: 100.0%;"><i>     Address: 6 Colony Dr, Caldwell, NJ<br/>     MLS: <a target="_blank" href="https://gsmls.herokuapp.com/properties/3430823">3430823</a><br/>     Rating: nan<br/>     Comments:<br/>     - short sale<br/>- no pictures of the interior     </i></div>')[0];
+                popup_321b1fadd67e4cb792de5aa45c9f0ec5.setContent(html_66b713c5d3fe424aa121077b024b1e46);
             
 
-            marker_13d3d0f494cf4cf29e5dce9463f7959d.bindPopup(popup_3ef3ec1cd51e4a67a153ca2a06979595);
+            marker_927b523ab7f94c61b5709bf65e2f800b.bindPopup(popup_321b1fadd67e4cb792de5aa45c9f0ec5);
 
             
         
     
 
-            var marker_76d73082f9a24167a2f9475e94a2bd9e = L.marker(
-                [40.6240033, -74.31661559999999],
-                {
-                    icon: new L.Icon.Default()
-                    }
-                )
-                .bindTooltip("<i>42 Kenneth Pl, Clark, NJ - 3.0</i>")
-                .addTo(map_39c8affb561543c2bb4bc5ad5930d99a);
-            
-    
-            var popup_f3eff3a2d2c44b0b8c6cb0067847643e = L.popup({maxWidth: '300'});
-
-            
-                var html_fdb45ea4543740078e4c22a7cd1f9fe3 = $('<div id="html_fdb45ea4543740078e4c22a7cd1f9fe3" style="width: 100.0%; height: 100.0%;"><i>     Address: 42 Kenneth Pl, Clark, NJ<br/>     MLS: <a target="_blank" href="https://gsmls.herokuapp.com/properties/3428051">3428051</a><br/>     Rating: 3.0<br/>     Comments:<br/>     - need to check storage area<br/>- need to check bedrooms<br/>- has an inground pool     </i></div>')[0];
-                popup_f3eff3a2d2c44b0b8c6cb0067847643e.setContent(html_fdb45ea4543740078e4c22a7cd1f9fe3);
-            
-
-            marker_76d73082f9a24167a2f9475e94a2bd9e.bindPopup(popup_f3eff3a2d2c44b0b8c6cb0067847643e);
-
-            
-        
-    
-
-            var marker_aa78fbfce6dc4dcd8a95fbd831327b87 = L.marker(
-                [40.6168436, -74.3018257],
-                {
-                    icon: new L.Icon.Default()
-                    }
-                )
-                .bindTooltip("<i>44 Kathryn St, Clark, NJ - 2.5</i>")
-                .addTo(map_39c8affb561543c2bb4bc5ad5930d99a);
-            
-    
-            var popup_b4061e65208843f683075e3131752275 = L.popup({maxWidth: '300'});
-
-            
-                var html_ea837a2c03df4ffc9122425a3223a917 = $('<div id="html_ea837a2c03df4ffc9122425a3223a917" style="width: 100.0%; height: 100.0%;"><i>     Address: 44 Kathryn St, Clark, NJ<br/>     MLS: <a target="_blank" href="https://gsmls.herokuapp.com/properties/3431185">3431185</a><br/>     Rating: 2.5<br/>     Comments:<br/>     - living room is a bit small<br/>- basement has large rec area + bar     </i></div>')[0];
-                popup_b4061e65208843f683075e3131752275.setContent(html_ea837a2c03df4ffc9122425a3223a917);
-            
-
-            marker_aa78fbfce6dc4dcd8a95fbd831327b87.bindPopup(popup_b4061e65208843f683075e3131752275);
-
-            
-        
-    
-
-            var marker_47923b0e0f984395979180e087f481b5 = L.marker(
-                [40.8762394, -74.174675],
-                {
-                    icon: new L.Icon.Default()
-                    }
-                )
-                .bindTooltip("<i>3 Trella Terrace, Clifton, NJ - 4.0</i>")
-                .addTo(map_39c8affb561543c2bb4bc5ad5930d99a);
-            
-    
-            var popup_03c96b0d7541400a95c9af7651ac03d1 = L.popup({maxWidth: '300'});
-
-            
-                var html_35efb560d06447d682126e2a6abf3797 = $('<div id="html_35efb560d06447d682126e2a6abf3797" style="width: 100.0%; height: 100.0%;"><i>     Address: 3 Trella Terrace, Clifton, NJ<br/>     MLS: <a target="_blank" href="http://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1741251">1741251</a><br/>     Rating: 4.0<br/>     Comments:<br/>     - clifton!<br/>- ranch, looks pretty large     </i></div>')[0];
-                popup_03c96b0d7541400a95c9af7651ac03d1.setContent(html_35efb560d06447d682126e2a6abf3797);
-            
-
-            marker_47923b0e0f984395979180e087f481b5.bindPopup(popup_03c96b0d7541400a95c9af7651ac03d1);
-
-            
-        
-    
-
-            var marker_1c26a1b011be4b82ac60ddd6f9e343e6 = L.marker(
-                [40.8848572, -74.1731053],
-                {
-                    icon: new L.Icon.Default()
-                    }
-                )
-                .bindTooltip("<i>42 Livingston Street, Clifton, NJ - 3.0</i>")
-                .addTo(map_39c8affb561543c2bb4bc5ad5930d99a);
-            
-    
-            var popup_7eecdcd9a5a84946a6a219d7f5dfe6b8 = L.popup({maxWidth: '300'});
-
-            
-                var html_2b8483409c834bd994cdb0b9be56cb6c = $('<div id="html_2b8483409c834bd994cdb0b9be56cb6c" style="width: 100.0%; height: 100.0%;"><i>     Address: 42 Livingston Street, Clifton, NJ<br/>     MLS: <a target="_blank" href="http://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1747925">1747925</a><br/>     Rating: 3.0<br/>     Comments:<br/>     - no foyer<br/>- no upstairs family room, use basement     </i></div>')[0];
-                popup_7eecdcd9a5a84946a6a219d7f5dfe6b8.setContent(html_2b8483409c834bd994cdb0b9be56cb6c);
-            
-
-            marker_1c26a1b011be4b82ac60ddd6f9e343e6.bindPopup(popup_7eecdcd9a5a84946a6a219d7f5dfe6b8);
-
-            
-        
-    
-
-            var marker_8f49fc9c3bd245cc806a97db0b131ea3 = L.marker(
-                [40.8505406, -74.1678021],
-                {
-                    icon: new L.Icon.Default()
-                    }
-                )
-                .bindTooltip("<i>130 Sycamore Road, Clifton, NJ - 3.0</i>")
-                .addTo(map_39c8affb561543c2bb4bc5ad5930d99a);
-            
-    
-            var popup_c8a1ac94c519450abf42b50a4bc3f0ca = L.popup({maxWidth: '300'});
-
-            
-                var html_85b223daaef5491bbe06fea7405d86be = $('<div id="html_85b223daaef5491bbe06fea7405d86be" style="width: 100.0%; height: 100.0%;"><i>     Address: 130 Sycamore Road, Clifton, NJ<br/>     MLS: <a target="_blank" href="http://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1728111">1728111</a><br/>     Rating: 3.0<br/>     Comments:<br/>     - clifton!<br/>- nice large recreation / game area in basement<br/>- has both family room and living room     </i></div>')[0];
-                popup_c8a1ac94c519450abf42b50a4bc3f0ca.setContent(html_85b223daaef5491bbe06fea7405d86be);
-            
-
-            marker_8f49fc9c3bd245cc806a97db0b131ea3.bindPopup(popup_c8a1ac94c519450abf42b50a4bc3f0ca);
-
-            
-        
-    
-
-            var marker_22c1b39fd1944bb3afbfce6ba7aca90c = L.marker(
-                [40.8656005, -74.17975919999999],
-                {
-                    icon: new L.Icon.Default()
-                    }
-                )
-                .bindTooltip("<i>1 Friar Ln, Clifton, NJ - 2.5</i>")
-                .addTo(map_39c8affb561543c2bb4bc5ad5930d99a);
-            
-    
-            var popup_660fafa775d24b3b96b3021880889bb5 = L.popup({maxWidth: '300'});
-
-            
-                var html_977e22322d3d451388a54a086d531ecd = $('<div id="html_977e22322d3d451388a54a086d531ecd" style="width: 100.0%; height: 100.0%;"><i>     Address: 1 Friar Ln, Clifton, NJ<br/>     MLS: <a target="_blank" href="https://gsmls.herokuapp.com/properties/3433595">3433595</a><br/>     Rating: 2.5<br/>     Comments:<br/>     - clifton!<br/>- not enough pictures, no bedrooms shown<br/>- nice kitchen<br/>- large finished basement with bar<br/>- living room seems nice     </i></div>')[0];
-                popup_660fafa775d24b3b96b3021880889bb5.setContent(html_977e22322d3d451388a54a086d531ecd);
-            
-
-            marker_22c1b39fd1944bb3afbfce6ba7aca90c.bindPopup(popup_660fafa775d24b3b96b3021880889bb5);
-
-            
-        
-    
-
-            var marker_25807473b49f46389bcd88417d1507ef = L.marker(
-                [40.8748328, -74.1530543],
-                {
-                    icon: new L.Icon.Default()
-                    }
-                )
-                .bindTooltip("<i>318 Union Ave, Clifton, NJ - 2.0</i>")
-                .addTo(map_39c8affb561543c2bb4bc5ad5930d99a);
-            
-    
-            var popup_c34c6d87f8f94d38b094bc9d93812291 = L.popup({maxWidth: '300'});
-
-            
-                var html_1191235a56d64014a25e59cb4989b3a9 = $('<div id="html_1191235a56d64014a25e59cb4989b3a9" style="width: 100.0%; height: 100.0%;"><i>     Address: 318 Union Ave, Clifton, NJ<br/>     MLS: <a target="_blank" href="https://gsmls.herokuapp.com/properties/3430446">3430446</a><br/>     Rating: 2.0<br/>     Comments:<br/>     - not enough space in the basement<br/>- not enough living area (living room small, family room to the side)     </i></div>')[0];
-                popup_c34c6d87f8f94d38b094bc9d93812291.setContent(html_1191235a56d64014a25e59cb4989b3a9);
-            
-
-            marker_25807473b49f46389bcd88417d1507ef.bindPopup(popup_c34c6d87f8f94d38b094bc9d93812291);
-
-            
-        
-    
-
-            var marker_736cdd58e9e548b8b36c62df233f1742 = L.marker(
+            var marker_e982f6f6855945d596ecde139bcbb9e6 = L.marker(
                 [40.8964313, -74.1239066],
                 {
                     icon: new L.Icon.Default()
                     }
                 )
                 .bindTooltip("<i>38 Hillman Drive, Elmwood Park, NJ - nan</i>")
-                .addTo(map_39c8affb561543c2bb4bc5ad5930d99a);
+                .addTo(map_861770d22bf24fd9bfce430bd7c6e0d2);
             
     
-            var popup_5fb5f44a2e7b4b6aac09e6287375c7fa = L.popup({maxWidth: '300'});
+            var popup_0f9f53b3a479451293ce300210d71a56 = L.popup({maxWidth: '300'});
 
             
-                var html_351ddbaebef94135a1ed32e0e32bd223 = $('<div id="html_351ddbaebef94135a1ed32e0e32bd223" style="width: 100.0%; height: 100.0%;"><i>     Address: 38 Hillman Drive, Elmwood Park, NJ<br/>     MLS: <a target="_blank" href="http://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1719260">1719260</a><br/>     Rating: nan<br/>     Comments:<br/>     - almost no pictures of inside<br/>- looks very nice from the outside     </i></div>')[0];
-                popup_5fb5f44a2e7b4b6aac09e6287375c7fa.setContent(html_351ddbaebef94135a1ed32e0e32bd223);
+                var html_98d6746afd3a4a75872a6d6a75e63e86 = $('<div id="html_98d6746afd3a4a75872a6d6a75e63e86" style="width: 100.0%; height: 100.0%;"><i>     Address: 38 Hillman Drive, Elmwood Park, NJ<br/>     MLS: <a target="_blank" href="http://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1719260">1719260</a><br/>     Rating: nan<br/>     Comments:<br/>     - almost no pictures of inside<br/>- looks very nice from the outside     </i></div>')[0];
+                popup_0f9f53b3a479451293ce300210d71a56.setContent(html_98d6746afd3a4a75872a6d6a75e63e86);
             
 
-            marker_736cdd58e9e548b8b36c62df233f1742.bindPopup(popup_5fb5f44a2e7b4b6aac09e6287375c7fa);
+            marker_e982f6f6855945d596ecde139bcbb9e6.bindPopup(popup_0f9f53b3a479451293ce300210d71a56);
 
             
         
     
 
-            var marker_8613f0f7bda041338ab66fda619433b7 = L.marker(
-                [40.674887, -74.30035409999999],
-                {
-                    icon: new L.Icon.Default()
-                    }
-                )
-                .bindTooltip("<i>319 Boulevard, Kenilworth, NJ - 0.0</i>")
-                .addTo(map_39c8affb561543c2bb4bc5ad5930d99a);
-            
-    
-            var popup_cfd40f57005b463a8274b97225ed9e99 = L.popup({maxWidth: '300'});
-
-            
-                var html_70fb68deee604d969f6c075d7a036c2d = $('<div id="html_70fb68deee604d969f6c075d7a036c2d" style="width: 100.0%; height: 100.0%;"><i>     Address: 319 Boulevard, Kenilworth, NJ<br/>     MLS: <a target="_blank" href="https://gsmls.herokuapp.com/properties/3434491">3434491</a><br/>     Rating: 0.0<br/>     Comments:<br/>     - mom doesn&#x27;t look<br/>- kitchen is small<br/>- living room is very ganda     </i></div>')[0];
-                popup_cfd40f57005b463a8274b97225ed9e99.setContent(html_70fb68deee604d969f6c075d7a036c2d);
-            
-
-            marker_8613f0f7bda041338ab66fda619433b7.bindPopup(popup_cfd40f57005b463a8274b97225ed9e99);
-
-            
-        
-    
-
-            var marker_227d351582ac4c42935e4f5c94da6f89 = L.marker(
-                [40.6428216, -74.2721554],
-                {
-                    icon: new L.Icon.Default()
-                    }
-                )
-                .bindTooltip("<i>2105 N Wood Ave, Linden, NJ - 3.0</i>")
-                .addTo(map_39c8affb561543c2bb4bc5ad5930d99a);
-            
-    
-            var popup_5db858ea503b4708983832e63f030193 = L.popup({maxWidth: '300'});
-
-            
-                var html_ebd4f26e0be04f428506a00b475789f2 = $('<div id="html_ebd4f26e0be04f428506a00b475789f2" style="width: 100.0%; height: 100.0%;"><i>     Address: 2105 N Wood Ave, Linden, NJ<br/>     MLS: <a target="_blank" href="https://gsmls.herokuapp.com/properties/3435183">3435183</a><br/>     Rating: 3.0<br/>     Comments:<br/>     - wow factor both inside and outside<br/>- unsure about location, Linden     </i></div>')[0];
-                popup_5db858ea503b4708983832e63f030193.setContent(html_ebd4f26e0be04f428506a00b475789f2);
-            
-
-            marker_227d351582ac4c42935e4f5c94da6f89.bindPopup(popup_5db858ea503b4708983832e63f030193);
-
-            
-        
-    
-
-            var marker_6ff78d4b943541f4ac02de4b4bdda41f = L.marker(
-                [40.87002650000001, -74.2169104],
-                {
-                    icon: new L.Icon.Default()
-                    }
-                )
-                .bindTooltip("<i>7 Robinwood Drive, Little Falls, NJ - 3.5</i>")
-                .addTo(map_39c8affb561543c2bb4bc5ad5930d99a);
-            
-    
-            var popup_002fec9782b74e3abc749305b6e36d9f = L.popup({maxWidth: '300'});
-
-            
-                var html_1049cd0efc714da9bc6d7c627aa4ff19 = $('<div id="html_1049cd0efc714da9bc6d7c627aa4ff19" style="width: 100.0%; height: 100.0%;"><i>     Address: 7 Robinwood Drive, Little Falls, NJ<br/>     MLS: <a target="_blank" href="https://gsmls.herokuapp.com/properties/3430057">3430057</a><br/>     Rating: 3.5<br/>     Comments:<br/>     - very large living room and dining room<br/>- basements is very large<br/>- need to finish the basement<br/>- bedrooms are okay, not amazing<br/>- bathrooms need work     </i></div>')[0];
-                popup_002fec9782b74e3abc749305b6e36d9f.setContent(html_1049cd0efc714da9bc6d7c627aa4ff19);
-            
-
-            marker_6ff78d4b943541f4ac02de4b4bdda41f.bindPopup(popup_002fec9782b74e3abc749305b6e36d9f);
-
-            
-        
-    
-
-            var marker_0b990cd89eee48a09b78793abcd972fb = L.marker(
-                [40.8798858, -74.22763549999999],
-                {
-                    icon: new L.Icon.Default()
-                    }
-                )
-                .bindTooltip("<i>12 Ridge Ave, Little Falls, NJ - 3.0</i>")
-                .addTo(map_39c8affb561543c2bb4bc5ad5930d99a);
-            
-    
-            var popup_321ff7990c7845f2bbd5bc02bfb936b0 = L.popup({maxWidth: '300'});
-
-            
-                var html_ff892b2fd5c04e47b6cf44d7a2b3b32a = $('<div id="html_ff892b2fd5c04e47b6cf44d7a2b3b32a" style="width: 100.0%; height: 100.0%;"><i>     Address: 12 Ridge Ave, Little Falls, NJ<br/>     MLS: <a target="_blank" href="https://gsmls.herokuapp.com/properties/3418468">3418468</a><br/>     Rating: 3.0<br/>     Comments:<br/>     - school in the front<br/>- kitchen upstairs, non-traditional layout<br/>- lots of storage<br/>- look nice in the back     </i></div>')[0];
-                popup_321ff7990c7845f2bbd5bc02bfb936b0.setContent(html_ff892b2fd5c04e47b6cf44d7a2b3b32a);
-            
-
-            marker_0b990cd89eee48a09b78793abcd972fb.bindPopup(popup_321ff7990c7845f2bbd5bc02bfb936b0);
-
-            
-        
-    
-
-            var marker_a01eb78be45b419a8cc462bd4587d1a2 = L.marker(
-                [40.8631991, -74.2018362],
-                {
-                    icon: new L.Icon.Default()
-                    }
-                )
-                .bindTooltip("<i>271 Long Hill Rd, Little Falls, NJ - 1.0</i>")
-                .addTo(map_39c8affb561543c2bb4bc5ad5930d99a);
-            
-    
-            var popup_f2445c7a988140e486ad95cdc7290d8f = L.popup({maxWidth: '300'});
-
-            
-                var html_b94914c8c274415fb3cdb30e468e4de5 = $('<div id="html_b94914c8c274415fb3cdb30e468e4de5" style="width: 100.0%; height: 100.0%;"><i>     Address: 271 Long Hill Rd, Little Falls, NJ<br/>     MLS: <a target="_blank" href="https://gsmls.herokuapp.com/properties/3429216">3429216</a><br/>     Rating: 1.0<br/>     Comments:<br/>     - curb side appeal is bad<br/>- not enough pictures<br/>- need to check bathrooms, none shown<br/>- need to check bedrooms<br/>- basement     </i></div>')[0];
-                popup_f2445c7a988140e486ad95cdc7290d8f.setContent(html_b94914c8c274415fb3cdb30e468e4de5);
-            
-
-            marker_a01eb78be45b419a8cc462bd4587d1a2.bindPopup(popup_f2445c7a988140e486ad95cdc7290d8f);
-
-            
-        
-    
-
-            var marker_f81cc80707564d1b90551ed118873149 = L.marker(
-                [40.7168649, -74.2567491],
-                {
-                    icon: new L.Icon.Default()
-                    }
-                )
-                .bindTooltip("<i>31 Menzel Ave, Maplewood, NJ - 3.0</i>")
-                .addTo(map_39c8affb561543c2bb4bc5ad5930d99a);
-            
-    
-            var popup_804570b2b78840309bc32aa437ea97c8 = L.popup({maxWidth: '300'});
-
-            
-                var html_8981a38ad30a48d8aec0104f0a3ee2cf = $('<div id="html_8981a38ad30a48d8aec0104f0a3ee2cf" style="width: 100.0%; height: 100.0%;"><i>     Address: 31 Menzel Ave, Maplewood, NJ<br/>     MLS: <a target="_blank" href="https://gsmls.herokuapp.com/properties/3434442">3434442</a><br/>     Rating: 3.0<br/>     Comments:<br/>     - living room is small<br/>- storage may be less     </i></div>')[0];
-                popup_804570b2b78840309bc32aa437ea97c8.setContent(html_8981a38ad30a48d8aec0104f0a3ee2cf);
-            
-
-            marker_f81cc80707564d1b90551ed118873149.bindPopup(popup_804570b2b78840309bc32aa437ea97c8);
-
-            
-        
-    
-
-            var marker_e2b25362f21142f0beac7b7050496d85 = L.marker(
-                [40.7841998, -74.1352689],
-                {
-                    icon: new L.Icon.Default()
-                    }
-                )
-                .bindTooltip("<i>92 Union Place, North Arlington, NJ - 3.0</i>")
-                .addTo(map_39c8affb561543c2bb4bc5ad5930d99a);
-            
-    
-            var popup_5a18ed0edecb4b9b9c66a0f32da3e476 = L.popup({maxWidth: '300'});
-
-            
-                var html_638c4f4e47db41938b932a19221ebc68 = $('<div id="html_638c4f4e47db41938b932a19221ebc68" style="width: 100.0%; height: 100.0%;"><i>     Address: 92 Union Place, North Arlington, NJ<br/>     MLS: <a target="_blank" href="http://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1738325">1738325</a><br/>     Rating: 3.0<br/>     Comments:<br/>     - nice fireplace<br/>- very new, recently rennovated<br/>- check storage space     </i></div>')[0];
-                popup_5a18ed0edecb4b9b9c66a0f32da3e476.setContent(html_638c4f4e47db41938b932a19221ebc68);
-            
-
-            marker_e2b25362f21142f0beac7b7050496d85.bindPopup(popup_5a18ed0edecb4b9b9c66a0f32da3e476);
-
-            
-        
-    
-
-            var marker_f1fda8030aaa4d7cab2b9b65be66dc7d = L.marker(
+            var marker_80adbfe54fd74c2a90eedfceda3e2557 = L.marker(
                 [40.880996, -74.24956399999999],
                 {
                     icon: new L.Icon.Default()
                     }
                 )
                 .bindTooltip("<i>46 Veranda Avenue, North Caldwell, NJ - nan</i>")
-                .addTo(map_39c8affb561543c2bb4bc5ad5930d99a);
+                .addTo(map_861770d22bf24fd9bfce430bd7c6e0d2);
             
     
-            var popup_cd212fd970444dc6b44638fc79b9b13f = L.popup({maxWidth: '300'});
+            var popup_8990bc5852794cf0ad4bd9218b1c96a5 = L.popup({maxWidth: '300'});
 
             
-                var html_98fcefb130eb40c2965226faff61c0ae = $('<div id="html_98fcefb130eb40c2965226faff61c0ae" style="width: 100.0%; height: 100.0%;"><i>     Address: 46 Veranda Avenue, North Caldwell, NJ<br/>     MLS: <a target="_blank" href="http://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1742511">1742511</a><br/>     Rating: nan<br/>     Comments:<br/>     - find out the square footage<br/>- find the room dimensions     </i></div>')[0];
-                popup_cd212fd970444dc6b44638fc79b9b13f.setContent(html_98fcefb130eb40c2965226faff61c0ae);
+                var html_85628da66ca04c5490d50eb8125eeeb9 = $('<div id="html_85628da66ca04c5490d50eb8125eeeb9" style="width: 100.0%; height: 100.0%;"><i>     Address: 46 Veranda Avenue, North Caldwell, NJ<br/>     MLS: <a target="_blank" href="http://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1742511">1742511</a><br/>     Rating: nan<br/>     Comments:<br/>     - find out the square footage<br/>- find the room dimensions     </i></div>')[0];
+                popup_8990bc5852794cf0ad4bd9218b1c96a5.setContent(html_85628da66ca04c5490d50eb8125eeeb9);
             
 
-            marker_f1fda8030aaa4d7cab2b9b65be66dc7d.bindPopup(popup_cd212fd970444dc6b44638fc79b9b13f);
+            marker_80adbfe54fd74c2a90eedfceda3e2557.bindPopup(popup_8990bc5852794cf0ad4bd9218b1c96a5);
 
             
         
     
 
-            var marker_646aa1c8490b4bfe9fe4c5442b37c94e = L.marker(
-                [40.6556672, -74.3955802],
-                {
-                    icon: new L.Icon.Default()
-                    }
-                )
-                .bindTooltip("<i>333 Cook Ave, Scotch Plains, NJ - 2.5</i>")
-                .addTo(map_39c8affb561543c2bb4bc5ad5930d99a);
-            
-    
-            var popup_d01872f672134aa18d1ff912d607d4f4 = L.popup({maxWidth: '300'});
-
-            
-                var html_f2e6228f0e634ffa82cab4361a5390cd = $('<div id="html_f2e6228f0e634ffa82cab4361a5390cd" style="width: 100.0%; height: 100.0%;"><i>     Address: 333 Cook Ave, Scotch Plains, NJ<br/>     MLS: <a target="_blank" href="https://gsmls.herokuapp.com/properties/3432610">3432610</a><br/>     Rating: 2.5<br/>     Comments:<br/>     - good living space, big living room, big recreation room<br/>- bedrooms are smaller<br/>- no master bathroom<br/>- check if there&#x27;s room for a future bathroom     </i></div>')[0];
-                popup_d01872f672134aa18d1ff912d607d4f4.setContent(html_f2e6228f0e634ffa82cab4361a5390cd);
-            
-
-            marker_646aa1c8490b4bfe9fe4c5442b37c94e.bindPopup(popup_d01872f672134aa18d1ff912d607d4f4);
-
-            
-        
-    
-
-            var marker_7ce81867f5334392b37e68a65c7dc7db = L.marker(
-                [40.7557599, -74.2504238],
-                {
-                    icon: new L.Icon.Default()
-                    }
-                )
-                .bindTooltip("<i>535 Scotland Rd, South Orange, NJ - 1.5</i>")
-                .addTo(map_39c8affb561543c2bb4bc5ad5930d99a);
-            
-    
-            var popup_41146de86c2c4e7ebec57ed6e5ee5408 = L.popup({maxWidth: '300'});
-
-            
-                var html_3d59dd1608b84102add86ed5568f776e = $('<div id="html_3d59dd1608b84102add86ed5568f776e" style="width: 100.0%; height: 100.0%;"><i>     Address: 535 Scotland Rd, South Orange, NJ<br/>     MLS: <a target="_blank" href="https://gsmls.herokuapp.com/properties/3430566">3430566</a><br/>     Rating: 1.5<br/>     Comments:<br/>     - large ranch<br/>- large living room and basement<br/>- looks very small compared to other houses outside because it&#x27;s a ranch     </i></div>')[0];
-                popup_41146de86c2c4e7ebec57ed6e5ee5408.setContent(html_3d59dd1608b84102add86ed5568f776e);
-            
-
-            marker_7ce81867f5334392b37e68a65c7dc7db.bindPopup(popup_41146de86c2c4e7ebec57ed6e5ee5408);
-
-            
-        
-    
-
-            var marker_8ecb22259b954f4c92ead30e2642fd69 = L.marker(
-                [40.9070019, -74.2344924],
-                {
-                    icon: new L.Icon.Default()
-                    }
-                )
-                .bindTooltip("<i>129 Winifred Dr, Totowa, NJ - 3.0</i>")
-                .addTo(map_39c8affb561543c2bb4bc5ad5930d99a);
-            
-    
-            var popup_f4510f073d244334a9ba5a5b631ea08c = L.popup({maxWidth: '300'});
-
-            
-                var html_493b0156377845d7a04856725c119ee1 = $('<div id="html_493b0156377845d7a04856725c119ee1" style="width: 100.0%; height: 100.0%;"><i>     Address: 129 Winifred Dr, Totowa, NJ<br/>     MLS: <a target="_blank" href="https://gsmls.herokuapp.com/properties/3431168">3431168</a><br/>     Rating: 3.0<br/>     Comments:<br/>     - nice     </i></div>')[0];
-                popup_f4510f073d244334a9ba5a5b631ea08c.setContent(html_493b0156377845d7a04856725c119ee1);
-            
-
-            marker_8ecb22259b954f4c92ead30e2642fd69.bindPopup(popup_f4510f073d244334a9ba5a5b631ea08c);
-
-            
-        
-    
-
-            var marker_b41556a99ea048209694b9d1ddedb7df = L.marker(
-                [40.8901074, -74.2336953],
-                {
-                    icon: new L.Icon.Default()
-                    }
-                )
-                .bindTooltip("<i>725 N Riverview Dr, Totowa, NJ - 1.75</i>")
-                .addTo(map_39c8affb561543c2bb4bc5ad5930d99a);
-            
-    
-            var popup_3e241a1a643b4ca98c3dbc732aadecbd = L.popup({maxWidth: '300'});
-
-            
-                var html_a11ae3a3e4d744deaf4bb0b4d3f1c1fc = $('<div id="html_a11ae3a3e4d744deaf4bb0b4d3f1c1fc" style="width: 100.0%; height: 100.0%;"><i>     Address: 725 N Riverview Dr, Totowa, NJ<br/>     MLS: <a target="_blank" href="https://gsmls.herokuapp.com/properties/3400020">3400020</a><br/>     Rating: 1.75<br/>     Comments:<br/>     - looks nice/large from the outside<br/>- totally renovated 2005<br/>- looks like small living room but can&#x27;t tell from pictures     </i></div>')[0];
-                popup_3e241a1a643b4ca98c3dbc732aadecbd.setContent(html_a11ae3a3e4d744deaf4bb0b4d3f1c1fc);
-            
-
-            marker_b41556a99ea048209694b9d1ddedb7df.bindPopup(popup_3e241a1a643b4ca98c3dbc732aadecbd);
-
-            
-        
-    
-
-            var marker_a7d0d09c31104a8b86a5813a47ba1ad9 = L.marker(
-                [40.8999277, -74.2211919],
-                {
-                    icon: new L.Icon.Default()
-                    }
-                )
-                .bindTooltip("<i>26 Knollwood Rd, Totowa, NJ - 1.5</i>")
-                .addTo(map_39c8affb561543c2bb4bc5ad5930d99a);
-            
-    
-            var popup_a0a598a173f64aa988a799527b2db7b9 = L.popup({maxWidth: '300'});
-
-            
-                var html_65c30b18a2e7470fa317faec6a3f1a29 = $('<div id="html_65c30b18a2e7470fa317faec6a3f1a29" style="width: 100.0%; height: 100.0%;"><i>     Address: 26 Knollwood Rd, Totowa, NJ<br/>     MLS: <a target="_blank" href="https://gsmls.herokuapp.com/properties/3432279">3432279</a><br/>     Rating: 1.5<br/>     Comments:<br/>     - very few pictures, need to go see     </i></div>')[0];
-                popup_a0a598a173f64aa988a799527b2db7b9.setContent(html_65c30b18a2e7470fa317faec6a3f1a29);
-            
-
-            marker_a7d0d09c31104a8b86a5813a47ba1ad9.bindPopup(popup_a0a598a173f64aa988a799527b2db7b9);
-
-            
-        
-    
-
-            var marker_340f2b1541f54ce79f4aecdbff7fe043 = L.marker(
+            var marker_f5ff1ae3b9d14fe99cc3a44d74c715fe = L.marker(
                 [40.7138068, -74.2856197],
                 {
                     icon: new L.Icon.Default()
                     }
                 )
                 .bindTooltip("<i>2715 Couto Ct, Union, NJ - nan</i>")
-                .addTo(map_39c8affb561543c2bb4bc5ad5930d99a);
+                .addTo(map_861770d22bf24fd9bfce430bd7c6e0d2);
             
     
-            var popup_66de73b5cb174f4eaf6d24473342036c = L.popup({maxWidth: '300'});
+            var popup_e2a0605ecf114d1197eced3974e76886 = L.popup({maxWidth: '300'});
 
             
-                var html_f488820e9d724ff3994e293f1539503d = $('<div id="html_f488820e9d724ff3994e293f1539503d" style="width: 100.0%; height: 100.0%;"><i>     Address: 2715 Couto Ct, Union, NJ<br/>     MLS: <a target="_blank" href="https://gsmls.herokuapp.com/properties/3430329">3430329</a><br/>     Rating: nan<br/>     Comments:<br/>     - short sale<br/>- no pictures of the interior     </i></div>')[0];
-                popup_66de73b5cb174f4eaf6d24473342036c.setContent(html_f488820e9d724ff3994e293f1539503d);
+                var html_b98caf4ae21843709a83970f6a18e76f = $('<div id="html_b98caf4ae21843709a83970f6a18e76f" style="width: 100.0%; height: 100.0%;"><i>     Address: 2715 Couto Ct, Union, NJ<br/>     MLS: <a target="_blank" href="https://gsmls.herokuapp.com/properties/3430329">3430329</a><br/>     Rating: nan<br/>     Comments:<br/>     - short sale<br/>- no pictures of the interior     </i></div>')[0];
+                popup_e2a0605ecf114d1197eced3974e76886.setContent(html_b98caf4ae21843709a83970f6a18e76f);
             
 
-            marker_340f2b1541f54ce79f4aecdbff7fe043.bindPopup(popup_66de73b5cb174f4eaf6d24473342036c);
+            marker_f5ff1ae3b9d14fe99cc3a44d74c715fe.bindPopup(popup_e2a0605ecf114d1197eced3974e76886);
 
             
         
     
 
-            var marker_96438f4be42f487e9f28f6e354d64f04 = L.marker(
-                [40.6828644, -74.2617483],
+            var marker_c36ef49053c34dc9a5565918de2e61f3 = L.marker(
+                [40.7849792, -74.20863059999999],
                 {
                     icon: new L.Icon.Default()
                     }
                 )
-                .bindTooltip("<i>360 Washington Ave, Union, NJ - 2.75</i>")
-                .addTo(map_39c8affb561543c2bb4bc5ad5930d99a);
+                .bindTooltip("<i>35 Morse Ave, Bloomfield, NJ - 4.0</i>")
+                .addTo(map_861770d22bf24fd9bfce430bd7c6e0d2);
             
     
-            var popup_f743421d525b456ba26e4b67f2d51775 = L.popup({maxWidth: '300'});
+            var popup_d0b6f181f01d477d80e88294567972df = L.popup({maxWidth: '300'});
 
             
-                var html_23586db09c6941dfb3747cffb9500870 = $('<div id="html_23586db09c6941dfb3747cffb9500870" style="width: 100.0%; height: 100.0%;"><i>     Address: 360 Washington Ave, Union, NJ<br/>     MLS: <a target="_blank" href="https://gsmls.herokuapp.com/properties/3414681">3414681</a><br/>     Rating: 2.75<br/>     Comments:<br/>     - nice hard wood floors<br/>- nice finished basement<br/>- living room is a little small, but has family room     </i></div>')[0];
-                popup_f743421d525b456ba26e4b67f2d51775.setContent(html_23586db09c6941dfb3747cffb9500870);
+                var html_f778ff47580c4be0b18cd2eaf833c9cc = $('<div id="html_f778ff47580c4be0b18cd2eaf833c9cc" style="width: 100.0%; height: 100.0%;"><i>     Address: 35 Morse Ave, Bloomfield, NJ<br/>     MLS: <a target="_blank" href="https://gsmls.herokuapp.com/properties/3374522">3374522</a><br/>     Rating: 4.0<br/>     Comments:<br/>     - no pictures of bedrooms<br/>- price is very low, could be something wrong<br/>- looks nice outside<br/>- parkway exit 148     </i></div>')[0];
+                popup_d0b6f181f01d477d80e88294567972df.setContent(html_f778ff47580c4be0b18cd2eaf833c9cc);
             
 
-            marker_96438f4be42f487e9f28f6e354d64f04.bindPopup(popup_f743421d525b456ba26e4b67f2d51775);
+            marker_c36ef49053c34dc9a5565918de2e61f3.bindPopup(popup_d0b6f181f01d477d80e88294567972df);
 
             
         
     
 
-            var marker_5d40dc4dcd9b4eabbe6ff0f71018165c = L.marker(
-                [40.6772866, -74.2555094],
+            var marker_76018a5b1a7f48aeba48ff12bca91475 = L.marker(
+                [40.8762394, -74.174675],
                 {
                     icon: new L.Icon.Default()
                     }
                 )
-                .bindTooltip("<i>541 Winchester Ave, Union, NJ - 2.0</i>")
-                .addTo(map_39c8affb561543c2bb4bc5ad5930d99a);
+                .bindTooltip("<i>3 Trella Terrace, Clifton, NJ - 4.0</i>")
+                .addTo(map_861770d22bf24fd9bfce430bd7c6e0d2);
             
     
-            var popup_9fe63e6c2e224e61a2910d96f7c296f2 = L.popup({maxWidth: '300'});
+            var popup_ac8f8b7af67b443086109513eb5f579e = L.popup({maxWidth: '300'});
 
             
-                var html_0e2a7078a269424682c9607d1a3c3963 = $('<div id="html_0e2a7078a269424682c9607d1a3c3963" style="width: 100.0%; height: 100.0%;"><i>     Address: 541 Winchester Ave, Union, NJ<br/>     MLS: <a target="_blank" href="https://gsmls.herokuapp.com/properties/3413305">3413305</a><br/>     Rating: 2.0<br/>     Comments:<br/>     - no pictures of the inside<br/>- nice inground pool<br/>- need to go and see     </i></div>')[0];
-                popup_9fe63e6c2e224e61a2910d96f7c296f2.setContent(html_0e2a7078a269424682c9607d1a3c3963);
+                var html_e5d0335a45834f9dad7353b9c155720b = $('<div id="html_e5d0335a45834f9dad7353b9c155720b" style="width: 100.0%; height: 100.0%;"><i>     Address: 3 Trella Terrace, Clifton, NJ<br/>     MLS: <a target="_blank" href="http://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1741251">1741251</a><br/>     Rating: 4.0<br/>     Comments:<br/>     - clifton!<br/>- ranch, looks pretty large     </i></div>')[0];
+                popup_ac8f8b7af67b443086109513eb5f579e.setContent(html_e5d0335a45834f9dad7353b9c155720b);
             
 
-            marker_5d40dc4dcd9b4eabbe6ff0f71018165c.bindPopup(popup_9fe63e6c2e224e61a2910d96f7c296f2);
+            marker_76018a5b1a7f48aeba48ff12bca91475.bindPopup(popup_ac8f8b7af67b443086109513eb5f579e);
 
             
         
     
 
-            var marker_7847beb74dcf4e108c0256ce33a2cafa = L.marker(
-                [40.69668770000001, -74.29257989999999],
-                {
-                    icon: new L.Icon.Default()
-                    }
-                )
-                .bindTooltip("<i>740 Garden St, Union, NJ - 2.0</i>")
-                .addTo(map_39c8affb561543c2bb4bc5ad5930d99a);
-            
-    
-            var popup_dd697a21d4be4c3cb1c2b2292d188dc3 = L.popup({maxWidth: '300'});
-
-            
-                var html_93b3dda5ff5f4668876411d30009a4a1 = $('<div id="html_93b3dda5ff5f4668876411d30009a4a1" style="width: 100.0%; height: 100.0%;"><i>     Address: 740 Garden St, Union, NJ<br/>     MLS: <a target="_blank" href="https://gsmls.herokuapp.com/properties/3434406">3434406</a><br/>     Rating: 2.0<br/>     Comments:<br/>     - looks nice but need more pictures, can&#x27;t quite tell<br/>- check basement and storage     </i></div>')[0];
-                popup_dd697a21d4be4c3cb1c2b2292d188dc3.setContent(html_93b3dda5ff5f4668876411d30009a4a1);
-            
-
-            marker_7847beb74dcf4e108c0256ce33a2cafa.bindPopup(popup_dd697a21d4be4c3cb1c2b2292d188dc3);
-
-            
-        
-    
-
-            var marker_914e03295e6a412cbc2560d3503ec598 = L.marker(
-                [40.6776432, -74.2371403],
-                {
-                    icon: new L.Icon.Default()
-                    }
-                )
-                .bindTooltip("<i>731 Palisade Rd, Union, NJ - 1.5</i>")
-                .addTo(map_39c8affb561543c2bb4bc5ad5930d99a);
-            
-    
-            var popup_337b5f46411e46409355e203d0250a7c = L.popup({maxWidth: '300'});
-
-            
-                var html_e25b4d0e98c84076b92a94a05f4eb723 = $('<div id="html_e25b4d0e98c84076b92a94a05f4eb723" style="width: 100.0%; height: 100.0%;"><i>     Address: 731 Palisade Rd, Union, NJ<br/>     MLS: <a target="_blank" href="https://gsmls.herokuapp.com/properties/3435828">3435828</a><br/>     Rating: 1.5<br/>     Comments:<br/>     - smallish living area, nice basement     </i></div>')[0];
-                popup_337b5f46411e46409355e203d0250a7c.setContent(html_e25b4d0e98c84076b92a94a05f4eb723);
-            
-
-            marker_914e03295e6a412cbc2560d3503ec598.bindPopup(popup_337b5f46411e46409355e203d0250a7c);
-
-            
-        
-    
-
-            var marker_0f2f0882a2db4b7a9c6a75d4158dfdda = L.marker(
-                [40.8246759, -74.2288602],
-                {
-                    icon: new L.Icon.Default()
-                    }
-                )
-                .bindTooltip("<i>18 Sunset Ave, Verona, NJ - 3.0</i>")
-                .addTo(map_39c8affb561543c2bb4bc5ad5930d99a);
-            
-    
-            var popup_d57be72d3daf4cda9502c63347a5a60d = L.popup({maxWidth: '300'});
-
-            
-                var html_ae77671aa1a9470ba1265ca3840b2336 = $('<div id="html_ae77671aa1a9470ba1265ca3840b2336" style="width: 100.0%; height: 100.0%;"><i>     Address: 18 Sunset Ave, Verona, NJ<br/>     MLS: <a target="_blank" href="https://gsmls.herokuapp.com/properties/3434254">3434254</a><br/>     Rating: 3.0<br/>     Comments:<br/>     - check basement<br/>- large living room<br/>- very large, several extra rooms<br/>- nice patio/deck all around     </i></div>')[0];
-                popup_d57be72d3daf4cda9502c63347a5a60d.setContent(html_ae77671aa1a9470ba1265ca3840b2336);
-            
-
-            marker_0f2f0882a2db4b7a9c6a75d4158dfdda.bindPopup(popup_d57be72d3daf4cda9502c63347a5a60d);
-
-            
-        
-    
-
-            var marker_c8a5faf3569f4bdb8d70a5ae092b5d32 = L.marker(
-                [40.8379533, -74.2447382],
-                {
-                    icon: new L.Icon.Default()
-                    }
-                )
-                .bindTooltip("<i>105 Grove Ave, Verona, NJ - 1.25</i>")
-                .addTo(map_39c8affb561543c2bb4bc5ad5930d99a);
-            
-    
-            var popup_1ef0216774834997aafd5129d72a9371 = L.popup({maxWidth: '300'});
-
-            
-                var html_a1d8d5dbbb18465785c914be5c6928a2 = $('<div id="html_a1d8d5dbbb18465785c914be5c6928a2" style="width: 100.0%; height: 100.0%;"><i>     Address: 105 Grove Ave, Verona, NJ<br/>     MLS: <a target="_blank" href="https://gsmls.herokuapp.com/properties/3419757">3419757</a><br/>     Rating: 1.25<br/>     Comments:<br/>     - very long house, small width in the front<br/>- nice foyer<br/>- has three floors<br/>- cabana attached to garage in the back<br/>- check basement     </i></div>')[0];
-                popup_1ef0216774834997aafd5129d72a9371.setContent(html_a1d8d5dbbb18465785c914be5c6928a2);
-            
-
-            marker_c8a5faf3569f4bdb8d70a5ae092b5d32.bindPopup(popup_1ef0216774834997aafd5129d72a9371);
-
-            
-        
-    
-
-            var marker_0a8d3899d77f4bf3bef96de65b3e9bcf = L.marker(
+            var marker_d0271de5a74d4c87a1611ab7f75855b5 = L.marker(
                 [40.7657542, -74.27019539999999],
                 {
                     icon: new L.Icon.Default()
                     }
                 )
                 .bindTooltip("<i>340 Walker Rd, West Orange, NJ - 4.0</i>")
-                .addTo(map_39c8affb561543c2bb4bc5ad5930d99a);
+                .addTo(map_861770d22bf24fd9bfce430bd7c6e0d2);
             
     
-            var popup_b2bed97969784b74b4b5d5e86267204f = L.popup({maxWidth: '300'});
+            var popup_a60564c2a9144bd0a458f01b3a68a735 = L.popup({maxWidth: '300'});
 
             
-                var html_420e6d3256d34a6cae9144bb9bd28c51 = $('<div id="html_420e6d3256d34a6cae9144bb9bd28c51" style="width: 100.0%; height: 100.0%;"><i>     Address: 340 Walker Rd, West Orange, NJ<br/>     MLS: <a target="_blank" href="https://gsmls.herokuapp.com/properties/3433347">3433347</a><br/>     Rating: 4.0<br/>     Comments:<br/>     - check basement<br/>- check if there&#x27;s room for a future bathroom<br/>- check storage area     </i></div>')[0];
-                popup_b2bed97969784b74b4b5d5e86267204f.setContent(html_420e6d3256d34a6cae9144bb9bd28c51);
+                var html_6ba32e51ceeb4187b4a119ecc187d553 = $('<div id="html_6ba32e51ceeb4187b4a119ecc187d553" style="width: 100.0%; height: 100.0%;"><i>     Address: 340 Walker Rd, West Orange, NJ<br/>     MLS: <a target="_blank" href="https://gsmls.herokuapp.com/properties/3433347">3433347</a><br/>     Rating: 4.0<br/>     Comments:<br/>     - check basement<br/>- check if there&#x27;s room for a future bathroom<br/>- check storage area     </i></div>')[0];
+                popup_a60564c2a9144bd0a458f01b3a68a735.setContent(html_6ba32e51ceeb4187b4a119ecc187d553);
             
 
-            marker_0a8d3899d77f4bf3bef96de65b3e9bcf.bindPopup(popup_b2bed97969784b74b4b5d5e86267204f);
+            marker_d0271de5a74d4c87a1611ab7f75855b5.bindPopup(popup_a60564c2a9144bd0a458f01b3a68a735);
 
             
         
     
 
-            var marker_66db3c0f150540bbbc6a5e8b7acf4d67 = L.marker(
+            var marker_a6877dd193fb4bbdbf23d03cbdaed531 = L.marker(
+                [40.8305208, -74.1815068],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .bindTooltip("<i>79 Winding Ln, Bloomfield, NJ - 3.5</i>")
+                .addTo(map_861770d22bf24fd9bfce430bd7c6e0d2);
+            
+    
+            var popup_953fa60a2521486493b76841f6a84ee0 = L.popup({maxWidth: '300'});
+
+            
+                var html_237b1e94ac544ff1965e57f26227335f = $('<div id="html_237b1e94ac544ff1965e57f26227335f" style="width: 100.0%; height: 100.0%;"><i>     Address: 79 Winding Ln, Bloomfield, NJ<br/>     MLS: <a target="_blank" href="https://gsmls.herokuapp.com/properties/3434778">3434778</a><br/>     Rating: 3.5<br/>     Comments:<br/>     - large (long, 24&#x27;) kitchen<br/>- dining room, living room, and family room all decent size<br/>- rec room in basement     </i></div>')[0];
+                popup_953fa60a2521486493b76841f6a84ee0.setContent(html_237b1e94ac544ff1965e57f26227335f);
+            
+
+            marker_a6877dd193fb4bbdbf23d03cbdaed531.bindPopup(popup_953fa60a2521486493b76841f6a84ee0);
+
+            
+        
+    
+
+            var marker_65eef8ad92884f44be80dccbaa4880bb = L.marker(
+                [40.87002650000001, -74.2169104],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .bindTooltip("<i>7 Robinwood Drive, Little Falls, NJ - 3.5</i>")
+                .addTo(map_861770d22bf24fd9bfce430bd7c6e0d2);
+            
+    
+            var popup_c9dd73c95d4a41a6a2bd3d33f93e1a83 = L.popup({maxWidth: '300'});
+
+            
+                var html_875525d6bd744810917f0e1f0b726783 = $('<div id="html_875525d6bd744810917f0e1f0b726783" style="width: 100.0%; height: 100.0%;"><i>     Address: 7 Robinwood Drive, Little Falls, NJ<br/>     MLS: <a target="_blank" href="https://gsmls.herokuapp.com/properties/3430057">3430057</a><br/>     Rating: 3.5<br/>     Comments:<br/>     - very large living room and dining room<br/>- basements is very large<br/>- need to finish the basement<br/>- bedrooms are okay, not amazing<br/>- bathrooms need work     </i></div>')[0];
+                popup_c9dd73c95d4a41a6a2bd3d33f93e1a83.setContent(html_875525d6bd744810917f0e1f0b726783);
+            
+
+            marker_65eef8ad92884f44be80dccbaa4880bb.bindPopup(popup_c9dd73c95d4a41a6a2bd3d33f93e1a83);
+
+            
+        
+    
+
+            var marker_f404f1aae0654a728dcfa578fe79b4d2 = L.marker(
                 [40.886162, -74.20354139999999],
                 {
                     icon: new L.Icon.Default()
                     }
                 )
                 .bindTooltip("<i>35 Van Winkle Ct, Woodland Park, NJ - 3.5</i>")
-                .addTo(map_39c8affb561543c2bb4bc5ad5930d99a);
+                .addTo(map_861770d22bf24fd9bfce430bd7c6e0d2);
             
     
-            var popup_1a1119b3156246f09c8585668862d120 = L.popup({maxWidth: '300'});
+            var popup_da0a6c61c19644aeb26467c7702db2fa = L.popup({maxWidth: '300'});
 
             
-                var html_b63b3320cd294def8313f057474de2e5 = $('<div id="html_b63b3320cd294def8313f057474de2e5" style="width: 100.0%; height: 100.0%;"><i>     Address: 35 Van Winkle Ct, Woodland Park, NJ<br/>     MLS: <a target="_blank" href="https://gsmls.herokuapp.com/properties/3418703">3418703</a><br/>     Rating: 3.5<br/>     Comments:<br/>     - expensive<br/>- very nice inside     </i></div>')[0];
-                popup_1a1119b3156246f09c8585668862d120.setContent(html_b63b3320cd294def8313f057474de2e5);
+                var html_8f49e22ce72d487f94bd94a1164fc86a = $('<div id="html_8f49e22ce72d487f94bd94a1164fc86a" style="width: 100.0%; height: 100.0%;"><i>     Address: 35 Van Winkle Ct, Woodland Park, NJ<br/>     MLS: <a target="_blank" href="https://gsmls.herokuapp.com/properties/3418703">3418703</a><br/>     Rating: 3.5<br/>     Comments:<br/>     - expensive<br/>- very nice inside     </i></div>')[0];
+                popup_da0a6c61c19644aeb26467c7702db2fa.setContent(html_8f49e22ce72d487f94bd94a1164fc86a);
             
 
-            marker_66db3c0f150540bbbc6a5e8b7acf4d67.bindPopup(popup_1a1119b3156246f09c8585668862d120);
+            marker_f404f1aae0654a728dcfa578fe79b4d2.bindPopup(popup_da0a6c61c19644aeb26467c7702db2fa);
 
             
         
     
 
-            var marker_16d5d73a92e74da0bddba6744cb48978 = L.marker(
+            var marker_61c0d4cc98cc490184bb17d79536803a = L.marker(
+                [40.7836892, -74.1945653],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .bindTooltip("<i>21 Grace Street, Bloomfield, NJ - 3.0</i>")
+                .addTo(map_861770d22bf24fd9bfce430bd7c6e0d2);
+            
+    
+            var popup_a7ae865cdc3c4845bb4cc9797832ac66 = L.popup({maxWidth: '300'});
+
+            
+                var html_332de732207e4c468c259e6c7ca7eaa1 = $('<div id="html_332de732207e4c468c259e6c7ca7eaa1" style="width: 100.0%; height: 100.0%;"><i>     Address: 21 Grace Street, Bloomfield, NJ<br/>     MLS: <a target="_blank" href="http://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1732338">1732338</a><br/>     Rating: 3.0<br/>     Comments:<br/>     - living room small?<br/>- no actual foyer     </i></div>')[0];
+                popup_a7ae865cdc3c4845bb4cc9797832ac66.setContent(html_332de732207e4c468c259e6c7ca7eaa1);
+            
+
+            marker_61c0d4cc98cc490184bb17d79536803a.bindPopup(popup_a7ae865cdc3c4845bb4cc9797832ac66);
+
+            
+        
+    
+
+            var marker_9228c1e99a644f3c89bbdf86e22b675b = L.marker(
+                [40.6240033, -74.31661559999999],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .bindTooltip("<i>42 Kenneth Pl, Clark, NJ - 3.0</i>")
+                .addTo(map_861770d22bf24fd9bfce430bd7c6e0d2);
+            
+    
+            var popup_e5f1d891e2d44ac8bafc3dcef1fa2c48 = L.popup({maxWidth: '300'});
+
+            
+                var html_a6ebde90c45d4bce9fd7e24caade65a7 = $('<div id="html_a6ebde90c45d4bce9fd7e24caade65a7" style="width: 100.0%; height: 100.0%;"><i>     Address: 42 Kenneth Pl, Clark, NJ<br/>     MLS: <a target="_blank" href="https://gsmls.herokuapp.com/properties/3428051">3428051</a><br/>     Rating: 3.0<br/>     Comments:<br/>     - need to check storage area<br/>- need to check bedrooms<br/>- has an inground pool     </i></div>')[0];
+                popup_e5f1d891e2d44ac8bafc3dcef1fa2c48.setContent(html_a6ebde90c45d4bce9fd7e24caade65a7);
+            
+
+            marker_9228c1e99a644f3c89bbdf86e22b675b.bindPopup(popup_e5f1d891e2d44ac8bafc3dcef1fa2c48);
+
+            
+        
+    
+
+            var marker_7dfeb9e077ce4efb8f6633d561e5fbf7 = L.marker(
+                [40.8848572, -74.1731053],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .bindTooltip("<i>42 Livingston Street, Clifton, NJ - 3.0</i>")
+                .addTo(map_861770d22bf24fd9bfce430bd7c6e0d2);
+            
+    
+            var popup_4b69c337274a4d5999f3a9f98c40fcbb = L.popup({maxWidth: '300'});
+
+            
+                var html_27388fa78c184658b5412ca5379f30b5 = $('<div id="html_27388fa78c184658b5412ca5379f30b5" style="width: 100.0%; height: 100.0%;"><i>     Address: 42 Livingston Street, Clifton, NJ<br/>     MLS: <a target="_blank" href="http://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1747925">1747925</a><br/>     Rating: 3.0<br/>     Comments:<br/>     - no foyer<br/>- no upstairs family room, use basement     </i></div>')[0];
+                popup_4b69c337274a4d5999f3a9f98c40fcbb.setContent(html_27388fa78c184658b5412ca5379f30b5);
+            
+
+            marker_7dfeb9e077ce4efb8f6633d561e5fbf7.bindPopup(popup_4b69c337274a4d5999f3a9f98c40fcbb);
+
+            
+        
+    
+
+            var marker_6b3091cea9fa4afc95a76045acfcc5fa = L.marker(
+                [40.8505406, -74.1678021],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .bindTooltip("<i>130 Sycamore Road, Clifton, NJ - 3.0</i>")
+                .addTo(map_861770d22bf24fd9bfce430bd7c6e0d2);
+            
+    
+            var popup_a328a5f50ca0452d978bc084d290d4a4 = L.popup({maxWidth: '300'});
+
+            
+                var html_9e5f0cddf53d46b38d70fc98898a2bcc = $('<div id="html_9e5f0cddf53d46b38d70fc98898a2bcc" style="width: 100.0%; height: 100.0%;"><i>     Address: 130 Sycamore Road, Clifton, NJ<br/>     MLS: <a target="_blank" href="http://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1728111">1728111</a><br/>     Rating: 3.0<br/>     Comments:<br/>     - clifton!<br/>- nice large recreation / game area in basement<br/>- has both family room and living room     </i></div>')[0];
+                popup_a328a5f50ca0452d978bc084d290d4a4.setContent(html_9e5f0cddf53d46b38d70fc98898a2bcc);
+            
+
+            marker_6b3091cea9fa4afc95a76045acfcc5fa.bindPopup(popup_a328a5f50ca0452d978bc084d290d4a4);
+
+            
+        
+    
+
+            var marker_b0d311627ad840d890ecc7d138aa07d1 = L.marker(
+                [40.6428216, -74.2721554],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .bindTooltip("<i>2105 N Wood Ave, Linden, NJ - 3.0</i>")
+                .addTo(map_861770d22bf24fd9bfce430bd7c6e0d2);
+            
+    
+            var popup_be0625da5e2a4d39b9f7fa80f9bccb15 = L.popup({maxWidth: '300'});
+
+            
+                var html_1c05f0154c624f83b684add811fca534 = $('<div id="html_1c05f0154c624f83b684add811fca534" style="width: 100.0%; height: 100.0%;"><i>     Address: 2105 N Wood Ave, Linden, NJ<br/>     MLS: <a target="_blank" href="https://gsmls.herokuapp.com/properties/3435183">3435183</a><br/>     Rating: 3.0<br/>     Comments:<br/>     - wow factor both inside and outside<br/>- unsure about location, Linden     </i></div>')[0];
+                popup_be0625da5e2a4d39b9f7fa80f9bccb15.setContent(html_1c05f0154c624f83b684add811fca534);
+            
+
+            marker_b0d311627ad840d890ecc7d138aa07d1.bindPopup(popup_be0625da5e2a4d39b9f7fa80f9bccb15);
+
+            
+        
+    
+
+            var marker_b8ea5976d102456883540e7aaf32f7dc = L.marker(
+                [40.8798858, -74.22763549999999],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .bindTooltip("<i>12 Ridge Ave, Little Falls, NJ - 3.0</i>")
+                .addTo(map_861770d22bf24fd9bfce430bd7c6e0d2);
+            
+    
+            var popup_c4987be4a6514b4c880f9a2464f673a4 = L.popup({maxWidth: '300'});
+
+            
+                var html_b12ebd00133443e7abd87774fb8b0cb6 = $('<div id="html_b12ebd00133443e7abd87774fb8b0cb6" style="width: 100.0%; height: 100.0%;"><i>     Address: 12 Ridge Ave, Little Falls, NJ<br/>     MLS: <a target="_blank" href="https://gsmls.herokuapp.com/properties/3418468">3418468</a><br/>     Rating: 3.0<br/>     Comments:<br/>     - school in the front<br/>- kitchen upstairs, non-traditional layout<br/>- lots of storage<br/>- look nice in the back     </i></div>')[0];
+                popup_c4987be4a6514b4c880f9a2464f673a4.setContent(html_b12ebd00133443e7abd87774fb8b0cb6);
+            
+
+            marker_b8ea5976d102456883540e7aaf32f7dc.bindPopup(popup_c4987be4a6514b4c880f9a2464f673a4);
+
+            
+        
+    
+
+            var marker_94e1c42302f747e5b394b090aabc39af = L.marker(
+                [40.7168649, -74.2567491],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .bindTooltip("<i>31 Menzel Ave, Maplewood, NJ - 3.0</i>")
+                .addTo(map_861770d22bf24fd9bfce430bd7c6e0d2);
+            
+    
+            var popup_61c0227bbbdd43b4a0b3be435a5be2b2 = L.popup({maxWidth: '300'});
+
+            
+                var html_38490463d07b45f78c588f2eb80ac7e6 = $('<div id="html_38490463d07b45f78c588f2eb80ac7e6" style="width: 100.0%; height: 100.0%;"><i>     Address: 31 Menzel Ave, Maplewood, NJ<br/>     MLS: <a target="_blank" href="https://gsmls.herokuapp.com/properties/3434442">3434442</a><br/>     Rating: 3.0<br/>     Comments:<br/>     - living room is small<br/>- storage may be less     </i></div>')[0];
+                popup_61c0227bbbdd43b4a0b3be435a5be2b2.setContent(html_38490463d07b45f78c588f2eb80ac7e6);
+            
+
+            marker_94e1c42302f747e5b394b090aabc39af.bindPopup(popup_61c0227bbbdd43b4a0b3be435a5be2b2);
+
+            
+        
+    
+
+            var marker_b90100613853472ea0a7ebfce41c1cca = L.marker(
+                [40.7841998, -74.1352689],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .bindTooltip("<i>92 Union Place, North Arlington, NJ - 3.0</i>")
+                .addTo(map_861770d22bf24fd9bfce430bd7c6e0d2);
+            
+    
+            var popup_2c0be7f8ab6240b0947afeb9b3d6fd9e = L.popup({maxWidth: '300'});
+
+            
+                var html_d5272bf8451a45c4b6ec8c17e0780f3f = $('<div id="html_d5272bf8451a45c4b6ec8c17e0780f3f" style="width: 100.0%; height: 100.0%;"><i>     Address: 92 Union Place, North Arlington, NJ<br/>     MLS: <a target="_blank" href="http://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1738325">1738325</a><br/>     Rating: 3.0<br/>     Comments:<br/>     - nice fireplace<br/>- very new, recently rennovated<br/>- check storage space     </i></div>')[0];
+                popup_2c0be7f8ab6240b0947afeb9b3d6fd9e.setContent(html_d5272bf8451a45c4b6ec8c17e0780f3f);
+            
+
+            marker_b90100613853472ea0a7ebfce41c1cca.bindPopup(popup_2c0be7f8ab6240b0947afeb9b3d6fd9e);
+
+            
+        
+    
+
+            var marker_a1da3495df7d4e9ebeb122e97fa49706 = L.marker(
+                [40.9070019, -74.2344924],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .bindTooltip("<i>129 Winifred Dr, Totowa, NJ - 3.0</i>")
+                .addTo(map_861770d22bf24fd9bfce430bd7c6e0d2);
+            
+    
+            var popup_360c18a0f14a4f86b96ca1e17a0c2965 = L.popup({maxWidth: '300'});
+
+            
+                var html_d7ee10ea2b2c42d9b65f5204e200070d = $('<div id="html_d7ee10ea2b2c42d9b65f5204e200070d" style="width: 100.0%; height: 100.0%;"><i>     Address: 129 Winifred Dr, Totowa, NJ<br/>     MLS: <a target="_blank" href="https://gsmls.herokuapp.com/properties/3431168">3431168</a><br/>     Rating: 3.0<br/>     Comments:<br/>     - nice     </i></div>')[0];
+                popup_360c18a0f14a4f86b96ca1e17a0c2965.setContent(html_d7ee10ea2b2c42d9b65f5204e200070d);
+            
+
+            marker_a1da3495df7d4e9ebeb122e97fa49706.bindPopup(popup_360c18a0f14a4f86b96ca1e17a0c2965);
+
+            
+        
+    
+
+            var marker_c1872a3e0e0f49108e4cbba1868e606e = L.marker(
+                [40.8246759, -74.2288602],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .bindTooltip("<i>18 Sunset Ave, Verona, NJ - 3.0</i>")
+                .addTo(map_861770d22bf24fd9bfce430bd7c6e0d2);
+            
+    
+            var popup_62f17f610f8b42f191ab7dade65aaa19 = L.popup({maxWidth: '300'});
+
+            
+                var html_4f191f7f6cdd4f43a403334b27423670 = $('<div id="html_4f191f7f6cdd4f43a403334b27423670" style="width: 100.0%; height: 100.0%;"><i>     Address: 18 Sunset Ave, Verona, NJ<br/>     MLS: <a target="_blank" href="https://gsmls.herokuapp.com/properties/3434254">3434254</a><br/>     Rating: 3.0<br/>     Comments:<br/>     - check basement<br/>- large living room<br/>- very large, several extra rooms<br/>- nice patio/deck all around     </i></div>')[0];
+                popup_62f17f610f8b42f191ab7dade65aaa19.setContent(html_4f191f7f6cdd4f43a403334b27423670);
+            
+
+            marker_c1872a3e0e0f49108e4cbba1868e606e.bindPopup(popup_62f17f610f8b42f191ab7dade65aaa19);
+
+            
+        
+    
+
+            var marker_b02b4dba4b1346b5ab36531318dabf7c = L.marker(
+                [40.6828644, -74.2617483],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .bindTooltip("<i>360 Washington Ave, Union, NJ - 2.75</i>")
+                .addTo(map_861770d22bf24fd9bfce430bd7c6e0d2);
+            
+    
+            var popup_3c49fd5a68c440fea75bc93b6e0ec571 = L.popup({maxWidth: '300'});
+
+            
+                var html_ef159a151684429d9e496e71275f20be = $('<div id="html_ef159a151684429d9e496e71275f20be" style="width: 100.0%; height: 100.0%;"><i>     Address: 360 Washington Ave, Union, NJ<br/>     MLS: <a target="_blank" href="https://gsmls.herokuapp.com/properties/3414681">3414681</a><br/>     Rating: 2.75<br/>     Comments:<br/>     - nice hard wood floors<br/>- nice finished basement<br/>- living room is a little small, but has family room     </i></div>')[0];
+                popup_3c49fd5a68c440fea75bc93b6e0ec571.setContent(html_ef159a151684429d9e496e71275f20be);
+            
+
+            marker_b02b4dba4b1346b5ab36531318dabf7c.bindPopup(popup_3c49fd5a68c440fea75bc93b6e0ec571);
+
+            
+        
+    
+
+            var marker_0491010d76e44e78be6a25aa2e467e3b = L.marker(
+                [40.6168436, -74.3018257],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .bindTooltip("<i>44 Kathryn St, Clark, NJ - 2.5</i>")
+                .addTo(map_861770d22bf24fd9bfce430bd7c6e0d2);
+            
+    
+            var popup_ac43d647331e488eac1d0e61393b9d3a = L.popup({maxWidth: '300'});
+
+            
+                var html_eedbca23de984acf802534911b7a6249 = $('<div id="html_eedbca23de984acf802534911b7a6249" style="width: 100.0%; height: 100.0%;"><i>     Address: 44 Kathryn St, Clark, NJ<br/>     MLS: <a target="_blank" href="https://gsmls.herokuapp.com/properties/3431185">3431185</a><br/>     Rating: 2.5<br/>     Comments:<br/>     - living room is a bit small<br/>- basement has large rec area + bar     </i></div>')[0];
+                popup_ac43d647331e488eac1d0e61393b9d3a.setContent(html_eedbca23de984acf802534911b7a6249);
+            
+
+            marker_0491010d76e44e78be6a25aa2e467e3b.bindPopup(popup_ac43d647331e488eac1d0e61393b9d3a);
+
+            
+        
+    
+
+            var marker_d670a826ebbc4a369aa9f449ba835011 = L.marker(
+                [40.8656005, -74.17975919999999],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .bindTooltip("<i>1 Friar Ln, Clifton, NJ - 2.5</i>")
+                .addTo(map_861770d22bf24fd9bfce430bd7c6e0d2);
+            
+    
+            var popup_1dd71ec00709447d91b4f5c8dade88ba = L.popup({maxWidth: '300'});
+
+            
+                var html_17b866eb2c6944bab61246a130e0022c = $('<div id="html_17b866eb2c6944bab61246a130e0022c" style="width: 100.0%; height: 100.0%;"><i>     Address: 1 Friar Ln, Clifton, NJ<br/>     MLS: <a target="_blank" href="https://gsmls.herokuapp.com/properties/3433595">3433595</a><br/>     Rating: 2.5<br/>     Comments:<br/>     - clifton!<br/>- not enough pictures, no bedrooms shown<br/>- nice kitchen<br/>- large finished basement with bar<br/>- living room seems nice     </i></div>')[0];
+                popup_1dd71ec00709447d91b4f5c8dade88ba.setContent(html_17b866eb2c6944bab61246a130e0022c);
+            
+
+            marker_d670a826ebbc4a369aa9f449ba835011.bindPopup(popup_1dd71ec00709447d91b4f5c8dade88ba);
+
+            
+        
+    
+
+            var marker_38ef44ed06d841b68b65c96743d896ac = L.marker(
+                [40.6556672, -74.3955802],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .bindTooltip("<i>333 Cook Ave, Scotch Plains, NJ - 2.5</i>")
+                .addTo(map_861770d22bf24fd9bfce430bd7c6e0d2);
+            
+    
+            var popup_2caa082d62f944cb812fb42ab00ee3ca = L.popup({maxWidth: '300'});
+
+            
+                var html_95e85d0016004e41a219bd5e6aa2e172 = $('<div id="html_95e85d0016004e41a219bd5e6aa2e172" style="width: 100.0%; height: 100.0%;"><i>     Address: 333 Cook Ave, Scotch Plains, NJ<br/>     MLS: <a target="_blank" href="https://gsmls.herokuapp.com/properties/3432610">3432610</a><br/>     Rating: 2.5<br/>     Comments:<br/>     - good living space, big living room, big recreation room<br/>- bedrooms are smaller<br/>- no master bathroom<br/>- check if there&#x27;s room for a future bathroom     </i></div>')[0];
+                popup_2caa082d62f944cb812fb42ab00ee3ca.setContent(html_95e85d0016004e41a219bd5e6aa2e172);
+            
+
+            marker_38ef44ed06d841b68b65c96743d896ac.bindPopup(popup_2caa082d62f944cb812fb42ab00ee3ca);
+
+            
+        
+    
+
+            var marker_d062884811a14d80907d8fc3a221d720 = L.marker(
                 [40.8976733, -74.1923592],
                 {
                     icon: new L.Icon.Default()
                     }
                 )
                 .bindTooltip("<i>31 Garden Avenue, Woodland Park, NJ - 2.5</i>")
-                .addTo(map_39c8affb561543c2bb4bc5ad5930d99a);
+                .addTo(map_861770d22bf24fd9bfce430bd7c6e0d2);
             
     
-            var popup_abaa0b5f37244f9092b019e2ecb7024e = L.popup({maxWidth: '300'});
+            var popup_04d56e9ca84846189ce46e4c1093c2b4 = L.popup({maxWidth: '300'});
 
             
-                var html_ae07ba5c5ce1413a928e794a50b0b4ce = $('<div id="html_ae07ba5c5ce1413a928e794a50b0b4ce" style="width: 100.0%; height: 100.0%;"><i>     Address: 31 Garden Avenue, Woodland Park, NJ<br/>     MLS: <a target="_blank" href="https://gsmls.herokuapp.com/properties/3418022">3418022</a><br/>     Rating: 2.5<br/>     Comments:<br/>     - nice house, ready to move in<br/>- hilly area, house is on a slope<br/>- small living room, ok family room<br/>- nice finished basement     </i></div>')[0];
-                popup_abaa0b5f37244f9092b019e2ecb7024e.setContent(html_ae07ba5c5ce1413a928e794a50b0b4ce);
+                var html_ac65314d1f3e401c997b54251d38fd7b = $('<div id="html_ac65314d1f3e401c997b54251d38fd7b" style="width: 100.0%; height: 100.0%;"><i>     Address: 31 Garden Avenue, Woodland Park, NJ<br/>     MLS: <a target="_blank" href="https://gsmls.herokuapp.com/properties/3418022">3418022</a><br/>     Rating: 2.5<br/>     Comments:<br/>     - nice house, ready to move in<br/>- hilly area, house is on a slope<br/>- small living room, ok family room<br/>- nice finished basement     </i></div>')[0];
+                popup_04d56e9ca84846189ce46e4c1093c2b4.setContent(html_ac65314d1f3e401c997b54251d38fd7b);
             
 
-            marker_16d5d73a92e74da0bddba6744cb48978.bindPopup(popup_abaa0b5f37244f9092b019e2ecb7024e);
+            marker_d062884811a14d80907d8fc3a221d720.bindPopup(popup_04d56e9ca84846189ce46e4c1093c2b4);
+
+            
+        
+    
+
+            var marker_fed4b004178c424895f5c1f03f1fc022 = L.marker(
+                [40.8748328, -74.1530543],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .bindTooltip("<i>318 Union Ave, Clifton, NJ - 2.0</i>")
+                .addTo(map_861770d22bf24fd9bfce430bd7c6e0d2);
+            
+    
+            var popup_82fdd60e50664e87bc6e56a0e6808c0b = L.popup({maxWidth: '300'});
+
+            
+                var html_218a0d7bff694455857494b900e53605 = $('<div id="html_218a0d7bff694455857494b900e53605" style="width: 100.0%; height: 100.0%;"><i>     Address: 318 Union Ave, Clifton, NJ<br/>     MLS: <a target="_blank" href="https://gsmls.herokuapp.com/properties/3430446">3430446</a><br/>     Rating: 2.0<br/>     Comments:<br/>     - not enough space in the basement<br/>- not enough living area (living room small, family room to the side)     </i></div>')[0];
+                popup_82fdd60e50664e87bc6e56a0e6808c0b.setContent(html_218a0d7bff694455857494b900e53605);
+            
+
+            marker_fed4b004178c424895f5c1f03f1fc022.bindPopup(popup_82fdd60e50664e87bc6e56a0e6808c0b);
+
+            
+        
+    
+
+            var marker_030f275adf114e5eae4d3257846d1c2e = L.marker(
+                [40.6772866, -74.2555094],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .bindTooltip("<i>541 Winchester Ave, Union, NJ - 2.0</i>")
+                .addTo(map_861770d22bf24fd9bfce430bd7c6e0d2);
+            
+    
+            var popup_52a06eb19aae4a188dfbdaa18a5c8db5 = L.popup({maxWidth: '300'});
+
+            
+                var html_4cfaf2ae98dd437db546c32ecbcc10a8 = $('<div id="html_4cfaf2ae98dd437db546c32ecbcc10a8" style="width: 100.0%; height: 100.0%;"><i>     Address: 541 Winchester Ave, Union, NJ<br/>     MLS: <a target="_blank" href="https://gsmls.herokuapp.com/properties/3413305">3413305</a><br/>     Rating: 2.0<br/>     Comments:<br/>     - no pictures of the inside<br/>- nice inground pool<br/>- need to go and see     </i></div>')[0];
+                popup_52a06eb19aae4a188dfbdaa18a5c8db5.setContent(html_4cfaf2ae98dd437db546c32ecbcc10a8);
+            
+
+            marker_030f275adf114e5eae4d3257846d1c2e.bindPopup(popup_52a06eb19aae4a188dfbdaa18a5c8db5);
+
+            
+        
+    
+
+            var marker_273c872f6ab34e33bfc15b71c41128bc = L.marker(
+                [40.69668770000001, -74.29257989999999],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .bindTooltip("<i>740 Garden St, Union, NJ - 2.0</i>")
+                .addTo(map_861770d22bf24fd9bfce430bd7c6e0d2);
+            
+    
+            var popup_9506ee9a14c548f8a8342d7500486f9a = L.popup({maxWidth: '300'});
+
+            
+                var html_b465d046ef234fd59faca363559f7cdf = $('<div id="html_b465d046ef234fd59faca363559f7cdf" style="width: 100.0%; height: 100.0%;"><i>     Address: 740 Garden St, Union, NJ<br/>     MLS: <a target="_blank" href="https://gsmls.herokuapp.com/properties/3434406">3434406</a><br/>     Rating: 2.0<br/>     Comments:<br/>     - looks nice but need more pictures, can&#x27;t quite tell<br/>- check basement and storage     </i></div>')[0];
+                popup_9506ee9a14c548f8a8342d7500486f9a.setContent(html_b465d046ef234fd59faca363559f7cdf);
+            
+
+            marker_273c872f6ab34e33bfc15b71c41128bc.bindPopup(popup_9506ee9a14c548f8a8342d7500486f9a);
+
+            
+        
+    
+
+            var marker_7ba08caffc3d49c4ba491f9b83d54355 = L.marker(
+                [40.8901074, -74.2336953],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .bindTooltip("<i>725 N Riverview Dr, Totowa, NJ - 1.75</i>")
+                .addTo(map_861770d22bf24fd9bfce430bd7c6e0d2);
+            
+    
+            var popup_be58c336b7424212bb7a445842d7a9b5 = L.popup({maxWidth: '300'});
+
+            
+                var html_f5905579a6da4da1a47a225f61b13dca = $('<div id="html_f5905579a6da4da1a47a225f61b13dca" style="width: 100.0%; height: 100.0%;"><i>     Address: 725 N Riverview Dr, Totowa, NJ<br/>     MLS: <a target="_blank" href="https://gsmls.herokuapp.com/properties/3400020">3400020</a><br/>     Rating: 1.75<br/>     Comments:<br/>     - looks nice/large from the outside<br/>- totally renovated 2005<br/>- looks like small living room but can&#x27;t tell from pictures     </i></div>')[0];
+                popup_be58c336b7424212bb7a445842d7a9b5.setContent(html_f5905579a6da4da1a47a225f61b13dca);
+            
+
+            marker_7ba08caffc3d49c4ba491f9b83d54355.bindPopup(popup_be58c336b7424212bb7a445842d7a9b5);
+
+            
+        
+    
+
+            var marker_cdc6e89d53684713ad044111a14b5e67 = L.marker(
+                [40.7557599, -74.2504238],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .bindTooltip("<i>535 Scotland Rd, South Orange, NJ - 1.5</i>")
+                .addTo(map_861770d22bf24fd9bfce430bd7c6e0d2);
+            
+    
+            var popup_47aabdb7051a487598a48dd1c5d8dec9 = L.popup({maxWidth: '300'});
+
+            
+                var html_a6c70750f05e46cc93a835a0b51d6509 = $('<div id="html_a6c70750f05e46cc93a835a0b51d6509" style="width: 100.0%; height: 100.0%;"><i>     Address: 535 Scotland Rd, South Orange, NJ<br/>     MLS: <a target="_blank" href="https://gsmls.herokuapp.com/properties/3430566">3430566</a><br/>     Rating: 1.5<br/>     Comments:<br/>     - large ranch<br/>- large living room and basement<br/>- looks very small compared to other houses outside because it&#x27;s a ranch     </i></div>')[0];
+                popup_47aabdb7051a487598a48dd1c5d8dec9.setContent(html_a6c70750f05e46cc93a835a0b51d6509);
+            
+
+            marker_cdc6e89d53684713ad044111a14b5e67.bindPopup(popup_47aabdb7051a487598a48dd1c5d8dec9);
+
+            
+        
+    
+
+            var marker_03e7179756904d8ab436fadf0fad834d = L.marker(
+                [40.8999277, -74.2211919],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .bindTooltip("<i>26 Knollwood Rd, Totowa, NJ - 1.5</i>")
+                .addTo(map_861770d22bf24fd9bfce430bd7c6e0d2);
+            
+    
+            var popup_af3c931d97cd4bf090224b4e85852299 = L.popup({maxWidth: '300'});
+
+            
+                var html_a8fdc80116fc407b8e673f5790ef6c2b = $('<div id="html_a8fdc80116fc407b8e673f5790ef6c2b" style="width: 100.0%; height: 100.0%;"><i>     Address: 26 Knollwood Rd, Totowa, NJ<br/>     MLS: <a target="_blank" href="https://gsmls.herokuapp.com/properties/3432279">3432279</a><br/>     Rating: 1.5<br/>     Comments:<br/>     - very few pictures, need to go see     </i></div>')[0];
+                popup_af3c931d97cd4bf090224b4e85852299.setContent(html_a8fdc80116fc407b8e673f5790ef6c2b);
+            
+
+            marker_03e7179756904d8ab436fadf0fad834d.bindPopup(popup_af3c931d97cd4bf090224b4e85852299);
+
+            
+        
+    
+
+            var marker_8e1acb5d2c2845488d8e420124af26aa = L.marker(
+                [40.6776432, -74.2371403],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .bindTooltip("<i>731 Palisade Rd, Union, NJ - 1.5</i>")
+                .addTo(map_861770d22bf24fd9bfce430bd7c6e0d2);
+            
+    
+            var popup_c0a177b2d26b443aa1b856a5eb9a281a = L.popup({maxWidth: '300'});
+
+            
+                var html_aff77a32ad6b49449e23c962db8709dc = $('<div id="html_aff77a32ad6b49449e23c962db8709dc" style="width: 100.0%; height: 100.0%;"><i>     Address: 731 Palisade Rd, Union, NJ<br/>     MLS: <a target="_blank" href="https://gsmls.herokuapp.com/properties/3435828">3435828</a><br/>     Rating: 1.5<br/>     Comments:<br/>     - smallish living area, nice basement     </i></div>')[0];
+                popup_c0a177b2d26b443aa1b856a5eb9a281a.setContent(html_aff77a32ad6b49449e23c962db8709dc);
+            
+
+            marker_8e1acb5d2c2845488d8e420124af26aa.bindPopup(popup_c0a177b2d26b443aa1b856a5eb9a281a);
+
+            
+        
+    
+
+            var marker_858056cbbb64426cbfc54235419cfd28 = L.marker(
+                [40.8379533, -74.2447382],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .bindTooltip("<i>105 Grove Ave, Verona, NJ - 1.25</i>")
+                .addTo(map_861770d22bf24fd9bfce430bd7c6e0d2);
+            
+    
+            var popup_cf665297f2754dd6927260e017035f25 = L.popup({maxWidth: '300'});
+
+            
+                var html_c15a9094eb70484e9948457f558e773b = $('<div id="html_c15a9094eb70484e9948457f558e773b" style="width: 100.0%; height: 100.0%;"><i>     Address: 105 Grove Ave, Verona, NJ<br/>     MLS: <a target="_blank" href="https://gsmls.herokuapp.com/properties/3419757">3419757</a><br/>     Rating: 1.25<br/>     Comments:<br/>     - very long house, small width in the front<br/>- nice foyer<br/>- has three floors<br/>- cabana attached to garage in the back<br/>- check basement     </i></div>')[0];
+                popup_cf665297f2754dd6927260e017035f25.setContent(html_c15a9094eb70484e9948457f558e773b);
+            
+
+            marker_858056cbbb64426cbfc54235419cfd28.bindPopup(popup_cf665297f2754dd6927260e017035f25);
+
+            
+        
+    
+
+            var marker_8ce17969324c48269c62ead2c2af4744 = L.marker(
+                [40.8375418, -74.18636],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .bindTooltip("<i>13 Bellevue Avenue, Bloomfield, NJ - 1.0</i>")
+                .addTo(map_861770d22bf24fd9bfce430bd7c6e0d2);
+            
+    
+            var popup_ce2d27acc8284f94a0f9ce539358f72f = L.popup({maxWidth: '300'});
+
+            
+                var html_17b4eb99fd5641e582c8e147e69a81eb = $('<div id="html_17b4eb99fd5641e582c8e147e69a81eb" style="width: 100.0%; height: 100.0%;"><i>     Address: 13 Bellevue Avenue, Bloomfield, NJ<br/>     MLS: <a target="_blank" href="http://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1738410">1738410</a><br/>     Rating: 1.0<br/>     Comments:<br/>     - open house 12/7 (12pm-4pm)<br/>- no bedrooms shown?     </i></div>')[0];
+                popup_ce2d27acc8284f94a0f9ce539358f72f.setContent(html_17b4eb99fd5641e582c8e147e69a81eb);
+            
+
+            marker_8ce17969324c48269c62ead2c2af4744.bindPopup(popup_ce2d27acc8284f94a0f9ce539358f72f);
+
+            
+        
+    
+
+            var marker_a006ed91395848129d839f533f3dbc81 = L.marker(
+                [40.8631991, -74.2018362],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .bindTooltip("<i>271 Long Hill Rd, Little Falls, NJ - 1.0</i>")
+                .addTo(map_861770d22bf24fd9bfce430bd7c6e0d2);
+            
+    
+            var popup_4b0c7b6b606a4860a2feb08359d1ca3f = L.popup({maxWidth: '300'});
+
+            
+                var html_52c189c9b26141dc80e7220c2ddd69aa = $('<div id="html_52c189c9b26141dc80e7220c2ddd69aa" style="width: 100.0%; height: 100.0%;"><i>     Address: 271 Long Hill Rd, Little Falls, NJ<br/>     MLS: <a target="_blank" href="https://gsmls.herokuapp.com/properties/3429216">3429216</a><br/>     Rating: 1.0<br/>     Comments:<br/>     - curb side appeal is bad<br/>- not enough pictures<br/>- need to check bathrooms, none shown<br/>- need to check bedrooms<br/>- basement     </i></div>')[0];
+                popup_4b0c7b6b606a4860a2feb08359d1ca3f.setContent(html_52c189c9b26141dc80e7220c2ddd69aa);
+            
+
+            marker_a006ed91395848129d839f533f3dbc81.bindPopup(popup_4b0c7b6b606a4860a2feb08359d1ca3f);
+
+            
+        
+    
+
+            var marker_a3c3e42605cd445e9edaeef31363d6a7 = L.marker(
+                [40.674887, -74.30035409999999],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .bindTooltip("<i>319 Boulevard, Kenilworth, NJ - 0.0</i>")
+                .addTo(map_861770d22bf24fd9bfce430bd7c6e0d2);
+            
+    
+            var popup_02d39f1b29124e92b65aa849d608d49f = L.popup({maxWidth: '300'});
+
+            
+                var html_4c82dc8b6e304e82b41ede4cef460d68 = $('<div id="html_4c82dc8b6e304e82b41ede4cef460d68" style="width: 100.0%; height: 100.0%;"><i>     Address: 319 Boulevard, Kenilworth, NJ<br/>     MLS: <a target="_blank" href="https://gsmls.herokuapp.com/properties/3434491">3434491</a><br/>     Rating: 0.0<br/>     Comments:<br/>     - mom doesn&#x27;t look<br/>- kitchen is small<br/>- living room is very ganda     </i></div>')[0];
+                popup_02d39f1b29124e92b65aa849d608d49f.setContent(html_4c82dc8b6e304e82b41ede4cef460d68);
+            
+
+            marker_a3c3e42605cd445e9edaeef31363d6a7.bindPopup(popup_02d39f1b29124e92b65aa849d608d49f);
 
             
         
