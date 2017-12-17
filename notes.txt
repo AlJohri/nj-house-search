@@ -1,0 +1,5 @@
+Things to Check Out Next
+- length of time on market
+- lot (acreage) vs square footage
+- year built
+- create github pages gsmls thing to view individual listings
