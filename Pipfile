@@ -23,6 +23,9 @@ geopy = "*"
 gsmls = "==0.0.2"
 njmls = "*"
 njactb = "*"
+usaddress = "*"
+xlrd = "*"
+folium = {git = "https://github.com/python-visualization/folium"}
 
 
 [dev-packages]
