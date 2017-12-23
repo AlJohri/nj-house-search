@@ -26,6 +26,7 @@ njactb = "*"
 usaddress = "*"
 xlrd = "*"
 folium = {git = "https://github.com/python-visualization/folium"}
+nbconvert = "*"
 
 
 [dev-packages]
