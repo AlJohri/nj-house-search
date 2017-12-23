@@ -3,4 +3,5 @@ clean:
 	find . -name "*.pyc" -delete
 
 convert:
-	jupyter nbconvert --to=html analysis.ipynb
+	jupyter nbconvert --to=html gsmls.ipynb
+	jupyter nbconvert --to=html njmls.ipynb

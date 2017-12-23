@@ -109,6 +109,31 @@ def get_directions(source, destination, mode='transit'):
         "instructions": instructions
     }
 
+def add_geocode_to_listing(listing):
+    source = listing['address'] + ' ' + listing['city'] + ', ' + 'NJ'
+    geocoded = geocode(source)
+    if len(geocoded) == 0:
+        source2 = listing['address'] + ' ' + listing['city'].replace(' City', '').replace(' Boro Twp.', '').replace(' Boro', '') + ', ' + 'NJ'
+        geocoded = geocode(source2)
+        if len(geocoded) == 0:
+            print(f"could not geocode: {source} or {source2}")
+            return listing
+    listing['lat'] = geocoded[0]['geometry']['location']['lat']
+    listing['lng'] = geocoded[0]['geometry']['location']['lng']
+    listing['formatted_address'] = geocoded[0]['formatted_address']
+    try:
+        listing['city'] = [x['long_name'] for x in geocoded[0]['address_components'] if 'locality' in x['types']][0]
+    except IndexError:
+        try:
+            listing['city'] = [x['long_name'] for x in geocoded[0]['address_components'] if 'administrative_area_level_3' in x['types']][0]
+        except IndexError:
+            print("could not find city for", listing['formatted_address'], geocoded[0]['address_components'])
+    try:
+        listing['county'] = [x['long_name'] for x in geocoded[0]['address_components'] if 'administrative_area_level_2' in x['types']][0].replace(' County', '')
+    except IndexError:
+        print("could not find county for", listing['id'], listing['formatted_address'], geocoded[0]['address_components'])
+    return listing
+
 if __name__ == "__main__":
 
     from blessings import Terminal
