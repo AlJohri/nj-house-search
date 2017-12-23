@@ -5,3 +5,4 @@ clean:
 convert:
 	jupyter nbconvert --to=html gsmls.ipynb
 	jupyter nbconvert --to=html njmls.ipynb
+	jupyter nbconvert --to=html cjmls.ipynb
