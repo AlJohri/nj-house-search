@@ -1,0 +1,19 @@
+http://www.state.nj.us/treasury/taxation/pdf/lpt/chap123/2018/passaic.pdf
+
+Tax Amount: 12758
+Tax Rate: 3.121
+Tax Assessment: 416800
+
+Little Falls
+	Lower Limit: 78.63
+	Average Ratio: 92.51
+	Upper Limit: 106.39
+
+
+416800 / .9251 = 450545.886931
+416800 / 1.0639 = 391766.143435
+
+
+450545 * 0.03121 = 14061.50945
+391766.143435 * 0.03121 = 12227.0213366
+
