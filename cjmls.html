@@ -11830,16 +11830,45 @@ div#notebook {
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Import global settings</strong></p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">settings</span> <span class="k">import</span> <span class="p">(</span><span class="n">blacklist_cities</span><span class="p">,</span> <span class="n">MIN_PRICE</span><span class="p">,</span> <span class="n">MAX_PRICE</span><span class="p">,</span> <span class="n">MAX_TAX</span><span class="p">,</span> <span class="n">MIN_BEDS</span><span class="p">,</span> <span class="n">MIN_BATHS</span><span class="p">,</span>
                       <span class="n">ONE_HOUR</span><span class="p">,</span> <span class="n">HALF_HOUR</span><span class="p">,</span> <span class="n">TEN_MINUTES</span><span class="p">,)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">MIN_PRICE</span><span class="p">,</span> <span class="n">MAX_PRICE</span><span class="p">,</span> <span class="n">MAX_TAX</span><span class="p">,</span> <span class="n">MIN_BEDS</span><span class="p">,</span> <span class="n">MIN_BATHS</span><span class="p">,)</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>300000 525000 16000 3 2
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -11925,10 +11954,10 @@ div#notebook {
 
  
  
-<div id="90d45dea-2d9f-4b15-952e-05e8d60d933e"></div>
+<div id="76c6edc9-9b27-437b-862c-033e74c016a2"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#90d45dea-2d9f-4b15-952e-05e8d60d933e');
+var element = $('#76c6edc9-9b27-437b-862c-033e74c016a2');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
 {"model_id": "985472b5c0cc4d8eb67bd9999b88b557", "version_major": 2, "version_minor": 0}
@@ -12025,10 +12054,10 @@ could not geocode: 359 Saint James Avenue Woodbridge Proper, NJ or 359 Saint Jam
 
  
  
-<div id="2d7401f8-1cb7-4f99-a72c-135d762d1d72"></div>
+<div id="80c8682d-0d0e-49a1-afb7-1a7daacaf486"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#2d7401f8-1cb7-4f99-a72c-135d762d1d72');
+var element = $('#80c8682d-0d0e-49a1-afb7-1a7daacaf486');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
 {"model_id": "dc9357caad034f3bb394b22342f96c90", "version_major": 2, "version_minor": 0}
@@ -12097,10 +12126,10 @@ var element = $('#2d7401f8-1cb7-4f99-a72c-135d762d1d72');
 
  
  
-<div id="8f0f46be-b56d-47f4-9448-a41e961db889"></div>
+<div id="2202a072-784e-44f4-a16e-18fb1d5b411e"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#8f0f46be-b56d-47f4-9448-a41e961db889');
+var element = $('#2202a072-784e-44f4-a16e-18fb1d5b411e');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
 {"model_id": "9050f3df481949649736194f6426ad8b", "version_major": 2, "version_minor": 0}
@@ -12147,7 +12176,7 @@ var element = $('#8f0f46be-b56d-47f4-9448-a41e961db889');
     <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">barnabas_duration</span> <span class="o">&lt;</span> <span class="n">HALF_HOUR</span> <span class="o">+</span> <span class="n">TEN_MINUTES</span><span class="p">)</span> <span class="o">&amp;</span>
     <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">park_and_ride_duration1</span> <span class="o">&lt;</span> <span class="n">TEN_MINUTES</span><span class="p">)</span> <span class="o">&amp;</span>
     <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">park_and_ride_duration</span> <span class="o">&lt;</span> <span class="n">ONE_HOUR</span> <span class="o">+</span> <span class="n">TEN_MINUTES</span><span class="p">)</span> <span class="o">&amp;</span>
-    <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">price</span> <span class="o">&gt;</span> <span class="mi">300000</span><span class="p">)</span> <span class="o">&amp;</span>
+    <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">price</span> <span class="o">&gt;</span> <span class="n">MIN_PRICE</span><span class="p">)</span> <span class="o">&amp;</span>
     <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">sqft</span><span class="o">.</span><span class="n">notnull</span><span class="p">())</span>
 <span class="p">]</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;sqft&#39;</span><span class="p">,],</span> <span class="n">ascending</span><span class="o">=</span><span class="p">[</span><span class="kc">False</span><span class="p">])</span>
@@ -12792,7 +12821,7 @@ var element = $('#8f0f46be-b56d-47f4-9448-a41e961db889');
     <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">barnabas_duration</span> <span class="o">&lt;</span> <span class="n">HALF_HOUR</span> <span class="o">+</span> <span class="n">TEN_MINUTES</span><span class="p">)</span> <span class="o">&amp;</span>
     <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">park_and_ride_duration1</span> <span class="o">&lt;</span> <span class="n">TEN_MINUTES</span><span class="p">)</span> <span class="o">&amp;</span>
     <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">park_and_ride_duration</span> <span class="o">&lt;</span> <span class="n">ONE_HOUR</span> <span class="o">+</span> <span class="n">TEN_MINUTES</span><span class="p">)</span> <span class="o">&amp;</span>
-    <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">price</span> <span class="o">&gt;</span> <span class="mi">300000</span><span class="p">)</span> <span class="o">&amp;</span>
+    <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">price</span> <span class="o">&gt;</span> <span class="n">MIN_PRICE</span><span class="p">)</span> <span class="o">&amp;</span>
     <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">sqft</span><span class="o">.</span><span class="n">isnull</span><span class="p">())</span>
 <span class="p">]</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;city&#39;</span><span class="p">,</span> <span class="s1">&#39;price&#39;</span><span class="p">,],</span> <span class="n">ascending</span><span class="o">=</span><span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">])</span>

@@ -11799,6 +11799,7 @@ div#notebook {
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">math</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">from</span> <span class="nn">tqdm</span> <span class="k">import</span> <span class="n">tqdm_notebook</span> <span class="k">as</span> <span class="n">tqdm</span>
@@ -11834,7 +11835,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Define global parameters</strong></p>
+<p><strong>Import global settings</strong></p>
 
 </div>
 </div>
@@ -11844,22 +11845,31 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">counties</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Passaic&#39;</span><span class="p">,</span> <span class="s1">&#39;Hudson&#39;</span><span class="p">,</span><span class="s1">&#39;Essex&#39;</span><span class="p">,</span> <span class="s1">&#39;Middlesex&#39;</span><span class="p">,</span> <span class="s1">&#39;Morris&#39;</span><span class="p">,</span> <span class="s1">&#39;Bergen&#39;</span><span class="p">,</span> <span class="s1">&#39;Union&#39;</span><span class="p">,</span> <span class="s1">&#39;Sussex&#39;</span><span class="p">,]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">settings</span> <span class="k">import</span> <span class="p">(</span><span class="n">blacklist_cities</span><span class="p">,</span> <span class="n">counties</span><span class="p">,</span> <span class="n">ONE_HOUR</span><span class="p">,</span> <span class="n">HALF_HOUR</span><span class="p">,</span> <span class="n">TEN_MINUTES</span><span class="p">,</span>
+                      <span class="n">MIN_PRICE</span><span class="p">,</span> <span class="n">MAX_PRICE</span><span class="p">,</span> <span class="n">MAX_TAX</span><span class="p">,</span> <span class="n">MIN_BEDS</span><span class="p">,</span> <span class="n">MIN_BATHS</span><span class="p">,)</span>
 
-<span class="n">ONE_HOUR</span> <span class="o">=</span> <span class="mi">3600</span>
-<span class="n">TEN_MINUTES</span> <span class="o">=</span> <span class="n">ONE_HOUR</span><span class="o">/</span><span class="mi">6</span>
-<span class="n">HALF_HOUR</span> <span class="o">=</span> <span class="n">ONE_HOUR</span> <span class="o">/</span> <span class="mi">2</span>
-<span class="n">ONE_HOUR_TEN_MINUTES</span> <span class="o">=</span> <span class="n">ONE_HOUR</span> <span class="o">+</span> <span class="n">TEN_MINUTES</span>
-<span class="n">ONE_HOUR_THIRTY_MINUTES</span> <span class="o">=</span> <span class="n">ONE_HOUR</span> <span class="o">+</span> <span class="n">HALF_HOUR</span>
-<span class="n">ONE_HOUR_FORTY_MINUTES</span> <span class="o">=</span> <span class="n">ONE_HOUR</span> <span class="o">+</span> <span class="n">HALF_HOUR</span> <span class="o">+</span> <span class="n">TEN_MINUTES</span>
-
-<span class="n">blacklist_cities</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="s1">&#39;Paterson&#39;</span><span class="p">,</span> <span class="s1">&#39;East Orange&#39;</span><span class="p">,</span> <span class="s1">&#39;City of Orange&#39;</span><span class="p">,</span> <span class="s1">&#39;Belleville&#39;</span><span class="p">,</span> <span class="s1">&#39;Elizabeth&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;Jefferson&#39;</span><span class="p">,</span> <span class="s1">&#39;Passaic&#39;</span><span class="p">,</span> <span class="s1">&#39;Newark&#39;</span><span class="p">,</span> <span class="s1">&#39;East Newark&#39;</span><span class="p">,</span> <span class="s1">&#39;Linden&#39;</span><span class="p">,</span> <span class="s1">&#39;Nutley&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;Garfield&#39;</span><span class="p">,</span> <span class="s1">&#39;Hillside&#39;</span><span class="p">,</span> <span class="s1">&#39;Little Ferry&#39;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">MIN_PRICE</span><span class="p">,</span> <span class="n">MAX_PRICE</span><span class="p">,</span> <span class="n">MAX_TAX</span><span class="p">,</span> <span class="n">MIN_BEDS</span><span class="p">,</span> <span class="n">MIN_BATHS</span><span class="p">,)</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>300000 525000 16000 3 2
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -11884,16 +11894,16 @@ div#notebook {
 <span class="k">for</span> <span class="n">county</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="p">(</span><span class="n">counties</span><span class="p">):</span>
 
     <span class="n">listings</span> <span class="o">+=</span> <span class="n">get_listings</span><span class="p">(</span><span class="n">county</span><span class="p">,</span>
-                           <span class="n">min_list_price</span><span class="o">=</span><span class="mi">350000</span><span class="p">,</span>
-                           <span class="n">max_list_price</span><span class="o">=</span><span class="mi">400000</span><span class="p">,</span>
-                           <span class="n">min_bedrooms</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
-                           <span class="n">min_bathrooms</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+                           <span class="n">min_list_price</span><span class="o">=</span><span class="n">MIN_PRICE</span><span class="p">,</span>
+                           <span class="n">max_list_price</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">floor</span><span class="p">((</span><span class="n">MAX_PRICE</span><span class="o">+</span><span class="n">MIN_PRICE</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)),</span>
+                           <span class="n">min_bedrooms</span><span class="o">=</span><span class="n">MIN_BEDS</span><span class="p">,</span>
+                           <span class="n">min_bathrooms</span><span class="o">=</span><span class="n">MIN_BATHS</span><span class="p">)</span>
 
     <span class="n">listings</span> <span class="o">+=</span> <span class="n">get_listings</span><span class="p">(</span><span class="n">county</span><span class="p">,</span>
-                           <span class="n">min_list_price</span><span class="o">=</span><span class="mi">400000</span><span class="p">,</span>
-                           <span class="n">max_list_price</span><span class="o">=</span><span class="mi">515000</span><span class="p">,</span>
-                           <span class="n">min_bedrooms</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
-                           <span class="n">min_bathrooms</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+                           <span class="n">min_list_price</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">ceil</span><span class="p">((</span><span class="n">MAX_PRICE</span><span class="o">+</span><span class="n">MIN_PRICE</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)),</span>
+                           <span class="n">max_list_price</span><span class="o">=</span><span class="n">MAX_PRICE</span><span class="p">,</span>
+                           <span class="n">min_bedrooms</span><span class="o">=</span><span class="n">MIN_BEDS</span><span class="p">,</span>
+                           <span class="n">min_bathrooms</span><span class="o">=</span><span class="n">MIN_BATHS</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;Downloaded {len(listings)} listings from GSMLS.&quot;</span><span class="p">)</span>
 <span class="n">gsmls_listings</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">listings</span> <span class="k">if</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;address&#39;</span><span class="p">]]</span>
@@ -11918,13 +11928,13 @@ div#notebook {
 
  
  
-<div id="8fa3cee1-db00-48cd-9250-d4294add8454"></div>
+<div id="9739c1e4-97ca-4e03-ac46-3fa1b0017520"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#8fa3cee1-db00-48cd-9250-d4294add8454');
+var element = $('#9739c1e4-97ca-4e03-ac46-3fa1b0017520');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "9aecea9b94a94eaca669173fa233e19a", "version_major": 2, "version_minor": 0}
+{"model_id": "4eba411d83c84992b4158a64adc47868", "version_major": 2, "version_minor": 0}
 </script>
 </div>
 
@@ -11937,8 +11947,8 @@ var element = $('#8fa3cee1-db00-48cd-9250-d4294add8454');
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
-Downloaded 1104 listings from GSMLS.
-Filtered down to 1104 listings due to null address.
+Downloaded 1600 listings from GSMLS.
+Filtered down to 1600 listings due to null address.
 </pre>
 </div>
 </div>
@@ -11985,13 +11995,13 @@ Filtered down to 1104 listings due to null address.
 
  
  
-<div id="43b983f4-1ffe-4cd2-9f35-5f92aa67409b"></div>
+<div id="9b749504-7a7a-480e-ba23-dffd3b27cacd"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#43b983f4-1ffe-4cd2-9f35-5f92aa67409b');
+var element = $('#9b749504-7a7a-480e-ba23-dffd3b27cacd');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "9bedfb0744724441b92f17d3a43149d7", "version_major": 2, "version_minor": 0}
+{"model_id": "c8afe39a4d38418d9652c6409060dcd4", "version_major": 2, "version_minor": 0}
 </script>
 </div>
 
@@ -12007,10 +12017,19 @@ var element = $('#43b983f4-1ffe-4cd2-9f35-5f92aa67409b');
 could not geocode: 4 Shadtree Lane Mount Arlington Boro, NJ or 4 Shadtree Lane Mount Arlington, NJ
 could not geocode: 2 Shadetree Lane Mount Arlington Boro, NJ or 2 Shadetree Lane Mount Arlington, NJ
 could not geocode: 15 Shadetree Ln Mount Arlington Boro, NJ or 15 Shadetree Ln Mount Arlington, NJ
+could not geocode: 5 Harbor Front Plz A5 Elizabeth City, NJ or 5 Harbor Front Plz A5 Elizabeth, NJ
+could not geocode: 6 Harbor Front Ct Elizabeth City, NJ or 6 Harbor Front Ct Elizabeth, NJ
+could not geocode: 15 Harbor Front Plz B6 Elizabeth City, NJ or 15 Harbor Front Plz B6 Elizabeth, NJ
+could not geocode: 9 Harbor Front Plz A9 Elizabeth City, NJ or 9 Harbor Front Plz A9 Elizabeth, NJ
+could not geocode: 13 Harbor Front Ct C13 Elizabeth City, NJ or 13 Harbor Front Ct C13 Elizabeth, NJ
+could not geocode: 9 Harbor Front Ter D9 Elizabeth City, NJ or 9 Harbor Front Ter D9 Elizabeth, NJ
+could not geocode: 6 Harbor Front Ter D6 Elizabeth City, NJ or 6 Harbor Front Ter D6 Elizabeth, NJ
+could not geocode: 13 Harbor Front Ter D13 Elizabeth City, NJ or 13 Harbor Front Ter D13 Elizabeth, NJ
 could not geocode: 1 Harbor Front Plz A1 Elizabeth City, NJ or 1 Harbor Front Plz A1 Elizabeth, NJ
 could not geocode: 1 Harbor Front Ter D1 Elizabeth City, NJ or 1 Harbor Front Ter D1 Elizabeth, NJ
 could not geocode: 380 Route 206 Andover Twp., NJ or 380 Route 206 Andover Twp., NJ
 could not geocode: 6 Anthony Ct Hardyston Twp., NJ or 6 Anthony Ct Hardyston Twp., NJ
+could not geocode: 19 Durban Rd. 3 UNITS Hopatcong Boro, NJ or 19 Durban Rd. 3 UNITS Hopatcong, NJ
 could not geocode: 3 Anthony Ct Hardyston Twp., NJ or 3 Anthony Ct Hardyston Twp., NJ
 could not geocode: 103 Mariner&#39;s Pointe Hopatcong Boro, NJ or 103 Mariner&#39;s Pointe Hopatcong, NJ
 could not geocode: 303 Mariner&#39;s Pointe Hopatcong Boro, NJ or 303 Mariner&#39;s Pointe Hopatcong, NJ
@@ -12062,13 +12081,13 @@ could not geocode: 303 Mariner&#39;s Pointe Hopatcong Boro, NJ or 303 Mariner&#3
 
  
  
-<div id="657e5d02-d68a-4a60-bec9-286911f8b98b"></div>
+<div id="c046ecf4-0ac5-4187-9d49-6dc9b9f9abcb"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#657e5d02-d68a-4a60-bec9-286911f8b98b');
+var element = $('#c046ecf4-0ac5-4187-9d49-6dc9b9f9abcb');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "3b472a1f85ce45989bbc384411f3ae11", "version_major": 2, "version_minor": 0}
+{"model_id": "0a598ad046a048f89eaeddbbdac98079", "version_major": 2, "version_minor": 0}
 </script>
 </div>
 
@@ -12134,13 +12153,13 @@ var element = $('#657e5d02-d68a-4a60-bec9-286911f8b98b');
 
  
  
-<div id="5a62ec71-d3ef-49fd-9c27-9adec9802c5d"></div>
+<div id="78d3915c-5e87-4231-a7b3-3fdc5ce11b20"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#5a62ec71-d3ef-49fd-9c27-9adec9802c5d');
+var element = $('#78d3915c-5e87-4231-a7b3-3fdc5ce11b20');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "0c0befa01f05447ebf9e1d23be7db43a", "version_major": 2, "version_minor": 0}
+{"model_id": "ec3af3f1252c4482842efea4da89a430", "version_major": 2, "version_minor": 0}
 </script>
 </div>
 
@@ -12153,8 +12172,8 @@ var element = $('#5a62ec71-d3ef-49fd-9c27-9adec9802c5d');
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
-1041 out of 1104 have park and ride commute times.
-780 out of 1104 have walking commute times.
+1503 out of 1600 have park and ride commute times.
+1113 out of 1600 have walking commute times.
 </pre>
 </div>
 </div>
@@ -12165,15 +12184,15 @@ var element = $('#5a62ec71-d3ef-49fd-9c27-9adec9802c5d');
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">gsmls_filters</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">((</span><span class="n">x</span><span class="o">.</span><span class="n">address</span><span class="o">.</span><span class="n">notnull</span><span class="p">())</span> <span class="o">&amp;</span>
                             <span class="p">(</span><span class="o">~</span><span class="n">x</span><span class="o">.</span><span class="n">city</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">blacklist_cities</span><span class="p">))</span> <span class="o">&amp;</span>
                             <span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">barnabas_duration</span> <span class="o">&lt;</span> <span class="n">HALF_HOUR</span> <span class="o">+</span> <span class="n">TEN_MINUTES</span><span class="p">)</span> <span class="o">&amp;</span>                           
-                            <span class="p">((</span><span class="n">x</span><span class="o">.</span><span class="n">park_and_ride_duration1</span> <span class="o">&lt;</span> <span class="n">TEN_MINUTES</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">park_and_ride_duration</span> <span class="o">&lt;</span> <span class="n">ONE_HOUR_TEN_MINUTES</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">nyc_duration</span> <span class="o">&lt;</span> <span class="n">ONE_HOUR_TEN_MINUTES</span><span class="p">))</span> <span class="o">&amp;</span>
+                            <span class="p">((</span><span class="n">x</span><span class="o">.</span><span class="n">park_and_ride_duration1</span> <span class="o">&lt;</span> <span class="n">TEN_MINUTES</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">park_and_ride_duration</span> <span class="o">&lt;</span> <span class="n">ONE_HOUR</span> <span class="o">+</span> <span class="n">TEN_MINUTES</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">nyc_duration</span> <span class="o">&lt;</span> <span class="n">ONE_HOUR</span> <span class="o">+</span> <span class="n">TEN_MINUTES</span><span class="p">))</span> <span class="o">&amp;</span>
                             <span class="p">(</span><span class="o">~</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;style&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">&#39;Townhouse&#39;</span><span class="p">,</span> <span class="n">case</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span> <span class="o">&amp;</span>
-<span class="c1">#                             (~x[&#39;style&#39;].str.contains(&#39;Bi-Level&#39;, case=False)) &amp;</span>
+                            <span class="c1"># (~x[&#39;style&#39;].str.contains(&#39;Bi-Level&#39;, case=False)) &amp;</span>
                             <span class="p">(</span><span class="o">~</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;style&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">&#39;Cape Cod&#39;</span><span class="p">,</span> <span class="n">case</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span> <span class="o">&amp;</span>
                             <span class="p">(</span><span class="o">~</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;style&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">&#39;Multi Floor Unit&#39;</span><span class="p">,</span> <span class="n">case</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span> <span class="o">&amp;</span>
                             <span class="p">(</span><span class="o">~</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;style&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">&#39;1/2 Duplex&#39;</span><span class="p">,</span> <span class="n">case</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span> <span class="o">&amp;</span>
@@ -12208,14 +12227,14 @@ var element = $('#5a62ec71-d3ef-49fd-9c27-9adec9802c5d');
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df1a</span> <span class="o">=</span> <span class="n">show_gsmls</span><span class="p">()</span>
-<span class="n">df1a</span> <span class="o">=</span> <span class="n">df1a</span><span class="p">[(</span><span class="n">df1a</span><span class="o">.</span><span class="n">sqft</span> <span class="o">&gt;</span> <span class="mi">2000</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df1a</span><span class="o">.</span><span class="n">tax</span> <span class="o">&lt;</span> <span class="mi">10000</span><span class="p">)]</span>
-<span class="n">df1a</span> <span class="o">=</span> <span class="n">df1a</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;barnabas_duration&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">df1a</span><span class="p">),</span> <span class="s2">&quot;listings after filtering&quot;</span><span class="p">)</span>
-<span class="n">preview_gsmls_df</span><span class="p">(</span><span class="n">df1a</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">show_gsmls</span><span class="p">()</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="o">.</span><span class="n">sqft</span> <span class="o">&gt;</span> <span class="mi">2000</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">tax</span> <span class="o">&lt;</span> <span class="mi">10000</span><span class="p">)]</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;barnabas_duration&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">),</span> <span class="s2">&quot;listings after filtering&quot;</span><span class="p">)</span>
+<span class="n">preview_gsmls_df</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12232,7 +12251,7 @@ var element = $('#5a62ec71-d3ef-49fd-9c27-9adec9802c5d');
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>10 listings after filtering
+<pre>11 listings after filtering
 </pre>
 </div>
 </div>
@@ -12447,6 +12466,28 @@ var element = $('#5a62ec71-d3ef-49fd-9c27-9adec9802c5d');
       <td>57 mins</td>
     </tr>
     <tr>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3434956">3434956</a></th>
+      <td>39 Marlin Ave</td>
+      <td>Pequannock Township</td>
+      <td>Morris</td>
+      <td>3</td>
+      <td>3</td>
+      <td>0</td>
+      <td>2060.0</td>
+      <td>339900</td>
+      <td>6272</td>
+      <td>Split Level</td>
+      <td>8</td>
+      <td>Lincoln Park</td>
+      <td>7 mins, 1 hour 5 mins</td>
+      <td>rail</td>
+      <td>1.879715</td>
+      <td>Mothers Park & Ride</td>
+      <td>1.980115</td>
+      <td>33 mins</td>
+      <td>1 hour 2 mins</td>
+    </tr>
+    <tr>
       <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3434968">3434968</a></th>
       <td>6 First St</td>
       <td>Pequannock Township</td>
@@ -12533,14 +12574,14 @@ var element = $('#5a62ec71-d3ef-49fd-9c27-9adec9802c5d');
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df1b</span> <span class="o">=</span> <span class="n">show_gsmls</span><span class="p">()</span>
-<span class="n">df1b</span> <span class="o">=</span> <span class="n">df1b</span><span class="p">[(</span><span class="n">df1b</span><span class="o">.</span><span class="n">sqft</span> <span class="o">&gt;</span> <span class="mi">2000</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df1b</span><span class="o">.</span><span class="n">tax</span> <span class="o">&gt;</span> <span class="mi">10000</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df1b</span><span class="o">.</span><span class="n">tax</span> <span class="o">&lt;</span> <span class="mi">13500</span><span class="p">)]</span>
-<span class="n">df1b</span> <span class="o">=</span> <span class="n">df1b</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;price&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">df1b</span><span class="p">),</span> <span class="s2">&quot;listings after filtering&quot;</span><span class="p">)</span>
-<span class="n">preview_gsmls_df</span><span class="p">(</span><span class="n">df1b</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">show_gsmls</span><span class="p">()</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="o">.</span><span class="n">sqft</span> <span class="o">&gt;</span> <span class="mi">2000</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">tax</span> <span class="o">&gt;</span> <span class="mi">10000</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">tax</span> <span class="o">&lt;</span> <span class="mi">13500</span><span class="p">)]</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;price&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">),</span> <span class="s2">&quot;listings after filtering&quot;</span><span class="p">)</span>
+<span class="n">preview_gsmls_df</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12557,7 +12598,7 @@ var element = $('#5a62ec71-d3ef-49fd-9c27-9adec9802c5d');
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>10 listings after filtering
+<pre>14 listings after filtering
 </pre>
 </div>
 </div>
@@ -12617,6 +12658,50 @@ var element = $('#5a62ec71-d3ef-49fd-9c27-9adec9802c5d');
     </tr>
   </thead>
   <tbody>
+    <tr>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3435111">3435111</a></th>
+      <td>63 Stanford Ave</td>
+      <td>West Orange</td>
+      <td>Essex</td>
+      <td>3</td>
+      <td>2</td>
+      <td>1</td>
+      <td>2082.0</td>
+      <td>306000</td>
+      <td>13229</td>
+      <td>Expanded Ranch</td>
+      <td>8</td>
+      <td>Orange</td>
+      <td>9 mins, 32 mins</td>
+      <td>rail</td>
+      <td>3.043755</td>
+      <td>Willowbrook Mall</td>
+      <td>5.484492</td>
+      <td>12 mins</td>
+      <td>1 hour 15 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3435377">3435377</a></th>
+      <td>36 James St</td>
+      <td>Wayne</td>
+      <td>Passaic</td>
+      <td>4</td>
+      <td>2</td>
+      <td>0</td>
+      <td>2276.0</td>
+      <td>309900</td>
+      <td>10192</td>
+      <td>Bi-Level</td>
+      <td>8</td>
+      <td>Mothers Park & Ride</td>
+      <td>5 mins, 55 mins</td>
+      <td>bus</td>
+      <td>0.974083</td>
+      <td>Mothers Park & Ride</td>
+      <td>0.974083</td>
+      <td>31 mins</td>
+      <td>58 mins</td>
+    </tr>
     <tr>
       <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3416166">3416166</a></th>
       <td>1148-50 CUSHING RD</td>
@@ -12837,6 +12922,50 @@ var element = $('#5a62ec71-d3ef-49fd-9c27-9adec9802c5d');
       <td>25 mins</td>
       <td>50 mins</td>
     </tr>
+    <tr>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3432478">3432478</a></th>
+      <td>147 Hickory Rd</td>
+      <td>Union</td>
+      <td>Union</td>
+      <td>4</td>
+      <td>3</td>
+      <td>0</td>
+      <td>2350.0</td>
+      <td>520000</td>
+      <td>10011</td>
+      <td>Colonial, Custom Home</td>
+      <td>10</td>
+      <td>Springfield Center - Springfield Twp</td>
+      <td>6 mins, 1 hour 3 mins</td>
+      <td>bus</td>
+      <td>0.723089</td>
+      <td>Springfield Center - Springfield Twp</td>
+      <td>0.723089</td>
+      <td>17 mins</td>
+      <td>1 hour 9 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3404283">3404283</a></th>
+      <td>618 Summit Ave</td>
+      <td>Hackensack</td>
+      <td>Bergen</td>
+      <td>4</td>
+      <td>2</td>
+      <td>1</td>
+      <td>2658.0</td>
+      <td>525000</td>
+      <td>12708</td>
+      <td>Bi-Level</td>
+      <td>8</td>
+      <td>Anderson Street</td>
+      <td>3 mins, 41 mins</td>
+      <td>rail</td>
+      <td>0.765913</td>
+      <td>Hackensack Terminal</td>
+      <td>1.610432</td>
+      <td>37 mins</td>
+      <td>1 hour 3 mins</td>
+    </tr>
   </tbody>
 </table>
 </div>
@@ -12858,14 +12987,14 @@ var element = $('#5a62ec71-d3ef-49fd-9c27-9adec9802c5d');
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df1bb</span> <span class="o">=</span> <span class="n">show_gsmls</span><span class="p">()</span>
-<span class="n">df1bb</span> <span class="o">=</span> <span class="n">df1bb</span><span class="p">[(</span><span class="n">df1bb</span><span class="o">.</span><span class="n">sqft</span> <span class="o">&gt;</span> <span class="mi">2000</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df1bb</span><span class="o">.</span><span class="n">tax</span> <span class="o">&gt;</span> <span class="mi">13500</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df1bb</span><span class="o">.</span><span class="n">tax</span> <span class="o">&lt;</span> <span class="mi">16000</span><span class="p">)]</span>
-<span class="n">df1bb</span> <span class="o">=</span> <span class="n">df1bb</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;tax&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">df1bb</span><span class="p">),</span> <span class="s2">&quot;listings after filtering&quot;</span><span class="p">)</span>
-<span class="n">preview_gsmls_df</span><span class="p">(</span><span class="n">df1bb</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">show_gsmls</span><span class="p">()</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="o">.</span><span class="n">sqft</span> <span class="o">&gt;</span> <span class="mi">2000</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">tax</span> <span class="o">&gt;</span> <span class="mi">13500</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">tax</span> <span class="o">&lt;</span> <span class="n">MAX_TAX</span><span class="p">)]</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;tax&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">),</span> <span class="s2">&quot;listings after filtering&quot;</span><span class="p">)</span>
+<span class="n">preview_gsmls_df</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12882,7 +13011,7 @@ var element = $('#5a62ec71-d3ef-49fd-9c27-9adec9802c5d');
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>6 listings after filtering
+<pre>7 listings after filtering
 </pre>
 </div>
 </div>
@@ -13053,6 +13182,28 @@ var element = $('#5a62ec71-d3ef-49fd-9c27-9adec9802c5d');
       <td>1 hour 5 mins</td>
     </tr>
     <tr>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3421464">3421464</a></th>
+      <td>45 Hillcrest Ter</td>
+      <td>Lincoln Park</td>
+      <td>Morris</td>
+      <td>4</td>
+      <td>3</td>
+      <td>0</td>
+      <td>3500.0</td>
+      <td>520000</td>
+      <td>14809</td>
+      <td>Custom Home, Raised Ranch</td>
+      <td>10</td>
+      <td>Lincoln Park</td>
+      <td>5 mins, 1 hour 5 mins</td>
+      <td>rail</td>
+      <td>0.414171</td>
+      <td>Mothers Park & Ride</td>
+      <td>2.073701</td>
+      <td>30 mins</td>
+      <td>1 hour 0 mins</td>
+    </tr>
+    <tr>
       <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3411678">3411678</a></th>
       <td>47 NORMANDY RD</td>
       <td>Woodbridge Township</td>
@@ -13095,14 +13246,14 @@ var element = $('#5a62ec71-d3ef-49fd-9c27-9adec9802c5d');
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df1c</span> <span class="o">=</span> <span class="n">show_gsmls</span><span class="p">()</span>
-<span class="n">df1c</span> <span class="o">=</span> <span class="n">df1c</span><span class="p">[(</span><span class="n">df1c</span><span class="o">.</span><span class="n">sqft</span><span class="o">.</span><span class="n">isnull</span><span class="p">())</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df1c</span><span class="o">.</span><span class="n">tax</span> <span class="o">&lt;</span> <span class="mi">10000</span><span class="p">)]</span>
-<span class="n">df1c</span> <span class="o">=</span> <span class="n">df1c</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;city&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">df1c</span><span class="p">),</span> <span class="s2">&quot;listings after filtering&quot;</span><span class="p">)</span>
-<span class="n">preview_gsmls_df</span><span class="p">(</span><span class="n">df1c</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">show_gsmls</span><span class="p">()</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="o">.</span><span class="n">sqft</span><span class="o">.</span><span class="n">isnull</span><span class="p">())</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">tax</span> <span class="o">&lt;</span> <span class="mi">10000</span><span class="p">)]</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;city&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">),</span> <span class="s2">&quot;listings after filtering&quot;</span><span class="p">)</span>
+<span class="n">preview_gsmls_df</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -13119,7 +13270,7 @@ var element = $('#5a62ec71-d3ef-49fd-9c27-9adec9802c5d');
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>66 listings after filtering
+<pre>90 listings after filtering
 </pre>
 </div>
 </div>
@@ -13180,28 +13331,6 @@ var element = $('#5a62ec71-d3ef-49fd-9c27-9adec9802c5d');
   </thead>
   <tbody>
     <tr>
-      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3433324">3433324</a></th>
-      <td>217 Stevens Ave</td>
-      <td>Cedar Grove</td>
-      <td>Essex</td>
-      <td>3</td>
-      <td>3</td>
-      <td>1</td>
-      <td>NaN</td>
-      <td>509000</td>
-      <td>9231</td>
-      <td>Colonial</td>
-      <td>6</td>
-      <td>Little Falls</td>
-      <td>2 mins, 1 hour 4 mins</td>
-      <td>rail</td>
-      <td>0.423710</td>
-      <td>Willowbrook Mall</td>
-      <td>1.753137</td>
-      <td>23 mins</td>
-      <td>1 hour 4 mins</td>
-    </tr>
-    <tr>
       <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3428699">3428699</a></th>
       <td>27 Ira Rd</td>
       <td>Cedar Grove</td>
@@ -13224,48 +13353,48 @@ var element = $('#5a62ec71-d3ef-49fd-9c27-9adec9802c5d');
       <td>51 mins</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3428633">3428633</a></th>
-      <td>447 Westfield Ave</td>
-      <td>Clark</td>
-      <td>Union</td>
-      <td>4</td>
-      <td>2</td>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3433324">3433324</a></th>
+      <td>217 Stevens Ave</td>
+      <td>Cedar Grove</td>
+      <td>Essex</td>
+      <td>3</td>
+      <td>3</td>
       <td>1</td>
       <td>NaN</td>
-      <td>399999</td>
-      <td>9631</td>
-      <td>Custom Home, Split Level</td>
-      <td>10</td>
-      <td>Garwood</td>
-      <td>9 mins, 53 mins</td>
+      <td>509000</td>
+      <td>9231</td>
+      <td>Colonial</td>
+      <td>6</td>
+      <td>Little Falls</td>
+      <td>2 mins, 1 hour 4 mins</td>
       <td>rail</td>
-      <td>1.974796</td>
-      <td>Rutgers Lane Hospital - Union Twp</td>
-      <td>4.251719</td>
-      <td>29 mins</td>
-      <td>1 hour 30 mins</td>
+      <td>0.423710</td>
+      <td>Willowbrook Mall</td>
+      <td>1.753137</td>
+      <td>23 mins</td>
+      <td>1 hour 4 mins</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3436414">3436414</a></th>
-      <td>44 KATHRYN ST</td>
-      <td>Clark</td>
-      <td>Union</td>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3434457">3434457</a></th>
+      <td>317 Bowden Rd</td>
+      <td>Cedar Grove</td>
+      <td>Essex</td>
       <td>4</td>
       <td>2</td>
       <td>0</td>
       <td>NaN</td>
-      <td>469900</td>
-      <td>8551</td>
-      <td>Custom Home, See Remarks</td>
-      <td>7</td>
-      <td>Rahway</td>
-      <td>7 mins, 48 mins</td>
+      <td>525000</td>
+      <td>8611</td>
+      <td>Custom Home</td>
+      <td>8</td>
+      <td>Montclair Heights</td>
+      <td>5 mins, 52 mins</td>
       <td>rail</td>
-      <td>1.507395</td>
-      <td>Carteret</td>
-      <td>4.256120</td>
-      <td>30 mins</td>
-      <td>1 hour 23 mins</td>
+      <td>1.062350</td>
+      <td>Allwood Road</td>
+      <td>2.513666</td>
+      <td>23 mins</td>
+      <td>50 mins</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3428897">3428897</a></th>
@@ -13290,48 +13419,70 @@ var element = $('#5a62ec71-d3ef-49fd-9c27-9adec9802c5d');
       <td>1 hour 21 mins</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3435342">3435342</a></th>
-      <td>52 Rowland Ave</td>
-      <td>Clifton</td>
-      <td>Passaic</td>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3436414">3436414</a></th>
+      <td>44 KATHRYN ST</td>
+      <td>Clark</td>
+      <td>Union</td>
+      <td>4</td>
+      <td>2</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>469900</td>
+      <td>8551</td>
+      <td>Custom Home, See Remarks</td>
+      <td>7</td>
+      <td>Rahway</td>
+      <td>7 mins, 48 mins</td>
+      <td>rail</td>
+      <td>1.507395</td>
+      <td>Carteret</td>
+      <td>4.256120</td>
+      <td>30 mins</td>
+      <td>1 hour 23 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3428633">3428633</a></th>
+      <td>447 Westfield Ave</td>
+      <td>Clark</td>
+      <td>Union</td>
       <td>4</td>
       <td>2</td>
       <td>1</td>
       <td>NaN</td>
-      <td>399000</td>
-      <td>8047</td>
-      <td>Custom Home</td>
-      <td>8</td>
-      <td>Passaic</td>
-      <td>4 mins, 40 mins</td>
+      <td>399999</td>
+      <td>9631</td>
+      <td>Custom Home, Split Level</td>
+      <td>10</td>
+      <td>Garwood</td>
+      <td>9 mins, 53 mins</td>
       <td>rail</td>
-      <td>0.768880</td>
-      <td>Allwood Road</td>
-      <td>1.420538</td>
-      <td>30 mins</td>
-      <td>48 mins</td>
+      <td>1.974796</td>
+      <td>Rutgers Lane Hospital - Union Twp</td>
+      <td>4.251719</td>
+      <td>29 mins</td>
+      <td>1 hour 30 mins</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3422738">3422738</a></th>
-      <td>119 Edgewood Ave</td>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3434599">3434599</a></th>
+      <td>103 Arlington Ave</td>
       <td>Clifton</td>
       <td>Passaic</td>
       <td>3</td>
       <td>2</td>
-      <td>1</td>
+      <td>0</td>
       <td>NaN</td>
-      <td>374900</td>
-      <td>9515</td>
+      <td>329000</td>
+      <td>7506</td>
       <td>Colonial</td>
-      <td>6</td>
-      <td>Passaic</td>
-      <td>4 mins, 40 mins</td>
+      <td>7</td>
+      <td>Clifton</td>
+      <td>8 mins, 44 mins</td>
       <td>rail</td>
-      <td>0.830379</td>
-      <td>Clifton Commons</td>
-      <td>1.141417</td>
-      <td>29 mins</td>
-      <td>51 mins</td>
+      <td>1.257149</td>
+      <td>Passaic Bus Terminal</td>
+      <td>1.278926</td>
+      <td>30 mins</td>
+      <td>58 mins</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3435731">3435731</a></th>
@@ -13356,28 +13507,6 @@ var element = $('#5a62ec71-d3ef-49fd-9c27-9adec9802c5d');
       <td>55 mins</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3430713">3430713</a></th>
-      <td>80 W 2nd St</td>
-      <td>Clifton</td>
-      <td>Passaic</td>
-      <td>5</td>
-      <td>2</td>
-      <td>1</td>
-      <td>NaN</td>
-      <td>489000</td>
-      <td>9352</td>
-      <td>Bi-Level</td>
-      <td>7</td>
-      <td>Clifton</td>
-      <td>8 mins, 44 mins</td>
-      <td>rail</td>
-      <td>1.427437</td>
-      <td>Passaic Bus Terminal</td>
-      <td>2.207848</td>
-      <td>29 mins</td>
-      <td>51 mins</td>
-    </tr>
-    <tr>
       <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3409537">3409537</a></th>
       <td>118 W 2nd St</td>
       <td>Clifton</td>
@@ -13398,6 +13527,50 @@ var element = $('#5a62ec71-d3ef-49fd-9c27-9adec9802c5d');
       <td>2.239075</td>
       <td>27 mins</td>
       <td>51 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3408197">3408197</a></th>
+      <td>46 Hollywood Ave</td>
+      <td>Clifton</td>
+      <td>Passaic</td>
+      <td>3</td>
+      <td>2</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>329000</td>
+      <td>0</td>
+      <td>Ranch</td>
+      <td>6</td>
+      <td>Clifton Commons</td>
+      <td>3 mins, 47 mins</td>
+      <td>bus</td>
+      <td>0.555150</td>
+      <td>Clifton Commons</td>
+      <td>0.555150</td>
+      <td>27 mins</td>
+      <td>49 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3425188">3425188</a></th>
+      <td>21 Clay St</td>
+      <td>Clifton</td>
+      <td>Passaic</td>
+      <td>4</td>
+      <td>2</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>389900</td>
+      <td>8905</td>
+      <td>See Remarks</td>
+      <td>7</td>
+      <td>Clifton Commons</td>
+      <td>3 mins, 47 mins</td>
+      <td>bus</td>
+      <td>0.283583</td>
+      <td>Clifton Commons</td>
+      <td>0.283583</td>
+      <td>28 mins</td>
+      <td>46 mins</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3432077">3432077</a></th>
@@ -13422,26 +13595,92 @@ var element = $('#5a62ec71-d3ef-49fd-9c27-9adec9802c5d');
       <td>1 hour 2 mins</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3425188">3425188</a></th>
-      <td>21 Clay St</td>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3430713">3430713</a></th>
+      <td>80 W 2nd St</td>
+      <td>Clifton</td>
+      <td>Passaic</td>
+      <td>5</td>
+      <td>2</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>489000</td>
+      <td>9352</td>
+      <td>Bi-Level</td>
+      <td>7</td>
+      <td>Clifton</td>
+      <td>8 mins, 44 mins</td>
+      <td>rail</td>
+      <td>1.427437</td>
+      <td>Passaic Bus Terminal</td>
+      <td>2.207848</td>
+      <td>29 mins</td>
+      <td>51 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3431528">3431528</a></th>
+      <td>150 Clinton Ave</td>
+      <td>Clifton</td>
+      <td>Passaic</td>
+      <td>4</td>
+      <td>2</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>339000</td>
+      <td>8610</td>
+      <td>Colonial</td>
+      <td>7</td>
+      <td>Clifton</td>
+      <td>4 mins, 44 mins</td>
+      <td>rail</td>
+      <td>0.536066</td>
+      <td>Passaic Bus Terminal</td>
+      <td>1.097687</td>
+      <td>30 mins</td>
+      <td>53 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3422738">3422738</a></th>
+      <td>119 Edgewood Ave</td>
+      <td>Clifton</td>
+      <td>Passaic</td>
+      <td>3</td>
+      <td>2</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>374900</td>
+      <td>9515</td>
+      <td>Colonial</td>
+      <td>6</td>
+      <td>Passaic</td>
+      <td>4 mins, 40 mins</td>
+      <td>rail</td>
+      <td>0.830379</td>
+      <td>Clifton Commons</td>
+      <td>1.141417</td>
+      <td>29 mins</td>
+      <td>51 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3435342">3435342</a></th>
+      <td>52 Rowland Ave</td>
       <td>Clifton</td>
       <td>Passaic</td>
       <td>4</td>
       <td>2</td>
       <td>1</td>
       <td>NaN</td>
-      <td>389900</td>
-      <td>8905</td>
-      <td>See Remarks</td>
-      <td>7</td>
-      <td>Clifton Commons</td>
-      <td>3 mins, 47 mins</td>
-      <td>bus</td>
-      <td>0.283583</td>
-      <td>Clifton Commons</td>
-      <td>0.283583</td>
-      <td>28 mins</td>
-      <td>46 mins</td>
+      <td>399000</td>
+      <td>8047</td>
+      <td>Custom Home</td>
+      <td>8</td>
+      <td>Passaic</td>
+      <td>4 mins, 40 mins</td>
+      <td>rail</td>
+      <td>0.768880</td>
+      <td>Allwood Road</td>
+      <td>1.420538</td>
+      <td>30 mins</td>
+      <td>48 mins</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3414060">3414060</a></th>
@@ -13486,6 +13725,28 @@ var element = $('#5a62ec71-d3ef-49fd-9c27-9adec9802c5d');
       <td>4.672412</td>
       <td>37 mins</td>
       <td>1 hour 33 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3418722">3418722</a></th>
+      <td>85 Elmwood Ave</td>
+      <td>Edison</td>
+      <td>Middlesex</td>
+      <td>3</td>
+      <td>2</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>339900</td>
+      <td>8895</td>
+      <td>Detached, Ranch</td>
+      <td>8</td>
+      <td>Metuchen</td>
+      <td>3 mins, 51 mins</td>
+      <td>rail</td>
+      <td>0.872534</td>
+      <td>Sayreville</td>
+      <td>4.901415</td>
+      <td>37 mins</td>
+      <td>1 hour 20 mins</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3428672">3428672</a></th>
@@ -13576,6 +13837,28 @@ var element = $('#5a62ec71-d3ef-49fd-9c27-9adec9802c5d');
       <td>1 hour 54 mins</td>
     </tr>
     <tr>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3435325">3435325</a></th>
+      <td>1 Sharon Drive</td>
+      <td>Hanover</td>
+      <td>Morris</td>
+      <td>4</td>
+      <td>2</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>524900</td>
+      <td>8053</td>
+      <td>Ranch</td>
+      <td>10</td>
+      <td>Convent Station</td>
+      <td>8 mins, 1 hour 0 mins</td>
+      <td>rail</td>
+      <td>1.995208</td>
+      <td>Springfield Center - Springfield Twp</td>
+      <td>8.974603</td>
+      <td>21 mins</td>
+      <td>1 hour 52 mins</td>
+    </tr>
+    <tr>
       <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3434491">3434491</a></th>
       <td>319 Boulevard</td>
       <td>Kenilworth</td>
@@ -13596,6 +13879,28 @@ var element = $('#5a62ec71-d3ef-49fd-9c27-9adec9802c5d');
       <td>1.790486</td>
       <td>23 mins</td>
       <td>1 hour 9 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3435036">3435036</a></th>
+      <td>19 Mohawk Ave</td>
+      <td>Lincoln Park</td>
+      <td>Morris</td>
+      <td>3</td>
+      <td>2</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>324900</td>
+      <td>8010</td>
+      <td>Ranch</td>
+      <td>6</td>
+      <td>Mountain View</td>
+      <td>3 mins, 1 hour 11 mins</td>
+      <td>rail</td>
+      <td>0.692691</td>
+      <td>Mothers Park & Ride</td>
+      <td>0.967235</td>
+      <td>33 mins</td>
+      <td>1 hour 5 mins</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3408234">3408234</a></th>
@@ -13642,6 +13947,50 @@ var element = $('#5a62ec71-d3ef-49fd-9c27-9adec9802c5d');
       <td>46 mins</td>
     </tr>
     <tr>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3436210">3436210</a></th>
+      <td>1 Notch Rd</td>
+      <td>Little Falls</td>
+      <td>Passaic</td>
+      <td>3</td>
+      <td>2</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>315000</td>
+      <td>8367</td>
+      <td>Ranch</td>
+      <td>8</td>
+      <td>Montclair State University</td>
+      <td>2 mins, 57 mins</td>
+      <td>rail</td>
+      <td>0.513251</td>
+      <td>Allwood Road</td>
+      <td>2.110348</td>
+      <td>26 mins</td>
+      <td>38 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3417974">3417974</a></th>
+      <td>46 Van Pelt Pl</td>
+      <td>Little Falls</td>
+      <td>Passaic</td>
+      <td>4</td>
+      <td>3</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>339900</td>
+      <td>9737</td>
+      <td>Colonial</td>
+      <td>8</td>
+      <td>Little Falls</td>
+      <td>4 mins, 1 hour 4 mins</td>
+      <td>rail</td>
+      <td>0.548241</td>
+      <td>Willowbrook Mall</td>
+      <td>0.877670</td>
+      <td>24 mins</td>
+      <td>53 mins</td>
+    </tr>
+    <tr>
       <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3426913">3426913</a></th>
       <td>43 Burnet St</td>
       <td>Livingston</td>
@@ -13662,6 +14011,28 @@ var element = $('#5a62ec71-d3ef-49fd-9c27-9adec9802c5d');
       <td>4.250537</td>
       <td>4 mins</td>
       <td>1 hour 39 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3436714">3436714</a></th>
+      <td>428 N Lincoln Ave</td>
+      <td>Middlesex</td>
+      <td>Middlesex</td>
+      <td>3</td>
+      <td>2</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>335000</td>
+      <td>8818</td>
+      <td>Colonial</td>
+      <td>8</td>
+      <td>Dunellen</td>
+      <td>7 mins, 1 hour 0 mins</td>
+      <td>rail</td>
+      <td>1.411272</td>
+      <td>Watchung Park & Ride</td>
+      <td>5.792416</td>
+      <td>39 mins</td>
+      <td>1 hour 37 mins</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3410830">3410830</a></th>
@@ -13686,6 +14057,50 @@ var element = $('#5a62ec71-d3ef-49fd-9c27-9adec9802c5d');
       <td>57 mins</td>
     </tr>
     <tr>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3433545">3433545</a></th>
+      <td>21 Crystal St</td>
+      <td>North Arlington</td>
+      <td>Bergen</td>
+      <td>3</td>
+      <td>2</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>349900</td>
+      <td>8392</td>
+      <td>Colonial</td>
+      <td>7</td>
+      <td>Kingsland</td>
+      <td>6 mins, 31 mins</td>
+      <td>rail</td>
+      <td>1.467926</td>
+      <td>Clifton Commons</td>
+      <td>2.477050</td>
+      <td>32 mins</td>
+      <td>40 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3412356">3412356</a></th>
+      <td>13 Garrow Ave</td>
+      <td>Pequannock Township</td>
+      <td>Morris</td>
+      <td>3</td>
+      <td>2</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>310000</td>
+      <td>4874</td>
+      <td>Colonial</td>
+      <td>7</td>
+      <td>Lincoln Park</td>
+      <td>6 mins, 1 hour 5 mins</td>
+      <td>rail</td>
+      <td>1.792262</td>
+      <td>Mothers Park & Ride</td>
+      <td>1.911293</td>
+      <td>33 mins</td>
+      <td>1 hour 6 mins</td>
+    </tr>
+    <tr>
       <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3406097">3406097</a></th>
       <td>1898 W 5th St</td>
       <td>Piscataway Township</td>
@@ -13708,48 +14123,26 @@ var element = $('#5a62ec71-d3ef-49fd-9c27-9adec9802c5d');
       <td>1 hour 33 mins</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3435543">3435543</a></th>
-      <td>972 FERNWOOD AVENUE</td>
-      <td>Plainfield</td>
-      <td>Union</td>
-      <td>3</td>
-      <td>2</td>
-      <td>0</td>
-      <td>NaN</td>
-      <td>369999</td>
-      <td>9747</td>
-      <td>Colonial</td>
-      <td>7</td>
-      <td>Netherwood</td>
-      <td>4 mins, 1 hour 2 mins</td>
-      <td>rail</td>
-      <td>0.744823</td>
-      <td>Watchung Park & Ride</td>
-      <td>1.812149</td>
-      <td>36 mins</td>
-      <td>1 hour 28 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3410799">3410799</a></th>
-      <td>1108-10 PUTNAM AVE</td>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3435475">3435475</a></th>
+      <td>266 Netherwood Ave</td>
       <td>Plainfield</td>
       <td>Union</td>
       <td>6</td>
       <td>3</td>
       <td>0</td>
       <td>NaN</td>
-      <td>399000</td>
-      <td>9137</td>
-      <td>Victorian</td>
-      <td>12</td>
-      <td>Plainfield</td>
-      <td>4 mins, 1 hour 5 mins</td>
+      <td>320000</td>
+      <td>7987</td>
+      <td>Colonial</td>
+      <td>10</td>
+      <td>Netherwood</td>
+      <td>3 mins, 1 hour 2 mins</td>
       <td>rail</td>
-      <td>0.585727</td>
+      <td>0.251681</td>
       <td>Watchung Park & Ride</td>
-      <td>1.736232</td>
-      <td>35 mins</td>
-      <td>1 hour 22 mins</td>
+      <td>0.933977</td>
+      <td>32 mins</td>
+      <td>1 hour 16 mins</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3409260">3409260</a></th>
@@ -13774,114 +14167,92 @@ var element = $('#5a62ec71-d3ef-49fd-9c27-9adec9802c5d');
       <td>1 hour 26 mins</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3414788">3414788</a></th>
-      <td>253 Dukes Rd</td>
-      <td>Rahway</td>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3435543">3435543</a></th>
+      <td>972 FERNWOOD AVENUE</td>
+      <td>Plainfield</td>
       <td>Union</td>
-      <td>4</td>
+      <td>3</td>
       <td>2</td>
       <td>0</td>
       <td>NaN</td>
-      <td>360000</td>
-      <td>8925</td>
-      <td>Ranch</td>
-      <td>8</td>
-      <td>Rahway</td>
-      <td>5 mins, 48 mins</td>
+      <td>369999</td>
+      <td>9747</td>
+      <td>Colonial</td>
+      <td>7</td>
+      <td>Netherwood</td>
+      <td>4 mins, 1 hour 2 mins</td>
       <td>rail</td>
-      <td>1.434057</td>
-      <td>Carteret</td>
-      <td>4.058924</td>
-      <td>34 mins</td>
-      <td>1 hour 22 mins</td>
+      <td>0.744823</td>
+      <td>Watchung Park & Ride</td>
+      <td>1.812149</td>
+      <td>36 mins</td>
+      <td>1 hour 28 mins</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3430802">3430802</a></th>
-      <td>473 E Milton Ave</td>
-      <td>Rahway</td>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3424535">3424535</a></th>
+      <td>948 Pine St</td>
+      <td>Plainfield</td>
       <td>Union</td>
       <td>5</td>
       <td>2</td>
-      <td>1</td>
+      <td>0</td>
       <td>NaN</td>
-      <td>379000</td>
-      <td>7309</td>
-      <td>Ranch</td>
+      <td>346900</td>
+      <td>9317</td>
+      <td>Colonial</td>
       <td>9</td>
-      <td>Rahway</td>
-      <td>3 mins, 48 mins</td>
+      <td>Netherwood</td>
+      <td>4 mins, 1 hour 2 mins</td>
       <td>rail</td>
-      <td>0.484201</td>
-      <td>Carteret</td>
-      <td>2.273088</td>
-      <td>35 mins</td>
-      <td>1 hour 9 mins</td>
+      <td>0.851924</td>
+      <td>Watchung Park & Ride</td>
+      <td>1.952935</td>
+      <td>34 mins</td>
+      <td>1 hour 30 mins</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3432697">3432697</a></th>
-      <td>859 Milton Blvd</td>
-      <td>Rahway</td>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3415664">3415664</a></th>
+      <td>623 E 7th St</td>
+      <td>Plainfield</td>
       <td>Union</td>
       <td>4</td>
-      <td>3</td>
-      <td>1</td>
-      <td>NaN</td>
-      <td>449000</td>
-      <td>8075</td>
-      <td>Detached</td>
-      <td>7</td>
-      <td>Rahway</td>
-      <td>4 mins, 48 mins</td>
-      <td>rail</td>
-      <td>0.958811</td>
-      <td>Carteret</td>
-      <td>3.696847</td>
-      <td>31 mins</td>
-      <td>1 hour 13 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3421377">3421377</a></th>
-      <td>2003 Rutherford St</td>
-      <td>Rahway</td>
-      <td>Union</td>
-      <td>5</td>
-      <td>3</td>
-      <td>1</td>
-      <td>NaN</td>
-      <td>379000</td>
-      <td>7047</td>
-      <td>Colonial</td>
-      <td>8</td>
-      <td>Rahway</td>
-      <td>5 mins, 48 mins</td>
-      <td>rail</td>
-      <td>0.727232</td>
-      <td>Carteret</td>
-      <td>2.219804</td>
-      <td>34 mins</td>
-      <td>1 hour 20 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3436404">3436404</a></th>
-      <td>713 Sycamore St</td>
-      <td>Rahway</td>
-      <td>Union</td>
-      <td>3</td>
       <td>2</td>
       <td>1</td>
       <td>NaN</td>
-      <td>379900</td>
-      <td>9724</td>
-      <td>Split Level</td>
+      <td>324000</td>
+      <td>5687</td>
+      <td>Colonial</td>
       <td>8</td>
-      <td>Rahway</td>
-      <td>5 mins, 48 mins</td>
+      <td>Netherwood</td>
+      <td>3 mins, 1 hour 2 mins</td>
       <td>rail</td>
-      <td>1.144231</td>
-      <td>Carteret</td>
-      <td>3.746217</td>
-      <td>33 mins</td>
-      <td>1 hour 13 mins</td>
+      <td>0.564577</td>
+      <td>Watchung Park & Ride</td>
+      <td>1.518204</td>
+      <td>34 mins</td>
+      <td>1 hour 24 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3410799">3410799</a></th>
+      <td>1108-10 PUTNAM AVE</td>
+      <td>Plainfield</td>
+      <td>Union</td>
+      <td>6</td>
+      <td>3</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>399000</td>
+      <td>9137</td>
+      <td>Victorian</td>
+      <td>12</td>
+      <td>Plainfield</td>
+      <td>4 mins, 1 hour 5 mins</td>
+      <td>rail</td>
+      <td>0.585727</td>
+      <td>Watchung Park & Ride</td>
+      <td>1.736232</td>
+      <td>35 mins</td>
+      <td>1 hour 22 mins</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3422026">3422026</a></th>
@@ -13950,6 +14321,28 @@ var element = $('#5a62ec71-d3ef-49fd-9c27-9adec9802c5d');
       <td>1 hour 3 mins</td>
     </tr>
     <tr>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3412439">3412439</a></th>
+      <td>277 Adriana St</td>
+      <td>Saddle Brook</td>
+      <td>Bergen</td>
+      <td>3</td>
+      <td>2</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>325000</td>
+      <td>7173</td>
+      <td>Expanded Ranch</td>
+      <td>7</td>
+      <td>Plauderville</td>
+      <td>5 mins, 36 mins</td>
+      <td>rail</td>
+      <td>0.841435</td>
+      <td>Hackensack Terminal</td>
+      <td>2.704836</td>
+      <td>34 mins</td>
+      <td>48 mins</td>
+    </tr>
+    <tr>
       <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3435727">3435727</a></th>
       <td>65 Roosevelt Blvd</td>
       <td>Sayreville</td>
@@ -13969,6 +14362,28 @@ var element = $('#5a62ec71-d3ef-49fd-9c27-9adec9802c5d');
       <td>Sayreville</td>
       <td>0.721065</td>
       <td>39 mins</td>
+      <td>59 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3419935">3419935</a></th>
+      <td>370 Hoe Ave</td>
+      <td>Scotch Plains</td>
+      <td>Union</td>
+      <td>3</td>
+      <td>2</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>324900</td>
+      <td>6169</td>
+      <td>Colonial</td>
+      <td>6</td>
+      <td>Watchung Park & Ride</td>
+      <td>3 mins, 1 hour 4 mins</td>
+      <td>bus</td>
+      <td>0.332206</td>
+      <td>Watchung Park & Ride</td>
+      <td>0.332206</td>
+      <td>28 mins</td>
       <td>59 mins</td>
     </tr>
     <tr>
@@ -13994,6 +14409,28 @@ var element = $('#5a62ec71-d3ef-49fd-9c27-9adec9802c5d');
       <td>1 hour 11 mins</td>
     </tr>
     <tr>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3436872">3436872</a></th>
+      <td>107 Seton Pl</td>
+      <td>South Orange</td>
+      <td>Essex</td>
+      <td>3</td>
+      <td>2</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>519900</td>
+      <td>9570</td>
+      <td>Colonial</td>
+      <td>6</td>
+      <td>South Orange</td>
+      <td>6 mins, 36 mins</td>
+      <td>rail</td>
+      <td>0.687142</td>
+      <td>Irvington Bus Terminal</td>
+      <td>1.519459</td>
+      <td>16 mins</td>
+      <td>50 mins</td>
+    </tr>
+    <tr>
       <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3419432">3419432</a></th>
       <td>188 Hillside Ave</td>
       <td>Springfield Township</td>
@@ -14014,6 +14451,28 @@ var element = $('#5a62ec71-d3ef-49fd-9c27-9adec9802c5d');
       <td>1.607511</td>
       <td>19 mins</td>
       <td>55 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3426657">3426657</a></th>
+      <td>11-E TROY DR BLDG 2</td>
+      <td>Springfield Township</td>
+      <td>Union</td>
+      <td>3</td>
+      <td>2</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>335500</td>
+      <td>6088</td>
+      <td>First Floor Unit, One Floor Unit</td>
+      <td>6</td>
+      <td>Springfield Center - Springfield Twp</td>
+      <td>5 mins, 1 hour 3 mins</td>
+      <td>bus</td>
+      <td>0.863770</td>
+      <td>Springfield Center - Springfield Twp</td>
+      <td>0.863770</td>
+      <td>16 mins</td>
+      <td>52 mins</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3378927">3378927</a></th>
@@ -14038,50 +14497,6 @@ var element = $('#5a62ec71-d3ef-49fd-9c27-9adec9802c5d');
       <td>35 mins</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3361029">3361029</a></th>
-      <td>579 Totowa Rd</td>
-      <td>Totowa</td>
-      <td>Passaic</td>
-      <td>6</td>
-      <td>2</td>
-      <td>0</td>
-      <td>NaN</td>
-      <td>450000</td>
-      <td>9755</td>
-      <td>Bi-Level</td>
-      <td>10</td>
-      <td>Little Falls</td>
-      <td>7 mins, 1 hour 4 mins</td>
-      <td>rail</td>
-      <td>1.842533</td>
-      <td>Wayne/Route 23 Transit Center</td>
-      <td>1.910378</td>
-      <td>26 mins</td>
-      <td>50 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3428229">3428229</a></th>
-      <td>983 Riverview Dr N</td>
-      <td>Totowa</td>
-      <td>Passaic</td>
-      <td>5</td>
-      <td>2</td>
-      <td>1</td>
-      <td>NaN</td>
-      <td>499000</td>
-      <td>0</td>
-      <td>Raised Ranch</td>
-      <td>9</td>
-      <td>Wayne/Route 23 Transit Center</td>
-      <td>4 mins, 53 mins</td>
-      <td>rail</td>
-      <td>0.998292</td>
-      <td>Wayne/Route 23 Transit Center</td>
-      <td>0.998292</td>
-      <td>26 mins</td>
-      <td>41 mins</td>
-    </tr>
-    <tr>
       <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3433473">3433473</a></th>
       <td>20 Melissa Dr</td>
       <td>Totowa</td>
@@ -14102,6 +14517,28 @@ var element = $('#5a62ec71-d3ef-49fd-9c27-9adec9802c5d');
       <td>1.398115</td>
       <td>27 mins</td>
       <td>49 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3412727">3412727</a></th>
+      <td>143 Lincoln Ave</td>
+      <td>Totowa</td>
+      <td>Passaic</td>
+      <td>5</td>
+      <td>2</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>339900</td>
+      <td>7587</td>
+      <td>Colonial</td>
+      <td>7</td>
+      <td>Broadway Bus Terminal - Paterson</td>
+      <td>10 mins, 59 mins</td>
+      <td>bus</td>
+      <td>1.699430</td>
+      <td>Broadway Bus Terminal - Paterson</td>
+      <td>1.699430</td>
+      <td>30 mins</td>
+      <td>59 mins</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3401799">3401799</a></th>
@@ -14148,92 +14585,70 @@ var element = $('#5a62ec71-d3ef-49fd-9c27-9adec9802c5d');
       <td>53 mins</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3433969">3433969</a></th>
-      <td>2579 Hamilton Ter</td>
-      <td>Union</td>
-      <td>Union</td>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3421511">3421511</a></th>
+      <td>4 Peterson Rd</td>
+      <td>Totowa</td>
+      <td>Passaic</td>
       <td>3</td>
       <td>2</td>
       <td>1</td>
       <td>NaN</td>
-      <td>410000</td>
-      <td>7979</td>
-      <td>Colonial</td>
-      <td>8</td>
-      <td>Pine Avenue - Union Twp</td>
-      <td>6 mins, 55 mins</td>
-      <td>bus</td>
-      <td>1.236177</td>
-      <td>Pine Avenue - Union Twp</td>
-      <td>1.236177</td>
-      <td>17 mins</td>
-      <td>1 hour 9 mins</td>
+      <td>524900</td>
+      <td>8447</td>
+      <td>Raised Ranch</td>
+      <td>6</td>
+      <td>Little Falls</td>
+      <td>7 mins, 1 hour 4 mins</td>
+      <td>rail</td>
+      <td>1.822280</td>
+      <td>Wayne/Route 23 Transit Center</td>
+      <td>1.968810</td>
+      <td>26 mins</td>
+      <td>1 hour 0 mins</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3400289">3400289</a></th>
-      <td>1591 Ridgeway St</td>
-      <td>Union</td>
-      <td>Union</td>
-      <td>4</td>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3361029">3361029</a></th>
+      <td>579 Totowa Rd</td>
+      <td>Totowa</td>
+      <td>Passaic</td>
+      <td>6</td>
       <td>2</td>
-      <td>2</td>
+      <td>0</td>
       <td>NaN</td>
-      <td>419000</td>
-      <td>9825</td>
-      <td>Bi-Level, Colonial</td>
-      <td>8</td>
-      <td>Pine Avenue - Union Twp</td>
-      <td>6 mins, 55 mins</td>
-      <td>bus</td>
-      <td>1.010369</td>
-      <td>Pine Avenue - Union Twp</td>
-      <td>1.010369</td>
-      <td>18 mins</td>
-      <td>1 hour 13 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3407408">3407408</a></th>
-      <td>975 Roosevelt Ave</td>
-      <td>Union</td>
-      <td>Union</td>
-      <td>4</td>
-      <td>2</td>
-      <td>1</td>
-      <td>NaN</td>
-      <td>399000</td>
-      <td>8594</td>
-      <td>Custom Home</td>
+      <td>450000</td>
+      <td>9755</td>
+      <td>Bi-Level</td>
       <td>10</td>
-      <td>Bonnel Court - Union Twp</td>
-      <td>1 min, 54 mins</td>
-      <td>bus</td>
-      <td>0.135236</td>
-      <td>Bonnel Court - Union Twp</td>
-      <td>0.135236</td>
-      <td>21 mins</td>
-      <td>51 mins</td>
+      <td>Little Falls</td>
+      <td>7 mins, 1 hour 4 mins</td>
+      <td>rail</td>
+      <td>1.842533</td>
+      <td>Wayne/Route 23 Transit Center</td>
+      <td>1.910378</td>
+      <td>26 mins</td>
+      <td>50 mins</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3413000">3413000</a></th>
-      <td>1357 Center St</td>
-      <td>Union</td>
-      <td>Union</td>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3428229">3428229</a></th>
+      <td>983 Riverview Dr N</td>
+      <td>Totowa</td>
+      <td>Passaic</td>
       <td>5</td>
       <td>2</td>
       <td>1</td>
       <td>NaN</td>
-      <td>350000</td>
-      <td>8949</td>
-      <td>Split Level</td>
+      <td>499000</td>
+      <td>0</td>
+      <td>Raised Ranch</td>
       <td>9</td>
-      <td>Pine Avenue - Union Twp</td>
-      <td>5 mins, 55 mins</td>
-      <td>bus</td>
-      <td>1.182950</td>
-      <td>Pine Avenue - Union Twp</td>
-      <td>1.182950</td>
-      <td>18 mins</td>
-      <td>1 hour 10 mins</td>
+      <td>Wayne/Route 23 Transit Center</td>
+      <td>4 mins, 53 mins</td>
+      <td>rail</td>
+      <td>0.998292</td>
+      <td>Wayne/Route 23 Transit Center</td>
+      <td>0.998292</td>
+      <td>26 mins</td>
+      <td>41 mins</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3422571">3422571</a></th>
@@ -14280,26 +14695,26 @@ var element = $('#5a62ec71-d3ef-49fd-9c27-9adec9802c5d');
       <td>52 mins</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3435828">3435828</a></th>
-      <td>731 Palisade Rd</td>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3419207">3419207</a></th>
+      <td>608 Robinson Ter</td>
       <td>Union</td>
       <td>Union</td>
       <td>4</td>
-      <td>3</td>
+      <td>2</td>
       <td>0</td>
       <td>NaN</td>
-      <td>499900</td>
-      <td>7177</td>
-      <td>Colonial</td>
-      <td>9</td>
-      <td>Union</td>
-      <td>4 mins, 41 mins</td>
-      <td>rail</td>
-      <td>0.422754</td>
-      <td>Rutgers Lane Hospital - Union Twp</td>
-      <td>1.552985</td>
-      <td>30 mins</td>
-      <td>1 hour 14 mins</td>
+      <td>349999</td>
+      <td>9471</td>
+      <td>Bi-Level</td>
+      <td>7</td>
+      <td>Union Center - Union Twp</td>
+      <td>4 mins, 47 mins</td>
+      <td>bus</td>
+      <td>0.639677</td>
+      <td>Union Center - Union Twp</td>
+      <td>0.639677</td>
+      <td>25 mins</td>
+      <td>1 hour 6 mins</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3361006">3361006</a></th>
@@ -14322,6 +14737,336 @@ var element = $('#5a62ec71-d3ef-49fd-9c27-9adec9802c5d');
       <td>1.542580</td>
       <td>30 mins</td>
       <td>1 hour 6 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3431716">3431716</a></th>
+      <td>356 Nottingham Way</td>
+      <td>Union</td>
+      <td>Union</td>
+      <td>3</td>
+      <td>2</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>359500</td>
+      <td>8818</td>
+      <td>Split Level</td>
+      <td>8</td>
+      <td>Rutgers Lane Hospital - Union Twp</td>
+      <td>3 mins, 56 mins</td>
+      <td>bus</td>
+      <td>0.420739</td>
+      <td>Rutgers Lane Hospital - Union Twp</td>
+      <td>0.420739</td>
+      <td>28 mins</td>
+      <td>56 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3421358">3421358</a></th>
+      <td>628 Robinson Ter</td>
+      <td>Union</td>
+      <td>Union</td>
+      <td>4</td>
+      <td>2</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>399000</td>
+      <td>9556</td>
+      <td>Bi-Level, Custom Home, Raised Ranch</td>
+      <td>9</td>
+      <td>Union Center - Union Twp</td>
+      <td>4 mins, 47 mins</td>
+      <td>bus</td>
+      <td>0.610152</td>
+      <td>Union Center - Union Twp</td>
+      <td>0.610152</td>
+      <td>25 mins</td>
+      <td>1 hour 10 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3407408">3407408</a></th>
+      <td>975 Roosevelt Ave</td>
+      <td>Union</td>
+      <td>Union</td>
+      <td>4</td>
+      <td>2</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>399000</td>
+      <td>8594</td>
+      <td>Custom Home</td>
+      <td>10</td>
+      <td>Bonnel Court - Union Twp</td>
+      <td>1 min, 54 mins</td>
+      <td>bus</td>
+      <td>0.135236</td>
+      <td>Bonnel Court - Union Twp</td>
+      <td>0.135236</td>
+      <td>21 mins</td>
+      <td>51 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3425086">3425086</a></th>
+      <td>1848 Portsmouth Way</td>
+      <td>Union</td>
+      <td>Union</td>
+      <td>3</td>
+      <td>2</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>349900</td>
+      <td>8818</td>
+      <td>Colonial</td>
+      <td>6</td>
+      <td>Union Center - Union Twp</td>
+      <td>4 mins, 47 mins</td>
+      <td>bus</td>
+      <td>0.460175</td>
+      <td>Union Center - Union Twp</td>
+      <td>0.460175</td>
+      <td>23 mins</td>
+      <td>58 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3411937">3411937</a></th>
+      <td>1168 Caldwell Ave</td>
+      <td>Union</td>
+      <td>Union</td>
+      <td>4</td>
+      <td>2</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>349900</td>
+      <td>8725</td>
+      <td>Colonial</td>
+      <td>10</td>
+      <td>Pine Avenue - Union Twp</td>
+      <td>2 mins, 55 mins</td>
+      <td>bus</td>
+      <td>0.288000</td>
+      <td>Pine Avenue - Union Twp</td>
+      <td>0.288000</td>
+      <td>19 mins</td>
+      <td>56 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3427453">3427453</a></th>
+      <td>2132 Van Buren Pl</td>
+      <td>Union</td>
+      <td>Union</td>
+      <td>3</td>
+      <td>2</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>380000</td>
+      <td>7327</td>
+      <td>A-Frame, Colonial, Tudor</td>
+      <td>6</td>
+      <td>Pine Avenue - Union Twp</td>
+      <td>2 mins, 55 mins</td>
+      <td>bus</td>
+      <td>0.225655</td>
+      <td>Pine Avenue - Union Twp</td>
+      <td>0.225655</td>
+      <td>20 mins</td>
+      <td>56 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3414861">3414861</a></th>
+      <td>2046 Stecher Ave</td>
+      <td>Union</td>
+      <td>Union</td>
+      <td>3</td>
+      <td>3</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>525000</td>
+      <td>3553</td>
+      <td>Colonial</td>
+      <td>8</td>
+      <td>Pine Avenue - Union Twp</td>
+      <td>4 mins, 55 mins</td>
+      <td>bus</td>
+      <td>0.583372</td>
+      <td>Pine Avenue - Union Twp</td>
+      <td>0.583372</td>
+      <td>20 mins</td>
+      <td>1 hour 6 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3428001">3428001</a></th>
+      <td>232 Delaware Ave</td>
+      <td>Union</td>
+      <td>Union</td>
+      <td>3</td>
+      <td>2</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>330000</td>
+      <td>7662</td>
+      <td>Colonial</td>
+      <td>6</td>
+      <td>Rutgers Lane Hospital - Union Twp</td>
+      <td>3 mins, 56 mins</td>
+      <td>bus</td>
+      <td>0.271849</td>
+      <td>Rutgers Lane Hospital - Union Twp</td>
+      <td>0.271849</td>
+      <td>26 mins</td>
+      <td>48 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3404812">3404812</a></th>
+      <td>478 Lehigh Ave</td>
+      <td>Union</td>
+      <td>Union</td>
+      <td>3</td>
+      <td>2</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>359900</td>
+      <td>8557</td>
+      <td>Colonial</td>
+      <td>7</td>
+      <td>Rutgers Lane Hospital - Union Twp</td>
+      <td>3 mins, 56 mins</td>
+      <td>bus</td>
+      <td>0.490758</td>
+      <td>Rutgers Lane Hospital - Union Twp</td>
+      <td>0.490758</td>
+      <td>28 mins</td>
+      <td>1 hour 1 min</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3435828">3435828</a></th>
+      <td>731 Palisade Rd</td>
+      <td>Union</td>
+      <td>Union</td>
+      <td>4</td>
+      <td>3</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>499900</td>
+      <td>7177</td>
+      <td>Colonial</td>
+      <td>9</td>
+      <td>Union</td>
+      <td>4 mins, 41 mins</td>
+      <td>rail</td>
+      <td>0.422754</td>
+      <td>Rutgers Lane Hospital - Union Twp</td>
+      <td>1.552985</td>
+      <td>30 mins</td>
+      <td>1 hour 14 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3429138">3429138</a></th>
+      <td>1481 Burnet Ave</td>
+      <td>Union</td>
+      <td>Union</td>
+      <td>3</td>
+      <td>3</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>337000</td>
+      <td>8837</td>
+      <td>Colonial</td>
+      <td>9</td>
+      <td>Pine Avenue - Union Twp</td>
+      <td>5 mins, 55 mins</td>
+      <td>bus</td>
+      <td>1.066816</td>
+      <td>Pine Avenue - Union Twp</td>
+      <td>1.066816</td>
+      <td>17 mins</td>
+      <td>1 hour 10 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3429646">3429646</a></th>
+      <td>1349 Orange Ave</td>
+      <td>Union</td>
+      <td>Union</td>
+      <td>4</td>
+      <td>2</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>393888</td>
+      <td>9191</td>
+      <td>Colonial</td>
+      <td>8</td>
+      <td>Pine Avenue - Union Twp</td>
+      <td>3 mins, 55 mins</td>
+      <td>bus</td>
+      <td>0.515914</td>
+      <td>Pine Avenue - Union Twp</td>
+      <td>0.515914</td>
+      <td>20 mins</td>
+      <td>1 hour 6 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3433453">3433453</a></th>
+      <td>450 Colonial Ave</td>
+      <td>Union</td>
+      <td>Union</td>
+      <td>4</td>
+      <td>2</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>489000</td>
+      <td>8782</td>
+      <td>Colonial</td>
+      <td>8</td>
+      <td>Rutgers Lane Hospital - Union Twp</td>
+      <td>4 mins, 56 mins</td>
+      <td>bus</td>
+      <td>0.749279</td>
+      <td>Rutgers Lane Hospital - Union Twp</td>
+      <td>0.749279</td>
+      <td>24 mins</td>
+      <td>1 hour 2 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3413815">3413815</a></th>
+      <td>2605 Juliat Pl</td>
+      <td>Union</td>
+      <td>Union</td>
+      <td>3</td>
+      <td>2</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>307000</td>
+      <td>8762</td>
+      <td>Split Level</td>
+      <td>7</td>
+      <td>Pine Avenue - Union Twp</td>
+      <td>5 mins, 55 mins</td>
+      <td>bus</td>
+      <td>1.214336</td>
+      <td>Pine Avenue - Union Twp</td>
+      <td>1.214336</td>
+      <td>18 mins</td>
+      <td>1 hour 11 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3413000">3413000</a></th>
+      <td>1357 Center St</td>
+      <td>Union</td>
+      <td>Union</td>
+      <td>5</td>
+      <td>2</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>350000</td>
+      <td>8949</td>
+      <td>Split Level</td>
+      <td>9</td>
+      <td>Pine Avenue - Union Twp</td>
+      <td>5 mins, 55 mins</td>
+      <td>bus</td>
+      <td>1.182950</td>
+      <td>Pine Avenue - Union Twp</td>
+      <td>1.182950</td>
+      <td>18 mins</td>
+      <td>1 hour 10 mins</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3382540">3382540</a></th>
@@ -14368,6 +15113,50 @@ var element = $('#5a62ec71-d3ef-49fd-9c27-9adec9802c5d');
       <td>1 hour 4 mins</td>
     </tr>
     <tr>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3400289">3400289</a></th>
+      <td>1591 Ridgeway St</td>
+      <td>Union</td>
+      <td>Union</td>
+      <td>4</td>
+      <td>2</td>
+      <td>2</td>
+      <td>NaN</td>
+      <td>419000</td>
+      <td>9825</td>
+      <td>Bi-Level, Colonial</td>
+      <td>8</td>
+      <td>Pine Avenue - Union Twp</td>
+      <td>6 mins, 55 mins</td>
+      <td>bus</td>
+      <td>1.010369</td>
+      <td>Pine Avenue - Union Twp</td>
+      <td>1.010369</td>
+      <td>18 mins</td>
+      <td>1 hour 13 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3433969">3433969</a></th>
+      <td>2579 Hamilton Ter</td>
+      <td>Union</td>
+      <td>Union</td>
+      <td>3</td>
+      <td>2</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>410000</td>
+      <td>7979</td>
+      <td>Colonial</td>
+      <td>8</td>
+      <td>Pine Avenue - Union Twp</td>
+      <td>6 mins, 55 mins</td>
+      <td>bus</td>
+      <td>1.236177</td>
+      <td>Pine Avenue - Union Twp</td>
+      <td>1.236177</td>
+      <td>17 mins</td>
+      <td>1 hour 9 mins</td>
+    </tr>
+    <tr>
       <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3420973">3420973</a></th>
       <td>2 Short Dr</td>
       <td>Union</td>
@@ -14388,138 +15177,6 @@ var element = $('#5a62ec71-d3ef-49fd-9c27-9adec9802c5d');
       <td>1.245491</td>
       <td>23 mins</td>
       <td>57 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3427453">3427453</a></th>
-      <td>2132 Van Buren Pl</td>
-      <td>Union</td>
-      <td>Union</td>
-      <td>3</td>
-      <td>2</td>
-      <td>1</td>
-      <td>NaN</td>
-      <td>380000</td>
-      <td>7327</td>
-      <td>A-Frame, Colonial, Tudor</td>
-      <td>6</td>
-      <td>Pine Avenue - Union Twp</td>
-      <td>2 mins, 55 mins</td>
-      <td>bus</td>
-      <td>0.225655</td>
-      <td>Pine Avenue - Union Twp</td>
-      <td>0.225655</td>
-      <td>20 mins</td>
-      <td>56 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3429646">3429646</a></th>
-      <td>1349 Orange Ave</td>
-      <td>Union</td>
-      <td>Union</td>
-      <td>4</td>
-      <td>2</td>
-      <td>1</td>
-      <td>NaN</td>
-      <td>393888</td>
-      <td>9191</td>
-      <td>Colonial</td>
-      <td>8</td>
-      <td>Pine Avenue - Union Twp</td>
-      <td>3 mins, 55 mins</td>
-      <td>bus</td>
-      <td>0.515914</td>
-      <td>Pine Avenue - Union Twp</td>
-      <td>0.515914</td>
-      <td>20 mins</td>
-      <td>1 hour 6 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3404812">3404812</a></th>
-      <td>478 Lehigh Ave</td>
-      <td>Union</td>
-      <td>Union</td>
-      <td>3</td>
-      <td>2</td>
-      <td>1</td>
-      <td>NaN</td>
-      <td>359900</td>
-      <td>8557</td>
-      <td>Colonial</td>
-      <td>7</td>
-      <td>Rutgers Lane Hospital - Union Twp</td>
-      <td>3 mins, 56 mins</td>
-      <td>bus</td>
-      <td>0.490758</td>
-      <td>Rutgers Lane Hospital - Union Twp</td>
-      <td>0.490758</td>
-      <td>28 mins</td>
-      <td>1 hour 1 min</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3431716">3431716</a></th>
-      <td>356 Nottingham Way</td>
-      <td>Union</td>
-      <td>Union</td>
-      <td>3</td>
-      <td>2</td>
-      <td>0</td>
-      <td>NaN</td>
-      <td>359500</td>
-      <td>8818</td>
-      <td>Split Level</td>
-      <td>8</td>
-      <td>Rutgers Lane Hospital - Union Twp</td>
-      <td>3 mins, 56 mins</td>
-      <td>bus</td>
-      <td>0.420739</td>
-      <td>Rutgers Lane Hospital - Union Twp</td>
-      <td>0.420739</td>
-      <td>28 mins</td>
-      <td>56 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3433453">3433453</a></th>
-      <td>450 Colonial Ave</td>
-      <td>Union</td>
-      <td>Union</td>
-      <td>4</td>
-      <td>2</td>
-      <td>0</td>
-      <td>NaN</td>
-      <td>489000</td>
-      <td>8782</td>
-      <td>Colonial</td>
-      <td>8</td>
-      <td>Rutgers Lane Hospital - Union Twp</td>
-      <td>4 mins, 56 mins</td>
-      <td>bus</td>
-      <td>0.749279</td>
-      <td>Rutgers Lane Hospital - Union Twp</td>
-      <td>0.749279</td>
-      <td>24 mins</td>
-      <td>1 hour 2 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3421358">3421358</a></th>
-      <td>628 Robinson Ter</td>
-      <td>Union</td>
-      <td>Union</td>
-      <td>4</td>
-      <td>2</td>
-      <td>0</td>
-      <td>NaN</td>
-      <td>399000</td>
-      <td>9556</td>
-      <td>Bi-Level, Custom Home, Raised Ranch</td>
-      <td>9</td>
-      <td>Union Center - Union Twp</td>
-      <td>4 mins, 47 mins</td>
-      <td>bus</td>
-      <td>0.610152</td>
-      <td>Union Center - Union Twp</td>
-      <td>0.610152</td>
-      <td>25 mins</td>
-      <td>1 hour 10 mins</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3407428">3407428</a></th>
@@ -14566,26 +15223,26 @@ var element = $('#5a62ec71-d3ef-49fd-9c27-9adec9802c5d');
       <td>1 hour 9 mins</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3417186">3417186</a></th>
-      <td>20 Cliff Ave</td>
-      <td>Woodbridge Township</td>
-      <td>Middlesex</td>
-      <td>4</td>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3436839">3436839</a></th>
+      <td>523 Mount Pleasant Ave</td>
+      <td>West Orange</td>
+      <td>Essex</td>
+      <td>3</td>
       <td>2</td>
       <td>1</td>
       <td>NaN</td>
-      <td>409000</td>
-      <td>9937</td>
+      <td>348989</td>
+      <td>8363</td>
       <td>Colonial</td>
       <td>7</td>
-      <td>Woodbridge</td>
-      <td>8 mins, 43 mins</td>
+      <td>Highland Avenue</td>
+      <td>9 mins, 46 mins</td>
       <td>rail</td>
-      <td>2.418659</td>
-      <td>Sayreville</td>
-      <td>3.896474</td>
-      <td>36 mins</td>
-      <td>1 hour 33 mins</td>
+      <td>2.294944</td>
+      <td>Irvington Bus Terminal</td>
+      <td>5.093576</td>
+      <td>8 mins</td>
+      <td>1 hour 36 mins</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3428901">3428901</a></th>
@@ -14631,6 +15288,28 @@ var element = $('#5a62ec71-d3ef-49fd-9c27-9adec9802c5d');
       <td>34 mins</td>
       <td>1 hour 20 mins</td>
     </tr>
+    <tr>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3417186">3417186</a></th>
+      <td>20 Cliff Ave</td>
+      <td>Woodbridge Township</td>
+      <td>Middlesex</td>
+      <td>4</td>
+      <td>2</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>409000</td>
+      <td>9937</td>
+      <td>Colonial</td>
+      <td>7</td>
+      <td>Woodbridge</td>
+      <td>8 mins, 43 mins</td>
+      <td>rail</td>
+      <td>2.418659</td>
+      <td>Sayreville</td>
+      <td>3.896474</td>
+      <td>36 mins</td>
+      <td>1 hour 33 mins</td>
+    </tr>
   </tbody>
 </table>
 </div>
@@ -14652,14 +15331,14 @@ var element = $('#5a62ec71-d3ef-49fd-9c27-9adec9802c5d');
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df1d</span> <span class="o">=</span> <span class="n">show_gsmls</span><span class="p">()</span>
-<span class="n">df1d</span> <span class="o">=</span> <span class="n">df1d</span><span class="p">[(</span><span class="n">df1d</span><span class="o">.</span><span class="n">sqft</span><span class="o">.</span><span class="n">isnull</span><span class="p">())</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df1d</span><span class="o">.</span><span class="n">tax</span> <span class="o">&gt;</span> <span class="mi">10000</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df1d</span><span class="o">.</span><span class="n">tax</span> <span class="o">&lt;</span> <span class="mi">13500</span><span class="p">)]</span>
-<span class="n">df1d</span> <span class="o">=</span> <span class="n">df1d</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;city&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">df1d</span><span class="p">),</span> <span class="s2">&quot;listings after filtering&quot;</span><span class="p">)</span>
-<span class="n">preview_gsmls_df</span><span class="p">(</span><span class="n">df1d</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">show_gsmls</span><span class="p">()</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="o">.</span><span class="n">sqft</span><span class="o">.</span><span class="n">isnull</span><span class="p">())</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">tax</span> <span class="o">&gt;</span> <span class="mi">10000</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">tax</span> <span class="o">&lt;</span> <span class="mi">13500</span><span class="p">)]</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;city&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">),</span> <span class="s2">&quot;listings after filtering&quot;</span><span class="p">)</span>
+<span class="n">preview_gsmls_df</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -14676,7 +15355,7 @@ var element = $('#5a62ec71-d3ef-49fd-9c27-9adec9802c5d');
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>68 listings after filtering
+<pre>76 listings after filtering
 </pre>
 </div>
 </div>
@@ -14759,6 +15438,28 @@ var element = $('#5a62ec71-d3ef-49fd-9c27-9adec9802c5d');
       <td>1 hour 5 mins</td>
     </tr>
     <tr>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3426528">3426528</a></th>
+      <td>128 Willow St</td>
+      <td>Bloomfield</td>
+      <td>Essex</td>
+      <td>3</td>
+      <td>2</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>349000</td>
+      <td>10124</td>
+      <td>Colonial</td>
+      <td>7</td>
+      <td>Watsessing Avenue</td>
+      <td>3 mins, 33 mins</td>
+      <td>rail</td>
+      <td>0.293689</td>
+      <td>Newark Penn Station Bus Lanes</td>
+      <td>4.057832</td>
+      <td>21 mins</td>
+      <td>54 mins</td>
+    </tr>
+    <tr>
       <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3400950">3400950</a></th>
       <td>47 Hearthstone Rd</td>
       <td>Bloomfield</td>
@@ -14779,6 +15480,28 @@ var element = $('#5a62ec71-d3ef-49fd-9c27-9adec9802c5d');
       <td>1.638773</td>
       <td>25 mins</td>
       <td>57 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3426760">3426760</a></th>
+      <td>102 Beverly Rd</td>
+      <td>Bloomfield</td>
+      <td>Essex</td>
+      <td>3</td>
+      <td>2</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>304000</td>
+      <td>11438</td>
+      <td>Split Level</td>
+      <td>7</td>
+      <td>Watchung Avenue</td>
+      <td>6 mins, 45 mins</td>
+      <td>rail</td>
+      <td>1.406556</td>
+      <td>Allwood Road</td>
+      <td>1.953135</td>
+      <td>23 mins</td>
+      <td>53 mins</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3425147">3425147</a></th>
@@ -14847,28 +15570,6 @@ var element = $('#5a62ec71-d3ef-49fd-9c27-9adec9802c5d');
       <td>1 hour 32 mins</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3432605">3432605</a></th>
-      <td>790 Grove St</td>
-      <td>Clifton</td>
-      <td>Passaic</td>
-      <td>3</td>
-      <td>2</td>
-      <td>0</td>
-      <td>NaN</td>
-      <td>499000</td>
-      <td>12971</td>
-      <td>Ranch</td>
-      <td>6</td>
-      <td>Montclair Heights</td>
-      <td>4 mins, 52 mins</td>
-      <td>rail</td>
-      <td>0.712505</td>
-      <td>Allwood Road</td>
-      <td>0.777666</td>
-      <td>25 mins</td>
-      <td>52 mins</td>
-    </tr>
-    <tr>
       <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3420673">3420673</a></th>
       <td>106 Abbe Ln</td>
       <td>Clifton</td>
@@ -14913,26 +15614,26 @@ var element = $('#5a62ec71-d3ef-49fd-9c27-9adec9802c5d');
       <td>59 mins</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3426860">3426860</a></th>
-      <td>193 2nd St</td>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3432605">3432605</a></th>
+      <td>790 Grove St</td>
       <td>Clifton</td>
       <td>Passaic</td>
-      <td>5</td>
+      <td>3</td>
       <td>2</td>
-      <td>1</td>
+      <td>0</td>
       <td>NaN</td>
-      <td>424900</td>
-      <td>10667</td>
-      <td>Colonial, Victorian</td>
-      <td>9</td>
-      <td>Clifton</td>
-      <td>4 mins, 44 mins</td>
+      <td>499000</td>
+      <td>12971</td>
+      <td>Ranch</td>
+      <td>6</td>
+      <td>Montclair Heights</td>
+      <td>4 mins, 52 mins</td>
       <td>rail</td>
-      <td>0.728880</td>
-      <td>Passaic Bus Terminal</td>
-      <td>1.218341</td>
-      <td>29 mins</td>
-      <td>50 mins</td>
+      <td>0.712505</td>
+      <td>Allwood Road</td>
+      <td>0.777666</td>
+      <td>25 mins</td>
+      <td>52 mins</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3414582">3414582</a></th>
@@ -14955,6 +15656,50 @@ var element = $('#5a62ec71-d3ef-49fd-9c27-9adec9802c5d');
       <td>1.376629</td>
       <td>30 mins</td>
       <td>51 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3406313">3406313</a></th>
+      <td>51 Karen Dr</td>
+      <td>Clifton</td>
+      <td>Passaic</td>
+      <td>3</td>
+      <td>2</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>423000</td>
+      <td>10009</td>
+      <td>Split Level</td>
+      <td>8</td>
+      <td>Clifton</td>
+      <td>6 mins, 44 mins</td>
+      <td>rail</td>
+      <td>0.927682</td>
+      <td>Allwood Road</td>
+      <td>1.325885</td>
+      <td>27 mins</td>
+      <td>44 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3436041">3436041</a></th>
+      <td>15 Maple Hill Rd</td>
+      <td>Clifton</td>
+      <td>Passaic</td>
+      <td>4</td>
+      <td>2</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>345000</td>
+      <td>11871</td>
+      <td>Split Level</td>
+      <td>9</td>
+      <td>Montclair State University</td>
+      <td>6 mins, 57 mins</td>
+      <td>rail</td>
+      <td>1.046929</td>
+      <td>Allwood Road</td>
+      <td>1.495874</td>
+      <td>27 mins</td>
+      <td>37 mins</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3401881">3401881</a></th>
@@ -15023,26 +15768,26 @@ var element = $('#5a62ec71-d3ef-49fd-9c27-9adec9802c5d');
       <td>53 mins</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3406313">3406313</a></th>
-      <td>51 Karen Dr</td>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3426860">3426860</a></th>
+      <td>193 2nd St</td>
       <td>Clifton</td>
       <td>Passaic</td>
-      <td>3</td>
+      <td>5</td>
       <td>2</td>
       <td>1</td>
       <td>NaN</td>
-      <td>423000</td>
-      <td>10009</td>
-      <td>Split Level</td>
-      <td>8</td>
+      <td>424900</td>
+      <td>10667</td>
+      <td>Colonial, Victorian</td>
+      <td>9</td>
       <td>Clifton</td>
-      <td>6 mins, 44 mins</td>
+      <td>4 mins, 44 mins</td>
       <td>rail</td>
-      <td>0.927682</td>
-      <td>Allwood Road</td>
-      <td>1.325885</td>
-      <td>27 mins</td>
-      <td>44 mins</td>
+      <td>0.728880</td>
+      <td>Passaic Bus Terminal</td>
+      <td>1.218341</td>
+      <td>29 mins</td>
+      <td>50 mins</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3422300">3422300</a></th>
@@ -15155,28 +15900,6 @@ var element = $('#5a62ec71-d3ef-49fd-9c27-9adec9802c5d');
       <td>1 hour 8 mins</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3431028">3431028</a></th>
-      <td>72 Dewey Ave</td>
-      <td>Little Falls</td>
-      <td>Passaic</td>
-      <td>5</td>
-      <td>2</td>
-      <td>0</td>
-      <td>NaN</td>
-      <td>359999</td>
-      <td>11001</td>
-      <td>Bi-Level</td>
-      <td>8</td>
-      <td>Little Falls</td>
-      <td>4 mins, 1 hour 4 mins</td>
-      <td>rail</td>
-      <td>0.396433</td>
-      <td>Willowbrook Mall</td>
-      <td>1.050831</td>
-      <td>25 mins</td>
-      <td>52 mins</td>
-    </tr>
-    <tr>
       <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3429216">3429216</a></th>
       <td>271 Long Hill Rd</td>
       <td>Little Falls</td>
@@ -15197,6 +15920,28 @@ var element = $('#5a62ec71-d3ef-49fd-9c27-9adec9802c5d');
       <td>1.537463</td>
       <td>25 mins</td>
       <td>46 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3431028">3431028</a></th>
+      <td>72 Dewey Ave</td>
+      <td>Little Falls</td>
+      <td>Passaic</td>
+      <td>5</td>
+      <td>2</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>359999</td>
+      <td>11001</td>
+      <td>Bi-Level</td>
+      <td>8</td>
+      <td>Little Falls</td>
+      <td>4 mins, 1 hour 4 mins</td>
+      <td>rail</td>
+      <td>0.396433</td>
+      <td>Willowbrook Mall</td>
+      <td>1.050831</td>
+      <td>25 mins</td>
+      <td>52 mins</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3431222">3431222</a></th>
@@ -15353,6 +16098,28 @@ var element = $('#5a62ec71-d3ef-49fd-9c27-9adec9802c5d');
       <td>1 hour 24 mins</td>
     </tr>
     <tr>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3426772">3426772</a></th>
+      <td>142 Haroldson Pl</td>
+      <td>Pompton Lakes</td>
+      <td>Passaic</td>
+      <td>4</td>
+      <td>2</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>319000</td>
+      <td>10819</td>
+      <td>Colonial</td>
+      <td>8</td>
+      <td>Lincoln Park</td>
+      <td>14 mins, 1 hour 5 mins</td>
+      <td>rail</td>
+      <td>4.515697</td>
+      <td>Mothers Park & Ride</td>
+      <td>4.595778</td>
+      <td>31 mins</td>
+      <td>1 hour 8 mins</td>
+    </tr>
+    <tr>
       <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3415789">3415789</a></th>
       <td>40 Dewey Dr</td>
       <td>Ringwood</td>
@@ -15463,6 +16230,28 @@ var element = $('#5a62ec71-d3ef-49fd-9c27-9adec9802c5d');
       <td>1 hour 7 mins</td>
     </tr>
     <tr>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3428724">3428724</a></th>
+      <td>6 Juniper Way</td>
+      <td>Springfield Township</td>
+      <td>Union</td>
+      <td>3</td>
+      <td>3</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>475000</td>
+      <td>12118</td>
+      <td>Ranch</td>
+      <td>7</td>
+      <td>Summit</td>
+      <td>7 mins, 44 mins</td>
+      <td>rail</td>
+      <td>1.396153</td>
+      <td>Springfield Center - Springfield Twp</td>
+      <td>2.276740</td>
+      <td>20 mins</td>
+      <td>1 hour 5 mins</td>
+    </tr>
+    <tr>
       <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3433695">3433695</a></th>
       <td>45 Evergreen Ave</td>
       <td>Springfield Township</td>
@@ -15505,28 +16294,6 @@ var element = $('#5a62ec71-d3ef-49fd-9c27-9adec9802c5d');
       <td>1.143781</td>
       <td>18 mins</td>
       <td>59 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3428724">3428724</a></th>
-      <td>6 Juniper Way</td>
-      <td>Springfield Township</td>
-      <td>Union</td>
-      <td>3</td>
-      <td>3</td>
-      <td>0</td>
-      <td>NaN</td>
-      <td>475000</td>
-      <td>12118</td>
-      <td>Ranch</td>
-      <td>7</td>
-      <td>Summit</td>
-      <td>7 mins, 44 mins</td>
-      <td>rail</td>
-      <td>1.396153</td>
-      <td>Springfield Center - Springfield Twp</td>
-      <td>2.276740</td>
-      <td>20 mins</td>
-      <td>1 hour 5 mins</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3400020">3400020</a></th>
@@ -15573,6 +16340,160 @@ var element = $('#5a62ec71-d3ef-49fd-9c27-9adec9802c5d');
       <td>1 hour 48 mins</td>
     </tr>
     <tr>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3419305">3419305</a></th>
+      <td>954 Wendy Ct</td>
+      <td>Union</td>
+      <td>Union</td>
+      <td>5</td>
+      <td>3</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>375000</td>
+      <td>10962</td>
+      <td>Bi-Level, Custom Home</td>
+      <td>12</td>
+      <td>Springfield Center - Springfield Twp</td>
+      <td>6 mins, 1 hour 3 mins</td>
+      <td>bus</td>
+      <td>1.055163</td>
+      <td>Springfield Center - Springfield Twp</td>
+      <td>1.055163</td>
+      <td>17 mins</td>
+      <td>1 hour 0 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3421364">3421364</a></th>
+      <td>377 Wayne Ter</td>
+      <td>Union</td>
+      <td>Union</td>
+      <td>4</td>
+      <td>3</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>429000</td>
+      <td>12118</td>
+      <td>Bi-Level</td>
+      <td>9</td>
+      <td>Union</td>
+      <td>5 mins, 41 mins</td>
+      <td>rail</td>
+      <td>0.697349</td>
+      <td>Rutgers Lane Hospital - Union Twp</td>
+      <td>0.997869</td>
+      <td>26 mins</td>
+      <td>50 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3433230">3433230</a></th>
+      <td>2655 Hawthorne Ave</td>
+      <td>Union</td>
+      <td>Union</td>
+      <td>5</td>
+      <td>2</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>445000</td>
+      <td>10496</td>
+      <td>Split Level</td>
+      <td>8</td>
+      <td>Springfield Center - Springfield Twp</td>
+      <td>6 mins, 1 hour 3 mins</td>
+      <td>bus</td>
+      <td>1.141205</td>
+      <td>Springfield Center - Springfield Twp</td>
+      <td>1.141205</td>
+      <td>18 mins</td>
+      <td>1 hour 0 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3419034">3419034</a></th>
+      <td>2570 Allen Ave</td>
+      <td>Union</td>
+      <td>Union</td>
+      <td>3</td>
+      <td>3</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>429000</td>
+      <td>11652</td>
+      <td>Split Level</td>
+      <td>12</td>
+      <td>Pine Avenue - Union Twp</td>
+      <td>6 mins, 55 mins</td>
+      <td>bus</td>
+      <td>1.209960</td>
+      <td>Pine Avenue - Union Twp</td>
+      <td>1.209960</td>
+      <td>18 mins</td>
+      <td>1 hour 10 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3406582">3406582</a></th>
+      <td>762 Inwood Rd</td>
+      <td>Union</td>
+      <td>Union</td>
+      <td>3</td>
+      <td>2</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>439900</td>
+      <td>11186</td>
+      <td>Split Level</td>
+      <td>8</td>
+      <td>Bonnel Court - Union Twp</td>
+      <td>6 mins, 54 mins</td>
+      <td>bus</td>
+      <td>1.212946</td>
+      <td>Bonnel Court - Union Twp</td>
+      <td>1.212946</td>
+      <td>19 mins</td>
+      <td>1 hour 5 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3430329">3430329</a></th>
+      <td>2715 Couto Ct</td>
+      <td>Union</td>
+      <td>Union</td>
+      <td>4</td>
+      <td>2</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>485000</td>
+      <td>13032</td>
+      <td>Colonial</td>
+      <td>7</td>
+      <td>Millburn</td>
+      <td>9 mins, 36 mins</td>
+      <td>rail</td>
+      <td>1.253346</td>
+      <td>Pine Avenue - Union Twp</td>
+      <td>1.360904</td>
+      <td>18 mins</td>
+      <td>1 hour 13 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3434406">3434406</a></th>
+      <td>740 Garden St</td>
+      <td>Union</td>
+      <td>Union</td>
+      <td>4</td>
+      <td>3</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>499900</td>
+      <td>11372</td>
+      <td>Split Level</td>
+      <td>9</td>
+      <td>Bonnel Court - Union Twp</td>
+      <td>5 mins, 54 mins</td>
+      <td>bus</td>
+      <td>1.067110</td>
+      <td>Bonnel Court - Union Twp</td>
+      <td>1.067110</td>
+      <td>19 mins</td>
+      <td>1 hour 4 mins</td>
+    </tr>
+    <tr>
       <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3423660">3423660</a></th>
       <td>2463 Wilson Terrace</td>
       <td>Union</td>
@@ -15615,28 +16536,6 @@ var element = $('#5a62ec71-d3ef-49fd-9c27-9adec9802c5d');
       <td>0.796234</td>
       <td>23 mins</td>
       <td>1 hour 13 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3433230">3433230</a></th>
-      <td>2655 Hawthorne Ave</td>
-      <td>Union</td>
-      <td>Union</td>
-      <td>5</td>
-      <td>2</td>
-      <td>1</td>
-      <td>NaN</td>
-      <td>445000</td>
-      <td>10496</td>
-      <td>Split Level</td>
-      <td>8</td>
-      <td>Springfield Center - Springfield Twp</td>
-      <td>6 mins, 1 hour 3 mins</td>
-      <td>bus</td>
-      <td>1.141205</td>
-      <td>Springfield Center - Springfield Twp</td>
-      <td>1.141205</td>
-      <td>18 mins</td>
-      <td>1 hour 0 mins</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3428523">3428523</a></th>
@@ -15683,28 +16582,6 @@ var element = $('#5a62ec71-d3ef-49fd-9c27-9adec9802c5d');
       <td>1 hour 0 mins</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3419305">3419305</a></th>
-      <td>954 Wendy Ct</td>
-      <td>Union</td>
-      <td>Union</td>
-      <td>5</td>
-      <td>3</td>
-      <td>0</td>
-      <td>NaN</td>
-      <td>375000</td>
-      <td>10962</td>
-      <td>Bi-Level, Custom Home</td>
-      <td>12</td>
-      <td>Springfield Center - Springfield Twp</td>
-      <td>6 mins, 1 hour 3 mins</td>
-      <td>bus</td>
-      <td>1.055163</td>
-      <td>Springfield Center - Springfield Twp</td>
-      <td>1.055163</td>
-      <td>17 mins</td>
-      <td>1 hour 0 mins</td>
-    </tr>
-    <tr>
       <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3413305">3413305</a></th>
       <td>541 Winchester Ave</td>
       <td>Union</td>
@@ -15727,114 +16604,26 @@ var element = $('#5a62ec71-d3ef-49fd-9c27-9adec9802c5d');
       <td>52 mins</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3434406">3434406</a></th>
-      <td>740 Garden St</td>
-      <td>Union</td>
-      <td>Union</td>
-      <td>4</td>
-      <td>3</td>
-      <td>1</td>
-      <td>NaN</td>
-      <td>499900</td>
-      <td>11372</td>
-      <td>Split Level</td>
-      <td>9</td>
-      <td>Bonnel Court - Union Twp</td>
-      <td>5 mins, 54 mins</td>
-      <td>bus</td>
-      <td>1.067110</td>
-      <td>Bonnel Court - Union Twp</td>
-      <td>1.067110</td>
-      <td>19 mins</td>
-      <td>1 hour 4 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3430329">3430329</a></th>
-      <td>2715 Couto Ct</td>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3417681">3417681</a></th>
+      <td>1487 Brookside Dr</td>
       <td>Union</td>
       <td>Union</td>
       <td>4</td>
       <td>2</td>
-      <td>1</td>
-      <td>NaN</td>
-      <td>485000</td>
-      <td>13032</td>
-      <td>Colonial</td>
-      <td>7</td>
-      <td>Millburn</td>
-      <td>9 mins, 36 mins</td>
-      <td>rail</td>
-      <td>1.253346</td>
-      <td>Pine Avenue - Union Twp</td>
-      <td>1.360904</td>
-      <td>18 mins</td>
-      <td>1 hour 13 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3406582">3406582</a></th>
-      <td>762 Inwood Rd</td>
-      <td>Union</td>
-      <td>Union</td>
-      <td>3</td>
-      <td>2</td>
-      <td>1</td>
-      <td>NaN</td>
-      <td>439900</td>
-      <td>11186</td>
-      <td>Split Level</td>
-      <td>8</td>
-      <td>Bonnel Court - Union Twp</td>
-      <td>6 mins, 54 mins</td>
-      <td>bus</td>
-      <td>1.212946</td>
-      <td>Bonnel Court - Union Twp</td>
-      <td>1.212946</td>
-      <td>19 mins</td>
-      <td>1 hour 5 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3419034">3419034</a></th>
-      <td>2570 Allen Ave</td>
-      <td>Union</td>
-      <td>Union</td>
-      <td>3</td>
-      <td>3</td>
       <td>0</td>
       <td>NaN</td>
-      <td>429000</td>
-      <td>11652</td>
-      <td>Split Level</td>
-      <td>12</td>
-      <td>Pine Avenue - Union Twp</td>
-      <td>6 mins, 55 mins</td>
-      <td>bus</td>
-      <td>1.209960</td>
-      <td>Pine Avenue - Union Twp</td>
-      <td>1.209960</td>
-      <td>18 mins</td>
-      <td>1 hour 10 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3421364">3421364</a></th>
-      <td>377 Wayne Ter</td>
+      <td>339900</td>
+      <td>10366</td>
+      <td>Bi-Level, Detached</td>
+      <td>10</td>
       <td>Union</td>
-      <td>Union</td>
-      <td>4</td>
-      <td>3</td>
-      <td>0</td>
-      <td>NaN</td>
-      <td>429000</td>
-      <td>12118</td>
-      <td>Bi-Level</td>
-      <td>9</td>
-      <td>Union</td>
-      <td>5 mins, 41 mins</td>
+      <td>4 mins, 41 mins</td>
       <td>rail</td>
-      <td>0.697349</td>
-      <td>Rutgers Lane Hospital - Union Twp</td>
-      <td>0.997869</td>
-      <td>26 mins</td>
-      <td>50 mins</td>
+      <td>0.713374</td>
+      <td>Union Center - Union Twp</td>
+      <td>0.983160</td>
+      <td>24 mins</td>
+      <td>55 mins</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3406133">3406133</a></th>
@@ -15925,48 +16714,26 @@ var element = $('#5a62ec71-d3ef-49fd-9c27-9adec9802c5d');
       <td>1 hour 14 mins</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3430300">3430300</a></th>
-      <td>86 Claremont Terrace</td>
-      <td>Wayne</td>
-      <td>Passaic</td>
-      <td>4</td>
-      <td>2</td>
-      <td>0</td>
-      <td>NaN</td>
-      <td>439000</td>
-      <td>10908</td>
-      <td>Ranch</td>
-      <td>9</td>
-      <td>Mothers Park & Ride</td>
-      <td>13 mins, 55 mins</td>
-      <td>bus</td>
-      <td>3.874334</td>
-      <td>Mothers Park & Ride</td>
-      <td>3.874334</td>
-      <td>35 mins</td>
-      <td>1 hour 8 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3406962">3406962</a></th>
-      <td>70 Clifford Dr</td>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3421863">3421863</a></th>
+      <td>35 Brighton Ter</td>
       <td>Wayne</td>
       <td>Passaic</td>
       <td>4</td>
       <td>2</td>
       <td>1</td>
       <td>NaN</td>
-      <td>499900</td>
-      <td>12824</td>
+      <td>490000</td>
+      <td>13427</td>
       <td>Split Level</td>
       <td>8</td>
       <td>Mothers Park & Ride</td>
-      <td>6 mins, 55 mins</td>
+      <td>8 mins, 55 mins</td>
       <td>bus</td>
-      <td>1.780209</td>
+      <td>2.653160</td>
       <td>Mothers Park & Ride</td>
-      <td>1.780209</td>
+      <td>2.653160</td>
       <td>33 mins</td>
-      <td>57 mins</td>
+      <td>1 hour 2 mins</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3432668">3432668</a></th>
@@ -15991,6 +16758,28 @@ var element = $('#5a62ec71-d3ef-49fd-9c27-9adec9802c5d');
       <td>58 mins</td>
     </tr>
     <tr>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3406962">3406962</a></th>
+      <td>70 Clifford Dr</td>
+      <td>Wayne</td>
+      <td>Passaic</td>
+      <td>4</td>
+      <td>2</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>499900</td>
+      <td>12824</td>
+      <td>Split Level</td>
+      <td>8</td>
+      <td>Mothers Park & Ride</td>
+      <td>6 mins, 55 mins</td>
+      <td>bus</td>
+      <td>1.780209</td>
+      <td>Mothers Park & Ride</td>
+      <td>1.780209</td>
+      <td>33 mins</td>
+      <td>57 mins</td>
+    </tr>
+    <tr>
       <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3426996">3426996</a></th>
       <td>30 Brandon Ave</td>
       <td>Wayne</td>
@@ -16013,26 +16802,48 @@ var element = $('#5a62ec71-d3ef-49fd-9c27-9adec9802c5d');
       <td>1 hour 7 mins</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3421863">3421863</a></th>
-      <td>35 Brighton Ter</td>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3430300">3430300</a></th>
+      <td>86 Claremont Terrace</td>
+      <td>Wayne</td>
+      <td>Passaic</td>
+      <td>4</td>
+      <td>2</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>439000</td>
+      <td>10908</td>
+      <td>Ranch</td>
+      <td>9</td>
+      <td>Mothers Park & Ride</td>
+      <td>13 mins, 55 mins</td>
+      <td>bus</td>
+      <td>3.874334</td>
+      <td>Mothers Park & Ride</td>
+      <td>3.874334</td>
+      <td>35 mins</td>
+      <td>1 hour 8 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3434993">3434993</a></th>
+      <td>185 Parish Dr</td>
       <td>Wayne</td>
       <td>Passaic</td>
       <td>4</td>
       <td>2</td>
       <td>1</td>
       <td>NaN</td>
-      <td>490000</td>
-      <td>13427</td>
-      <td>Split Level</td>
+      <td>365900</td>
+      <td>11954</td>
+      <td>Bi-Level</td>
       <td>8</td>
+      <td>Mountain View</td>
+      <td>2 mins, 1 hour 11 mins</td>
+      <td>rail</td>
+      <td>0.651807</td>
       <td>Mothers Park & Ride</td>
-      <td>8 mins, 55 mins</td>
-      <td>bus</td>
-      <td>2.653160</td>
-      <td>Mothers Park & Ride</td>
-      <td>2.653160</td>
+      <td>0.800669</td>
       <td>33 mins</td>
-      <td>1 hour 2 mins</td>
+      <td>54 mins</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3433287">3433287</a></th>
@@ -16057,26 +16868,26 @@ var element = $('#5a62ec71-d3ef-49fd-9c27-9adec9802c5d');
       <td>1 hour 9 mins</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3434993">3434993</a></th>
-      <td>185 Parish Dr</td>
-      <td>Wayne</td>
-      <td>Passaic</td>
-      <td>4</td>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3424501">3424501</a></th>
+      <td>3 Gilbert Pl</td>
+      <td>West Orange</td>
+      <td>Essex</td>
+      <td>3</td>
       <td>2</td>
       <td>1</td>
       <td>NaN</td>
-      <td>365900</td>
-      <td>11954</td>
-      <td>Bi-Level</td>
-      <td>8</td>
-      <td>Mountain View</td>
-      <td>2 mins, 1 hour 11 mins</td>
+      <td>325000</td>
+      <td>12837</td>
+      <td>Detached, Split Level</td>
+      <td>7</td>
+      <td>Highland Avenue</td>
+      <td>5 mins, 46 mins</td>
       <td>rail</td>
-      <td>0.651807</td>
-      <td>Mothers Park & Ride</td>
-      <td>0.800669</td>
-      <td>33 mins</td>
-      <td>54 mins</td>
+      <td>0.832474</td>
+      <td>Irvington Bus Terminal</td>
+      <td>3.624832</td>
+      <td>11 mins</td>
+      <td>1 hour 31 mins</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3410322">3410322</a></th>
@@ -16123,28 +16934,6 @@ var element = $('#5a62ec71-d3ef-49fd-9c27-9adec9802c5d');
       <td>59 mins</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3396444">3396444</a></th>
-      <td>18 Edisonia Ter</td>
-      <td>West Orange</td>
-      <td>Essex</td>
-      <td>8</td>
-      <td>2</td>
-      <td>1</td>
-      <td>NaN</td>
-      <td>449900</td>
-      <td>10893</td>
-      <td>Colonial, Victorian</td>
-      <td>14</td>
-      <td>Orange</td>
-      <td>7 mins, 32 mins</td>
-      <td>rail</td>
-      <td>0.931824</td>
-      <td>Irvington Bus Terminal</td>
-      <td>4.085610</td>
-      <td>15 mins</td>
-      <td>1 hour 9 mins</td>
-    </tr>
-    <tr>
       <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3436699">3436699</a></th>
       <td>9 Edgewood Ave</td>
       <td>West Orange</td>
@@ -16167,26 +16956,70 @@ var element = $('#5a62ec71-d3ef-49fd-9c27-9adec9802c5d');
       <td>1 hour 52 mins</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3424832">3424832</a></th>
-      <td>79 Demorest Avenue</td>
-      <td>Woodbridge Township</td>
-      <td>Middlesex</td>
-      <td>4</td>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3418569">3418569</a></th>
+      <td>215 St.Cloud Ave</td>
+      <td>West Orange</td>
+      <td>Essex</td>
+      <td>3</td>
       <td>2</td>
       <td>1</td>
       <td>NaN</td>
-      <td>509000</td>
-      <td>13232</td>
-      <td>Custom Home</td>
-      <td>9</td>
-      <td>Avenel</td>
-      <td>4 mins, 36 mins</td>
+      <td>349000</td>
+      <td>11230</td>
+      <td>Split Level</td>
+      <td>8</td>
+      <td>Highland Avenue</td>
+      <td>10 mins, 46 mins</td>
       <td>rail</td>
-      <td>0.725264</td>
+      <td>1.849925</td>
+      <td>Irvington Bus Terminal</td>
+      <td>4.534837</td>
+      <td>7 mins</td>
+      <td>1 hour 47 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3396444">3396444</a></th>
+      <td>18 Edisonia Ter</td>
+      <td>West Orange</td>
+      <td>Essex</td>
+      <td>8</td>
+      <td>2</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>449900</td>
+      <td>10893</td>
+      <td>Colonial, Victorian</td>
+      <td>14</td>
+      <td>Orange</td>
+      <td>7 mins, 32 mins</td>
+      <td>rail</td>
+      <td>0.931824</td>
+      <td>Irvington Bus Terminal</td>
+      <td>4.085610</td>
+      <td>15 mins</td>
+      <td>1 hour 9 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3431890">3431890</a></th>
+      <td>33 Livingston Ave</td>
+      <td>Woodbridge Township</td>
+      <td>Middlesex</td>
+      <td>5</td>
+      <td>3</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>329900</td>
+      <td>10543</td>
+      <td>Colonial</td>
+      <td>8</td>
+      <td>Avenel</td>
+      <td>1 min, 36 mins</td>
+      <td>rail</td>
+      <td>0.219237</td>
       <td>Carteret</td>
-      <td>3.444604</td>
-      <td>36 mins</td>
-      <td>1 hour 16 mins</td>
+      <td>2.935125</td>
+      <td>38 mins</td>
+      <td>57 mins</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3430405">3430405</a></th>
@@ -16209,6 +17042,28 @@ var element = $('#5a62ec71-d3ef-49fd-9c27-9adec9802c5d');
       <td>4.259026</td>
       <td>37 mins</td>
       <td>1 hour 37 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3424832">3424832</a></th>
+      <td>79 Demorest Avenue</td>
+      <td>Woodbridge Township</td>
+      <td>Middlesex</td>
+      <td>4</td>
+      <td>2</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>509000</td>
+      <td>13232</td>
+      <td>Custom Home</td>
+      <td>9</td>
+      <td>Avenel</td>
+      <td>4 mins, 36 mins</td>
+      <td>rail</td>
+      <td>0.725264</td>
+      <td>Carteret</td>
+      <td>3.444604</td>
+      <td>36 mins</td>
+      <td>1 hour 16 mins</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3418022">3418022</a></th>
@@ -16253,14 +17108,14 @@ var element = $('#5a62ec71-d3ef-49fd-9c27-9adec9802c5d');
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df1dd</span> <span class="o">=</span> <span class="n">show_gsmls</span><span class="p">()</span>
-<span class="n">df1dd</span> <span class="o">=</span> <span class="n">df1dd</span><span class="p">[(</span><span class="n">df1dd</span><span class="o">.</span><span class="n">sqft</span><span class="o">.</span><span class="n">isnull</span><span class="p">())</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df1dd</span><span class="o">.</span><span class="n">tax</span> <span class="o">&gt;</span> <span class="mi">13500</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df1dd</span><span class="o">.</span><span class="n">tax</span> <span class="o">&lt;</span> <span class="mi">16000</span><span class="p">)]</span>
-<span class="n">df1dd</span> <span class="o">=</span> <span class="n">df1dd</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;city&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">df1dd</span><span class="p">),</span> <span class="s2">&quot;listings after filtering&quot;</span><span class="p">)</span>
-<span class="n">preview_gsmls_df</span><span class="p">(</span><span class="n">df1dd</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">show_gsmls</span><span class="p">()</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="o">.</span><span class="n">sqft</span><span class="o">.</span><span class="n">isnull</span><span class="p">())</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">tax</span> <span class="o">&gt;</span> <span class="mi">13500</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">tax</span> <span class="o">&lt;</span> <span class="n">MAX_TAX</span><span class="p">)]</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;city&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">),</span> <span class="s2">&quot;listings after filtering&quot;</span><span class="p">)</span>
+<span class="n">preview_gsmls_df</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -16277,7 +17132,7 @@ var element = $('#5a62ec71-d3ef-49fd-9c27-9adec9802c5d');
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>12 listings after filtering
+<pre>16 listings after filtering
 </pre>
 </div>
 </div>
@@ -16380,6 +17235,28 @@ var element = $('#5a62ec71-d3ef-49fd-9c27-9adec9802c5d');
       <td>1.715933</td>
       <td>22 mins</td>
       <td>48 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3429872">3429872</a></th>
+      <td>9 Lynn Dr</td>
+      <td>Clifton</td>
+      <td>Passaic</td>
+      <td>4</td>
+      <td>3</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>519900</td>
+      <td>14975</td>
+      <td>Split Level</td>
+      <td>10</td>
+      <td>Allwood Road</td>
+      <td>3 mins, 33 mins</td>
+      <td>bus</td>
+      <td>0.608936</td>
+      <td>Allwood Road</td>
+      <td>0.608936</td>
+      <td>27 mins</td>
+      <td>51 mins</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3424669">3424669</a></th>
@@ -16492,6 +17369,28 @@ var element = $('#5a62ec71-d3ef-49fd-9c27-9adec9802c5d');
       <td>1 hour 16 mins</td>
     </tr>
     <tr>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3403126">3403126</a></th>
+      <td>1955 Parkwood Dr</td>
+      <td>Scotch Plains</td>
+      <td>Union</td>
+      <td>5</td>
+      <td>2</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>525000</td>
+      <td>15980</td>
+      <td>Colonial</td>
+      <td>9</td>
+      <td>Fanwood</td>
+      <td>5 mins, 58 mins</td>
+      <td>rail</td>
+      <td>1.289505</td>
+      <td>Watchung Park & Ride</td>
+      <td>2.608803</td>
+      <td>33 mins</td>
+      <td>1 hour 37 mins</td>
+    </tr>
+    <tr>
       <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3424594">3424594</a></th>
       <td>1470 Cooper Rd</td>
       <td>Scotch Plains</td>
@@ -16558,6 +17457,28 @@ var element = $('#5a62ec71-d3ef-49fd-9c27-9adec9802c5d');
       <td>1 hour 3 mins</td>
     </tr>
     <tr>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3371626">3371626</a></th>
+      <td>6 Vincent Pl</td>
+      <td>Verona</td>
+      <td>Essex</td>
+      <td>4</td>
+      <td>2</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>525000</td>
+      <td>13502</td>
+      <td>Custom Home, Split Level</td>
+      <td>10</td>
+      <td>Watchung Avenue</td>
+      <td>8 mins, 45 mins</td>
+      <td>rail</td>
+      <td>1.056869</td>
+      <td>Allwood Road</td>
+      <td>3.045190</td>
+      <td>19 mins</td>
+      <td>54 mins</td>
+    </tr>
+    <tr>
       <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3429304">3429304</a></th>
       <td>9 Timothy Rd</td>
       <td>Wayne</td>
@@ -16578,6 +17499,28 @@ var element = $('#5a62ec71-d3ef-49fd-9c27-9adec9802c5d');
       <td>0.869674</td>
       <td>31 mins</td>
       <td>1 hour 19 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3423900">3423900</a></th>
+      <td>32 VETERI PL</td>
+      <td>Wayne</td>
+      <td>Passaic</td>
+      <td>3</td>
+      <td>2</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>525000</td>
+      <td>14233</td>
+      <td>Split Level</td>
+      <td>8</td>
+      <td>Mothers Park & Ride</td>
+      <td>8 mins, 55 mins</td>
+      <td>bus</td>
+      <td>2.117232</td>
+      <td>Mothers Park & Ride</td>
+      <td>2.117232</td>
+      <td>38 mins</td>
+      <td>56 mins</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://gsmls.herokuapp.com/properties/3428855">3428855</a></th>

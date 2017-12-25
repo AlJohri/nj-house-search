@@ -13,3 +13,6 @@ blacklist_cities = [
     'Elizabeth', 'Jefferson', 'Passaic', 'Newark', 'East Newark',
     'Linden', 'Nutley', 'Garfield', 'Hillside', 'Little Ferry',
     'Perth Amboy', 'Irvington', 'Carteret', 'Rahway',]
+
+counties = ['Passaic', 'Hudson','Essex', 'Middlesex', 'Morris', 'Bergen',
+            'Union', 'Sussex',]
