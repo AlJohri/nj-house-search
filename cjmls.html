@@ -11795,7 +11795,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
@@ -11815,7 +11815,7 @@ div#notebook {
                <span class="s1">&#39;park_and_ride_bus_name&#39;</span><span class="p">,</span> <span class="s1">&#39;park_and_ride_bus_distance&#39;</span><span class="p">,</span>
                <span class="s1">&#39;barnabas_duration_text&#39;</span><span class="p">,]</span>
     <span class="k">if</span> <span class="n">save</span><span class="p">:</span>
-        <span class="n">mydf</span><span class="p">[</span><span class="n">columns</span><span class="p">]</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;njmls.csv&#39;</span><span class="p">)</span>
+        <span class="n">mydf</span><span class="p">[</span><span class="n">columns</span><span class="p">]</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;cjmls.csv&#39;</span><span class="p">)</span>
     <span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span>
         <span class="sd">&quot;&quot;&quot;&lt;style&gt;.dataframe td {white-space: nowrap;}&lt;/style&gt;&quot;&quot;&quot;</span> <span class="o">+</span>
         <span class="n">mydf</span><span class="p">[</span><span class="n">columns</span><span class="p">]</span><span class="o">.</span><span class="n">to_html</span><span class="p">(</span>
@@ -11830,31 +11830,13 @@ div#notebook {
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Define global parameters</strong></p>
-
-</div>
-</div>
-</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ONE_HOUR</span> <span class="o">=</span> <span class="mi">3600</span>
-<span class="n">TEN_MINUTES</span> <span class="o">=</span> <span class="n">ONE_HOUR</span><span class="o">/</span><span class="mi">6</span>
-<span class="n">HALF_HOUR</span> <span class="o">=</span> <span class="n">ONE_HOUR</span> <span class="o">/</span> <span class="mi">2</span>
-<span class="n">ONE_HOUR_TEN_MINUTES</span> <span class="o">=</span> <span class="n">ONE_HOUR</span> <span class="o">+</span> <span class="n">TEN_MINUTES</span>
-<span class="n">ONE_HOUR_THIRTY_MINUTES</span> <span class="o">=</span> <span class="n">ONE_HOUR</span> <span class="o">+</span> <span class="n">HALF_HOUR</span>
-<span class="n">ONE_HOUR_FORTY_MINUTES</span> <span class="o">=</span> <span class="n">ONE_HOUR</span> <span class="o">+</span> <span class="n">HALF_HOUR</span> <span class="o">+</span> <span class="n">TEN_MINUTES</span>
-
-<span class="n">blacklist_cities</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="s1">&#39;Paterson&#39;</span><span class="p">,</span> <span class="s1">&#39;East Orange&#39;</span><span class="p">,</span> <span class="s1">&#39;City of Orange&#39;</span><span class="p">,</span> <span class="s1">&#39;Belleville&#39;</span><span class="p">,</span> <span class="s1">&#39;Elizabeth&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;Jefferson&#39;</span><span class="p">,</span> <span class="s1">&#39;Passaic&#39;</span><span class="p">,</span> <span class="s1">&#39;Newark&#39;</span><span class="p">,</span> <span class="s1">&#39;East Newark&#39;</span><span class="p">,</span> <span class="s1">&#39;Linden&#39;</span><span class="p">,</span> <span class="s1">&#39;Nutley&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;Garfield&#39;</span><span class="p">,</span> <span class="s1">&#39;Hillside&#39;</span><span class="p">,</span> <span class="s1">&#39;Little Ferry&#39;</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">settings</span> <span class="k">import</span> <span class="p">(</span><span class="n">blacklist_cities</span><span class="p">,</span> <span class="n">MIN_PRICE</span><span class="p">,</span> <span class="n">MAX_PRICE</span><span class="p">,</span> <span class="n">MAX_TAX</span><span class="p">,</span> <span class="n">MIN_BEDS</span><span class="p">,</span> <span class="n">MIN_BATHS</span><span class="p">,</span>
+                      <span class="n">ONE_HOUR</span><span class="p">,</span> <span class="n">HALF_HOUR</span><span class="p">,</span> <span class="n">TEN_MINUTES</span><span class="p">,)</span>
 </pre></div>
 
 </div>
@@ -11878,7 +11860,7 @@ div#notebook {
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">cjmls</span> <span class="k">import</span> <span class="n">get_listings</span>
 
-<span class="n">listings</span> <span class="o">=</span> <span class="p">[</span><span class="n">listing</span> <span class="k">for</span> <span class="n">meta</span><span class="p">,</span> <span class="n">listing</span> <span class="ow">in</span> <span class="n">get_listings</span><span class="p">(</span><span class="n">min_beds</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">min_baths</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">max_price</span><span class="o">=</span><span class="mi">500000</span><span class="p">)]</span>
+<span class="n">listings</span> <span class="o">=</span> <span class="p">[</span><span class="n">listing</span> <span class="k">for</span> <span class="n">meta</span><span class="p">,</span> <span class="n">listing</span> <span class="ow">in</span> <span class="n">get_listings</span><span class="p">(</span><span class="n">min_beds</span><span class="o">=</span><span class="n">MIN_BEDS</span><span class="p">,</span> <span class="n">min_baths</span><span class="o">=</span><span class="n">MIN_BATHS</span><span class="p">,</span> <span class="n">max_price</span><span class="o">=</span><span class="n">MAX_PRICE</span><span class="p">)]</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;Downloaded {len(listings)} listings from CJMLS.&quot;</span><span class="p">)</span>
 </pre></div>
 
@@ -11896,7 +11878,7 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Downloaded 986 listings from CJMLS.
+<pre>Downloaded 1024 listings from CJMLS.
 </pre>
 </div>
 </div>
@@ -11916,7 +11898,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">geolocate</span> <span class="k">import</span> <span class="n">add_geocode_to_listing</span>
@@ -11943,13 +11925,13 @@ div#notebook {
 
  
  
-<div id="0733424c-08e3-4d6b-8840-f6caa05dff67"></div>
+<div id="90d45dea-2d9f-4b15-952e-05e8d60d933e"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#0733424c-08e3-4d6b-8840-f6caa05dff67');
+var element = $('#90d45dea-2d9f-4b15-952e-05e8d60d933e');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "927f81e9f09546f3aac6d98c7e21dad2", "version_major": 2, "version_minor": 0}
+{"model_id": "985472b5c0cc4d8eb67bd9999b88b557", "version_major": 2, "version_minor": 0}
 </script>
 </div>
 
@@ -11962,6 +11944,7 @@ var element = $('#0733424c-08e3-4d6b-8840-f6caa05dff67');
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>could not geocode: 0 Samarpan Court Robbinsville, NJ or 0 Samarpan Court Robbinsville, NJ
+could not geocode: 0 Samarpan Court Robbinsville, NJ or 0 Samarpan Court Robbinsville, NJ
 could not geocode: 118 Swarthmore Terrace Menlo Park Terrace, NJ or 118 Swarthmore Terrace Menlo Park Terrace, NJ
 could not geocode: 43 Traditions Place Monroe, NJ or 43 Traditions Place Monroe, NJ
 could not geocode: 8 Traditions Place Monroe, NJ or 8 Traditions Place Monroe, NJ
@@ -11977,8 +11960,8 @@ could not geocode: 894 Terrace Avenue Woodbridge Proper, NJ or 894 Terrace Avenu
 could not geocode: 890 Terrace Avenue Woodbridge Proper, NJ or 890 Terrace Avenue Woodbridge Proper, NJ
 could not geocode: 785 Coolidge Avenue Woodbridge Proper, NJ or 785 Coolidge Avenue Woodbridge Proper, NJ
 could not geocode: 707 Bayside Court South Amboy, NJ or 707 Bayside Court South Amboy, NJ
-could not geocode: 168 Lockwood Avenue Woodbridge Proper, NJ or 168 Lockwood Avenue Woodbridge Proper, NJ
 could not geocode: 310 Columbus Avenue Woodbridge Proper, NJ or 310 Columbus Avenue Woodbridge Proper, NJ
+could not geocode: 168 Lockwood Avenue Woodbridge Proper, NJ or 168 Lockwood Avenue Woodbridge Proper, NJ
 could not geocode: 105 Van Buren Street Woodbridge Proper, NJ or 105 Van Buren Street Woodbridge Proper, NJ
 could not geocode: 71 ATLANTIC Street Menlo Park Terrace, NJ or 71 ATLANTIC Street Menlo Park Terrace, NJ
 could not geocode: 154 Crescent Avenue Woodbridge Proper, NJ or 154 Crescent Avenue Woodbridge Proper, NJ
@@ -12014,7 +11997,7 @@ could not geocode: 359 Saint James Avenue Woodbridge Proper, NJ or 359 Saint Jam
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">commute</span> <span class="k">import</span> <span class="n">add_closest_park_and_ride_to_listing</span>
@@ -12042,13 +12025,13 @@ could not geocode: 359 Saint James Avenue Woodbridge Proper, NJ or 359 Saint Jam
 
  
  
-<div id="91ee4862-4be9-4fa6-81e5-6d6ea53b0589"></div>
+<div id="2d7401f8-1cb7-4f99-a72c-135d762d1d72"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#91ee4862-4be9-4fa6-81e5-6d6ea53b0589');
+var element = $('#2d7401f8-1cb7-4f99-a72c-135d762d1d72');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "a8402a828397436f814f2dc14330514f", "version_major": 2, "version_minor": 0}
+{"model_id": "dc9357caad034f3bb394b22342f96c90", "version_major": 2, "version_minor": 0}
 </script>
 </div>
 
@@ -12080,7 +12063,7 @@ var element = $('#91ee4862-4be9-4fa6-81e5-6d6ea53b0589');
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">commute</span> <span class="k">import</span> <span class="n">add_commute_to_listing</span>
@@ -12114,13 +12097,13 @@ var element = $('#91ee4862-4be9-4fa6-81e5-6d6ea53b0589');
 
  
  
-<div id="99c21bb4-0a21-4c89-b79b-1bcdf159ecab"></div>
+<div id="8f0f46be-b56d-47f4-9448-a41e961db889"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#99c21bb4-0a21-4c89-b79b-1bcdf159ecab');
+var element = $('#8f0f46be-b56d-47f4-9448-a41e961db889');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "899fe9b8b94349089e107a9b9a3ef5f9", "version_major": 2, "version_minor": 0}
+{"model_id": "9050f3df481949649736194f6426ad8b", "version_major": 2, "version_minor": 0}
 </script>
 </div>
 
@@ -12133,8 +12116,8 @@ var element = $('#99c21bb4-0a21-4c89-b79b-1bcdf159ecab');
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
-954 out of 986 have park and ride commute times.
-875 out of 986 have walking commute times.
+991 out of 1024 have park and ride commute times.
+909 out of 1024 have walking commute times.
 </pre>
 </div>
 </div>
@@ -12143,9 +12126,18 @@ var element = $('#99c21bb4-0a21-4c89-b79b-1bcdf159ecab');
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Has Square Footage</strong></p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">listings</span><span class="p">)</span>
@@ -12154,7 +12146,9 @@ var element = $('#99c21bb4-0a21-4c89-b79b-1bcdf159ecab');
     <span class="p">(</span><span class="o">~</span><span class="n">df</span><span class="o">.</span><span class="n">city</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">blacklist_cities</span><span class="p">))</span> <span class="o">&amp;</span>
     <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">barnabas_duration</span> <span class="o">&lt;</span> <span class="n">HALF_HOUR</span> <span class="o">+</span> <span class="n">TEN_MINUTES</span><span class="p">)</span> <span class="o">&amp;</span>
     <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">park_and_ride_duration1</span> <span class="o">&lt;</span> <span class="n">TEN_MINUTES</span><span class="p">)</span> <span class="o">&amp;</span>
-    <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">park_and_ride_duration</span> <span class="o">&lt;</span> <span class="n">ONE_HOUR_TEN_MINUTES</span><span class="p">)</span>
+    <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">park_and_ride_duration</span> <span class="o">&lt;</span> <span class="n">ONE_HOUR</span> <span class="o">+</span> <span class="n">TEN_MINUTES</span><span class="p">)</span> <span class="o">&amp;</span>
+    <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">price</span> <span class="o">&gt;</span> <span class="mi">300000</span><span class="p">)</span> <span class="o">&amp;</span>
+    <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">sqft</span><span class="o">.</span><span class="n">notnull</span><span class="p">())</span>
 <span class="p">]</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;sqft&#39;</span><span class="p">,],</span> <span class="n">ascending</span><span class="o">=</span><span class="p">[</span><span class="kc">False</span><span class="p">])</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">),</span> <span class="s2">&quot;listings after filtering&quot;</span><span class="p">)</span>
@@ -12175,7 +12169,7 @@ var element = $('#99c21bb4-0a21-4c89-b79b-1bcdf159ecab');
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>208 listings after filtering
+<pre>30 listings after filtering
 </pre>
 </div>
 </div>
@@ -12228,24 +12222,6 @@ var element = $('#99c21bb4-0a21-4c89-b79b-1bcdf159ecab');
   </thead>
   <tbody>
     <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1804161">1804161</a></th>
-      <td>46 Wood Avenue</td>
-      <td>Edison</td>
-      <td>Middlesex</td>
-      <td>4</td>
-      <td>2</td>
-      <td>1</td>
-      <td>400000</td>
-      <td>875</td>
-      <td>Metropark</td>
-      <td>2 mins, 38 mins</td>
-      <td>rail</td>
-      <td>0.278891</td>
-      <td>Carteret</td>
-      <td>5.798302</td>
-      <td>33 mins</td>
-    </tr>
-    <tr>
       <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1802582">1802582</a></th>
       <td>47 Normandy Drive</td>
       <td>Woodbridge Township</td>
@@ -12254,7 +12230,7 @@ var element = $('#99c21bb4-0a21-4c89-b79b-1bcdf159ecab');
       <td>3</td>
       <td>1</td>
       <td>499900</td>
-      <td>3705</td>
+      <td>3705.0</td>
       <td>Metropark</td>
       <td>10 mins, 38 mins</td>
       <td>rail</td>
@@ -12262,24 +12238,6 @@ var element = $('#99c21bb4-0a21-4c89-b79b-1bcdf159ecab');
       <td>Watchung Park & Ride</td>
       <td>4.909467</td>
       <td>36 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1804831">1804831</a></th>
-      <td>32 Dorothy Street</td>
-      <td>Carteret</td>
-      <td>Middlesex</td>
-      <td>6</td>
-      <td>5</td>
-      <td>0</td>
-      <td>464000</td>
-      <td>3600</td>
-      <td>Carteret</td>
-      <td>7 mins, 42 mins</td>
-      <td>bus</td>
-      <td>0.920786</td>
-      <td>Carteret</td>
-      <td>0.920786</td>
-      <td>39 mins</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1810516">1810516</a></th>
@@ -12290,7 +12248,7 @@ var element = $('#99c21bb4-0a21-4c89-b79b-1bcdf159ecab');
       <td>2</td>
       <td>1</td>
       <td>459000</td>
-      <td>3005</td>
+      <td>3005.0</td>
       <td>Woodbridge</td>
       <td>7 mins, 43 mins</td>
       <td>rail</td>
@@ -12308,7 +12266,7 @@ var element = $('#99c21bb4-0a21-4c89-b79b-1bcdf159ecab');
       <td>2</td>
       <td>0</td>
       <td>495000</td>
-      <td>3000</td>
+      <td>3000.0</td>
       <td>Avenel</td>
       <td>5 mins, 36 mins</td>
       <td>rail</td>
@@ -12326,31 +12284,13 @@ var element = $('#99c21bb4-0a21-4c89-b79b-1bcdf159ecab');
       <td>2</td>
       <td>0</td>
       <td>399900</td>
-      <td>2924</td>
+      <td>2924.0</td>
       <td>South Amboy</td>
       <td>3 mins, 48 mins</td>
       <td>rail</td>
       <td>0.623283</td>
       <td>Sayreville</td>
       <td>0.887595</td>
-      <td>39 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1808444">1808444</a></th>
-      <td>312 Walnut Street</td>
-      <td>South Amboy</td>
-      <td>Middlesex</td>
-      <td>4</td>
-      <td>2</td>
-      <td>0</td>
-      <td>285000</td>
-      <td>2800</td>
-      <td>Sayreville</td>
-      <td>4 mins, 55 mins</td>
-      <td>bus</td>
-      <td>0.478589</td>
-      <td>Sayreville</td>
-      <td>0.478589</td>
       <td>39 mins</td>
     </tr>
     <tr>
@@ -12362,67 +12302,13 @@ var element = $('#99c21bb4-0a21-4c89-b79b-1bcdf159ecab');
       <td>2</td>
       <td>1</td>
       <td>369000</td>
-      <td>2800</td>
+      <td>2800.0</td>
       <td>Sayreville</td>
       <td>5 mins, 55 mins</td>
       <td>bus</td>
       <td>0.580759</td>
       <td>Sayreville</td>
       <td>0.580759</td>
-      <td>39 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1805572">1805572</a></th>
-      <td>104 Randolph Street</td>
-      <td>Carteret</td>
-      <td>Middlesex</td>
-      <td>4</td>
-      <td>2</td>
-      <td>1</td>
-      <td>484900</td>
-      <td>2700</td>
-      <td>Carteret</td>
-      <td>4 mins, 42 mins</td>
-      <td>bus</td>
-      <td>0.742283</td>
-      <td>Carteret</td>
-      <td>0.742283</td>
-      <td>38 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1808929">1808929</a></th>
-      <td>449 W 2nd Avenue</td>
-      <td>Roselle</td>
-      <td>Union</td>
-      <td>4</td>
-      <td>3</td>
-      <td>1</td>
-      <td>239000</td>
-      <td>2550</td>
-      <td>Roselle Park</td>
-      <td>5 mins, 45 mins</td>
-      <td>rail</td>
-      <td>0.809010</td>
-      <td>Rutgers Lane Hospital - Union Twp</td>
-      <td>1.231717</td>
-      <td>27 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1807981">1807981</a></th>
-      <td>16 Stima Avenue</td>
-      <td>Carteret</td>
-      <td>Middlesex</td>
-      <td>5</td>
-      <td>2</td>
-      <td>0</td>
-      <td>425000</td>
-      <td>2544</td>
-      <td>Carteret</td>
-      <td>7 mins, 42 mins</td>
-      <td>bus</td>
-      <td>0.918648</td>
-      <td>Carteret</td>
-      <td>0.918648</td>
       <td>39 mins</td>
     </tr>
     <tr>
@@ -12434,7 +12320,7 @@ var element = $('#99c21bb4-0a21-4c89-b79b-1bcdf159ecab');
       <td>2</td>
       <td>1</td>
       <td>475000</td>
-      <td>2394</td>
+      <td>2394.0</td>
       <td>Metropark</td>
       <td>4 mins, 38 mins</td>
       <td>rail</td>
@@ -12442,6 +12328,24 @@ var element = $('#99c21bb4-0a21-4c89-b79b-1bcdf159ecab');
       <td>Carteret</td>
       <td>4.328978</td>
       <td>33 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1810732">1810732</a></th>
+      <td>65 roosevelt Boulevard</td>
+      <td>Sayreville</td>
+      <td>Middlesex</td>
+      <td>4</td>
+      <td>2</td>
+      <td>1</td>
+      <td>425000</td>
+      <td>2200.0</td>
+      <td>Sayreville</td>
+      <td>4 mins, 55 mins</td>
+      <td>bus</td>
+      <td>0.721068</td>
+      <td>Sayreville</td>
+      <td>0.721068</td>
+      <td>39 mins</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1709216">1709216</a></th>
@@ -12452,7 +12356,7 @@ var element = $('#99c21bb4-0a21-4c89-b79b-1bcdf159ecab');
       <td>2</td>
       <td>1</td>
       <td>379900</td>
-      <td>2200</td>
+      <td>2200.0</td>
       <td>Old Bridge</td>
       <td>5 mins, 1 hour 3 mins</td>
       <td>bus</td>
@@ -12470,7 +12374,7 @@ var element = $('#99c21bb4-0a21-4c89-b79b-1bcdf159ecab');
       <td>2</td>
       <td>1</td>
       <td>379900</td>
-      <td>2200</td>
+      <td>2200.0</td>
       <td>Old Bridge</td>
       <td>5 mins, 1 hour 3 mins</td>
       <td>bus</td>
@@ -12478,60 +12382,6 @@ var element = $('#99c21bb4-0a21-4c89-b79b-1bcdf159ecab');
       <td>Old Bridge</td>
       <td>0.970550</td>
       <td>40 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1807770">1807770</a></th>
-      <td>96 Chain O Hills Road</td>
-      <td>Woodbridge Township</td>
-      <td>Middlesex</td>
-      <td>3</td>
-      <td>2</td>
-      <td>1</td>
-      <td>419900</td>
-      <td>2200</td>
-      <td>Metropark</td>
-      <td>4 mins, 38 mins</td>
-      <td>rail</td>
-      <td>1.044983</td>
-      <td>Carteret</td>
-      <td>4.489998</td>
-      <td>33 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1810732">1810732</a></th>
-      <td>65 roosevelt Boulevard</td>
-      <td>Sayreville</td>
-      <td>Middlesex</td>
-      <td>4</td>
-      <td>2</td>
-      <td>1</td>
-      <td>425000</td>
-      <td>2200</td>
-      <td>Sayreville</td>
-      <td>4 mins, 55 mins</td>
-      <td>bus</td>
-      <td>0.721068</td>
-      <td>Sayreville</td>
-      <td>0.721068</td>
-      <td>39 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1802373">1802373</a></th>
-      <td>1291 Madison Hill Road</td>
-      <td>Rahway</td>
-      <td>Union</td>
-      <td>3</td>
-      <td>2</td>
-      <td>1</td>
-      <td>310000</td>
-      <td>2054</td>
-      <td>Rahway</td>
-      <td>5 mins, 48 mins</td>
-      <td>rail</td>
-      <td>1.233285</td>
-      <td>Carteret</td>
-      <td>3.961899</td>
-      <td>29 mins</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1801380">1801380</a></th>
@@ -12542,7 +12392,7 @@ var element = $('#99c21bb4-0a21-4c89-b79b-1bcdf159ecab');
       <td>2</td>
       <td>1</td>
       <td>449000</td>
-      <td>2028</td>
+      <td>2028.0</td>
       <td>Dunellen</td>
       <td>3 mins, 1 hour 0 mins</td>
       <td>rail</td>
@@ -12560,13 +12410,31 @@ var element = $('#99c21bb4-0a21-4c89-b79b-1bcdf159ecab');
       <td>2</td>
       <td>1</td>
       <td>439900</td>
-      <td>2000</td>
+      <td>2000.0</td>
       <td>Sayreville</td>
       <td>5 mins, 55 mins</td>
       <td>bus</td>
       <td>0.615907</td>
       <td>Sayreville</td>
       <td>0.615907</td>
+      <td>40 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1805837">1805837</a></th>
+      <td>751 Drake Avenue</td>
+      <td>Middlesex</td>
+      <td>Middlesex</td>
+      <td>4</td>
+      <td>3</td>
+      <td>0</td>
+      <td>479999</td>
+      <td>2000.0</td>
+      <td>Dunellen</td>
+      <td>8 mins, 1 hour 0 mins</td>
+      <td>rail</td>
+      <td>1.887035</td>
+      <td>Watchung Park & Ride</td>
+      <td>6.441236</td>
       <td>40 mins</td>
     </tr>
     <tr>
@@ -12578,7 +12446,7 @@ var element = $('#99c21bb4-0a21-4c89-b79b-1bcdf159ecab');
       <td>2</td>
       <td>0</td>
       <td>325000</td>
-      <td>2000</td>
+      <td>2000.0</td>
       <td>Dunellen</td>
       <td>5 mins, 1 hour 0 mins</td>
       <td>rail</td>
@@ -12586,24 +12454,6 @@ var element = $('#99c21bb4-0a21-4c89-b79b-1bcdf159ecab');
       <td>Watchung Park & Ride</td>
       <td>5.851621</td>
       <td>37 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1805837">1805837</a></th>
-      <td>751 Drake Avenue</td>
-      <td>Middlesex</td>
-      <td>Middlesex</td>
-      <td>4</td>
-      <td>3</td>
-      <td>0</td>
-      <td>479999</td>
-      <td>2000</td>
-      <td>Dunellen</td>
-      <td>8 mins, 1 hour 0 mins</td>
-      <td>rail</td>
-      <td>1.887035</td>
-      <td>Watchung Park & Ride</td>
-      <td>6.441236</td>
-      <td>40 mins</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1808941">1808941</a></th>
@@ -12614,7 +12464,7 @@ var element = $('#99c21bb4-0a21-4c89-b79b-1bcdf159ecab');
       <td>2</td>
       <td>1</td>
       <td>399900</td>
-      <td>1952</td>
+      <td>1952.0</td>
       <td>Woodbridge</td>
       <td>8 mins, 43 mins</td>
       <td>rail</td>
@@ -12632,31 +12482,13 @@ var element = $('#99c21bb4-0a21-4c89-b79b-1bcdf159ecab');
       <td>3</td>
       <td>0</td>
       <td>499000</td>
-      <td>1930</td>
+      <td>1930.0</td>
       <td>Metropark</td>
       <td>4 mins, 38 mins</td>
       <td>rail</td>
       <td>0.472839</td>
       <td>Carteret</td>
       <td>5.056894</td>
-      <td>33 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1801789">1801789</a></th>
-      <td>955 Pierpont Street</td>
-      <td>Rahway</td>
-      <td>Union</td>
-      <td>3</td>
-      <td>2</td>
-      <td>1</td>
-      <td>344000</td>
-      <td>1926</td>
-      <td>Rahway</td>
-      <td>2 mins, 48 mins</td>
-      <td>rail</td>
-      <td>0.512177</td>
-      <td>Carteret</td>
-      <td>3.194758</td>
       <td>33 mins</td>
     </tr>
     <tr>
@@ -12668,7 +12500,7 @@ var element = $('#99c21bb4-0a21-4c89-b79b-1bcdf159ecab');
       <td>2</td>
       <td>0</td>
       <td>363000</td>
-      <td>1914</td>
+      <td>1914.0</td>
       <td>Avenel</td>
       <td>3 mins, 36 mins</td>
       <td>rail</td>
@@ -12676,24 +12508,6 @@ var element = $('#99c21bb4-0a21-4c89-b79b-1bcdf159ecab');
       <td>Carteret</td>
       <td>2.764967</td>
       <td>38 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1802458">1802458</a></th>
-      <td>75 Heald Street</td>
-      <td>Carteret</td>
-      <td>Middlesex</td>
-      <td>3</td>
-      <td>2</td>
-      <td>0</td>
-      <td>224900</td>
-      <td>1802</td>
-      <td>Carteret</td>
-      <td>4 mins, 42 mins</td>
-      <td>bus</td>
-      <td>0.634387</td>
-      <td>Carteret</td>
-      <td>0.634387</td>
-      <td>39 mins</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1802919">1802919</a></th>
@@ -12704,7 +12518,7 @@ var element = $('#99c21bb4-0a21-4c89-b79b-1bcdf159ecab');
       <td>2</td>
       <td>0</td>
       <td>359990</td>
-      <td>1798</td>
+      <td>1798.0</td>
       <td>Woodbridge</td>
       <td>8 mins, 43 mins</td>
       <td>rail</td>
@@ -12712,24 +12526,6 @@ var element = $('#99c21bb4-0a21-4c89-b79b-1bcdf159ecab');
       <td>Sayreville</td>
       <td>4.064748</td>
       <td>36 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1810863">1810863</a></th>
-      <td>101 Coolidge Avenue</td>
-      <td>Carteret</td>
-      <td>Middlesex</td>
-      <td>5</td>
-      <td>2</td>
-      <td>0</td>
-      <td>369900</td>
-      <td>1791</td>
-      <td>Carteret</td>
-      <td>5 mins, 42 mins</td>
-      <td>bus</td>
-      <td>0.745125</td>
-      <td>Carteret</td>
-      <td>0.745125</td>
-      <td>40 mins</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1804826">1804826</a></th>
@@ -12740,7 +12536,7 @@ var element = $('#99c21bb4-0a21-4c89-b79b-1bcdf159ecab');
       <td>2</td>
       <td>0</td>
       <td>355000</td>
-      <td>1750</td>
+      <td>1750.0</td>
       <td>Avenel</td>
       <td>5 mins, 36 mins</td>
       <td>rail</td>
@@ -12748,24 +12544,6 @@ var element = $('#99c21bb4-0a21-4c89-b79b-1bcdf159ecab');
       <td>Carteret</td>
       <td>3.706817</td>
       <td>36 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1809374">1809374</a></th>
-      <td>915 Westfield Avenue</td>
-      <td>Rahway</td>
-      <td>Union</td>
-      <td>4</td>
-      <td>2</td>
-      <td>0</td>
-      <td>169900</td>
-      <td>1728</td>
-      <td>Rahway</td>
-      <td>4 mins, 48 mins</td>
-      <td>rail</td>
-      <td>0.899052</td>
-      <td>Carteret</td>
-      <td>3.572989</td>
-      <td>30 mins</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1804285">1804285</a></th>
@@ -12776,7 +12554,7 @@ var element = $('#99c21bb4-0a21-4c89-b79b-1bcdf159ecab');
       <td>3</td>
       <td>0</td>
       <td>359000</td>
-      <td>1711</td>
+      <td>1711.0</td>
       <td>Avenel</td>
       <td>6 mins, 36 mins</td>
       <td>rail</td>
@@ -12784,42 +12562,6 @@ var element = $('#99c21bb4-0a21-4c89-b79b-1bcdf159ecab');
       <td>Carteret</td>
       <td>3.781581</td>
       <td>37 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1807869">1807869</a></th>
-      <td>16 Grover Avenue</td>
-      <td>South Amboy</td>
-      <td>Middlesex</td>
-      <td>4</td>
-      <td>2</td>
-      <td>0</td>
-      <td>289000</td>
-      <td>1700</td>
-      <td>Sayreville</td>
-      <td>5 mins, 55 mins</td>
-      <td>bus</td>
-      <td>0.656261</td>
-      <td>Sayreville</td>
-      <td>0.656261</td>
-      <td>40 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1807940">1807940</a></th>
-      <td>113 S Pine Avenue</td>
-      <td>South Amboy</td>
-      <td>Middlesex</td>
-      <td>4</td>
-      <td>2</td>
-      <td>0</td>
-      <td>177900</td>
-      <td>1680</td>
-      <td>South Amboy</td>
-      <td>3 mins, 48 mins</td>
-      <td>rail</td>
-      <td>0.397832</td>
-      <td>Sayreville</td>
-      <td>0.700053</td>
-      <td>39 mins</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1808789">1808789</a></th>
@@ -12830,7 +12572,7 @@ var element = $('#99c21bb4-0a21-4c89-b79b-1bcdf159ecab');
       <td>2</td>
       <td>1</td>
       <td>335000</td>
-      <td>1674</td>
+      <td>1674.0</td>
       <td>Dunellen</td>
       <td>5 mins, 1 hour 0 mins</td>
       <td>rail</td>
@@ -12848,7 +12590,7 @@ var element = $('#99c21bb4-0a21-4c89-b79b-1bcdf159ecab');
       <td>2</td>
       <td>0</td>
       <td>355000</td>
-      <td>1662</td>
+      <td>1662.0</td>
       <td>Dunellen</td>
       <td>5 mins, 1 hour 0 mins</td>
       <td>rail</td>
@@ -12866,7 +12608,7 @@ var element = $('#99c21bb4-0a21-4c89-b79b-1bcdf159ecab');
       <td>2</td>
       <td>0</td>
       <td>315000</td>
-      <td>1649</td>
+      <td>1649.0</td>
       <td>Vince Lombardi</td>
       <td>5 mins, 25 mins</td>
       <td>bus</td>
@@ -12874,24 +12616,6 @@ var element = $('#99c21bb4-0a21-4c89-b79b-1bcdf159ecab');
       <td>Vince Lombardi</td>
       <td>1.526575</td>
       <td>31 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1805219">1805219</a></th>
-      <td>1913 Bond Street</td>
-      <td>Rahway</td>
-      <td>Union</td>
-      <td>4</td>
-      <td>2</td>
-      <td>0</td>
-      <td>349900</td>
-      <td>1632</td>
-      <td>Rahway</td>
-      <td>4 mins, 48 mins</td>
-      <td>rail</td>
-      <td>0.578840</td>
-      <td>Carteret</td>
-      <td>2.373037</td>
-      <td>34 mins</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1808535">1808535</a></th>
@@ -12902,7 +12626,7 @@ var element = $('#99c21bb4-0a21-4c89-b79b-1bcdf159ecab');
       <td>2</td>
       <td>0</td>
       <td>415000</td>
-      <td>1580</td>
+      <td>1580.0</td>
       <td>Metuchen</td>
       <td>4 mins, 51 mins</td>
       <td>rail</td>
@@ -12920,7 +12644,7 @@ var element = $('#99c21bb4-0a21-4c89-b79b-1bcdf159ecab');
       <td>2</td>
       <td>1</td>
       <td>439900</td>
-      <td>1562</td>
+      <td>1562.0</td>
       <td>Metropark</td>
       <td>6 mins, 38 mins</td>
       <td>rail</td>
@@ -12938,7 +12662,7 @@ var element = $('#99c21bb4-0a21-4c89-b79b-1bcdf159ecab');
       <td>2</td>
       <td>0</td>
       <td>338000</td>
-      <td>1555</td>
+      <td>1555.0</td>
       <td>Rahway</td>
       <td>8 mins, 48 mins</td>
       <td>rail</td>
@@ -12946,114 +12670,6 @@ var element = $('#99c21bb4-0a21-4c89-b79b-1bcdf159ecab');
       <td>Carteret</td>
       <td>4.892210</td>
       <td>35 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1804592">1804592</a></th>
-      <td>710 King George Road</td>
-      <td>Woodbridge Township</td>
-      <td>Middlesex</td>
-      <td>3</td>
-      <td>2</td>
-      <td>0</td>
-      <td>265000</td>
-      <td>1535</td>
-      <td>Woodbridge</td>
-      <td>8 mins, 43 mins</td>
-      <td>rail</td>
-      <td>2.354566</td>
-      <td>Sayreville</td>
-      <td>3.775216</td>
-      <td>34 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1810566">1810566</a></th>
-      <td>37 robin Place</td>
-      <td>Sayreville</td>
-      <td>Middlesex</td>
-      <td>3</td>
-      <td>2</td>
-      <td>1</td>
-      <td>329900</td>
-      <td>1507</td>
-      <td>Sayreville</td>
-      <td>4 mins, 55 mins</td>
-      <td>bus</td>
-      <td>0.483094</td>
-      <td>Sayreville</td>
-      <td>0.483094</td>
-      <td>39 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1807860">1807860</a></th>
-      <td>48 Central Avenue</td>
-      <td>Piscataway Township</td>
-      <td>Middlesex</td>
-      <td>4</td>
-      <td>2</td>
-      <td>0</td>
-      <td>185400</td>
-      <td>1472</td>
-      <td>Dunellen</td>
-      <td>4 mins, 1 hour 0 mins</td>
-      <td>rail</td>
-      <td>1.268496</td>
-      <td>Watchung Park & Ride</td>
-      <td>5.888483</td>
-      <td>39 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1810518">1810518</a></th>
-      <td>804 Hidden Village Drive</td>
-      <td>Perth Amboy</td>
-      <td>Middlesex</td>
-      <td>3</td>
-      <td>2</td>
-      <td>1</td>
-      <td>143100</td>
-      <td>1439</td>
-      <td>Perth Amboy</td>
-      <td>3 mins, 1 hour 6 mins</td>
-      <td>rail</td>
-      <td>0.332916</td>
-      <td>Sayreville</td>
-      <td>2.867749</td>
-      <td>39 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1810753">1810753</a></th>
-      <td>19 Livingston Avenue</td>
-      <td>Woodbridge Township</td>
-      <td>Middlesex</td>
-      <td>3</td>
-      <td>2</td>
-      <td>1</td>
-      <td>264900</td>
-      <td>1416</td>
-      <td>Avenel</td>
-      <td>1 min, 36 mins</td>
-      <td>rail</td>
-      <td>0.149391</td>
-      <td>Carteret</td>
-      <td>2.880971</td>
-      <td>38 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1809427">1809427</a></th>
-      <td>30 John Street</td>
-      <td>Carteret</td>
-      <td>Middlesex</td>
-      <td>3</td>
-      <td>2</td>
-      <td>0</td>
-      <td>250000</td>
-      <td>1405</td>
-      <td>Carteret</td>
-      <td>4 mins, 42 mins</td>
-      <td>bus</td>
-      <td>0.742742</td>
-      <td>Carteret</td>
-      <td>0.742742</td>
-      <td>39 mins</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1804485">1804485</a></th>
@@ -13064,7 +12680,7 @@ var element = $('#99c21bb4-0a21-4c89-b79b-1bcdf159ecab');
       <td>2</td>
       <td>0</td>
       <td>339900</td>
-      <td>1375</td>
+      <td>1375.0</td>
       <td>Metuchen</td>
       <td>3 mins, 51 mins</td>
       <td>rail</td>
@@ -13072,24 +12688,6 @@ var element = $('#99c21bb4-0a21-4c89-b79b-1bcdf159ecab');
       <td>Sayreville</td>
       <td>4.901415</td>
       <td>37 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1808834">1808834</a></th>
-      <td>241 Jensen Avenue</td>
-      <td>Rahway</td>
-      <td>Union</td>
-      <td>3</td>
-      <td>2</td>
-      <td>0</td>
-      <td>382500</td>
-      <td>1300</td>
-      <td>Rahway</td>
-      <td>5 mins, 48 mins</td>
-      <td>rail</td>
-      <td>1.227758</td>
-      <td>Carteret</td>
-      <td>3.746201</td>
-      <td>34 mins</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1808016">1808016</a></th>
@@ -13100,7 +12698,7 @@ var element = $('#99c21bb4-0a21-4c89-b79b-1bcdf159ecab');
       <td>2</td>
       <td>0</td>
       <td>309000</td>
-      <td>1200</td>
+      <td>1200.0</td>
       <td>Dunellen</td>
       <td>6 mins, 1 hour 0 mins</td>
       <td>rail</td>
@@ -13118,7 +12716,7 @@ var element = $('#99c21bb4-0a21-4c89-b79b-1bcdf159ecab');
       <td>2</td>
       <td>0</td>
       <td>308000</td>
-      <td>1189</td>
+      <td>1189.0</td>
       <td>Avenel</td>
       <td>4 mins, 36 mins</td>
       <td>rail</td>
@@ -13126,24 +12724,6 @@ var element = $('#99c21bb4-0a21-4c89-b79b-1bcdf159ecab');
       <td>Carteret</td>
       <td>3.438165</td>
       <td>35 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1802397">1802397</a></th>
-      <td>663 Ford Avenue</td>
-      <td>Edison</td>
-      <td>Middlesex</td>
-      <td>3</td>
-      <td>2</td>
-      <td>0</td>
-      <td>209900</td>
-      <td>1176</td>
-      <td>Metuchen</td>
-      <td>7 mins, 51 mins</td>
-      <td>rail</td>
-      <td>1.318728</td>
-      <td>Sayreville</td>
-      <td>5.272244</td>
-      <td>36 mins</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1808414">1808414</a></th>
@@ -13154,7 +12734,7 @@ var element = $('#99c21bb4-0a21-4c89-b79b-1bcdf159ecab');
       <td>2</td>
       <td>0</td>
       <td>335000</td>
-      <td>1090</td>
+      <td>1090.0</td>
       <td>Metropark</td>
       <td>6 mins, 38 mins</td>
       <td>rail</td>
@@ -13164,1444 +12744,145 @@ var element = $('#99c21bb4-0a21-4c89-b79b-1bcdf159ecab');
       <td>35 mins</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1808207">1808207</a></th>
-      <td>57 Maryknoll Road</td>
-      <td>Metuchen</td>
-      <td>Middlesex</td>
-      <td>4</td>
-      <td>2</td>
-      <td>1</td>
-      <td>279000</td>
-      <td>1085</td>
-      <td>Metropark</td>
-      <td>7 mins, 38 mins</td>
-      <td>rail</td>
-      <td>0.861507</td>
-      <td>Carteret</td>
-      <td>5.458251</td>
-      <td>37 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1803428">1803428</a></th>
-      <td>1405 ROOSEVELT Avenue</td>
-      <td>Carteret</td>
-      <td>Middlesex</td>
-      <td>3</td>
-      <td>2</td>
-      <td>0</td>
-      <td>280000</td>
-      <td>0</td>
-      <td>Carteret</td>
-      <td>6 mins, 42 mins</td>
-      <td>bus</td>
-      <td>1.032232</td>
-      <td>Carteret</td>
-      <td>1.032232</td>
-      <td>38 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1715642">1715642</a></th>
-      <td>205 Liberty Street</td>
-      <td>Woodbridge Township</td>
-      <td>Middlesex</td>
-      <td>4</td>
-      <td>2</td>
-      <td>0</td>
-      <td>284500</td>
-      <td>0</td>
-      <td>Woodbridge</td>
-      <td>8 mins, 43 mins</td>
-      <td>rail</td>
-      <td>2.173923</td>
-      <td>Sayreville</td>
-      <td>3.881923</td>
-      <td>34 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1806366">1806366</a></th>
-      <td>35 Mary Street</td>
-      <td>Carteret</td>
-      <td>Middlesex</td>
-      <td>3</td>
-      <td>2</td>
-      <td>0</td>
-      <td>285000</td>
-      <td>0</td>
-      <td>Carteret</td>
-      <td>3 mins, 42 mins</td>
-      <td>bus</td>
-      <td>0.467328</td>
-      <td>Carteret</td>
-      <td>0.467328</td>
-      <td>38 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1803353">1803353</a></th>
-      <td>50 Westside Avenue</td>
-      <td>Woodbridge Township</td>
-      <td>Middlesex</td>
-      <td>3</td>
-      <td>2</td>
-      <td>1</td>
-      <td>294900</td>
-      <td>0</td>
-      <td>Avenel</td>
-      <td>2 mins, 36 mins</td>
-      <td>rail</td>
-      <td>0.220998</td>
-      <td>Carteret</td>
-      <td>2.851679</td>
-      <td>39 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1809086">1809086</a></th>
-      <td>956 Main Street</td>
-      <td>Woodbridge Township</td>
-      <td>Middlesex</td>
-      <td>3</td>
-      <td>2</td>
-      <td>1</td>
-      <td>285000</td>
-      <td>0</td>
-      <td>Metropark</td>
-      <td>7 mins, 38 mins</td>
-      <td>rail</td>
-      <td>2.282968</td>
-      <td>Sayreville</td>
-      <td>4.213984</td>
-      <td>35 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1809005">1809005</a></th>
-      <td>17 Fillmore Avenue</td>
-      <td>Carteret</td>
-      <td>Middlesex</td>
-      <td>3</td>
-      <td>2</td>
-      <td>0</td>
-      <td>287000</td>
-      <td>0</td>
-      <td>Carteret</td>
-      <td>4 mins, 42 mins</td>
-      <td>bus</td>
-      <td>0.589443</td>
-      <td>Carteret</td>
-      <td>0.589443</td>
-      <td>39 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1716282">1716282</a></th>
-      <td>29 5th Avenue</td>
-      <td>Woodbridge Township</td>
-      <td>Middlesex</td>
-      <td>3</td>
-      <td>2</td>
-      <td>0</td>
-      <td>287000</td>
-      <td>0</td>
-      <td>Avenel</td>
-      <td>1 min, 36 mins</td>
-      <td>rail</td>
-      <td>0.219627</td>
-      <td>Carteret</td>
-      <td>2.951861</td>
-      <td>38 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1804912">1804912</a></th>
-      <td>143 Poplar Street</td>
-      <td>Woodbridge Township</td>
-      <td>Middlesex</td>
-      <td>3</td>
-      <td>2</td>
-      <td>0</td>
-      <td>289000</td>
-      <td>0</td>
-      <td>Woodbridge</td>
-      <td>9 mins, 43 mins</td>
-      <td>rail</td>
-      <td>2.027385</td>
-      <td>Sayreville</td>
-      <td>4.191723</td>
-      <td>35 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1805709">1805709</a></th>
-      <td>104 New Dover Road</td>
-      <td>Woodbridge Township</td>
-      <td>Middlesex</td>
-      <td>3</td>
-      <td>2</td>
-      <td>0</td>
-      <td>289900</td>
-      <td>0</td>
-      <td>Metropark</td>
-      <td>5 mins, 38 mins</td>
-      <td>rail</td>
-      <td>1.182873</td>
-      <td>Carteret</td>
-      <td>5.434689</td>
-      <td>35 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1804671">1804671</a></th>
-      <td>202 E 5th Avenue</td>
-      <td>Roselle</td>
-      <td>Union</td>
-      <td>4</td>
-      <td>2</td>
-      <td>1</td>
-      <td>290000</td>
-      <td>0</td>
-      <td>Roselle Park</td>
-      <td>5 mins, 45 mins</td>
-      <td>rail</td>
-      <td>0.900025</td>
-      <td>Rutgers Lane Hospital - Union Twp</td>
-      <td>1.336743</td>
-      <td>32 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1804470">1804470</a></th>
-      <td>87 Bernard Avenue</td>
-      <td>Edison</td>
-      <td>Middlesex</td>
-      <td>3</td>
-      <td>3</td>
-      <td>1</td>
-      <td>294900</td>
-      <td>0</td>
-      <td>Metuchen</td>
-      <td>5 mins, 51 mins</td>
-      <td>rail</td>
-      <td>1.313386</td>
-      <td>Sayreville</td>
-      <td>4.282821</td>
-      <td>38 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1805329">1805329</a></th>
-      <td>135 Stephenson Avenue</td>
-      <td>Middlesex</td>
-      <td>Middlesex</td>
-      <td>3</td>
-      <td>2</td>
-      <td>0</td>
-      <td>295000</td>
-      <td>0</td>
-      <td>Dunellen</td>
-      <td>5 mins, 1 hour 0 mins</td>
-      <td>rail</td>
-      <td>1.110507</td>
-      <td>Watchung Park & Ride</td>
-      <td>5.576513</td>
-      <td>37 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1804409">1804409</a></th>
-      <td>819 Willis Place</td>
-      <td>Roselle Park</td>
-      <td>Union</td>
-      <td>3</td>
-      <td>2</td>
-      <td>0</td>
-      <td>299000</td>
-      <td>0</td>
-      <td>Rutgers Lane Hospital - Union Twp</td>
-      <td>1 min, 56 mins</td>
-      <td>bus</td>
-      <td>0.207420</td>
-      <td>Rutgers Lane Hospital - Union Twp</td>
-      <td>0.207420</td>
-      <td>27 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1809133">1809133</a></th>
-      <td>219 Florence Avenue</td>
-      <td>Woodbridge Township</td>
-      <td>Middlesex</td>
-      <td>3</td>
-      <td>2</td>
-      <td>0</td>
-      <td>299900</td>
-      <td>0</td>
-      <td>Rahway</td>
-      <td>7 mins, 48 mins</td>
-      <td>rail</td>
-      <td>1.894772</td>
-      <td>Carteret</td>
-      <td>4.459187</td>
-      <td>36 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1808033">1808033</a></th>
-      <td>81 Remsen Avenue</td>
-      <td>Woodbridge Township</td>
-      <td>Middlesex</td>
-      <td>4</td>
-      <td>2</td>
-      <td>0</td>
-      <td>299999</td>
-      <td>0</td>
-      <td>Avenel</td>
-      <td>3 mins, 36 mins</td>
-      <td>rail</td>
-      <td>0.777793</td>
-      <td>Carteret</td>
-      <td>3.485688</td>
-      <td>36 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1806537">1806537</a></th>
-      <td>9 Chestnut Street</td>
-      <td>Carteret</td>
-      <td>Middlesex</td>
-      <td>4</td>
-      <td>2</td>
-      <td>0</td>
-      <td>300000</td>
-      <td>0</td>
-      <td>Carteret</td>
-      <td>4 mins, 42 mins</td>
-      <td>bus</td>
-      <td>0.733117</td>
-      <td>Carteret</td>
-      <td>0.733117</td>
-      <td>39 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1720034">1720034</a></th>
-      <td>246 Adams Street</td>
-      <td>Rahway</td>
-      <td>Union</td>
-      <td>3</td>
-      <td>2</td>
-      <td>0</td>
-      <td>309000</td>
-      <td>0</td>
-      <td>Rahway</td>
-      <td>3 mins, 48 mins</td>
-      <td>rail</td>
-      <td>0.287662</td>
-      <td>Carteret</td>
-      <td>2.608738</td>
-      <td>36 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1714438">1714438</a></th>
-      <td>28 Concannon Drive</td>
-      <td>Woodbridge Township</td>
-      <td>Middlesex</td>
-      <td>5</td>
-      <td>2</td>
-      <td>1</td>
-      <td>309900</td>
-      <td>0</td>
-      <td>Metropark</td>
-      <td>6 mins, 38 mins</td>
-      <td>rail</td>
-      <td>1.743059</td>
-      <td>Sayreville</td>
-      <td>4.764350</td>
-      <td>34 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1621716">1621716</a></th>
-      <td>803 W Inman Avenue</td>
-      <td>Rahway</td>
-      <td>Union</td>
-      <td>3</td>
-      <td>2</td>
-      <td>0</td>
-      <td>310000</td>
-      <td>0</td>
-      <td>Rahway</td>
-      <td>5 mins, 48 mins</td>
-      <td>rail</td>
-      <td>1.387827</td>
-      <td>Carteret</td>
-      <td>3.938189</td>
-      <td>34 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1809236">1809236</a></th>
-      <td>351 Market Street</td>
-      <td>Perth Amboy</td>
-      <td>Middlesex</td>
-      <td>3</td>
-      <td>2</td>
-      <td>0</td>
-      <td>279900</td>
-      <td>0</td>
-      <td>Perth Amboy</td>
-      <td>1 min, 1 hour 6 mins</td>
-      <td>rail</td>
-      <td>0.268353</td>
-      <td>Sayreville</td>
-      <td>2.438144</td>
-      <td>38 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1810474">1810474</a></th>
-      <td>458 Front Street</td>
-      <td>Dunellen</td>
-      <td>Middlesex</td>
-      <td>4</td>
-      <td>2</td>
-      <td>0</td>
-      <td>259000</td>
-      <td>0</td>
-      <td>Dunellen</td>
-      <td>2 mins, 1 hour 0 mins</td>
-      <td>rail</td>
-      <td>0.279315</td>
-      <td>Watchung Park & Ride</td>
-      <td>4.841378</td>
-      <td>35 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1805213">1805213</a></th>
-      <td>229 2nd Street</td>
-      <td>Dunellen</td>
-      <td>Middlesex</td>
-      <td>3</td>
-      <td>2</td>
-      <td>0</td>
-      <td>275000</td>
-      <td>0</td>
-      <td>Dunellen</td>
-      <td>2 mins, 1 hour 0 mins</td>
-      <td>rail</td>
-      <td>0.345822</td>
-      <td>Watchung Park & Ride</td>
-      <td>4.434959</td>
-      <td>34 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1804901">1804901</a></th>
-      <td>80 Lincoln Avenue</td>
-      <td>Carteret</td>
-      <td>Middlesex</td>
-      <td>3</td>
-      <td>2</td>
-      <td>0</td>
-      <td>239900</td>
-      <td>0</td>
-      <td>Carteret</td>
-      <td>2 mins, 42 mins</td>
-      <td>bus</td>
-      <td>0.419715</td>
-      <td>Carteret</td>
-      <td>0.419715</td>
-      <td>37 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1721159">1721159</a></th>
-      <td>1150 Rahway Avenue</td>
-      <td>Woodbridge Township</td>
-      <td>Middlesex</td>
-      <td>3</td>
-      <td>2</td>
-      <td>0</td>
-      <td>99500</td>
-      <td>0</td>
-      <td>Avenel</td>
-      <td>4 mins, 36 mins</td>
-      <td>rail</td>
-      <td>0.548452</td>
-      <td>Carteret</td>
-      <td>2.193109</td>
-      <td>40 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1808564">1808564</a></th>
-      <td>424 Remsen Avenue</td>
-      <td>Woodbridge Township</td>
-      <td>Middlesex</td>
-      <td>3</td>
-      <td>2</td>
-      <td>0</td>
-      <td>166400</td>
-      <td>0</td>
-      <td>Avenel</td>
-      <td>4 mins, 36 mins</td>
-      <td>rail</td>
-      <td>0.606959</td>
-      <td>Carteret</td>
-      <td>2.901430</td>
-      <td>37 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1804059">1804059</a></th>
-      <td>203 S Washington Avenue</td>
-      <td>Dunellen</td>
-      <td>Middlesex</td>
-      <td>4</td>
-      <td>2</td>
-      <td>0</td>
-      <td>189000</td>
-      <td>0</td>
-      <td>Dunellen</td>
-      <td>2 mins, 1 hour 0 mins</td>
-      <td>rail</td>
-      <td>0.188270</td>
-      <td>Watchung Park & Ride</td>
-      <td>4.610682</td>
-      <td>35 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1802924">1802924</a></th>
-      <td>507 1st Street</td>
-      <td>Dunellen</td>
-      <td>Middlesex</td>
-      <td>3</td>
-      <td>2</td>
-      <td>0</td>
-      <td>189900</td>
-      <td>0</td>
-      <td>Dunellen</td>
-      <td>3 mins, 1 hour 0 mins</td>
-      <td>rail</td>
-      <td>0.393646</td>
-      <td>Watchung Park & Ride</td>
-      <td>4.881955</td>
-      <td>35 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1612522">1612522</a></th>
-      <td>311 Henry Street</td>
-      <td>South Amboy</td>
-      <td>Middlesex</td>
-      <td>3</td>
-      <td>2</td>
-      <td>0</td>
-      <td>190000</td>
-      <td>0</td>
-      <td>South Amboy</td>
-      <td>3 mins, 48 mins</td>
-      <td>rail</td>
-      <td>0.277007</td>
-      <td>Sayreville</td>
-      <td>0.840286</td>
-      <td>40 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1710122">1710122</a></th>
-      <td>1170 Broad Street</td>
-      <td>Rahway</td>
-      <td>Union</td>
-      <td>3</td>
-      <td>2</td>
-      <td>0</td>
-      <td>199900</td>
-      <td>0</td>
-      <td>Rahway</td>
-      <td>2 mins, 48 mins</td>
-      <td>rail</td>
-      <td>0.197050</td>
-      <td>Carteret</td>
-      <td>2.843364</td>
-      <td>35 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1803906">1803906</a></th>
-      <td>89 Heald Street</td>
-      <td>Carteret</td>
-      <td>Middlesex</td>
-      <td>3</td>
-      <td>2</td>
-      <td>0</td>
-      <td>212000</td>
-      <td>0</td>
-      <td>Carteret</td>
-      <td>4 mins, 42 mins</td>
-      <td>bus</td>
-      <td>0.601155</td>
-      <td>Carteret</td>
-      <td>0.601155</td>
-      <td>39 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1805159">1805159</a></th>
-      <td>333 Herbert Street</td>
-      <td>Perth Amboy</td>
-      <td>Middlesex</td>
-      <td>3</td>
-      <td>2</td>
-      <td>0</td>
-      <td>215000</td>
-      <td>0</td>
-      <td>Perth Amboy</td>
-      <td>3 mins, 1 hour 6 mins</td>
-      <td>rail</td>
-      <td>0.637080</td>
-      <td>Sayreville</td>
-      <td>2.631353</td>
-      <td>38 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1804656">1804656</a></th>
-      <td>970 Leesville Avenue</td>
-      <td>Rahway</td>
-      <td>Union</td>
-      <td>4</td>
-      <td>2</td>
-      <td>1</td>
-      <td>215000</td>
-      <td>0</td>
-      <td>Rahway</td>
-      <td>4 mins, 48 mins</td>
-      <td>rail</td>
-      <td>0.564879</td>
-      <td>Carteret</td>
-      <td>2.526348</td>
-      <td>36 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1810547">1810547</a></th>
-      <td>64 N Madison Avenue</td>
-      <td>Woodbridge Township</td>
-      <td>Middlesex</td>
-      <td>4</td>
-      <td>2</td>
-      <td>0</td>
-      <td>224900</td>
-      <td>0</td>
-      <td>Avenel</td>
-      <td>2 mins, 36 mins</td>
-      <td>rail</td>
-      <td>0.255242</td>
-      <td>Carteret</td>
-      <td>2.795994</td>
-      <td>38 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1804167">1804167</a></th>
-      <td>33 Heston Avenue</td>
-      <td>South Amboy</td>
-      <td>Middlesex</td>
-      <td>3</td>
-      <td>2</td>
-      <td>0</td>
-      <td>225000</td>
-      <td>0</td>
-      <td>Sayreville</td>
-      <td>3 mins, 55 mins</td>
-      <td>bus</td>
-      <td>0.660669</td>
-      <td>Sayreville</td>
-      <td>0.660669</td>
-      <td>39 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1808805">1808805</a></th>
-      <td>335 Dunellen Avenue</td>
-      <td>Dunellen</td>
-      <td>Middlesex</td>
-      <td>4</td>
-      <td>2</td>
-      <td>0</td>
-      <td>229000</td>
-      <td>0</td>
-      <td>Dunellen</td>
-      <td>2 mins, 1 hour 0 mins</td>
-      <td>rail</td>
-      <td>0.181007</td>
-      <td>Watchung Park & Ride</td>
-      <td>4.626397</td>
-      <td>34 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1809420">1809420</a></th>
-      <td>26 Middle Hill Road</td>
-      <td>Woodbridge Township</td>
-      <td>Middlesex</td>
-      <td>4</td>
-      <td>2</td>
-      <td>0</td>
-      <td>230000</td>
-      <td>0</td>
-      <td>Avenel</td>
-      <td>5 mins, 36 mins</td>
-      <td>rail</td>
-      <td>0.935502</td>
-      <td>Carteret</td>
-      <td>3.629429</td>
-      <td>36 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1807777">1807777</a></th>
-      <td>175 Union Avenue</td>
-      <td>Middlesex</td>
-      <td>Middlesex</td>
-      <td>3</td>
-      <td>2</td>
-      <td>0</td>
-      <td>235000</td>
-      <td>0</td>
-      <td>Bound Brook</td>
-      <td>3 mins, 1 hour 6 mins</td>
-      <td>rail</td>
-      <td>0.721463</td>
-      <td>Watchung Park & Ride</td>
-      <td>7.839602</td>
-      <td>39 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1806246">1806246</a></th>
-      <td>175 Lawrence Avenue</td>
-      <td>North Plainfield</td>
-      <td>Somerset</td>
-      <td>3</td>
-      <td>2</td>
-      <td>0</td>
-      <td>240000</td>
-      <td>0</td>
-      <td>Dunellen</td>
-      <td>5 mins, 1 hour 0 mins</td>
-      <td>rail</td>
-      <td>1.093009</td>
-      <td>Watchung Park & Ride</td>
-      <td>3.582214</td>
-      <td>36 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1614163">1614163</a></th>
-      <td>586 Mereline Avenue</td>
-      <td>Woodbridge Township</td>
-      <td>Middlesex</td>
-      <td>4</td>
-      <td>3</td>
-      <td>0</td>
-      <td>269000</td>
-      <td>0</td>
-      <td>Avenel</td>
-      <td>2 mins, 36 mins</td>
-      <td>rail</td>
-      <td>0.513229</td>
-      <td>Carteret</td>
-      <td>2.235949</td>
-      <td>39 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1805311">1805311</a></th>
-      <td>339 Walnut Street</td>
-      <td>Dunellen</td>
-      <td>Middlesex</td>
-      <td>4</td>
-      <td>2</td>
-      <td>0</td>
-      <td>245000</td>
-      <td>0</td>
-      <td>Dunellen</td>
-      <td>2 mins, 1 hour 0 mins</td>
-      <td>rail</td>
-      <td>0.399632</td>
-      <td>Watchung Park & Ride</td>
-      <td>4.812682</td>
-      <td>36 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1707619">1707619</a></th>
-      <td>407 ROCK Avenue</td>
-      <td>North Plainfield</td>
-      <td>Somerset</td>
-      <td>3</td>
-      <td>3</td>
-      <td>0</td>
-      <td>245500</td>
-      <td>0</td>
-      <td>Dunellen</td>
-      <td>7 mins, 1 hour 0 mins</td>
-      <td>rail</td>
-      <td>1.512474</td>
-      <td>Watchung Park & Ride</td>
-      <td>3.511059</td>
-      <td>36 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1714564">1714564</a></th>
-      <td>137 Edgar Street</td>
-      <td>Carteret</td>
-      <td>Middlesex</td>
-      <td>3</td>
-      <td>2</td>
-      <td>0</td>
-      <td>249000</td>
-      <td>0</td>
-      <td>Carteret</td>
-      <td>3 mins, 42 mins</td>
-      <td>bus</td>
-      <td>0.482737</td>
-      <td>Carteret</td>
-      <td>0.482737</td>
-      <td>38 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1708939">1708939</a></th>
-      <td>346 New Market Road</td>
-      <td>Dunellen</td>
-      <td>Middlesex</td>
-      <td>4</td>
-      <td>2</td>
-      <td>0</td>
-      <td>249900</td>
-      <td>0</td>
-      <td>Dunellen</td>
-      <td>2 mins, 1 hour 0 mins</td>
-      <td>rail</td>
-      <td>0.472297</td>
-      <td>Watchung Park & Ride</td>
-      <td>4.922063</td>
-      <td>36 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1714547">1714547</a></th>
-      <td>28 Parsler Place</td>
-      <td>Woodbridge Township</td>
-      <td>Middlesex</td>
-      <td>4</td>
-      <td>2</td>
-      <td>1</td>
-      <td>249900</td>
-      <td>0</td>
-      <td>Woodbridge</td>
-      <td>8 mins, 43 mins</td>
-      <td>rail</td>
-      <td>1.511135</td>
-      <td>Sayreville</td>
-      <td>4.804729</td>
-      <td>38 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1719418">1719418</a></th>
-      <td>1260 Rahway Avenue</td>
-      <td>Woodbridge Township</td>
-      <td>Middlesex</td>
-      <td>5</td>
-      <td>3</td>
-      <td>0</td>
-      <td>249999</td>
-      <td>0</td>
-      <td>Avenel</td>
-      <td>3 mins, 36 mins</td>
-      <td>rail</td>
-      <td>0.730074</td>
-      <td>Carteret</td>
-      <td>2.076824</td>
-      <td>39 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1808555">1808555</a></th>
-      <td>86 Hermann Avenue</td>
-      <td>Carteret</td>
-      <td>Middlesex</td>
-      <td>3</td>
-      <td>2</td>
-      <td>0</td>
-      <td>259000</td>
-      <td>0</td>
-      <td>Carteret</td>
-      <td>3 mins, 42 mins</td>
-      <td>bus</td>
-      <td>0.546653</td>
-      <td>Carteret</td>
-      <td>0.546653</td>
-      <td>39 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1809398">1809398</a></th>
-      <td>203 S Lincoln Avenue</td>
-      <td>Middlesex</td>
-      <td>Middlesex</td>
-      <td>3</td>
-      <td>2</td>
-      <td>0</td>
-      <td>259900</td>
-      <td>0</td>
-      <td>Dunellen</td>
-      <td>6 mins, 1 hour 0 mins</td>
-      <td>rail</td>
-      <td>1.590749</td>
-      <td>Watchung Park & Ride</td>
-      <td>6.132482</td>
-      <td>38 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1721341">1721341</a></th>
-      <td>336 John Street</td>
-      <td>South Amboy</td>
-      <td>Middlesex</td>
-      <td>3</td>
-      <td>2</td>
-      <td>0</td>
-      <td>260000</td>
-      <td>0</td>
-      <td>South Amboy</td>
-      <td>3 mins, 48 mins</td>
-      <td>rail</td>
-      <td>0.342357</td>
-      <td>Sayreville</td>
-      <td>0.789666</td>
-      <td>39 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1807616">1807616</a></th>
-      <td>312 Greenbriar Drive</td>
-      <td>Union</td>
-      <td>Union</td>
-      <td>3</td>
-      <td>2</td>
-      <td>1</td>
-      <td>260000</td>
-      <td>0</td>
-      <td>Bonnel Court - Union Twp</td>
-      <td>6 mins, 54 mins</td>
-      <td>bus</td>
-      <td>1.062054</td>
-      <td>Bonnel Court - Union Twp</td>
-      <td>1.062054</td>
-      <td>23 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1809397">1809397</a></th>
-      <td>193 Meade Street</td>
-      <td>Perth Amboy</td>
-      <td>Middlesex</td>
-      <td>3</td>
-      <td>2</td>
-      <td>0</td>
-      <td>264900</td>
-      <td>0</td>
-      <td>Perth Amboy</td>
-      <td>2 mins, 1 hour 6 mins</td>
-      <td>rail</td>
-      <td>0.390430</td>
-      <td>Sayreville</td>
-      <td>2.313882</td>
-      <td>39 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1808433">1808433</a></th>
-      <td>330 Front Street</td>
-      <td>Dunellen</td>
-      <td>Middlesex</td>
-      <td>3</td>
-      <td>2</td>
-      <td>0</td>
-      <td>265000</td>
-      <td>0</td>
-      <td>Dunellen</td>
-      <td>2 mins, 1 hour 0 mins</td>
-      <td>rail</td>
-      <td>0.127888</td>
-      <td>Watchung Park & Ride</td>
-      <td>4.634577</td>
-      <td>34 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1721393">1721393</a></th>
-      <td>55 William Street</td>
-      <td>Carteret</td>
-      <td>Middlesex</td>
-      <td>4</td>
-      <td>2</td>
-      <td>0</td>
-      <td>269000</td>
-      <td>0</td>
-      <td>Carteret</td>
-      <td>7 mins, 42 mins</td>
-      <td>bus</td>
-      <td>0.965947</td>
-      <td>Carteret</td>
-      <td>0.965947</td>
-      <td>39 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1802770">1802770</a></th>
-      <td>1832 Paterson Street</td>
-      <td>Rahway</td>
-      <td>Union</td>
-      <td>3</td>
-      <td>2</td>
-      <td>0</td>
-      <td>269000</td>
-      <td>0</td>
-      <td>Rahway</td>
-      <td>5 mins, 48 mins</td>
-      <td>rail</td>
-      <td>0.685119</td>
-      <td>Carteret</td>
-      <td>2.127465</td>
-      <td>35 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1801644">1801644</a></th>
-      <td>24 N Pennsylvania Street</td>
-      <td>Woodbridge Township</td>
-      <td>Middlesex</td>
-      <td>3</td>
-      <td>2</td>
-      <td>0</td>
-      <td>314900</td>
-      <td>0</td>
-      <td>Rahway</td>
-      <td>7 mins, 48 mins</td>
-      <td>rail</td>
-      <td>1.992906</td>
-      <td>Carteret</td>
-      <td>4.547052</td>
-      <td>36 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1805257">1805257</a></th>
-      <td>201 Maple Avenue</td>
-      <td>Metuchen</td>
-      <td>Middlesex</td>
-      <td>5</td>
-      <td>2</td>
-      <td>2</td>
-      <td>500000</td>
-      <td>0</td>
-      <td>Metuchen</td>
-      <td>3 mins, 51 mins</td>
-      <td>rail</td>
-      <td>0.466037</td>
-      <td>Sayreville</td>
-      <td>5.861296</td>
-      <td>38 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1805567">1805567</a></th>
-      <td>28 Oak Street</td>
-      <td>Woodbridge Township</td>
-      <td>Middlesex</td>
-      <td>5</td>
-      <td>2</td>
-      <td>0</td>
-      <td>319000</td>
-      <td>0</td>
-      <td>Avenel</td>
-      <td>1 min, 36 mins</td>
-      <td>rail</td>
-      <td>0.323813</td>
-      <td>Carteret</td>
-      <td>2.455100</td>
-      <td>38 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1808613">1808613</a></th>
-      <td>76 S Mckinley Avenue</td>
-      <td>Woodbridge Township</td>
-      <td>Middlesex</td>
-      <td>4</td>
-      <td>2</td>
-      <td>1</td>
-      <td>319900</td>
-      <td>0</td>
-      <td>Avenel</td>
-      <td>5 mins, 36 mins</td>
-      <td>rail</td>
-      <td>1.100363</td>
-      <td>Carteret</td>
-      <td>3.830071</td>
-      <td>36 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1805273">1805273</a></th>
-      <td>14 Mayling Court</td>
+      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1804161">1804161</a></th>
+      <td>46 Wood Avenue</td>
       <td>Edison</td>
       <td>Middlesex</td>
       <td>4</td>
       <td>2</td>
       <td>1</td>
-      <td>417000</td>
-      <td>0</td>
-      <td>Metuchen</td>
-      <td>4 mins, 51 mins</td>
-      <td>rail</td>
-      <td>0.832383</td>
-      <td>Sayreville</td>
-      <td>5.443685</td>
-      <td>38 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1808330">1808330</a></th>
-      <td>129 Pleasant Avenue</td>
-      <td>Woodbridge Township</td>
-      <td>Middlesex</td>
-      <td>5</td>
-      <td>2</td>
-      <td>1</td>
-      <td>409000</td>
-      <td>0</td>
-      <td>Avenel</td>
-      <td>7 mins, 36 mins</td>
-      <td>rail</td>
-      <td>1.334133</td>
-      <td>Carteret</td>
-      <td>4.062727</td>
-      <td>35 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1804174">1804174</a></th>
-      <td>20 Cliff Avenue</td>
-      <td>Woodbridge Township</td>
-      <td>Middlesex</td>
-      <td>4</td>
-      <td>2</td>
-      <td>1</td>
-      <td>409000</td>
-      <td>0</td>
-      <td>Woodbridge</td>
-      <td>8 mins, 43 mins</td>
-      <td>rail</td>
-      <td>2.418659</td>
-      <td>Sayreville</td>
-      <td>3.896474</td>
-      <td>36 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1808238">1808238</a></th>
-      <td>39 Scott Avenue</td>
-      <td>South Amboy</td>
-      <td>Middlesex</td>
-      <td>4</td>
-      <td>2</td>
-      <td>1</td>
-      <td>399000</td>
-      <td>0</td>
-      <td>Sayreville</td>
-      <td>3 mins, 55 mins</td>
-      <td>bus</td>
-      <td>0.858241</td>
-      <td>Sayreville</td>
-      <td>0.858241</td>
-      <td>37 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1802569">1802569</a></th>
-      <td>262 Florence Avenue</td>
-      <td>Woodbridge Township</td>
-      <td>Middlesex</td>
-      <td>3</td>
-      <td>2</td>
-      <td>0</td>
-      <td>399000</td>
-      <td>0</td>
-      <td>Rahway</td>
-      <td>7 mins, 48 mins</td>
-      <td>rail</td>
-      <td>1.990626</td>
-      <td>Carteret</td>
-      <td>4.561604</td>
-      <td>36 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1804861">1804861</a></th>
-      <td>4 Manor Place</td>
-      <td>Woodbridge Township</td>
-      <td>Middlesex</td>
-      <td>3</td>
-      <td>2</td>
-      <td>1</td>
-      <td>395000</td>
-      <td>0</td>
-      <td>Avenel</td>
-      <td>2 mins, 36 mins</td>
-      <td>rail</td>
-      <td>0.414573</td>
-      <td>Carteret</td>
-      <td>3.152970</td>
-      <td>37 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1721024">1721024</a></th>
-      <td>190 S Feltus Street</td>
-      <td>South Amboy</td>
-      <td>Middlesex</td>
-      <td>3</td>
-      <td>2</td>
-      <td>1</td>
-      <td>390000</td>
-      <td>0</td>
-      <td>South Amboy</td>
-      <td>4 mins, 48 mins</td>
-      <td>rail</td>
-      <td>0.571141</td>
-      <td>Sayreville</td>
-      <td>0.619118</td>
-      <td>39 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1804006">1804006</a></th>
-      <td>875 Chamberlain Avenue</td>
-      <td>Perth Amboy</td>
-      <td>Middlesex</td>
-      <td>4</td>
-      <td>2</td>
-      <td>1</td>
-      <td>389900</td>
-      <td>0</td>
-      <td>Woodbridge</td>
-      <td>7 mins, 43 mins</td>
-      <td>rail</td>
-      <td>1.598051</td>
-      <td>Sayreville</td>
-      <td>3.963835</td>
-      <td>36 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1808366">1808366</a></th>
-      <td>107 W Hill Road</td>
-      <td>Woodbridge Township</td>
-      <td>Middlesex</td>
-      <td>3</td>
-      <td>2</td>
-      <td>0</td>
-      <td>389000</td>
-      <td>0</td>
-      <td>Avenel</td>
-      <td>5 mins, 36 mins</td>
-      <td>rail</td>
-      <td>1.173493</td>
-      <td>Carteret</td>
-      <td>3.799444</td>
-      <td>35 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1802387">1802387</a></th>
-      <td>125 William Street</td>
-      <td>Carteret</td>
-      <td>Middlesex</td>
-      <td>5</td>
-      <td>2</td>
-      <td>0</td>
-      <td>379000</td>
-      <td>0</td>
-      <td>Carteret</td>
-      <td>6 mins, 42 mins</td>
-      <td>bus</td>
-      <td>0.920218</td>
-      <td>Carteret</td>
-      <td>0.920218</td>
-      <td>38 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1809085">1809085</a></th>
-      <td>11 Valley Brook Drive</td>
-      <td>Middlesex</td>
-      <td>Middlesex</td>
-      <td>4</td>
-      <td>2</td>
-      <td>0</td>
-      <td>375000</td>
-      <td>0</td>
-      <td>Dunellen</td>
-      <td>5 mins, 1 hour 0 mins</td>
-      <td>rail</td>
-      <td>0.817303</td>
-      <td>Watchung Park & Ride</td>
-      <td>5.186744</td>
-      <td>35 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1806131">1806131</a></th>
-      <td>99 Jordan Road</td>
-      <td>Woodbridge Township</td>
-      <td>Middlesex</td>
-      <td>4</td>
-      <td>2</td>
-      <td>1</td>
-      <td>375000</td>
-      <td>0</td>
+      <td>400000</td>
+      <td>875.0</td>
       <td>Metropark</td>
-      <td>9 mins, 38 mins</td>
+      <td>2 mins, 38 mins</td>
       <td>rail</td>
-      <td>2.319525</td>
-      <td>Watchung Park & Ride</td>
-      <td>5.228862</td>
-      <td>35 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1808831">1808831</a></th>
-      <td>58 Morris Avenue</td>
-      <td>Edison</td>
-      <td>Middlesex</td>
-      <td>4</td>
-      <td>2</td>
-      <td>0</td>
-      <td>375000</td>
-      <td>0</td>
-      <td>Metuchen</td>
-      <td>5 mins, 51 mins</td>
-      <td>rail</td>
-      <td>1.222795</td>
-      <td>Sayreville</td>
-      <td>4.299780</td>
-      <td>38 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1809181">1809181</a></th>
-      <td>609 Grandview Street</td>
-      <td>Middlesex</td>
-      <td>Middlesex</td>
-      <td>3</td>
-      <td>2</td>
-      <td>1</td>
-      <td>375000</td>
-      <td>0</td>
-      <td>Dunellen</td>
-      <td>5 mins, 1 hour 0 mins</td>
-      <td>rail</td>
-      <td>1.347935</td>
-      <td>Watchung Park & Ride</td>
-      <td>5.805845</td>
-      <td>37 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1810530">1810530</a></th>
-      <td>16 W Iselin Parkway</td>
-      <td>Woodbridge Township</td>
-      <td>Middlesex</td>
-      <td>3</td>
-      <td>2</td>
-      <td>0</td>
-      <td>374900</td>
-      <td>0</td>
-      <td>Metropark</td>
-      <td>5 mins, 38 mins</td>
-      <td>rail</td>
-      <td>0.996403</td>
+      <td>0.278891</td>
       <td>Carteret</td>
-      <td>5.688922</td>
-      <td>35 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1803081">1803081</a></th>
-      <td>5 Bender Avenue</td>
-      <td>Woodbridge Township</td>
-      <td>Middlesex</td>
-      <td>5</td>
-      <td>2</td>
-      <td>0</td>
-      <td>419000</td>
-      <td>0</td>
-      <td>Metropark</td>
-      <td>4 mins, 38 mins</td>
-      <td>rail</td>
-      <td>0.526809</td>
-      <td>Carteret</td>
-      <td>5.623783</td>
+      <td>5.798302</td>
       <td>33 mins</td>
     </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1720967">1720967</a></th>
-      <td>538 Henry Street</td>
-      <td>South Amboy</td>
-      <td>Middlesex</td>
-      <td>4</td>
-      <td>2</td>
-      <td>1</td>
-      <td>419900</td>
-      <td>0</td>
-      <td>Sayreville</td>
-      <td>6 mins, 55 mins</td>
-      <td>bus</td>
-      <td>0.479353</td>
-      <td>Sayreville</td>
-      <td>0.479353</td>
-      <td>39 mins</td>
+  </tbody>
+</table>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Null Square Footage</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">listings</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span>
+    <span class="p">(</span><span class="o">~</span><span class="n">df</span><span class="o">.</span><span class="n">city</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">blacklist_cities</span><span class="p">))</span> <span class="o">&amp;</span>
+    <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">barnabas_duration</span> <span class="o">&lt;</span> <span class="n">HALF_HOUR</span> <span class="o">+</span> <span class="n">TEN_MINUTES</span><span class="p">)</span> <span class="o">&amp;</span>
+    <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">park_and_ride_duration1</span> <span class="o">&lt;</span> <span class="n">TEN_MINUTES</span><span class="p">)</span> <span class="o">&amp;</span>
+    <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">park_and_ride_duration</span> <span class="o">&lt;</span> <span class="n">ONE_HOUR</span> <span class="o">+</span> <span class="n">TEN_MINUTES</span><span class="p">)</span> <span class="o">&amp;</span>
+    <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">price</span> <span class="o">&gt;</span> <span class="mi">300000</span><span class="p">)</span> <span class="o">&amp;</span>
+    <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">sqft</span><span class="o">.</span><span class="n">isnull</span><span class="p">())</span>
+<span class="p">]</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;city&#39;</span><span class="p">,</span> <span class="s1">&#39;price&#39;</span><span class="p">,],</span> <span class="n">ascending</span><span class="o">=</span><span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">),</span> <span class="s2">&quot;listings after filtering&quot;</span><span class="p">)</span>
+<span class="n">preview_cjmls_df</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>79 listings after filtering
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<style>.dataframe td {white-space: nowrap;}</style><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>address</th>
+      <th>city</th>
+      <th>county</th>
+      <th>bedrooms</th>
+      <th>baths_full</th>
+      <th>baths_part</th>
+      <th>price</th>
+      <th>sqft</th>
+      <th>park_and_ride_name</th>
+      <th>park_and_ride_duration_text</th>
+      <th>park_and_ride_type</th>
+      <th>park_and_ride_distance</th>
+      <th>park_and_ride_bus_name</th>
+      <th>park_and_ride_bus_distance</th>
+      <th>barnabas_duration_text</th>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1801822">1801822</a></th>
-      <td>181 Mitchell Street</td>
-      <td>West Orange</td>
+      <th>id</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1803747">1803747</a></th>
+      <td>352 Berkeley Avenue</td>
+      <td>Bloomfield</td>
       <td>Essex</td>
-      <td>4</td>
-      <td>3</td>
-      <td>0</td>
-      <td>424900</td>
-      <td>0</td>
-      <td>Highland Avenue</td>
-      <td>4 mins, 46 mins</td>
-      <td>rail</td>
-      <td>0.677339</td>
-      <td>Irvington Bus Terminal</td>
-      <td>3.488462</td>
-      <td>10 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1807643">1807643</a></th>
-      <td>63 W Edward Street</td>
-      <td>Woodbridge Township</td>
-      <td>Middlesex</td>
-      <td>4</td>
+      <td>5</td>
       <td>2</td>
-      <td>1</td>
-      <td>485000</td>
       <td>0</td>
-      <td>Metropark</td>
-      <td>6 mins, 38 mins</td>
+      <td>337000</td>
+      <td>NaN</td>
+      <td>Bloomfield</td>
+      <td>4 mins, 36 mins</td>
       <td>rail</td>
-      <td>1.170103</td>
-      <td>Carteret</td>
-      <td>5.526446</td>
-      <td>35 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1808973">1808973</a></th>
-      <td>50 Terry Avenue</td>
-      <td>Edison</td>
-      <td>Middlesex</td>
-      <td>3</td>
-      <td>2</td>
-      <td>1</td>
-      <td>499900</td>
-      <td>0</td>
-      <td>Metropark</td>
-      <td>4 mins, 38 mins</td>
-      <td>rail</td>
-      <td>1.046095</td>
-      <td>Sayreville</td>
-      <td>6.196405</td>
-      <td>35 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1808336">1808336</a></th>
-      <td>21 Commander Patrick Dunn Court</td>
-      <td>Woodbridge Township</td>
-      <td>Middlesex</td>
-      <td>4</td>
-      <td>4</td>
-      <td>0</td>
-      <td>499900</td>
-      <td>0</td>
-      <td>Woodbridge</td>
-      <td>8 mins, 43 mins</td>
-      <td>rail</td>
-      <td>2.149547</td>
-      <td>Sayreville</td>
-      <td>4.259026</td>
-      <td>37 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1808833">1808833</a></th>
-      <td>223 New Dover Road</td>
-      <td>Woodbridge Township</td>
-      <td>Middlesex</td>
-      <td>4</td>
-      <td>3</td>
-      <td>0</td>
-      <td>499000</td>
-      <td>0</td>
-      <td>Avenel</td>
-      <td>5 mins, 36 mins</td>
-      <td>rail</td>
-      <td>1.346549</td>
-      <td>Carteret</td>
-      <td>3.902292</td>
-      <td>34 mins</td>
+      <td>0.736768</td>
+      <td>Clifton Commons</td>
+      <td>3.354571</td>
+      <td>21 mins</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1803600">1803600</a></th>
@@ -14612,7 +12893,7 @@ var element = $('#99c21bb4-0a21-4c89-b79b-1bcdf159ecab');
       <td>2</td>
       <td>0</td>
       <td>499000</td>
-      <td>0</td>
+      <td>NaN</td>
       <td>Passaic</td>
       <td>4 mins, 40 mins</td>
       <td>rail</td>
@@ -14622,903 +12903,21 @@ var element = $('#99c21bb4-0a21-4c89-b79b-1bcdf159ecab');
       <td>30 mins</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1809377">1809377</a></th>
-      <td>1773 W 5th Street</td>
-      <td>Piscataway Township</td>
-      <td>Middlesex</td>
-      <td>4</td>
-      <td>2</td>
-      <td>1</td>
-      <td>495000</td>
-      <td>0</td>
-      <td>Dunellen</td>
-      <td>4 mins, 1 hour 0 mins</td>
-      <td>rail</td>
-      <td>0.736084</td>
-      <td>Watchung Park & Ride</td>
-      <td>4.337403</td>
-      <td>39 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1810661">1810661</a></th>
-      <td>20 Westbury Road</td>
-      <td>Woodbridge Township</td>
-      <td>Middlesex</td>
-      <td>5</td>
-      <td>2</td>
-      <td>0</td>
-      <td>489900</td>
-      <td>0</td>
-      <td>Metropark</td>
-      <td>6 mins, 38 mins</td>
-      <td>rail</td>
-      <td>1.365416</td>
-      <td>Carteret</td>
-      <td>4.258490</td>
-      <td>35 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1806035">1806035</a></th>
-      <td>340 Demorest Avenue</td>
-      <td>Woodbridge Township</td>
-      <td>Middlesex</td>
-      <td>4</td>
-      <td>2</td>
-      <td>1</td>
-      <td>469000</td>
-      <td>0</td>
-      <td>Avenel</td>
-      <td>3 mins, 36 mins</td>
-      <td>rail</td>
-      <td>0.571893</td>
-      <td>Carteret</td>
-      <td>2.973608</td>
-      <td>37 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1720661">1720661</a></th>
-      <td>15 W Louis Place</td>
-      <td>Woodbridge Township</td>
-      <td>Middlesex</td>
-      <td>4</td>
-      <td>3</td>
-      <td>0</td>
-      <td>425000</td>
-      <td>0</td>
-      <td>Metropark</td>
-      <td>5 mins, 38 mins</td>
-      <td>rail</td>
-      <td>0.975569</td>
-      <td>Carteret</td>
-      <td>5.693175</td>
-      <td>36 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1804419">1804419</a></th>
-      <td>3 W Walnut Street</td>
-      <td>Metuchen</td>
-      <td>Middlesex</td>
-      <td>5</td>
-      <td>2</td>
-      <td>1</td>
-      <td>465000</td>
-      <td>0</td>
-      <td>Metuchen</td>
-      <td>3 mins, 51 mins</td>
-      <td>rail</td>
-      <td>0.560384</td>
-      <td>Sayreville</td>
-      <td>4.991073</td>
-      <td>38 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1808964">1808964</a></th>
-      <td>333 Cook Avenue</td>
-      <td>Scotch Plains</td>
-      <td>Union</td>
-      <td>3</td>
-      <td>2</td>
-      <td>0</td>
-      <td>450000</td>
-      <td>0</td>
-      <td>Watchung Park & Ride</td>
-      <td>6 mins, 1 hour 4 mins</td>
-      <td>bus</td>
-      <td>1.091535</td>
-      <td>Watchung Park & Ride</td>
-      <td>1.091535</td>
-      <td>27 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1719623">1719623</a></th>
-      <td>6 Driftwood Drive</td>
-      <td>Sayreville</td>
-      <td>Middlesex</td>
-      <td>4</td>
-      <td>3</td>
-      <td>0</td>
-      <td>449000</td>
-      <td>0</td>
-      <td>Old Bridge</td>
-      <td>6 mins, 1 hour 3 mins</td>
-      <td>bus</td>
-      <td>0.992094</td>
-      <td>Old Bridge</td>
-      <td>0.992094</td>
-      <td>40 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1808978">1808978</a></th>
-      <td>859 Milton Boulevard</td>
-      <td>Rahway</td>
-      <td>Union</td>
-      <td>4</td>
-      <td>3</td>
-      <td>1</td>
-      <td>449000</td>
-      <td>0</td>
-      <td>Rahway</td>
-      <td>4 mins, 48 mins</td>
-      <td>rail</td>
-      <td>0.958811</td>
-      <td>Carteret</td>
-      <td>3.696847</td>
-      <td>31 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1808275">1808275</a></th>
-      <td>50 Dover Road</td>
-      <td>Woodbridge Township</td>
-      <td>Middlesex</td>
-      <td>4</td>
-      <td>2</td>
-      <td>1</td>
-      <td>439000</td>
-      <td>0</td>
-      <td>Avenel</td>
-      <td>4 mins, 36 mins</td>
-      <td>rail</td>
-      <td>0.954995</td>
-      <td>Carteret</td>
-      <td>3.604058</td>
-      <td>36 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1808926">1808926</a></th>
-      <td>98 Trinity Place</td>
-      <td>Woodbridge Township</td>
-      <td>Middlesex</td>
-      <td>4</td>
-      <td>2</td>
-      <td>1</td>
-      <td>429000</td>
-      <td>0</td>
-      <td>Avenel</td>
-      <td>2 mins, 36 mins</td>
-      <td>rail</td>
-      <td>0.322557</td>
-      <td>Carteret</td>
-      <td>2.417617</td>
-      <td>39 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1804004">1804004</a></th>
-      <td>875 Chamberlain Avenue</td>
-      <td>Perth Amboy</td>
-      <td>Middlesex</td>
-      <td>4</td>
-      <td>2</td>
-      <td>1</td>
-      <td>369900</td>
-      <td>0</td>
-      <td>Woodbridge</td>
-      <td>7 mins, 43 mins</td>
-      <td>rail</td>
-      <td>1.598051</td>
-      <td>Sayreville</td>
-      <td>3.963835</td>
-      <td>36 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1805794">1805794</a></th>
-      <td>30 Brook Avenue</td>
-      <td>South Amboy</td>
-      <td>Middlesex</td>
-      <td>4</td>
-      <td>2</td>
-      <td>1</td>
-      <td>369000</td>
-      <td>0</td>
-      <td>South Amboy</td>
-      <td>5 mins, 48 mins</td>
-      <td>rail</td>
-      <td>1.233750</td>
-      <td>Sayreville</td>
-      <td>1.318930</td>
-      <td>40 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1803504">1803504</a></th>
-      <td>144 BROWN Avenue</td>
-      <td>Woodbridge Township</td>
-      <td>Middlesex</td>
-      <td>3</td>
-      <td>2</td>
-      <td>1</td>
-      <td>365000</td>
-      <td>0</td>
-      <td>Woodbridge</td>
-      <td>5 mins, 43 mins</td>
-      <td>rail</td>
-      <td>1.331607</td>
-      <td>Carteret</td>
-      <td>4.092285</td>
-      <td>34 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1804538">1804538</a></th>
-      <td>1050 Thayer Avenue</td>
-      <td>Woodbridge Township</td>
-      <td>Middlesex</td>
-      <td>3</td>
-      <td>2</td>
-      <td>0</td>
-      <td>328000</td>
-      <td>0</td>
-      <td>Avenel</td>
-      <td>3 mins, 36 mins</td>
-      <td>rail</td>
-      <td>0.518478</td>
-      <td>Carteret</td>
-      <td>2.258830</td>
-      <td>40 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1801888">1801888</a></th>
-      <td>6 Astor Place</td>
-      <td>Woodbridge Township</td>
-      <td>Middlesex</td>
-      <td>3</td>
-      <td>2</td>
-      <td>1</td>
-      <td>335000</td>
-      <td>0</td>
-      <td>Avenel</td>
-      <td>2 mins, 36 mins</td>
-      <td>rail</td>
-      <td>0.218611</td>
-      <td>Carteret</td>
-      <td>2.892442</td>
-      <td>39 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1714890">1714890</a></th>
-      <td>0 Jackson Avenue</td>
-      <td>Carteret</td>
-      <td>Middlesex</td>
-      <td>4</td>
-      <td>2</td>
-      <td>1</td>
-      <td>499999</td>
-      <td>0</td>
-      <td>Carteret</td>
-      <td>4 mins, 42 mins</td>
-      <td>bus</td>
-      <td>0.538701</td>
-      <td>Carteret</td>
-      <td>0.538701</td>
-      <td>39 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1806416">1806416</a></th>
-      <td>143 S Inman Avenue</td>
-      <td>Woodbridge Township</td>
-      <td>Middlesex</td>
-      <td>3</td>
-      <td>2</td>
-      <td>0</td>
-      <td>334700</td>
-      <td>0</td>
-      <td>Avenel</td>
-      <td>1 min, 36 mins</td>
-      <td>rail</td>
-      <td>0.354770</td>
-      <td>Carteret</td>
-      <td>2.683051</td>
-      <td>38 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1808514">1808514</a></th>
-      <td>33 Livingston Street</td>
-      <td>Woodbridge Township</td>
-      <td>Middlesex</td>
-      <td>5</td>
-      <td>3</td>
-      <td>1</td>
-      <td>329900</td>
-      <td>0</td>
-      <td>Avenel</td>
-      <td>1 min, 36 mins</td>
-      <td>rail</td>
-      <td>0.219237</td>
-      <td>Carteret</td>
-      <td>2.935125</td>
-      <td>38 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1808119">1808119</a></th>
-      <td>77 Sixth Street</td>
+      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1808973">1808973</a></th>
+      <td>50 Terry Avenue</td>
       <td>Edison</td>
       <td>Middlesex</td>
       <td>3</td>
       <td>2</td>
       <td>1</td>
-      <td>329900</td>
-      <td>0</td>
-      <td>Metuchen</td>
-      <td>6 mins, 51 mins</td>
-      <td>rail</td>
-      <td>1.433108</td>
-      <td>Sayreville</td>
-      <td>4.488425</td>
-      <td>37 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1806219">1806219</a></th>
-      <td>82 Hamilton Boulevard</td>
-      <td>Piscataway Township</td>
-      <td>Middlesex</td>
-      <td>6</td>
-      <td>3</td>
-      <td>0</td>
-      <td>329000</td>
-      <td>0</td>
-      <td>Dunellen</td>
-      <td>5 mins, 1 hour 0 mins</td>
-      <td>rail</td>
-      <td>1.423418</td>
-      <td>Watchung Park & Ride</td>
-      <td>5.623814</td>
-      <td>39 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1801883">1801883</a></th>
-      <td>115 N Main Street</td>
-      <td>Woodbridge Township</td>
-      <td>Middlesex</td>
-      <td>3</td>
-      <td>3</td>
-      <td>0</td>
-      <td>325000</td>
-      <td>0</td>
-      <td>Metropark</td>
-      <td>3 mins, 38 mins</td>
-      <td>rail</td>
-      <td>0.746109</td>
-      <td>Carteret</td>
-      <td>4.819526</td>
-      <td>32 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1803747">1803747</a></th>
-      <td>352 Berkeley Avenue</td>
-      <td>Bloomfield</td>
-      <td>Essex</td>
-      <td>5</td>
-      <td>2</td>
-      <td>0</td>
-      <td>337000</td>
-      <td>0</td>
-      <td>Bloomfield</td>
-      <td>4 mins, 36 mins</td>
-      <td>rail</td>
-      <td>0.736768</td>
-      <td>Clifton Commons</td>
-      <td>3.354571</td>
-      <td>21 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1804073">1804073</a></th>
-      <td>368 Federal Court</td>
-      <td>Perth Amboy</td>
-      <td>Middlesex</td>
-      <td>3</td>
-      <td>2</td>
-      <td>2</td>
-      <td>325000</td>
-      <td>0</td>
-      <td>Perth Amboy</td>
-      <td>4 mins, 1 hour 6 mins</td>
-      <td>rail</td>
-      <td>0.398950</td>
-      <td>Sayreville</td>
-      <td>2.728517</td>
-      <td>38 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1806109">1806109</a></th>
-      <td>210 WASHINGTON Avenue</td>
-      <td>Carteret</td>
-      <td>Middlesex</td>
-      <td>4</td>
-      <td>2</td>
-      <td>0</td>
-      <td>325000</td>
-      <td>0</td>
-      <td>Carteret</td>
-      <td>3 mins, 42 mins</td>
-      <td>bus</td>
-      <td>0.678367</td>
-      <td>Carteret</td>
-      <td>0.678367</td>
-      <td>38 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1809365">1809365</a></th>
-      <td>50 Normandy Road</td>
-      <td>Woodbridge Township</td>
-      <td>Middlesex</td>
-      <td>3</td>
-      <td>2</td>
-      <td>0</td>
-      <td>325000</td>
-      <td>0</td>
-      <td>Metropark</td>
-      <td>10 mins, 38 mins</td>
-      <td>rail</td>
-      <td>2.513312</td>
-      <td>Watchung Park & Ride</td>
-      <td>4.892607</td>
-      <td>37 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1714123">1714123</a></th>
-      <td>218 Mcfarlane Road</td>
-      <td>Woodbridge Township</td>
-      <td>Middlesex</td>
-      <td>3</td>
-      <td>2</td>
-      <td>0</td>
-      <td>324900</td>
-      <td>0</td>
-      <td>Avenel</td>
-      <td>5 mins, 36 mins</td>
-      <td>rail</td>
-      <td>1.112906</td>
-      <td>Carteret</td>
-      <td>3.496686</td>
-      <td>36 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1808159">1808159</a></th>
-      <td>56 Washington Avenue</td>
-      <td>Woodbridge Township</td>
-      <td>Middlesex</td>
-      <td>4</td>
-      <td>3</td>
-      <td>0</td>
-      <td>324500</td>
-      <td>0</td>
-      <td>Metropark</td>
-      <td>5 mins, 38 mins</td>
-      <td>rail</td>
-      <td>1.200896</td>
-      <td>Carteret</td>
-      <td>4.329288</td>
-      <td>34 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1808430">1808430</a></th>
-      <td>88 Coolidge Avenue</td>
-      <td>Sayreville</td>
-      <td>Middlesex</td>
-      <td>4</td>
-      <td>2</td>
-      <td>0</td>
-      <td>319900</td>
-      <td>0</td>
-      <td>Sayreville</td>
-      <td>5 mins, 55 mins</td>
-      <td>bus</td>
-      <td>0.660390</td>
-      <td>Sayreville</td>
-      <td>0.660390</td>
-      <td>40 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1802650">1802650</a></th>
-      <td>34 Cozy Corner</td>
-      <td>Woodbridge Township</td>
-      <td>Middlesex</td>
-      <td>4</td>
-      <td>2</td>
-      <td>0</td>
-      <td>335000</td>
-      <td>0</td>
-      <td>Avenel</td>
-      <td>4 mins, 36 mins</td>
-      <td>rail</td>
-      <td>0.827476</td>
-      <td>Carteret</td>
-      <td>3.054347</td>
-      <td>38 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1800851">1800851</a></th>
-      <td>304 Wood Avenue</td>
-      <td>Woodbridge Township</td>
-      <td>Middlesex</td>
-      <td>4</td>
-      <td>2</td>
-      <td>0</td>
-      <td>339000</td>
-      <td>0</td>
+      <td>499900</td>
+      <td>NaN</td>
       <td>Metropark</td>
       <td>4 mins, 38 mins</td>
       <td>rail</td>
-      <td>0.654335</td>
-      <td>Carteret</td>
-      <td>5.753292</td>
-      <td>34 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1806244">1806244</a></th>
-      <td>38 Henry Street</td>
-      <td>Edison</td>
-      <td>Middlesex</td>
-      <td>4</td>
-      <td>2</td>
-      <td>0</td>
-      <td>365000</td>
-      <td>0</td>
-      <td>Metropark</td>
-      <td>5 mins, 38 mins</td>
-      <td>rail</td>
-      <td>0.686462</td>
-      <td>Carteret</td>
-      <td>5.914199</td>
-      <td>35 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1806253">1806253</a></th>
-      <td>1361 Franklin Street</td>
-      <td>Rahway</td>
-      <td>Union</td>
-      <td>4</td>
-      <td>2</td>
-      <td>1</td>
-      <td>349000</td>
-      <td>0</td>
-      <td>Rahway</td>
-      <td>6 mins, 48 mins</td>
-      <td>rail</td>
-      <td>1.172986</td>
-      <td>Carteret</td>
-      <td>3.891706</td>
-      <td>29 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1809142">1809142</a></th>
-      <td>5 Joanna Place</td>
-      <td>Woodbridge Township</td>
-      <td>Middlesex</td>
-      <td>4</td>
-      <td>2</td>
-      <td>0</td>
-      <td>360000</td>
-      <td>0</td>
-      <td>Rahway</td>
-      <td>6 mins, 48 mins</td>
-      <td>rail</td>
-      <td>1.465297</td>
-      <td>Carteret</td>
-      <td>4.104741</td>
-      <td>34 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1802678">1802678</a></th>
-      <td>82 Oak Street</td>
-      <td>Carteret</td>
-      <td>Middlesex</td>
-      <td>3</td>
-      <td>2</td>
-      <td>1</td>
-      <td>354900</td>
-      <td>0</td>
-      <td>Carteret</td>
-      <td>4 mins, 42 mins</td>
-      <td>bus</td>
-      <td>0.527311</td>
-      <td>Carteret</td>
-      <td>0.527311</td>
-      <td>39 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1809215">1809215</a></th>
-      <td>408 Fairview Avenue</td>
-      <td>Woodbridge Township</td>
-      <td>Middlesex</td>
-      <td>3</td>
-      <td>2</td>
-      <td>0</td>
-      <td>349900</td>
-      <td>0</td>
-      <td>Avenel</td>
-      <td>5 mins, 36 mins</td>
-      <td>rail</td>
-      <td>1.407252</td>
-      <td>Carteret</td>
-      <td>3.964666</td>
-      <td>35 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1805566">1805566</a></th>
-      <td>65 Homes Park Avenue</td>
-      <td>Woodbridge Township</td>
-      <td>Middlesex</td>
-      <td>4</td>
-      <td>2</td>
-      <td>0</td>
-      <td>349900</td>
-      <td>0</td>
-      <td>Metropark</td>
-      <td>4 mins, 38 mins</td>
-      <td>rail</td>
-      <td>1.013554</td>
-      <td>Carteret</td>
-      <td>4.514405</td>
-      <td>34 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1808086">1808086</a></th>
-      <td>875 Main Street</td>
-      <td>Woodbridge Township</td>
-      <td>Middlesex</td>
-      <td>3</td>
-      <td>2</td>
-      <td>0</td>
-      <td>349900</td>
-      <td>0</td>
-      <td>Metropark</td>
-      <td>7 mins, 38 mins</td>
-      <td>rail</td>
-      <td>2.279391</td>
+      <td>1.046095</td>
       <td>Sayreville</td>
-      <td>4.236466</td>
-      <td>36 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1808396">1808396</a></th>
-      <td>1912 Montgomery Street</td>
-      <td>Rahway</td>
-      <td>Union</td>
-      <td>4</td>
-      <td>3</td>
-      <td>0</td>
-      <td>349000</td>
-      <td>0</td>
-      <td>Rahway</td>
-      <td>4 mins, 48 mins</td>
-      <td>rail</td>
-      <td>0.534094</td>
-      <td>Carteret</td>
-      <td>2.477155</td>
-      <td>34 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1805970">1805970</a></th>
-      <td>948 Pine Street</td>
-      <td>Plainfield</td>
-      <td>Union</td>
-      <td>5</td>
-      <td>2</td>
-      <td>0</td>
-      <td>346900</td>
-      <td>0</td>
-      <td>Netherwood</td>
-      <td>4 mins, 1 hour 2 mins</td>
-      <td>rail</td>
-      <td>0.851924</td>
-      <td>Watchung Park & Ride</td>
-      <td>1.952935</td>
-      <td>34 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1807976">1807976</a></th>
-      <td>28 Oak Street</td>
-      <td>Carteret</td>
-      <td>Middlesex</td>
-      <td>3</td>
-      <td>2</td>
-      <td>0</td>
-      <td>339000</td>
-      <td>0</td>
-      <td>Carteret</td>
-      <td>4 mins, 42 mins</td>
-      <td>bus</td>
-      <td>0.423038</td>
-      <td>Carteret</td>
-      <td>0.423038</td>
-      <td>39 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1721550">1721550</a></th>
-      <td>114 Carolyn Avenue</td>
-      <td>Woodbridge Township</td>
-      <td>Middlesex</td>
-      <td>4</td>
-      <td>2</td>
-      <td>0</td>
-      <td>339900</td>
-      <td>0</td>
-      <td>Rahway</td>
-      <td>6 mins, 48 mins</td>
-      <td>rail</td>
-      <td>1.696195</td>
-      <td>Carteret</td>
-      <td>4.259865</td>
-      <td>35 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1701746">1701746</a></th>
-      <td>115 Grove Avenue</td>
-      <td>Verona</td>
-      <td>Essex</td>
-      <td>3</td>
-      <td>2</td>
-      <td>1</td>
-      <td>339900</td>
-      <td>0</td>
-      <td>Upper Montclair</td>
-      <td>8 mins, 48 mins</td>
-      <td>rail</td>
-      <td>1.859567</td>
-      <td>Willowbrook Mall</td>
-      <td>3.476632</td>
-      <td>17 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1701748">1701748</a></th>
-      <td>117 Grove Avenue</td>
-      <td>Woodbridge Township</td>
-      <td>Middlesex</td>
-      <td>3</td>
-      <td>2</td>
-      <td>1</td>
-      <td>339900</td>
-      <td>0</td>
-      <td>Woodbridge</td>
-      <td>2 mins, 43 mins</td>
-      <td>rail</td>
-      <td>0.320165</td>
-      <td>Carteret</td>
-      <td>3.574286</td>
-      <td>39 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1804157">1804157</a></th>
-      <td>1487 Brookside Drive</td>
-      <td>Union</td>
-      <td>Union</td>
-      <td>4</td>
-      <td>2</td>
-      <td>0</td>
-      <td>339900</td>
-      <td>0</td>
-      <td>Union</td>
-      <td>4 mins, 41 mins</td>
-      <td>rail</td>
-      <td>0.713374</td>
-      <td>Union Center - Union Twp</td>
-      <td>0.983160</td>
-      <td>24 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1804002">1804002</a></th>
-      <td>875 Chamberlain Avenue</td>
-      <td>Perth Amboy</td>
-      <td>Middlesex</td>
-      <td>3</td>
-      <td>2</td>
-      <td>1</td>
-      <td>339900</td>
-      <td>0</td>
-      <td>Woodbridge</td>
-      <td>7 mins, 43 mins</td>
-      <td>rail</td>
-      <td>1.598051</td>
-      <td>Sayreville</td>
-      <td>3.963835</td>
-      <td>36 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1807797">1807797</a></th>
-      <td>66 9th Street</td>
-      <td>Piscataway Township</td>
-      <td>Middlesex</td>
-      <td>3</td>
-      <td>2</td>
-      <td>0</td>
-      <td>339750</td>
-      <td>0</td>
-      <td>Dunellen</td>
-      <td>4 mins, 1 hour 0 mins</td>
-      <td>rail</td>
-      <td>0.839506</td>
-      <td>Watchung Park & Ride</td>
-      <td>5.079935</td>
-      <td>38 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1801434">1801434</a></th>
-      <td>107 Ellis Avenue</td>
-      <td>Irvington</td>
-      <td>Essex</td>
-      <td>5</td>
-      <td>2</td>
-      <td>0</td>
-      <td>54999</td>
-      <td>0</td>
-      <td>Irvington Bus Terminal</td>
-      <td>4 mins, 42 mins</td>
-      <td>bus</td>
-      <td>0.483992</td>
-      <td>Irvington Bus Terminal</td>
-      <td>0.483992</td>
-      <td>21 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1805132">1805132</a></th>
-      <td>555 Colonia Boulevard</td>
-      <td>Woodbridge Township</td>
-      <td>Middlesex</td>
-      <td>3</td>
-      <td>2</td>
-      <td></td>
-      <td>489900</td>
-      <td>None</td>
-      <td>Metropark</td>
-      <td>6 mins, 38 mins</td>
-      <td>rail</td>
-      <td>1.626280</td>
-      <td>Carteret</td>
-      <td>4.237629</td>
-      <td>35 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1800075">1800075</a></th>
-      <td>555 Colonia Boulevard</td>
-      <td>Woodbridge Township</td>
-      <td>Middlesex</td>
-      <td>3</td>
-      <td>2</td>
-      <td>0</td>
-      <td>489900</td>
-      <td>None</td>
-      <td>Metropark</td>
-      <td>6 mins, 38 mins</td>
-      <td>rail</td>
-      <td>1.626280</td>
-      <td>Carteret</td>
-      <td>4.237629</td>
-      <td>35 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1810916">1810916</a></th>
-      <td>126 BEECH Street</td>
-      <td>Woodbridge Township</td>
-      <td>Middlesex</td>
-      <td>4</td>
-      <td>2</td>
-      <td>1</td>
-      <td>469900</td>
-      <td>None</td>
-      <td>Woodbridge</td>
-      <td>9 mins, 43 mins</td>
-      <td>rail</td>
-      <td>2.198250</td>
-      <td>Sayreville</td>
-      <td>4.071384</td>
+      <td>6.196405</td>
       <td>35 mins</td>
     </tr>
     <tr>
@@ -15530,7 +12929,7 @@ var element = $('#99c21bb4-0a21-4c89-b79b-1bcdf159ecab');
       <td>2</td>
       <td>1</td>
       <td>465000</td>
-      <td>None</td>
+      <td>NaN</td>
       <td>Metuchen</td>
       <td>7 mins, 51 mins</td>
       <td>rail</td>
@@ -15548,7 +12947,7 @@ var element = $('#99c21bb4-0a21-4c89-b79b-1bcdf159ecab');
       <td>2</td>
       <td>1</td>
       <td>460000</td>
-      <td>None</td>
+      <td>NaN</td>
       <td>Metropark</td>
       <td>8 mins, 38 mins</td>
       <td>rail</td>
@@ -15558,40 +12957,22 @@ var element = $('#99c21bb4-0a21-4c89-b79b-1bcdf159ecab');
       <td>37 mins</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1806110">1806110</a></th>
-      <td>77 Grant Street</td>
-      <td>Carteret</td>
+      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1805273">1805273</a></th>
+      <td>14 Mayling Court</td>
+      <td>Edison</td>
       <td>Middlesex</td>
       <td>4</td>
       <td>2</td>
       <td>1</td>
-      <td>449900</td>
-      <td>None</td>
-      <td>Carteret</td>
-      <td>2 mins, 42 mins</td>
-      <td>bus</td>
-      <td>0.399815</td>
-      <td>Carteret</td>
-      <td>0.399815</td>
-      <td>37 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1810814">1810814</a></th>
-      <td>5 Driftwood Drive</td>
+      <td>417000</td>
+      <td>NaN</td>
+      <td>Metuchen</td>
+      <td>4 mins, 51 mins</td>
+      <td>rail</td>
+      <td>0.832383</td>
       <td>Sayreville</td>
-      <td>Middlesex</td>
-      <td>4</td>
-      <td>2</td>
-      <td>0</td>
-      <td>435000</td>
-      <td>None</td>
-      <td>Old Bridge</td>
-      <td>6 mins, 1 hour 3 mins</td>
-      <td>bus</td>
-      <td>0.970842</td>
-      <td>Old Bridge</td>
-      <td>0.970842</td>
-      <td>40 mins</td>
+      <td>5.443685</td>
+      <td>38 mins</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1810817">1810817</a></th>
@@ -15602,7 +12983,7 @@ var element = $('#99c21bb4-0a21-4c89-b79b-1bcdf159ecab');
       <td>3</td>
       <td>0</td>
       <td>415000</td>
-      <td>None</td>
+      <td>NaN</td>
       <td>Metropark</td>
       <td>6 mins, 38 mins</td>
       <td>rail</td>
@@ -15610,6 +12991,204 @@ var element = $('#99c21bb4-0a21-4c89-b79b-1bcdf159ecab');
       <td>Watchung Park & Ride</td>
       <td>5.447293</td>
       <td>36 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1808831">1808831</a></th>
+      <td>58 Morris Avenue</td>
+      <td>Edison</td>
+      <td>Middlesex</td>
+      <td>4</td>
+      <td>2</td>
+      <td>0</td>
+      <td>375000</td>
+      <td>NaN</td>
+      <td>Metuchen</td>
+      <td>5 mins, 51 mins</td>
+      <td>rail</td>
+      <td>1.222795</td>
+      <td>Sayreville</td>
+      <td>4.299780</td>
+      <td>38 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1806244">1806244</a></th>
+      <td>38 Henry Street</td>
+      <td>Edison</td>
+      <td>Middlesex</td>
+      <td>4</td>
+      <td>2</td>
+      <td>0</td>
+      <td>365000</td>
+      <td>NaN</td>
+      <td>Metropark</td>
+      <td>5 mins, 38 mins</td>
+      <td>rail</td>
+      <td>0.686462</td>
+      <td>Carteret</td>
+      <td>5.914199</td>
+      <td>35 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1808119">1808119</a></th>
+      <td>77 Sixth Street</td>
+      <td>Edison</td>
+      <td>Middlesex</td>
+      <td>3</td>
+      <td>2</td>
+      <td>1</td>
+      <td>329900</td>
+      <td>NaN</td>
+      <td>Metuchen</td>
+      <td>6 mins, 51 mins</td>
+      <td>rail</td>
+      <td>1.433108</td>
+      <td>Sayreville</td>
+      <td>4.488425</td>
+      <td>37 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1805257">1805257</a></th>
+      <td>201 Maple Avenue</td>
+      <td>Metuchen</td>
+      <td>Middlesex</td>
+      <td>5</td>
+      <td>2</td>
+      <td>2</td>
+      <td>500000</td>
+      <td>NaN</td>
+      <td>Metuchen</td>
+      <td>3 mins, 51 mins</td>
+      <td>rail</td>
+      <td>0.466037</td>
+      <td>Sayreville</td>
+      <td>5.861296</td>
+      <td>38 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1804419">1804419</a></th>
+      <td>3 W Walnut Street</td>
+      <td>Metuchen</td>
+      <td>Middlesex</td>
+      <td>5</td>
+      <td>2</td>
+      <td>1</td>
+      <td>465000</td>
+      <td>NaN</td>
+      <td>Metuchen</td>
+      <td>3 mins, 51 mins</td>
+      <td>rail</td>
+      <td>0.560384</td>
+      <td>Sayreville</td>
+      <td>4.991073</td>
+      <td>38 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1810717">1810717</a></th>
+      <td>86 Maryknoll Road</td>
+      <td>Metuchen</td>
+      <td>Middlesex</td>
+      <td>4</td>
+      <td>2</td>
+      <td>0</td>
+      <td>357000</td>
+      <td>NaN</td>
+      <td>Metropark</td>
+      <td>7 mins, 38 mins</td>
+      <td>rail</td>
+      <td>0.861507</td>
+      <td>Carteret</td>
+      <td>5.458251</td>
+      <td>37 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1809376">1809376</a></th>
+      <td>42 Maryknoll Road</td>
+      <td>Metuchen</td>
+      <td>Middlesex</td>
+      <td>3</td>
+      <td>2</td>
+      <td>0</td>
+      <td>334900</td>
+      <td>NaN</td>
+      <td>Metropark</td>
+      <td>7 mins, 38 mins</td>
+      <td>rail</td>
+      <td>0.861507</td>
+      <td>Carteret</td>
+      <td>5.458251</td>
+      <td>37 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1809181">1809181</a></th>
+      <td>609 Grandview Street</td>
+      <td>Middlesex</td>
+      <td>Middlesex</td>
+      <td>3</td>
+      <td>2</td>
+      <td>1</td>
+      <td>375000</td>
+      <td>NaN</td>
+      <td>Dunellen</td>
+      <td>5 mins, 1 hour 0 mins</td>
+      <td>rail</td>
+      <td>1.347935</td>
+      <td>Watchung Park & Ride</td>
+      <td>5.805845</td>
+      <td>37 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1809085">1809085</a></th>
+      <td>11 Valley Brook Drive</td>
+      <td>Middlesex</td>
+      <td>Middlesex</td>
+      <td>4</td>
+      <td>2</td>
+      <td>0</td>
+      <td>375000</td>
+      <td>NaN</td>
+      <td>Dunellen</td>
+      <td>5 mins, 1 hour 0 mins</td>
+      <td>rail</td>
+      <td>0.817303</td>
+      <td>Watchung Park & Ride</td>
+      <td>5.186744</td>
+      <td>35 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1810930">1810930</a></th>
+      <td>428 N Lincoln Avenue</td>
+      <td>Middlesex</td>
+      <td>Middlesex</td>
+      <td>3</td>
+      <td>2</td>
+      <td>1</td>
+      <td>335000</td>
+      <td>NaN</td>
+      <td>Dunellen</td>
+      <td>7 mins, 1 hour 0 mins</td>
+      <td>rail</td>
+      <td>1.411272</td>
+      <td>Watchung Park & Ride</td>
+      <td>5.792416</td>
+      <td>39 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1809377">1809377</a></th>
+      <td>1773 W 5th Street</td>
+      <td>Piscataway Township</td>
+      <td>Middlesex</td>
+      <td>4</td>
+      <td>2</td>
+      <td>1</td>
+      <td>495000</td>
+      <td>NaN</td>
+      <td>Dunellen</td>
+      <td>4 mins, 1 hour 0 mins</td>
+      <td>rail</td>
+      <td>0.736084</td>
+      <td>Watchung Park & Ride</td>
+      <td>4.337403</td>
+      <td>39 mins</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1810823">1810823</a></th>
@@ -15620,13 +13199,49 @@ var element = $('#99c21bb4-0a21-4c89-b79b-1bcdf159ecab');
       <td>3</td>
       <td>0</td>
       <td>379900</td>
-      <td>None</td>
+      <td>NaN</td>
       <td>Dunellen</td>
       <td>4 mins, 1 hour 0 mins</td>
       <td>rail</td>
       <td>1.251320</td>
       <td>Watchung Park & Ride</td>
       <td>5.672943</td>
+      <td>39 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1807797">1807797</a></th>
+      <td>66 9th Street</td>
+      <td>Piscataway Township</td>
+      <td>Middlesex</td>
+      <td>3</td>
+      <td>2</td>
+      <td>0</td>
+      <td>339750</td>
+      <td>NaN</td>
+      <td>Dunellen</td>
+      <td>4 mins, 1 hour 0 mins</td>
+      <td>rail</td>
+      <td>0.839506</td>
+      <td>Watchung Park & Ride</td>
+      <td>5.079935</td>
+      <td>38 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1806219">1806219</a></th>
+      <td>82 Hamilton Boulevard</td>
+      <td>Piscataway Township</td>
+      <td>Middlesex</td>
+      <td>6</td>
+      <td>3</td>
+      <td>0</td>
+      <td>329000</td>
+      <td>NaN</td>
+      <td>Dunellen</td>
+      <td>5 mins, 1 hour 0 mins</td>
+      <td>rail</td>
+      <td>1.423418</td>
+      <td>Watchung Park & Ride</td>
+      <td>5.623814</td>
       <td>39 mins</td>
     </tr>
     <tr>
@@ -15638,7 +13253,7 @@ var element = $('#99c21bb4-0a21-4c89-b79b-1bcdf159ecab');
       <td>2</td>
       <td>0</td>
       <td>369999</td>
-      <td>None</td>
+      <td>NaN</td>
       <td>Netherwood</td>
       <td>4 mins, 1 hour 2 mins</td>
       <td>rail</td>
@@ -15648,130 +13263,58 @@ var element = $('#99c21bb4-0a21-4c89-b79b-1bcdf159ecab');
       <td>36 mins</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1802447">1802447</a></th>
-      <td>28 Mclean Street</td>
-      <td>Woodbridge Township</td>
+      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1805970">1805970</a></th>
+      <td>948 Pine Street</td>
+      <td>Plainfield</td>
+      <td>Union</td>
+      <td>5</td>
+      <td>2</td>
+      <td>0</td>
+      <td>346900</td>
+      <td>NaN</td>
+      <td>Netherwood</td>
+      <td>4 mins, 1 hour 2 mins</td>
+      <td>rail</td>
+      <td>0.851924</td>
+      <td>Watchung Park & Ride</td>
+      <td>1.952935</td>
+      <td>34 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1719623">1719623</a></th>
+      <td>6 Driftwood Drive</td>
+      <td>Sayreville</td>
       <td>Middlesex</td>
+      <td>4</td>
       <td>3</td>
-      <td>2</td>
       <td>0</td>
-      <td>369000</td>
-      <td>None</td>
-      <td>Metropark</td>
-      <td>4 mins, 38 mins</td>
-      <td>rail</td>
-      <td>0.999593</td>
-      <td>Carteret</td>
-      <td>4.679696</td>
-      <td>33 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1810717">1810717</a></th>
-      <td>86 Maryknoll Road</td>
-      <td>Metuchen</td>
-      <td>Middlesex</td>
-      <td>4</td>
-      <td>2</td>
-      <td>0</td>
-      <td>357000</td>
-      <td>None</td>
-      <td>Metropark</td>
-      <td>7 mins, 38 mins</td>
-      <td>rail</td>
-      <td>0.861507</td>
-      <td>Carteret</td>
-      <td>5.458251</td>
-      <td>37 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1808125">1808125</a></th>
-      <td>49 Swarthmore Drive</td>
-      <td>Carteret</td>
-      <td>Middlesex</td>
-      <td>4</td>
-      <td>2</td>
-      <td>0</td>
-      <td>349900</td>
-      <td>None</td>
-      <td>Carteret</td>
-      <td>2 mins, 42 mins</td>
+      <td>449000</td>
+      <td>NaN</td>
+      <td>Old Bridge</td>
+      <td>6 mins, 1 hour 3 mins</td>
       <td>bus</td>
-      <td>0.262847</td>
-      <td>Carteret</td>
-      <td>0.262847</td>
-      <td>37 mins</td>
+      <td>0.992094</td>
+      <td>Old Bridge</td>
+      <td>0.992094</td>
+      <td>40 mins</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1810534">1810534</a></th>
-      <td>115 Warwick Street</td>
-      <td>Woodbridge Township</td>
+      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1810814">1810814</a></th>
+      <td>5 Driftwood Drive</td>
+      <td>Sayreville</td>
       <td>Middlesex</td>
-      <td>3</td>
-      <td>2</td>
-      <td>0</td>
-      <td>349900</td>
-      <td>None</td>
-      <td>Metropark</td>
-      <td>4 mins, 38 mins</td>
-      <td>rail</td>
-      <td>0.837787</td>
-      <td>Carteret</td>
-      <td>4.907821</td>
-      <td>33 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1810930">1810930</a></th>
-      <td>428 N Lincoln Avenue</td>
-      <td>Middlesex</td>
-      <td>Middlesex</td>
-      <td>3</td>
-      <td>2</td>
-      <td>1</td>
-      <td>335000</td>
-      <td>None</td>
-      <td>Dunellen</td>
-      <td>7 mins, 1 hour 0 mins</td>
-      <td>rail</td>
-      <td>1.411272</td>
-      <td>Watchung Park & Ride</td>
-      <td>5.792416</td>
-      <td>39 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1809376">1809376</a></th>
-      <td>42 Maryknoll Road</td>
-      <td>Metuchen</td>
-      <td>Middlesex</td>
-      <td>3</td>
-      <td>2</td>
-      <td>0</td>
-      <td>334900</td>
-      <td>None</td>
-      <td>Metropark</td>
-      <td>7 mins, 38 mins</td>
-      <td>rail</td>
-      <td>0.861507</td>
-      <td>Carteret</td>
-      <td>5.458251</td>
-      <td>37 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1807690">1807690</a></th>
-      <td>614 Parkview Avenue</td>
-      <td>North Plainfield</td>
-      <td>Somerset</td>
       <td>4</td>
       <td>2</td>
-      <td>1</td>
-      <td>330000</td>
-      <td>None</td>
-      <td>Dunellen</td>
-      <td>5 mins, 1 hour 0 mins</td>
-      <td>rail</td>
-      <td>1.181210</td>
-      <td>Watchung Park & Ride</td>
-      <td>3.456342</td>
-      <td>36 mins</td>
+      <td>0</td>
+      <td>435000</td>
+      <td>NaN</td>
+      <td>Old Bridge</td>
+      <td>6 mins, 1 hour 3 mins</td>
+      <td>bus</td>
+      <td>0.970842</td>
+      <td>Old Bridge</td>
+      <td>0.970842</td>
+      <td>40 mins</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1810815">1810815</a></th>
@@ -15782,7 +13325,7 @@ var element = $('#99c21bb4-0a21-4c89-b79b-1bcdf159ecab');
       <td>2</td>
       <td>0</td>
       <td>329000</td>
-      <td>None</td>
+      <td>NaN</td>
       <td>Sayreville</td>
       <td>4 mins, 55 mins</td>
       <td>bus</td>
@@ -15792,184 +13335,958 @@ var element = $('#99c21bb4-0a21-4c89-b79b-1bcdf159ecab');
       <td>38 mins</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1809138">1809138</a></th>
-      <td>10 Falmouth Road</td>
-      <td>Woodbridge Township</td>
-      <td>Middlesex</td>
-      <td>4</td>
-      <td>2</td>
-      <td>0</td>
-      <td>299900</td>
-      <td>None</td>
-      <td>Metropark</td>
-      <td>6 mins, 38 mins</td>
-      <td>rail</td>
-      <td>1.388558</td>
-      <td>Carteret</td>
-      <td>4.266646</td>
-      <td>36 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1810750">1810750</a></th>
-      <td>15 Avon Way</td>
-      <td>Sayreville</td>
-      <td>Middlesex</td>
-      <td>3</td>
-      <td>2</td>
-      <td>1</td>
-      <td>278000</td>
-      <td>None</td>
-      <td>Sayreville</td>
-      <td>4 mins, 55 mins</td>
-      <td>bus</td>
-      <td>0.360781</td>
-      <td>Sayreville</td>
-      <td>0.360781</td>
-      <td>38 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1809443">1809443</a></th>
-      <td>75 Mckinley Avenue</td>
-      <td>Woodbridge Township</td>
-      <td>Middlesex</td>
-      <td>3</td>
-      <td>2</td>
-      <td>0</td>
-      <td>275000</td>
-      <td>None</td>
-      <td>Rahway</td>
-      <td>7 mins, 48 mins</td>
-      <td>rail</td>
-      <td>2.028363</td>
-      <td>Carteret</td>
-      <td>4.493082</td>
-      <td>36 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1810929">1810929</a></th>
-      <td>32 Chase Avenue</td>
-      <td>Woodbridge Township</td>
-      <td>Middlesex</td>
-      <td>5</td>
-      <td>3</td>
-      <td>1</td>
-      <td>251000</td>
-      <td>None</td>
-      <td>Avenel</td>
-      <td>2 mins, 36 mins</td>
-      <td>rail</td>
-      <td>0.307089</td>
-      <td>Carteret</td>
-      <td>3.045255</td>
-      <td>37 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1810548">1810548</a></th>
-      <td>115 Mckinley Avenue</td>
-      <td>Woodbridge Township</td>
-      <td>Middlesex</td>
-      <td>3</td>
-      <td>2</td>
-      <td>0</td>
-      <td>249900</td>
-      <td>None</td>
-      <td>Rahway</td>
-      <td>8 mins, 48 mins</td>
-      <td>rail</td>
-      <td>2.057605</td>
-      <td>Carteret</td>
-      <td>4.483674</td>
-      <td>36 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1810804">1810804</a></th>
-      <td>445 Remsen Avenue</td>
-      <td>Woodbridge Township</td>
-      <td>Middlesex</td>
-      <td>6</td>
-      <td>2</td>
-      <td>0</td>
-      <td>239900</td>
-      <td>None</td>
-      <td>Avenel</td>
-      <td>4 mins, 36 mins</td>
-      <td>rail</td>
-      <td>0.620762</td>
-      <td>Carteret</td>
-      <td>2.849109</td>
-      <td>37 mins</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1805870">1805870</a></th>
-      <td>3 Kenneth Avenue</td>
+      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1808430">1808430</a></th>
+      <td>88 Coolidge Avenue</td>
       <td>Sayreville</td>
       <td>Middlesex</td>
       <td>4</td>
-      <td>3</td>
+      <td>2</td>
       <td>0</td>
-      <td>222300</td>
-      <td>None</td>
+      <td>319900</td>
+      <td>NaN</td>
       <td>Sayreville</td>
-      <td>7 mins, 55 mins</td>
+      <td>5 mins, 55 mins</td>
       <td>bus</td>
-      <td>0.771389</td>
+      <td>0.660390</td>
       <td>Sayreville</td>
-      <td>0.771389</td>
-      <td>39 mins</td>
+      <td>0.660390</td>
+      <td>40 mins</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1709085">1709085</a></th>
-      <td>43 Scott Avenue</td>
+      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1808964">1808964</a></th>
+      <td>333 Cook Avenue</td>
+      <td>Scotch Plains</td>
+      <td>Union</td>
+      <td>3</td>
+      <td>2</td>
+      <td>0</td>
+      <td>450000</td>
+      <td>NaN</td>
+      <td>Watchung Park & Ride</td>
+      <td>6 mins, 1 hour 4 mins</td>
+      <td>bus</td>
+      <td>1.091535</td>
+      <td>Watchung Park & Ride</td>
+      <td>1.091535</td>
+      <td>27 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1808238">1808238</a></th>
+      <td>39 Scott Avenue</td>
       <td>South Amboy</td>
       <td>Middlesex</td>
       <td>4</td>
       <td>2</td>
       <td>1</td>
-      <td>189999</td>
-      <td>None</td>
+      <td>399000</td>
+      <td>NaN</td>
       <td>Sayreville</td>
-      <td>4 mins, 55 mins</td>
+      <td>3 mins, 55 mins</td>
       <td>bus</td>
-      <td>0.881800</td>
+      <td>0.858241</td>
       <td>Sayreville</td>
-      <td>0.881800</td>
+      <td>0.858241</td>
       <td>37 mins</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1806467">1806467</a></th>
-      <td>418 Jackson Avenue</td>
-      <td>Dunellen</td>
+      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1721024">1721024</a></th>
+      <td>190 S Feltus Street</td>
+      <td>South Amboy</td>
       <td>Middlesex</td>
       <td>3</td>
       <td>2</td>
-      <td>0</td>
-      <td>187320</td>
-      <td>None</td>
-      <td>Dunellen</td>
-      <td>3 mins, 1 hour 0 mins</td>
+      <td>1</td>
+      <td>390000</td>
+      <td>NaN</td>
+      <td>South Amboy</td>
+      <td>4 mins, 48 mins</td>
       <td>rail</td>
-      <td>0.382771</td>
-      <td>Watchung Park & Ride</td>
-      <td>4.347796</td>
+      <td>0.571141</td>
+      <td>Sayreville</td>
+      <td>0.619118</td>
+      <td>39 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1805794">1805794</a></th>
+      <td>30 Brook Avenue</td>
+      <td>South Amboy</td>
+      <td>Middlesex</td>
+      <td>4</td>
+      <td>2</td>
+      <td>1</td>
+      <td>369000</td>
+      <td>NaN</td>
+      <td>South Amboy</td>
+      <td>5 mins, 48 mins</td>
+      <td>rail</td>
+      <td>1.233750</td>
+      <td>Sayreville</td>
+      <td>1.318930</td>
+      <td>40 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1810572">1810572</a></th>
+      <td>411 Ward Avenue</td>
+      <td>South Amboy</td>
+      <td>Middlesex</td>
+      <td>3</td>
+      <td>2</td>
+      <td>1</td>
+      <td>350000</td>
+      <td>NaN</td>
+      <td>South Amboy</td>
+      <td>4 mins, 48 mins</td>
+      <td>rail</td>
+      <td>0.788532</td>
+      <td>Sayreville</td>
+      <td>0.826729</td>
+      <td>38 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1804157">1804157</a></th>
+      <td>1487 Brookside Drive</td>
+      <td>Union</td>
+      <td>Union</td>
+      <td>4</td>
+      <td>2</td>
+      <td>0</td>
+      <td>339900</td>
+      <td>NaN</td>
+      <td>Union</td>
+      <td>4 mins, 41 mins</td>
+      <td>rail</td>
+      <td>0.713374</td>
+      <td>Union Center - Union Twp</td>
+      <td>0.983160</td>
+      <td>24 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1701746">1701746</a></th>
+      <td>115 Grove Avenue</td>
+      <td>Verona</td>
+      <td>Essex</td>
+      <td>3</td>
+      <td>2</td>
+      <td>1</td>
+      <td>339900</td>
+      <td>NaN</td>
+      <td>Upper Montclair</td>
+      <td>8 mins, 48 mins</td>
+      <td>rail</td>
+      <td>1.859567</td>
+      <td>Willowbrook Mall</td>
+      <td>3.476632</td>
+      <td>17 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1801822">1801822</a></th>
+      <td>181 Mitchell Street</td>
+      <td>West Orange</td>
+      <td>Essex</td>
+      <td>4</td>
+      <td>3</td>
+      <td>0</td>
+      <td>424900</td>
+      <td>NaN</td>
+      <td>Highland Avenue</td>
+      <td>4 mins, 46 mins</td>
+      <td>rail</td>
+      <td>0.677339</td>
+      <td>Irvington Bus Terminal</td>
+      <td>3.488462</td>
+      <td>10 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1800267">1800267</a></th>
+      <td>11 Regina Street</td>
+      <td>Woodbridge Township</td>
+      <td>Middlesex</td>
+      <td>4</td>
+      <td>2</td>
+      <td>1</td>
+      <td>525000</td>
+      <td>NaN</td>
+      <td>Woodbridge</td>
+      <td>6 mins, 43 mins</td>
+      <td>rail</td>
+      <td>1.052740</td>
+      <td>Carteret</td>
+      <td>3.894006</td>
+      <td>37 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1804757">1804757</a></th>
+      <td>166 Sherwood Road</td>
+      <td>Woodbridge Township</td>
+      <td>Middlesex</td>
+      <td>3</td>
+      <td>2</td>
+      <td>1</td>
+      <td>525000</td>
+      <td>NaN</td>
+      <td>Metropark</td>
+      <td>7 mins, 38 mins</td>
+      <td>rail</td>
+      <td>1.776928</td>
+      <td>Carteret</td>
+      <td>4.613488</td>
+      <td>36 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1806028">1806028</a></th>
+      <td>79 Demorest Avenue</td>
+      <td>Woodbridge Township</td>
+      <td>Middlesex</td>
+      <td>4</td>
+      <td>2</td>
+      <td>1</td>
+      <td>509000</td>
+      <td>NaN</td>
+      <td>Avenel</td>
+      <td>4 mins, 36 mins</td>
+      <td>rail</td>
+      <td>0.725264</td>
+      <td>Carteret</td>
+      <td>3.444604</td>
+      <td>36 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1808336">1808336</a></th>
+      <td>21 Commander Patrick Dunn Court</td>
+      <td>Woodbridge Township</td>
+      <td>Middlesex</td>
+      <td>4</td>
+      <td>4</td>
+      <td>0</td>
+      <td>499900</td>
+      <td>NaN</td>
+      <td>Woodbridge</td>
+      <td>8 mins, 43 mins</td>
+      <td>rail</td>
+      <td>2.149547</td>
+      <td>Sayreville</td>
+      <td>4.259026</td>
+      <td>37 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1808833">1808833</a></th>
+      <td>223 New Dover Road</td>
+      <td>Woodbridge Township</td>
+      <td>Middlesex</td>
+      <td>4</td>
+      <td>3</td>
+      <td>0</td>
+      <td>499000</td>
+      <td>NaN</td>
+      <td>Avenel</td>
+      <td>5 mins, 36 mins</td>
+      <td>rail</td>
+      <td>1.346549</td>
+      <td>Carteret</td>
+      <td>3.902292</td>
       <td>34 mins</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1810759">1810759</a></th>
-      <td>20 Patrick Street</td>
+      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1810661">1810661</a></th>
+      <td>20 Westbury Road</td>
+      <td>Woodbridge Township</td>
+      <td>Middlesex</td>
+      <td>5</td>
+      <td>2</td>
+      <td>0</td>
+      <td>489900</td>
+      <td>NaN</td>
+      <td>Metropark</td>
+      <td>6 mins, 38 mins</td>
+      <td>rail</td>
+      <td>1.365416</td>
       <td>Carteret</td>
+      <td>4.258490</td>
+      <td>35 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1805132">1805132</a></th>
+      <td>555 Colonia Boulevard</td>
+      <td>Woodbridge Township</td>
+      <td>Middlesex</td>
+      <td>3</td>
+      <td>2</td>
+      <td></td>
+      <td>489900</td>
+      <td>NaN</td>
+      <td>Metropark</td>
+      <td>6 mins, 38 mins</td>
+      <td>rail</td>
+      <td>1.626280</td>
+      <td>Carteret</td>
+      <td>4.237629</td>
+      <td>35 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1800075">1800075</a></th>
+      <td>555 Colonia Boulevard</td>
+      <td>Woodbridge Township</td>
       <td>Middlesex</td>
       <td>3</td>
       <td>2</td>
       <td>0</td>
-      <td>181000</td>
-      <td>None</td>
+      <td>489900</td>
+      <td>NaN</td>
+      <td>Metropark</td>
+      <td>6 mins, 38 mins</td>
+      <td>rail</td>
+      <td>1.626280</td>
       <td>Carteret</td>
-      <td>2 mins, 42 mins</td>
-      <td>bus</td>
-      <td>0.303905</td>
+      <td>4.237629</td>
+      <td>35 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1807643">1807643</a></th>
+      <td>63 W Edward Street</td>
+      <td>Woodbridge Township</td>
+      <td>Middlesex</td>
+      <td>4</td>
+      <td>2</td>
+      <td>1</td>
+      <td>485000</td>
+      <td>NaN</td>
+      <td>Metropark</td>
+      <td>6 mins, 38 mins</td>
+      <td>rail</td>
+      <td>1.170103</td>
       <td>Carteret</td>
-      <td>0.303905</td>
+      <td>5.526446</td>
+      <td>35 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1810916">1810916</a></th>
+      <td>126 BEECH Street</td>
+      <td>Woodbridge Township</td>
+      <td>Middlesex</td>
+      <td>4</td>
+      <td>2</td>
+      <td>1</td>
+      <td>469900</td>
+      <td>NaN</td>
+      <td>Woodbridge</td>
+      <td>9 mins, 43 mins</td>
+      <td>rail</td>
+      <td>2.198250</td>
+      <td>Sayreville</td>
+      <td>4.071384</td>
+      <td>35 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1806035">1806035</a></th>
+      <td>340 Demorest Avenue</td>
+      <td>Woodbridge Township</td>
+      <td>Middlesex</td>
+      <td>4</td>
+      <td>2</td>
+      <td>1</td>
+      <td>469000</td>
+      <td>NaN</td>
+      <td>Avenel</td>
+      <td>3 mins, 36 mins</td>
+      <td>rail</td>
+      <td>0.571893</td>
+      <td>Carteret</td>
+      <td>2.973608</td>
       <td>37 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1808275">1808275</a></th>
+      <td>50 Dover Road</td>
+      <td>Woodbridge Township</td>
+      <td>Middlesex</td>
+      <td>4</td>
+      <td>2</td>
+      <td>1</td>
+      <td>439000</td>
+      <td>NaN</td>
+      <td>Avenel</td>
+      <td>4 mins, 36 mins</td>
+      <td>rail</td>
+      <td>0.954995</td>
+      <td>Carteret</td>
+      <td>3.604058</td>
+      <td>36 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1808926">1808926</a></th>
+      <td>98 Trinity Place</td>
+      <td>Woodbridge Township</td>
+      <td>Middlesex</td>
+      <td>4</td>
+      <td>2</td>
+      <td>1</td>
+      <td>429000</td>
+      <td>NaN</td>
+      <td>Avenel</td>
+      <td>2 mins, 36 mins</td>
+      <td>rail</td>
+      <td>0.322557</td>
+      <td>Carteret</td>
+      <td>2.417617</td>
+      <td>39 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1720661">1720661</a></th>
+      <td>15 W Louis Place</td>
+      <td>Woodbridge Township</td>
+      <td>Middlesex</td>
+      <td>4</td>
+      <td>3</td>
+      <td>0</td>
+      <td>425000</td>
+      <td>NaN</td>
+      <td>Metropark</td>
+      <td>5 mins, 38 mins</td>
+      <td>rail</td>
+      <td>0.975569</td>
+      <td>Carteret</td>
+      <td>5.693175</td>
+      <td>36 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1803081">1803081</a></th>
+      <td>5 Bender Avenue</td>
+      <td>Woodbridge Township</td>
+      <td>Middlesex</td>
+      <td>5</td>
+      <td>2</td>
+      <td>0</td>
+      <td>419000</td>
+      <td>NaN</td>
+      <td>Metropark</td>
+      <td>4 mins, 38 mins</td>
+      <td>rail</td>
+      <td>0.526809</td>
+      <td>Carteret</td>
+      <td>5.623783</td>
+      <td>33 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1808330">1808330</a></th>
+      <td>129 Pleasant Avenue</td>
+      <td>Woodbridge Township</td>
+      <td>Middlesex</td>
+      <td>5</td>
+      <td>2</td>
+      <td>1</td>
+      <td>409000</td>
+      <td>NaN</td>
+      <td>Avenel</td>
+      <td>7 mins, 36 mins</td>
+      <td>rail</td>
+      <td>1.334133</td>
+      <td>Carteret</td>
+      <td>4.062727</td>
+      <td>35 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1804174">1804174</a></th>
+      <td>20 Cliff Avenue</td>
+      <td>Woodbridge Township</td>
+      <td>Middlesex</td>
+      <td>4</td>
+      <td>2</td>
+      <td>1</td>
+      <td>409000</td>
+      <td>NaN</td>
+      <td>Woodbridge</td>
+      <td>8 mins, 43 mins</td>
+      <td>rail</td>
+      <td>2.418659</td>
+      <td>Sayreville</td>
+      <td>3.896474</td>
+      <td>36 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1802569">1802569</a></th>
+      <td>262 Florence Avenue</td>
+      <td>Woodbridge Township</td>
+      <td>Middlesex</td>
+      <td>3</td>
+      <td>2</td>
+      <td>0</td>
+      <td>399000</td>
+      <td>NaN</td>
+      <td>Rahway</td>
+      <td>7 mins, 48 mins</td>
+      <td>rail</td>
+      <td>1.990626</td>
+      <td>Carteret</td>
+      <td>4.561604</td>
+      <td>36 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1804861">1804861</a></th>
+      <td>4 Manor Place</td>
+      <td>Woodbridge Township</td>
+      <td>Middlesex</td>
+      <td>3</td>
+      <td>2</td>
+      <td>1</td>
+      <td>395000</td>
+      <td>NaN</td>
+      <td>Avenel</td>
+      <td>2 mins, 36 mins</td>
+      <td>rail</td>
+      <td>0.414573</td>
+      <td>Carteret</td>
+      <td>3.152970</td>
+      <td>37 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1808366">1808366</a></th>
+      <td>107 W Hill Road</td>
+      <td>Woodbridge Township</td>
+      <td>Middlesex</td>
+      <td>3</td>
+      <td>2</td>
+      <td>0</td>
+      <td>389000</td>
+      <td>NaN</td>
+      <td>Avenel</td>
+      <td>5 mins, 36 mins</td>
+      <td>rail</td>
+      <td>1.173493</td>
+      <td>Carteret</td>
+      <td>3.799444</td>
+      <td>35 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1806131">1806131</a></th>
+      <td>99 Jordan Road</td>
+      <td>Woodbridge Township</td>
+      <td>Middlesex</td>
+      <td>4</td>
+      <td>2</td>
+      <td>1</td>
+      <td>375000</td>
+      <td>NaN</td>
+      <td>Metropark</td>
+      <td>9 mins, 38 mins</td>
+      <td>rail</td>
+      <td>2.319525</td>
+      <td>Watchung Park & Ride</td>
+      <td>5.228862</td>
+      <td>35 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1810530">1810530</a></th>
+      <td>16 W Iselin Parkway</td>
+      <td>Woodbridge Township</td>
+      <td>Middlesex</td>
+      <td>3</td>
+      <td>2</td>
+      <td>0</td>
+      <td>374900</td>
+      <td>NaN</td>
+      <td>Metropark</td>
+      <td>5 mins, 38 mins</td>
+      <td>rail</td>
+      <td>0.996403</td>
+      <td>Carteret</td>
+      <td>5.688922</td>
+      <td>35 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1802447">1802447</a></th>
+      <td>28 Mclean Street</td>
+      <td>Woodbridge Township</td>
+      <td>Middlesex</td>
+      <td>3</td>
+      <td>2</td>
+      <td>0</td>
+      <td>369000</td>
+      <td>NaN</td>
+      <td>Metropark</td>
+      <td>4 mins, 38 mins</td>
+      <td>rail</td>
+      <td>0.999593</td>
+      <td>Carteret</td>
+      <td>4.679696</td>
+      <td>33 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1809142">1809142</a></th>
+      <td>5 Joanna Place</td>
+      <td>Woodbridge Township</td>
+      <td>Middlesex</td>
+      <td>4</td>
+      <td>2</td>
+      <td>0</td>
+      <td>360000</td>
+      <td>NaN</td>
+      <td>Rahway</td>
+      <td>6 mins, 48 mins</td>
+      <td>rail</td>
+      <td>1.465297</td>
+      <td>Carteret</td>
+      <td>4.104741</td>
+      <td>34 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1805566">1805566</a></th>
+      <td>65 Homes Park Avenue</td>
+      <td>Woodbridge Township</td>
+      <td>Middlesex</td>
+      <td>4</td>
+      <td>2</td>
+      <td>0</td>
+      <td>349900</td>
+      <td>NaN</td>
+      <td>Metropark</td>
+      <td>4 mins, 38 mins</td>
+      <td>rail</td>
+      <td>1.013554</td>
+      <td>Carteret</td>
+      <td>4.514405</td>
+      <td>34 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1808086">1808086</a></th>
+      <td>875 Main Street</td>
+      <td>Woodbridge Township</td>
+      <td>Middlesex</td>
+      <td>3</td>
+      <td>2</td>
+      <td>0</td>
+      <td>349900</td>
+      <td>NaN</td>
+      <td>Metropark</td>
+      <td>7 mins, 38 mins</td>
+      <td>rail</td>
+      <td>2.279391</td>
+      <td>Sayreville</td>
+      <td>4.236466</td>
+      <td>36 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1809215">1809215</a></th>
+      <td>408 Fairview Avenue</td>
+      <td>Woodbridge Township</td>
+      <td>Middlesex</td>
+      <td>3</td>
+      <td>2</td>
+      <td>0</td>
+      <td>349900</td>
+      <td>NaN</td>
+      <td>Avenel</td>
+      <td>5 mins, 36 mins</td>
+      <td>rail</td>
+      <td>1.407252</td>
+      <td>Carteret</td>
+      <td>3.964666</td>
+      <td>35 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1810534">1810534</a></th>
+      <td>115 Warwick Street</td>
+      <td>Woodbridge Township</td>
+      <td>Middlesex</td>
+      <td>3</td>
+      <td>2</td>
+      <td>0</td>
+      <td>349900</td>
+      <td>NaN</td>
+      <td>Metropark</td>
+      <td>4 mins, 38 mins</td>
+      <td>rail</td>
+      <td>0.837787</td>
+      <td>Carteret</td>
+      <td>4.907821</td>
+      <td>33 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1701748">1701748</a></th>
+      <td>117 Grove Avenue</td>
+      <td>Woodbridge Township</td>
+      <td>Middlesex</td>
+      <td>3</td>
+      <td>2</td>
+      <td>1</td>
+      <td>339900</td>
+      <td>NaN</td>
+      <td>Woodbridge</td>
+      <td>2 mins, 43 mins</td>
+      <td>rail</td>
+      <td>0.320165</td>
+      <td>Carteret</td>
+      <td>3.574286</td>
+      <td>39 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1721550">1721550</a></th>
+      <td>114 Carolyn Avenue</td>
+      <td>Woodbridge Township</td>
+      <td>Middlesex</td>
+      <td>4</td>
+      <td>2</td>
+      <td>0</td>
+      <td>339900</td>
+      <td>NaN</td>
+      <td>Rahway</td>
+      <td>6 mins, 48 mins</td>
+      <td>rail</td>
+      <td>1.696195</td>
+      <td>Carteret</td>
+      <td>4.259865</td>
+      <td>35 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1800851">1800851</a></th>
+      <td>304 Wood Avenue</td>
+      <td>Woodbridge Township</td>
+      <td>Middlesex</td>
+      <td>4</td>
+      <td>2</td>
+      <td>0</td>
+      <td>339000</td>
+      <td>NaN</td>
+      <td>Metropark</td>
+      <td>4 mins, 38 mins</td>
+      <td>rail</td>
+      <td>0.654335</td>
+      <td>Carteret</td>
+      <td>5.753292</td>
+      <td>34 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1802650">1802650</a></th>
+      <td>34 Cozy Corner</td>
+      <td>Woodbridge Township</td>
+      <td>Middlesex</td>
+      <td>4</td>
+      <td>2</td>
+      <td>0</td>
+      <td>335000</td>
+      <td>NaN</td>
+      <td>Avenel</td>
+      <td>4 mins, 36 mins</td>
+      <td>rail</td>
+      <td>0.827476</td>
+      <td>Carteret</td>
+      <td>3.054347</td>
+      <td>38 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1801888">1801888</a></th>
+      <td>6 Astor Place</td>
+      <td>Woodbridge Township</td>
+      <td>Middlesex</td>
+      <td>3</td>
+      <td>2</td>
+      <td>1</td>
+      <td>335000</td>
+      <td>NaN</td>
+      <td>Avenel</td>
+      <td>2 mins, 36 mins</td>
+      <td>rail</td>
+      <td>0.218611</td>
+      <td>Carteret</td>
+      <td>2.892442</td>
+      <td>39 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1806416">1806416</a></th>
+      <td>143 S Inman Avenue</td>
+      <td>Woodbridge Township</td>
+      <td>Middlesex</td>
+      <td>3</td>
+      <td>2</td>
+      <td>0</td>
+      <td>334700</td>
+      <td>NaN</td>
+      <td>Avenel</td>
+      <td>1 min, 36 mins</td>
+      <td>rail</td>
+      <td>0.354770</td>
+      <td>Carteret</td>
+      <td>2.683051</td>
+      <td>38 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1808514">1808514</a></th>
+      <td>33 Livingston Street</td>
+      <td>Woodbridge Township</td>
+      <td>Middlesex</td>
+      <td>5</td>
+      <td>3</td>
+      <td>1</td>
+      <td>329900</td>
+      <td>NaN</td>
+      <td>Avenel</td>
+      <td>1 min, 36 mins</td>
+      <td>rail</td>
+      <td>0.219237</td>
+      <td>Carteret</td>
+      <td>2.935125</td>
+      <td>38 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1804538">1804538</a></th>
+      <td>1050 Thayer Avenue</td>
+      <td>Woodbridge Township</td>
+      <td>Middlesex</td>
+      <td>3</td>
+      <td>2</td>
+      <td>0</td>
+      <td>328000</td>
+      <td>NaN</td>
+      <td>Avenel</td>
+      <td>3 mins, 36 mins</td>
+      <td>rail</td>
+      <td>0.518478</td>
+      <td>Carteret</td>
+      <td>2.258830</td>
+      <td>40 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1809365">1809365</a></th>
+      <td>50 Normandy Road</td>
+      <td>Woodbridge Township</td>
+      <td>Middlesex</td>
+      <td>3</td>
+      <td>2</td>
+      <td>0</td>
+      <td>325000</td>
+      <td>NaN</td>
+      <td>Metropark</td>
+      <td>10 mins, 38 mins</td>
+      <td>rail</td>
+      <td>2.513312</td>
+      <td>Watchung Park & Ride</td>
+      <td>4.892607</td>
+      <td>37 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1801883">1801883</a></th>
+      <td>115 N Main Street</td>
+      <td>Woodbridge Township</td>
+      <td>Middlesex</td>
+      <td>3</td>
+      <td>3</td>
+      <td>0</td>
+      <td>325000</td>
+      <td>NaN</td>
+      <td>Metropark</td>
+      <td>3 mins, 38 mins</td>
+      <td>rail</td>
+      <td>0.746109</td>
+      <td>Carteret</td>
+      <td>4.819526</td>
+      <td>32 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1714123">1714123</a></th>
+      <td>218 Mcfarlane Road</td>
+      <td>Woodbridge Township</td>
+      <td>Middlesex</td>
+      <td>3</td>
+      <td>2</td>
+      <td>0</td>
+      <td>324900</td>
+      <td>NaN</td>
+      <td>Avenel</td>
+      <td>5 mins, 36 mins</td>
+      <td>rail</td>
+      <td>1.112906</td>
+      <td>Carteret</td>
+      <td>3.496686</td>
+      <td>36 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1808159">1808159</a></th>
+      <td>56 Washington Avenue</td>
+      <td>Woodbridge Township</td>
+      <td>Middlesex</td>
+      <td>4</td>
+      <td>3</td>
+      <td>0</td>
+      <td>324500</td>
+      <td>NaN</td>
+      <td>Metropark</td>
+      <td>5 mins, 38 mins</td>
+      <td>rail</td>
+      <td>1.200896</td>
+      <td>Carteret</td>
+      <td>4.329288</td>
+      <td>34 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1808613">1808613</a></th>
+      <td>76 S Mckinley Avenue</td>
+      <td>Woodbridge Township</td>
+      <td>Middlesex</td>
+      <td>4</td>
+      <td>2</td>
+      <td>1</td>
+      <td>319900</td>
+      <td>NaN</td>
+      <td>Avenel</td>
+      <td>5 mins, 36 mins</td>
+      <td>rail</td>
+      <td>1.100363</td>
+      <td>Carteret</td>
+      <td>3.830071</td>
+      <td>36 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1805567">1805567</a></th>
+      <td>28 Oak Street</td>
+      <td>Woodbridge Township</td>
+      <td>Middlesex</td>
+      <td>5</td>
+      <td>2</td>
+      <td>0</td>
+      <td>319000</td>
+      <td>NaN</td>
+      <td>Avenel</td>
+      <td>1 min, 36 mins</td>
+      <td>rail</td>
+      <td>0.323813</td>
+      <td>Carteret</td>
+      <td>2.455100</td>
+      <td>38 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1801644">1801644</a></th>
+      <td>24 N Pennsylvania Street</td>
+      <td>Woodbridge Township</td>
+      <td>Middlesex</td>
+      <td>3</td>
+      <td>2</td>
+      <td>0</td>
+      <td>314900</td>
+      <td>NaN</td>
+      <td>Rahway</td>
+      <td>7 mins, 48 mins</td>
+      <td>rail</td>
+      <td>1.992906</td>
+      <td>Carteret</td>
+      <td>4.547052</td>
+      <td>36 mins</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://cjmls.herokuapp.com/properties/1714438">1714438</a></th>
+      <td>28 Concannon Drive</td>
+      <td>Woodbridge Township</td>
+      <td>Middlesex</td>
+      <td>5</td>
+      <td>2</td>
+      <td>1</td>
+      <td>309900</td>
+      <td>NaN</td>
+      <td>Metropark</td>
+      <td>6 mins, 38 mins</td>
+      <td>rail</td>
+      <td>1.743059</td>
+      <td>Sayreville</td>
+      <td>4.764350</td>
+      <td>34 mins</td>
     </tr>
   </tbody>
 </table>
