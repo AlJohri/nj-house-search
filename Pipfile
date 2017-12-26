@@ -28,6 +28,9 @@ xlrd = "*"
 folium = {git = "https://github.com/python-visualization/folium"}
 nbconvert = "*"
 cjmls = "*"
+cython = "*"
+cartopy = "*"
+pyshp = "*"
 
 
 [dev-packages]

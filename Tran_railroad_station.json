@@ -1,0 +1,5105 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          618521.1338671632,
+          459008.90274490416
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.0481919102,
+        "LATITUDE": 40.0927179632,
+        "RAIL_LINE": "North Jersey Coast Line",
+        "STATION": "Point Pleasant",
+        "MUN_LABEL": "Point Pleasant Beach Borough",
+        "COUNTY": "OCEAN",
+        "ATIS_ID": "RAIL0122",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          621972.9957298301,
+          480099.14435698837
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.0354595895,
+        "LATITUDE": 40.1505665612,
+        "RAIL_LINE": "North Jersey Coast Line",
+        "STATION": "Spring Lake",
+        "MUN_LABEL": "Spring Lake Borough",
+        "COUNTY": "MONMOUTH",
+        "ATIS_ID": "RAIL0141",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          624196.7507967465,
+          491047.22055790573
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.0272957779,
+        "LATITUDE": 40.1805890007,
+        "RAIL_LINE": "North Jersey Coast Line",
+        "STATION": "Belmar",
+        "MUN_LABEL": "Belmar Borough",
+        "COUNTY": "MONMOUTH",
+        "ATIS_ID": "RAIL0015",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          626480.9611233287,
+          499505.65049140155
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.0189564929,
+        "LATITUDE": 40.2037752554,
+        "RAIL_LINE": "North Jersey Coast Line",
+        "STATION": "Bradley Beach",
+        "MUN_LABEL": "Bradley Beach Borough",
+        "COUNTY": "MONMOUTH",
+        "ATIS_ID": "RAIL0022",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          627622.2895493284,
+          503731.9881673232
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.0147875299,
+        "LATITUDE": 40.2153602231,
+        "RAIL_LINE": "North Jersey Coast Line",
+        "STATION": "Asbury Park",
+        "MUN_LABEL": "Asbury Park City",
+        "COUNTY": "MONMOUTH",
+        "ATIS_ID": "RAIL0008",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          629819.0236729123,
+          511866.494536072
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.0067594066,
+        "LATITUDE": 40.2376575023,
+        "RAIL_LINE": "North Jersey Coast Line",
+        "STATION": "Allenhurst",
+        "MUN_LABEL": "Allenhurst Borough",
+        "COUNTY": "MONMOUTH",
+        "ATIS_ID": "RAIL0004",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          632321.8516724966,
+          521958.7820942402
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -73.9975893953,
+        "LATITUDE": 40.2653237319,
+        "RAIL_LINE": "North Jersey Coast Line",
+        "STATION": "Elberon",
+        "MUN_LABEL": "Long Branch City",
+        "COUNTY": "MONMOUTH",
+        "ATIS_ID": "RAIL0040",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          634837.3384394124,
+          533565.8136701584
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -73.9883350561,
+        "LATITUDE": 40.2971470092,
+        "RAIL_LINE": "North Jersey Coast Line",
+        "STATION": "Long Branch",
+        "MUN_LABEL": "Long Branch City",
+        "COUNTY": "MONMOUTH",
+        "ATIS_ID": "RAIL0074",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          627314.5680519119,
+          539442.0076264068
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.0151901084,
+        "LATITUDE": 40.313394033,
+        "RAIL_LINE": "North Jersey Coast Line",
+        "STATION": "Monmouth Park",
+        "MUN_LABEL": "Oceanport Borough",
+        "COUNTY": "MONMOUTH",
+        "ATIS_ID": "RAIL0162",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          620077.3951903284,
+          544255.0537745729
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.0410534159,
+        "LATITUDE": 40.3267123155,
+        "RAIL_LINE": "North Jersey Coast Line",
+        "STATION": "Little Silver",
+        "MUN_LABEL": "Little Silver Borough",
+        "COUNTY": "MONMOUTH",
+        "ATIS_ID": "RAIL0073",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          610700.5346789956,
+          552076.8104407415
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.0745510883,
+        "LATITUDE": 40.3483126249,
+        "RAIL_LINE": "North Jersey Coast Line",
+        "STATION": "Red Bank",
+        "MUN_LABEL": "Red Bank Borough",
+        "COUNTY": "MONMOUTH",
+        "ATIS_ID": "RAIL0130",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          599046.0415838286,
+          567129.4210834876
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.1161320925,
+        "LATITUDE": 40.3897802823,
+        "RAIL_LINE": "North Jersey Coast Line",
+        "STATION": "Middletown",
+        "MUN_LABEL": "Middletown Township",
+        "COUNTY": "MONMOUTH",
+        "ATIS_ID": "RAIL0085",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          578328.6246854104,
+          576373.7661118209
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.1903943659,
+        "LATITUDE": 40.4153802673,
+        "RAIL_LINE": "North Jersey Coast Line",
+        "STATION": "Hazlet",
+        "MUN_LABEL": "Hazlet Township",
+        "COUNTY": "MONMOUTH",
+        "ATIS_ID": "RAIL0059",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          569049.9408149943,
+          578087.2561231554
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.2236997002,
+        "LATITUDE": 40.4201684672,
+        "RAIL_LINE": "North Jersey Coast Line",
+        "STATION": "Aberdeen-Matawan",
+        "MUN_LABEL": "Matawan Borough",
+        "COUNTY": "MONMOUTH",
+        "ATIS_ID": "RAIL0082",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          553278.9283938296,
+          601408.5736536533
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.2801372897,
+        "LATITUDE": 40.4843101033,
+        "RAIL_LINE": "North Jersey Coast Line",
+        "STATION": "South Amboy",
+        "MUN_LABEL": "South Amboy City",
+        "COUNTY": "MIDDLESEX",
+        "ATIS_ID": "RAIL0139",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          555045.146318078,
+          610543.2266441584
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.2737031339,
+        "LATITUDE": 40.5093734917,
+        "RAIL_LINE": "North Jersey Coast Line",
+        "STATION": "Perth Amboy",
+        "MUN_LABEL": "Perth Amboy City",
+        "COUNTY": "MIDDLESEX",
+        "ATIS_ID": "RAIL0119",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          553877.5535089113,
+          627747.700109154
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.2777464473,
+        "LATITUDE": 40.5566095552,
+        "RAIL_LINE": "North Jersey Coast Line",
+        "STATION": "Woodbridge",
+        "MUN_LABEL": "Woodbridge Township",
+        "COUNTY": "MIDDLESEX",
+        "ATIS_ID": "RAIL0158",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          553936.5323935784,
+          635426.6220872402
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.2774643693,
+        "LATITUDE": 40.5776883927,
+        "RAIL_LINE": "North Jersey Coast Line",
+        "STATION": "Avenel",
+        "MUN_LABEL": "Woodbridge Township",
+        "COUNTY": "MIDDLESEX",
+        "ATIS_ID": "RAIL0011",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          554090.1977686621,
+          645883.0358856544
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.2768157286,
+        "LATITUDE": 40.6063908804,
+        "RAIL_LINE": "NEC / NJCL",
+        "STATION": "Rahway",
+        "MUN_LABEL": "Rahway City",
+        "COUNTY": "UNION",
+        "ATIS_ID": "RAIL0127",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          561020.5969655775,
+          654315.6161333248
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.2517685855,
+        "LATITUDE": 40.6294878012,
+        "RAIL_LINE": "NEC / NJCL",
+        "STATION": "Linden",
+        "MUN_LABEL": "Linden City",
+        "COUNTY": "UNION",
+        "ATIS_ID": "RAIL0070",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          571133.8083664104,
+          668325.007405825
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.215167541,
+        "LATITUDE": 40.6678598879,
+        "RAIL_LINE": "NEC / NJCL",
+        "STATION": "Elizabeth",
+        "MUN_LABEL": "Elizabeth City",
+        "COUNTY": "UNION",
+        "ATIS_ID": "RAIL0041",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          573617.5776770785,
+          672853.8812220693
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.2061589107,
+        "LATITUDE": 40.6802692675,
+        "RAIL_LINE": "NEC / NJCL",
+        "STATION": "North Elizabeth",
+        "MUN_LABEL": "Elizabeth City",
+        "COUNTY": "UNION",
+        "ATIS_ID": "RAIL0109",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          577870.1492244117,
+          681664.8386657387
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.1907136336,
+        "LATITUDE": 40.7044153021,
+        "RAIL_LINE": "NEC / NJCL",
+        "STATION": "Newark Airport",
+        "MUN_LABEL": "Newark City",
+        "COUNTY": "ESSEX",
+        "ATIS_ID": "RAIL0164",
+        "AMTRAK": "Y"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          585083.7689834945,
+          692562.4645082355
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.1645440776,
+        "LATITUDE": 40.7342564244,
+        "RAIL_LINE": "NEC / NJCL / RVL",
+        "STATION": "Newark Penn Station",
+        "MUN_LABEL": "Newark City",
+        "COUNTY": "ESSEX",
+        "ATIS_ID": "RAIL0107",
+        "AMTRAK": "Y"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          382317.76900449395,
+          668089.0803842396
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.8958569996,
+        "LATITUDE": 40.6668850033,
+        "RAIL_LINE": "Raritan Valley Line",
+        "STATION": "High Bridge",
+        "MUN_LABEL": "High Bridge Borough",
+        "COUNTY": "HUNTERDON",
+        "ATIS_ID": "RAIL0060",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          398945.6448694132,
+          657102.0232901573
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.8357630694,
+        "LATITUDE": 40.636915347,
+        "RAIL_LINE": "Raritan Valley Line",
+        "STATION": "Lebanon",
+        "MUN_LABEL": "Lebanon Borough",
+        "COUNTY": "HUNTERDON",
+        "ATIS_ID": "RAIL0068",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          416989.2646219954,
+          649281.3010707349
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.7706586699,
+        "LATITUDE": 40.6156178793,
+        "RAIL_LINE": "Raritan Valley Line",
+        "STATION": "White House",
+        "MUN_LABEL": "Readington Township",
+        "COUNTY": "HUNTERDON",
+        "ATIS_ID": "RAIL0157",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          441085.6744343303,
+          640625.3469259888
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.6837924956,
+        "LATITUDE": 40.5920274913,
+        "RAIL_LINE": "Raritan Valley Line",
+        "STATION": "North Branch",
+        "MUN_LABEL": "Branchburg Township",
+        "COUNTY": "SOMERSET",
+        "ATIS_ID": "RAIL0108",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          454800.0348008275,
+          632938.6369057372
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.6343650405,
+        "LATITUDE": 40.5709948382,
+        "RAIL_LINE": "Raritan Valley Line",
+        "STATION": "Raritan",
+        "MUN_LABEL": "Raritan Borough",
+        "COUNTY": "SOMERSET",
+        "ATIS_ID": "RAIL0129",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          460462.84434133023,
+          631137.8449036554
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.613971315,
+        "LATITUDE": 40.566073407,
+        "RAIL_LINE": "Raritan Valley Line",
+        "STATION": "Somerville",
+        "MUN_LABEL": "Somerville Borough",
+        "COUNTY": "SOMERSET",
+        "ATIS_ID": "RAIL0138",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          477750.284831997,
+          628877.2644510716
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.5517385847,
+        "LATITUDE": 40.5599125168,
+        "RAIL_LINE": "Raritan Valley Line",
+        "STATION": "Bridgewater",
+        "MUN_LABEL": "Bridgewater Township",
+        "COUNTY": "SOMERSET",
+        "ATIS_ID": "RAIL0024",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          483620.06705566123,
+          629245.0117470697
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.530612075,
+        "LATITUDE": 40.5609295503,
+        "RAIL_LINE": "Raritan Valley Line",
+        "STATION": "Bound Brook",
+        "MUN_LABEL": "Bound Brook Borough",
+        "COUNTY": "SOMERSET",
+        "ATIS_ID": "RAIL0021",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          502389.52656391263,
+          640151.8744477406
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.4630380921,
+        "LATITUDE": 40.5908680708,
+        "RAIL_LINE": "Raritan Valley Line",
+        "STATION": "Dunellen",
+        "MUN_LABEL": "Dunellen Borough",
+        "COUNTY": "MIDDLESEX",
+        "ATIS_ID": "RAIL0036",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          514288.97061274573,
+          650199.1844055727
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.4201561654,
+        "LATITUDE": 40.6184270724,
+        "RAIL_LINE": "Raritan Valley Line",
+        "STATION": "Plainfield",
+        "MUN_LABEL": "Plainfield City",
+        "COUNTY": "UNION",
+        "ATIS_ID": "RAIL0120",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          518925.27466033027,
+          654113.1486904919
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.4034388202,
+        "LATITUDE": 40.6291584192,
+        "RAIL_LINE": "Raritan Valley Line",
+        "STATION": "Netherwood",
+        "MUN_LABEL": "Plainfield City",
+        "COUNTY": "UNION",
+        "ATIS_ID": "RAIL0102",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          523975.55294558033,
+          658404.9347263202
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.3852225659,
+        "LATITUDE": 40.6409229894,
+        "RAIL_LINE": "Raritan Valley Line",
+        "STATION": "Fanwood",
+        "MUN_LABEL": "Fanwood Borough",
+        "COUNTY": "UNION",
+        "ATIS_ID": "RAIL0044",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          534403.6006589942,
+          661529.0177169889
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.3476244058,
+        "LATITUDE": 40.6494552983,
+        "RAIL_LINE": "Raritan Valley Line",
+        "STATION": "Westfield",
+        "MUN_LABEL": "Westfield Town",
+        "COUNTY": "UNION",
+        "ATIS_ID": "RAIL0155",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          540724.9292236604,
+          662673.9045348242
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.3248336884,
+        "LATITUDE": 40.6525657567,
+        "RAIL_LINE": "Raritan Valley Line",
+        "STATION": "Garwood",
+        "MUN_LABEL": "Garwood Borough",
+        "COUNTY": "UNION",
+        "ATIS_ID": "RAIL0047",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          546814.1453916617,
+          663781.6792221516
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.3028777964,
+        "LATITUDE": 40.6555712673,
+        "RAIL_LINE": "Raritan Valley Line",
+        "STATION": "Cranford",
+        "MUN_LABEL": "Cranford Township",
+        "COUNTY": "UNION",
+        "ATIS_ID": "RAIL0032",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          446095.02366757765,
+          687255.7713814899
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.6660710105,
+        "LATITUDE": 40.720057427,
+        "RAIL_LINE": "Gladstone Branch/M&E",
+        "STATION": "Gladstone",
+        "MUN_LABEL": "Peapack-Gladstone Borough",
+        "COUNTY": "SOMERSET",
+        "ATIS_ID": "RAIL0049",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          448196.80784982815,
+          683143.4492255747
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.6584612705,
+        "LATITUDE": 40.7087796856,
+        "RAIL_LINE": "Gladstone Branch/M&E",
+        "STATION": "Peapack",
+        "MUN_LABEL": "Peapack-Gladstone Borough",
+        "COUNTY": "SOMERSET",
+        "ATIS_ID": "RAIL0117",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          455024.59701574594,
+          674729.9913149849
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.6337853866,
+        "LATITUDE": 40.6857156717,
+        "RAIL_LINE": "Gladstone Branch/M&E",
+        "STATION": "Far Hills",
+        "MUN_LABEL": "Far Hills Borough",
+        "COUNTY": "SOMERSET",
+        "ATIS_ID": "RAIL0045",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          472435.43292891234,
+          686047.6514224038
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.5710343484,
+        "LATITUDE": 40.7168387082,
+        "RAIL_LINE": "Gladstone Branch/M&E",
+        "STATION": "Bernardsville",
+        "MUN_LABEL": "Bernardsville Borough",
+        "COUNTY": "SOMERSET",
+        "ATIS_ID": "RAIL0018",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          476803.208970245,
+          684065.0815686584
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.5552721641,
+        "LATITUDE": 40.7114051191,
+        "RAIL_LINE": "Gladstone Branch/M&E",
+        "STATION": "Basking Ridge",
+        "MUN_LABEL": "Bernards Township",
+        "COUNTY": "SOMERSET",
+        "ATIS_ID": "RAIL0012",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          478398.1562396623,
+          674400.3157932386
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.5494988778,
+        "LATITUDE": 40.6848775999,
+        "RAIL_LINE": "Gladstone Branch/M&E",
+        "STATION": "Lyons",
+        "MUN_LABEL": "Bernards Township",
+        "COUNTY": "SOMERSET",
+        "ATIS_ID": "RAIL0076",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          485580.5733052455,
+          670261.3102917373
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.523595142,
+        "LATITUDE": 40.6735240387,
+        "RAIL_LINE": "Gladstone Branch/M&E",
+        "STATION": "Millington",
+        "MUN_LABEL": "Long Hill Township",
+        "COUNTY": "MORRIS",
+        "ATIS_ID": "RAIL0088",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          493850.70669933036,
+          670643.9722560719
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.4937780745,
+        "LATITUDE": 40.6745767076,
+        "RAIL_LINE": "Gladstone Branch/M&E",
+        "STATION": "Stirling",
+        "MUN_LABEL": "Long Hill Township",
+        "COUNTY": "MORRIS",
+        "ATIS_ID": "RAIL0143",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          500919.146958746,
+          671987.4210127369
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.4682915189,
+        "LATITUDE": 40.6782603518,
+        "RAIL_LINE": "Gladstone Branch/M&E",
+        "STATION": "Gillette",
+        "MUN_LABEL": "Long Hill Township",
+        "COUNTY": "MORRIS",
+        "ATIS_ID": "RAIL0048",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          518959.45766282827,
+          678108.9930871576
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.4032205028,
+        "LATITUDE": 40.6950281177,
+        "RAIL_LINE": "Gladstone Branch/M&E",
+        "STATION": "Murray Hill",
+        "MUN_LABEL": "New Providence Borough",
+        "COUNTY": "UNION",
+        "ATIS_ID": "RAIL0099",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          508023.982158497,
+          673474.7638385743
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.4426705906,
+        "LATITUDE": 40.6823332965,
+        "RAIL_LINE": "Gladstone Branch/M&E",
+        "STATION": "Berkeley Heights",
+        "MUN_LABEL": "Berkeley Heights Township",
+        "COUNTY": "UNION",
+        "ATIS_ID": "RAIL0017",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          523603.0162890777,
+          684338.8999186531
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.3864443197,
+        "LATITUDE": 40.7121141398,
+        "RAIL_LINE": "Gladstone Branch/M&E",
+        "STATION": "New Providence",
+        "MUN_LABEL": "New Providence Borough",
+        "COUNTY": "UNION",
+        "ATIS_ID": "RAIL0104",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          531554.6312913299,
+          685961.9284967408
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.3577497814,
+        "LATITUDE": 40.7165376065,
+        "RAIL_LINE": "Morristown Line/M&E",
+        "STATION": "Summit",
+        "MUN_LABEL": "Summit City",
+        "COUNTY": "UNION",
+        "ATIS_ID": "RAIL0145",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          540959.4287546612,
+          689158.1005820706
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.3237971126,
+        "LATITUDE": 40.7252643444,
+        "RAIL_LINE": "Morristown Line/M&E",
+        "STATION": "Short Hills",
+        "MUN_LABEL": "Millburn Township",
+        "COUNTY": "ESSEX",
+        "ATIS_ID": "RAIL0136",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          546498.3599339947,
+          689304.8063254058
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.3038106344,
+        "LATITUDE": 40.7256348159,
+        "RAIL_LINE": "Morristown Line/M&E",
+        "STATION": "Millburn",
+        "MUN_LABEL": "Millburn Township",
+        "COUNTY": "ESSEX",
+        "ATIS_ID": "RAIL0087",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          554366.0407209136,
+          691336.4725376517
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.2754039995,
+        "LATITUDE": 40.7311600036,
+        "RAIL_LINE": "Morristown Line/M&E",
+        "STATION": "Maplewood",
+        "MUN_LABEL": "Maplewood Township",
+        "COUNTY": "ESSEX",
+        "ATIS_ID": "RAIL0081",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          558459.2316814959,
+          696716.9860548228
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.2605809447,
+        "LATITUDE": 40.7458997959,
+        "RAIL_LINE": "Morristown Line/M&E",
+        "STATION": "South Orange",
+        "MUN_LABEL": "South Orange Village Township",
+        "COUNTY": "ESSEX",
+        "ATIS_ID": "RAIL0140",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          560553.9955365807,
+          700189.9108674899
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.2529851381,
+        "LATITUDE": 40.7554169968,
+        "RAIL_LINE": "Morristown Line/M&E",
+        "STATION": "Mountain Station",
+        "MUN_LABEL": "South Orange Village Township",
+        "COUNTY": "ESSEX",
+        "ATIS_ID": "RAIL0097",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          563107.4661514126,
+          704374.3677216545
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.2437235987,
+        "LATITUDE": 40.7668831495,
+        "RAIL_LINE": "Morristown Line/M&E",
+        "STATION": "Highland Avenue",
+        "MUN_LABEL": "City of Orange Township",
+        "COUNTY": "ESSEX",
+        "ATIS_ID": "RAIL0061",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          566036.0875907466,
+          706206.6570360735
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.2331300359,
+        "LATITUDE": 40.7718887706,
+        "RAIL_LINE": "Morristown Line/M&E",
+        "STATION": "Orange",
+        "MUN_LABEL": "City of Orange Township",
+        "COUNTY": "ESSEX",
+        "ATIS_ID": "RAIL0112",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          569882.6904618293,
+          703889.1885739043
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.219268076,
+        "LATITUDE": 40.765494435,
+        "RAIL_LINE": "Morristown Line/M&E",
+        "STATION": "Brick Church",
+        "MUN_LABEL": "East Orange City",
+        "COUNTY": "ESSEX",
+        "ATIS_ID": "RAIL0023",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          572189.0319777466,
+          702272.2236319855
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.2109607206,
+        "LATITUDE": 40.7610353582,
+        "RAIL_LINE": "Morristown Line/M&E",
+        "STATION": "East Orange",
+        "MUN_LABEL": "East Orange City",
+        "COUNTY": "ESSEX",
+        "ATIS_ID": "RAIL0037",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          583027.4879910797,
+          697422.7841839045
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.1718988155,
+        "LATITUDE": 40.7476191905,
+        "RAIL_LINE": "Morris & Essex Line",
+        "STATION": "Newark Broad Street",
+        "MUN_LABEL": "Newark City",
+        "COUNTY": "ESSEX",
+        "ATIS_ID": "RAIL0106",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          632765.7054435797,
+          698546.2281312421
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -73.9923569998,
+        "LATITUDE": 40.7500530033,
+        "RAIL_LINE": "NEC / NJCL / M&E",
+        "STATION": "New York Penn Station",
+        "MUN_LABEL": "New York City, NY",
+        "COUNTY": "NEW YORK CITY, NY",
+        "ATIS_ID": "RAIL0105",
+        "AMTRAK": "Y"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          428376.4429630786,
+          755539.6761519909
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.7306454406,
+        "LATITUDE": 40.9073843279,
+        "RAIL_LINE": "Montclair-Boonton Line/M&E",
+        "STATION": "Mount Olive",
+        "MUN_LABEL": "Mount Olive Township",
+        "COUNTY": "MORRIS",
+        "ATIS_ID": "RAIL0093",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          399514.6985213272,
+          735464.3642685711
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.8347894633,
+        "LATITUDE": 40.8520234223,
+        "RAIL_LINE": "Montclair-Boonton Line/M&E",
+        "STATION": "Hackettstown",
+        "MUN_LABEL": "Hackettstown Town",
+        "COUNTY": "WARREN",
+        "ATIS_ID": "RAIL0054",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          434830.8368784115,
+          751944.6351137385
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.7072624691,
+        "LATITUDE": 40.8975605608,
+        "RAIL_LINE": "Montclair-Boonton Line/M&E",
+        "STATION": "Netcong",
+        "MUN_LABEL": "Netcong Borough",
+        "COUNTY": "MORRIS",
+        "ATIS_ID": "RAIL0101",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          446316.88838132843,
+          754387.6905950755
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.6657284348,
+        "LATITUDE": 40.9043337599,
+        "RAIL_LINE": "Montclair-Boonton Line/M&E",
+        "STATION": "Lake Hopatcong",
+        "MUN_LABEL": "Roxbury Township",
+        "COUNTY": "MORRIS",
+        "ATIS_ID": "RAIL0067",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          476695.2882543281,
+          746731.2360917404
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.5558053437,
+        "LATITUDE": 40.8834228005,
+        "RAIL_LINE": "Montclair-Boonton Line/M&E",
+        "STATION": "Dover",
+        "MUN_LABEL": "Dover Town",
+        "COUNTY": "MORRIS",
+        "ATIS_ID": "RAIL0035",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          497237.0841129124,
+          746899.1734199077
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.4815107597,
+        "LATITUDE": 40.8838957981,
+        "RAIL_LINE": "Montclair-Boonton Line/M&E",
+        "STATION": "Denville",
+        "MUN_LABEL": "Denville Township",
+        "COUNTY": "MORRIS",
+        "ATIS_ID": "RAIL0034",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          497122.8323729113,
+          743974.9164731577
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.4819261657,
+        "LATITUDE": 40.8758689239,
+        "RAIL_LINE": "Morristown Line/M&E",
+        "STATION": "Mount Tabor",
+        "MUN_LABEL": "Denville Township",
+        "COUNTY": "MORRIS",
+        "ATIS_ID": "RAIL0094",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          498157.51468674466,
+          726797.9603415728
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.4781998682,
+        "LATITUDE": 40.8287181622,
+        "RAIL_LINE": "Morristown Line/M&E",
+        "STATION": "Morris Plains",
+        "MUN_LABEL": "Morris Plains Borough",
+        "COUNTY": "MORRIS",
+        "ATIS_ID": "RAIL0091",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          499279.90647082776,
+          715322.5535024032
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.4741560263,
+        "LATITUDE": 40.797217539,
+        "RAIL_LINE": "Morristown Line/M&E",
+        "STATION": "Morristown",
+        "MUN_LABEL": "Morristown Town",
+        "COUNTY": "MORRIS",
+        "ATIS_ID": "RAIL0092",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          507797.87762383,
+          708699.2563815713
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.4434040251,
+        "LATITUDE": 40.7790256431,
+        "RAIL_LINE": "Morristown Line/M&E",
+        "STATION": "Convent Station",
+        "MUN_LABEL": "Morris Township",
+        "COUNTY": "MORRIS",
+        "ATIS_ID": "RAIL0030",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          515635.45053132996,
+          700708.0427052379
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.4151298791,
+        "LATITUDE": 40.757072405,
+        "RAIL_LINE": "Morristown Line/M&E",
+        "STATION": "Madison",
+        "MUN_LABEL": "Madison Borough",
+        "COUNTY": "MORRIS",
+        "ATIS_ID": "RAIL0077",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          524000.2546678297,
+          694568.1570191532
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.3849629612,
+        "LATITUDE": 40.7401922181,
+        "RAIL_LINE": "Morristown Line/M&E",
+        "STATION": "Chatham",
+        "MUN_LABEL": "Chatham Borough",
+        "COUNTY": "MORRIS",
+        "ATIS_ID": "RAIL0027",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          510489.37781824544,
+          747659.4163219854
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.4335781743,
+        "LATITUDE": 40.8859649816,
+        "RAIL_LINE": "Montclair-Boonton Line/M&E",
+        "STATION": "Mountain Lakes",
+        "MUN_LABEL": "Mountain Lakes Borough",
+        "COUNTY": "MORRIS",
+        "ATIS_ID": "RAIL0096",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          517629.09975924715,
+          754011.669365488
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.4077304326,
+        "LATITUDE": 40.9033837712,
+        "RAIL_LINE": "Montclair-Boonton Line/M&E",
+        "STATION": "Boonton",
+        "MUN_LABEL": "Boonton Town",
+        "COUNTY": "MORRIS",
+        "ATIS_ID": "RAIL0020",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          535295.250122413,
+          761128.3260639086
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.3437714579,
+        "LATITUDE": 40.9228496114,
+        "RAIL_LINE": "Montclair-Boonton Line/M&E",
+        "STATION": "Towaco",
+        "MUN_LABEL": "Montville Township",
+        "COUNTY": "MORRIS",
+        "ATIS_ID": "RAIL0147",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          546885.252204828,
+          761623.4992861524
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.3018246275,
+        "LATITUDE": 40.9241443687,
+        "RAIL_LINE": "Montclair-Boonton Line/M&E",
+        "STATION": "Lincoln Park",
+        "MUN_LABEL": "Lincoln Park Borough",
+        "COUNTY": "MORRIS",
+        "ATIS_ID": "RAIL0069",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          556295.403331995,
+          757942.9886025712
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.2678052337,
+        "LATITUDE": 40.9139781491,
+        "RAIL_LINE": "Montclair-Boonton Line/M&E",
+        "STATION": "Mountain View-Wayne",
+        "MUN_LABEL": "Wayne Township",
+        "COUNTY": "PASSAIC",
+        "ATIS_ID": "RAIL0098",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          565295.8804097474,
+          745835.6279748231
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.2353706103,
+        "LATITUDE": 40.880674331,
+        "RAIL_LINE": "Montclair-Boonton Line/M&E",
+        "STATION": "Little Falls",
+        "MUN_LABEL": "Little Falls Township",
+        "COUNTY": "PASSAIC",
+        "ATIS_ID": "RAIL0072",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          574416.3405152448,
+          737437.2750209048
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.2024892048,
+        "LATITUDE": 40.8575411438,
+        "RAIL_LINE": "Montclair-Boonton Line/M&E",
+        "STATION": "Montclair Heights",
+        "MUN_LABEL": "Montclair Township",
+        "COUNTY": "ESSEX",
+        "ATIS_ID": "RAIL0089",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          573648.6852264106,
+          734222.4694426581
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.2053036042,
+        "LATITUDE": 40.8487238624,
+        "RAIL_LINE": "Montclair-Boonton Line/M&E",
+        "STATION": "Mountain Avenue",
+        "MUN_LABEL": "Montclair Township",
+        "COUNTY": "ESSEX",
+        "ATIS_ID": "RAIL0095",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          572534.9978212453,
+          731775.0363454074
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.2093587255,
+        "LATITUDE": 40.8420160403,
+        "RAIL_LINE": "Montclair-Boonton Line/M&E",
+        "STATION": "Upper Montclair",
+        "MUN_LABEL": "Montclair Township",
+        "COUNTY": "ESSEX",
+        "ATIS_ID": "RAIL0150",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          573221.93378333,
+          727225.0070596561
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.2069308385,
+        "LATITUDE": 40.8295202217,
+        "RAIL_LINE": "Montclair-Boonton Line/M&E",
+        "STATION": "Watchung Avenue",
+        "MUN_LABEL": "Montclair Township",
+        "COUNTY": "ESSEX",
+        "ATIS_ID": "RAIL0153",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          572491.8197579943,
+          722750.3447491527
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.2096228766,
+        "LATITUDE": 40.8172442054,
+        "RAIL_LINE": "Montclair-Boonton Line/M&E",
+        "STATION": "Walnut Street",
+        "MUN_LABEL": "Montclair Township",
+        "COUNTY": "ESSEX",
+        "ATIS_ID": "RAIL0152",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          572764.175840579,
+          719448.5796991587
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.2086784709,
+        "LATITUDE": 40.808178555,
+        "RAIL_LINE": "Montclair-Boonton Line/M&E",
+        "STATION": "Bay Street-Montclair",
+        "MUN_LABEL": "Montclair Township",
+        "COUNTY": "ESSEX",
+        "ATIS_ID": "RAIL0014",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          573889.8451771624,
+          716688.4549700692
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.2046454566,
+        "LATITUDE": 40.800591812,
+        "RAIL_LINE": "Montclair-Boonton Line/M&E",
+        "STATION": "Glen Ridge",
+        "MUN_LABEL": "Glen Ridge Borough",
+        "COUNTY": "ESSEX",
+        "ATIS_ID": "RAIL0050",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          575167.7697866634,
+          713820.7822277397
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.2000647715,
+        "LATITUDE": 40.7927082787,
+        "RAIL_LINE": "Montclair-Boonton Line/M&E",
+        "STATION": "Bloomfield",
+        "MUN_LABEL": "Bloomfield Township",
+        "COUNTY": "ESSEX",
+        "ATIS_ID": "RAIL0019",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          575629.2370395772,
+          710180.7888515741
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.1984432603,
+        "LATITUDE": 40.7827123118,
+        "RAIL_LINE": "Montclair-Boonton Line/M&E",
+        "STATION": "Watsessing",
+        "MUN_LABEL": "Bloomfield Township",
+        "COUNTY": "ESSEX",
+        "ATIS_ID": "RAIL0154",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          619112.5067432493,
+          453355.21075226105
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.0461811589,
+        "LATITUDE": 40.0771889419,
+        "RAIL_LINE": "North Jersey Coast Line",
+        "STATION": "Bay Head",
+        "MUN_LABEL": "Bay Head Borough",
+        "COUNTY": "OCEAN",
+        "ATIS_ID": "RAIL0013",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          300860.324636247,
+          409826.9272901565
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -75.1823239998,
+        "LATITUDE": 39.9565690069,
+        "RAIL_LINE": "Atlantic City Line",
+        "STATION": "30th Street Station",
+        "MUN_LABEL": "Philadelphia, PA",
+        "COUNTY": "PHILADELPHIA, PA",
+        "ATIS_ID": "RAIL0001",
+        "AMTRAK": "Y"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          340228.7941274941,
+          399314.03853907436
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -75.0416586657,
+        "LATITUDE": 39.9284497766,
+        "RAIL_LINE": "Atlantic City Line",
+        "STATION": "Cherry Hill",
+        "MUN_LABEL": "Cherry Hill Township",
+        "COUNTY": "CAMDEN",
+        "ATIS_ID": "RAIL0028",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          351651.66662291065,
+          364755.48856182396
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -75.0002365871,
+        "LATITUDE": 39.8337585956,
+        "RAIL_LINE": "Atlantic City Line",
+        "STATION": "Lindenwold",
+        "MUN_LABEL": "Lindenwold Borough",
+        "COUNTY": "CAMDEN",
+        "ATIS_ID": "RAIL0071",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          377552.3067506626,
+          346361.7136696577
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.907706413,
+        "LATITUDE": 39.78362152,
+        "RAIL_LINE": "Atlantic City Line",
+        "STATION": "Atco",
+        "MUN_LABEL": "Waterford Township",
+        "COUNTY": "CAMDEN",
+        "ATIS_ID": "RAIL0009",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          407776.484491162,
+          290896.9738775715
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.7994963263,
+        "LATITUDE": 39.6316727105,
+        "RAIL_LINE": "Atlantic City Line",
+        "STATION": "Hammonton",
+        "MUN_LABEL": "Hammonton Town",
+        "COUNTY": "ATLANTIC",
+        "ATIS_ID": "RAIL0055",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          450336.6743049957,
+          252501.34233565629
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.6481539439,
+        "LATITUDE": 39.5265465128,
+        "RAIL_LINE": "Atlantic City Line",
+        "STATION": "Egg Harbor City",
+        "MUN_LABEL": "Egg Harbor City",
+        "COUNTY": "ATLANTIC",
+        "ATIS_ID": "RAIL0039",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          491534.53055741265,
+          215235.8630609885
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.5020903555,
+        "LATITUDE": 39.4243241196,
+        "RAIL_LINE": "Atlantic City Line",
+        "STATION": "Absecon",
+        "MUN_LABEL": "Absecon City",
+        "COUNTY": "ATLANTIC",
+        "ATIS_ID": "RAIL0002",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          508670.8699723296,
+          193016.9839424044
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.4414759998,
+        "LATITUDE": 39.3633040029,
+        "RAIL_LINE": "Atlantic City Line",
+        "STATION": "Atlantic City",
+        "MUN_LABEL": "Atlantic City",
+        "COUNTY": "ATLANTIC",
+        "ATIS_ID": "RAIL0010",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          587614.0152353272,
+          830750.8196926564
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.1534376185,
+        "LATITUDE": 41.113539882,
+        "RAIL_LINE": "Main/Bergen Line",
+        "STATION": "Suffern",
+        "MUN_LABEL": "Ramapo Town, NY",
+        "COUNTY": "ROCKLAND, NY",
+        "ATIS_ID": "RAIL0144",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          589523.9385808297,
+          823776.2870538235
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.1466086178,
+        "LATITUDE": 41.0943751886,
+        "RAIL_LINE": "Main/Bergen Line",
+        "STATION": "Mahwah",
+        "MUN_LABEL": "Mahwah Township",
+        "COUNTY": "BERGEN",
+        "ATIS_ID": "RAIL0078",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          590836.3372027464,
+          810130.5502377376
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.1420501806,
+        "LATITUDE": 41.0569056248,
+        "RAIL_LINE": "Main/Bergen Line",
+        "STATION": "Ramsey",
+        "MUN_LABEL": "Ramsey Borough",
+        "COUNTY": "BERGEN",
+        "ATIS_ID": "RAIL0128",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          593927.7155344114,
+          800682.3608008251
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.1309852498,
+        "LATITUDE": 41.0309367298,
+        "RAIL_LINE": "Main/Bergen Line",
+        "STATION": "Allendale",
+        "MUN_LABEL": "Allendale Borough",
+        "COUNTY": "BERGEN",
+        "ATIS_ID": "RAIL0003",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          596043.4091376625,
+          794082.5508377403
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.1234196353,
+        "LATITUDE": 41.0127966107,
+        "RAIL_LINE": "Main/Bergen Line",
+        "STATION": "Waldwick",
+        "MUN_LABEL": "Waldwick Borough",
+        "COUNTY": "BERGEN",
+        "ATIS_ID": "RAIL0151",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          598799.570291996,
+          788473.5282631516
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.1135220084,
+        "LATITUDE": 40.9973677461,
+        "RAIL_LINE": "Main/Bergen Line",
+        "STATION": "Ho-Ho-Kus",
+        "MUN_LABEL": "Ho-Ho-Kus Borough",
+        "COUNTY": "BERGEN",
+        "ATIS_ID": "RAIL0064",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          596881.2158609964,
+          782382.5952350721
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.1205678407,
+        "LATITUDE": 40.9806722138,
+        "RAIL_LINE": "Main/Bergen Line",
+        "STATION": "Ridgewood",
+        "MUN_LABEL": "Ridgewood Village",
+        "COUNTY": "BERGEN",
+        "ATIS_ID": "RAIL0131",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          593352.832825914,
+          775654.199571155
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.1334497908,
+        "LATITUDE": 40.9622451281,
+        "RAIL_LINE": "Main/Bergen Line",
+        "STATION": "Glen Rock-Main",
+        "MUN_LABEL": "Glen Rock Borough",
+        "COUNTY": "BERGEN",
+        "ATIS_ID": "RAIL0052",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          588144.0771673284,
+          768452.9984224066
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.1524142541,
+        "LATITUDE": 40.942537223,
+        "RAIL_LINE": "Main/Bergen Line",
+        "STATION": "Hawthorne",
+        "MUN_LABEL": "Hawthorne Borough",
+        "COUNTY": "PASSAIC",
+        "ATIS_ID": "RAIL0058",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          584063.4212866612,
+          758377.8532184064
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.1673245753,
+        "LATITUDE": 40.9149257344,
+        "RAIL_LINE": "Main/Bergen Line",
+        "STATION": "Paterson",
+        "MUN_LABEL": "Paterson City",
+        "COUNTY": "PASSAIC",
+        "ATIS_ID": "RAIL0116",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          588042.170218911,
+          741293.3175056577
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.1531728494,
+        "LATITUDE": 40.8679880582,
+        "RAIL_LINE": "Main/Bergen Line",
+        "STATION": "Clifton",
+        "MUN_LABEL": "Clifton City",
+        "COUNTY": "PASSAIC",
+        "ATIS_ID": "RAIL0029",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          593391.3491530791,
+          734555.3595249057
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.1339329385,
+        "LATITUDE": 40.84943323,
+        "RAIL_LINE": "Main/Bergen Line",
+        "STATION": "Passaic",
+        "MUN_LABEL": "Passaic City",
+        "COUNTY": "PASSAIC",
+        "ATIS_ID": "RAIL0115",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          594159.2550975792,
+          727976.676816158
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.1312571826,
+        "LATITUDE": 40.8313664815,
+        "RAIL_LINE": "Main/Bergen Line",
+        "STATION": "Delawanna",
+        "MUN_LABEL": "Clifton City",
+        "COUNTY": "PASSAIC",
+        "ATIS_ID": "RAIL0033",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          596124.9263630807,
+          722558.3900805712
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.1242375158,
+        "LATITUDE": 40.8164708058,
+        "RAIL_LINE": "Main/Bergen Line",
+        "STATION": "Lyndhurst",
+        "MUN_LABEL": "Lyndhurst Township",
+        "COUNTY": "BERGEN",
+        "ATIS_ID": "RAIL0075",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          594502.5870880783,
+          775325.9715530723
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.1292916065,
+        "LATITUDE": 40.9613308792,
+        "RAIL_LINE": "Main/Bergen Line",
+        "STATION": "Glen Rock-Boro Hall",
+        "MUN_LABEL": "Glen Rock Borough",
+        "COUNTY": "BERGEN",
+        "ATIS_ID": "RAIL0051",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          596658.7779856622,
+          767534.7643664852
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.1216063313,
+        "LATITUDE": 40.9399197655,
+        "RAIL_LINE": "Main/Bergen Line",
+        "STATION": "Radburn",
+        "MUN_LABEL": "Fair Lawn Borough",
+        "COUNTY": "BERGEN",
+        "ATIS_ID": "RAIL0126",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          598447.7960611619,
+          761200.099870488
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.1152314277,
+        "LATITUDE": 40.9225105413,
+        "RAIL_LINE": "Main/Bergen Line",
+        "STATION": "Broadway",
+        "MUN_LABEL": "Fair Lawn Borough",
+        "COUNTY": "BERGEN",
+        "ATIS_ID": "RAIL0025",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          601976.9110501632,
+          747528.0816109031
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.1026849568,
+        "LATITUDE": 40.8849392706,
+        "RAIL_LINE": "Main/Bergen Line",
+        "STATION": "Plauderville",
+        "MUN_LABEL": "Garfield City",
+        "COUNTY": "BERGEN",
+        "ATIS_ID": "RAIL0121",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          601212.067107413,
+          740868.780953154
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.10555971,
+        "LATITUDE": 40.8666697381,
+        "RAIL_LINE": "Main/Bergen Line",
+        "STATION": "Garfield",
+        "MUN_LABEL": "Garfield City",
+        "COUNTY": "BERGEN",
+        "ATIS_ID": "RAIL0046",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          602653.2292513289,
+          726896.0319958255
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.1005791912,
+        "LATITUDE": 40.8282980176,
+        "RAIL_LINE": "Main/Bergen Line",
+        "STATION": "Rutherford",
+        "MUN_LABEL": "Rutherford Borough",
+        "COUNTY": "BERGEN",
+        "ATIS_ID": "RAIL0134",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          617772.6350360774,
+          830319.1532331556
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.0439927614,
+        "LATITUDE": 41.1119738331,
+        "RAIL_LINE": "Pascack Valley Line",
+        "STATION": "Spring Valley",
+        "MUN_LABEL": "Ramapo Town, NY",
+        "COUNTY": "ROCKLAND, NY",
+        "ATIS_ID": "RAIL0142",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          625885.223797746,
+          822357.6228964031
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.0147119744,
+        "LATITUDE": 41.0900011624,
+        "RAIL_LINE": "Pascack Valley Line",
+        "STATION": "Nanuet",
+        "MUN_LABEL": "Clarkstown Town, NY",
+        "COUNTY": "ROCKLAND, NY",
+        "ATIS_ID": "RAIL0100",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          623853.9040414952,
+          810756.6306784898
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.0223120001,
+        "LATITUDE": 41.0581900032,
+        "RAIL_LINE": "Pascack Valley Line",
+        "STATION": "Pearl River",
+        "MUN_LABEL": "Orangetown, NY",
+        "COUNTY": "ROCKLAND, NY",
+        "ATIS_ID": "RAIL0118",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          622002.8414706625,
+          804440.6915387362
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.0291478869,
+        "LATITUDE": 41.0408817903,
+        "RAIL_LINE": "Pascack Valley Line",
+        "STATION": "Montvale",
+        "MUN_LABEL": "Montvale Borough",
+        "COUNTY": "BERGEN",
+        "ATIS_ID": "RAIL0090",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          620085.4732581638,
+          801308.6420285702
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.0361591415,
+        "LATITUDE": 41.0323131749,
+        "RAIL_LINE": "Pascack Valley Line",
+        "STATION": "Park Ridge",
+        "MUN_LABEL": "Park Ridge Borough",
+        "COUNTY": "BERGEN",
+        "ATIS_ID": "RAIL0114",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          618799.9768134132,
+          790406.1680986583
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.0410265287,
+        "LATITUDE": 41.0024067622,
+        "RAIL_LINE": "Pascack Valley Line",
+        "STATION": "Hillsdale",
+        "MUN_LABEL": "Hillsdale Borough",
+        "COUNTY": "BERGEN",
+        "ATIS_ID": "RAIL0062",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          621114.9715272449,
+          786212.4776671529
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.0327203118,
+        "LATITUDE": 40.9908622062,
+        "RAIL_LINE": "Pascack Valley Line",
+        "STATION": "Westwood",
+        "MUN_LABEL": "Westwood Borough",
+        "COUNTY": "BERGEN",
+        "ATIS_ID": "RAIL0156",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          622598.0637054108,
+          780470.8303578198
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.0274603313,
+        "LATITUDE": 40.9750805867,
+        "RAIL_LINE": "Pascack Valley Line",
+        "STATION": "Emerson",
+        "MUN_LABEL": "Emerson Borough",
+        "COUNTY": "BERGEN",
+        "ATIS_ID": "RAIL0042",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          621944.8084502444,
+          772596.4947285727
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.0299795509,
+        "LATITUDE": 40.9534766457,
+        "RAIL_LINE": "Pascack Valley Line",
+        "STATION": "Oradell",
+        "MUN_LABEL": "Oradell Borough",
+        "COUNTY": "BERGEN",
+        "ATIS_ID": "RAIL0111",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          622213.0661158301,
+          765920.0297350734
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.0291385195,
+        "LATITUDE": 40.9351469433,
+        "RAIL_LINE": "Pascack Valley Line",
+        "STATION": "River Edge",
+        "MUN_LABEL": "River Edge Borough",
+        "COUNTY": "BERGEN",
+        "ATIS_ID": "RAIL0132",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          620626.9990779944,
+          757057.3558594063
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.03504972,
+        "LATITUDE": 40.9108436281,
+        "RAIL_LINE": "Pascack Valley Line",
+        "STATION": "New Bridge Landing",
+        "MUN_LABEL": "River Edge Borough",
+        "COUNTY": "BERGEN",
+        "ATIS_ID": "RAIL0110",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          618246.0924224965,
+          751074.9403308183
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.0437769879,
+        "LATITUDE": 40.8944571908,
+        "RAIL_LINE": "Pascack Valley Line",
+        "STATION": "Anderson Street-Hackensack",
+        "MUN_LABEL": "Hackensack City",
+        "COUNTY": "BERGEN",
+        "ATIS_ID": "RAIL0005",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          616033.9643008299,
+          745430.7462386563
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.0518832967,
+        "LATITUDE": 40.8789960271,
+        "RAIL_LINE": "Pascack Valley Line",
+        "STATION": "Essex Street-Hackensack",
+        "MUN_LABEL": "Hackensack City",
+        "COUNTY": "BERGEN",
+        "ATIS_ID": "RAIL0043",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          613081.2845106609,
+          740276.1217054054
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.0626544737,
+        "LATITUDE": 40.864888224,
+        "RAIL_LINE": "Pascack Valley Line",
+        "STATION": "Teterboro-Williams Ave",
+        "MUN_LABEL": "Hasbrouck Heights Borough",
+        "COUNTY": "BERGEN",
+        "ATIS_ID": "RAIL0146",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          608654.193955414,
+          732596.6560932398
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.0787947527,
+        "LATITUDE": 40.8438685288,
+        "RAIL_LINE": "Pascack Valley Line",
+        "STATION": "Wood-Ridge",
+        "MUN_LABEL": "Wood-Ridge Borough",
+        "COUNTY": "BERGEN",
+        "ATIS_ID": "RAIL0160",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          539535.5680853277,
+          632074.7600245699
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.3293342567,
+        "LATITUDE": 40.568575489,
+        "RAIL_LINE": "Northeast Corridor",
+        "STATION": "Metropark",
+        "MUN_LABEL": "Woodbridge Township",
+        "COUNTY": "MIDDLESEX",
+        "ATIS_ID": "RAIL0083",
+        "AMTRAK": "Y"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          530917.1903089955,
+          621931.3636447415
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.360415919,
+        "LATITUDE": 40.5407725441,
+        "RAIL_LINE": "Northeast Corridor",
+        "STATION": "Metuchen",
+        "MUN_LABEL": "Metuchen Borough",
+        "COUNTY": "MIDDLESEX",
+        "ATIS_ID": "RAIL0084",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          516874.8781705797,
+          614036.109750241
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.41097231,
+        "LATITUDE": 40.519149165,
+        "RAIL_LINE": "Northeast Corridor",
+        "STATION": "Edison",
+        "MUN_LABEL": "Edison Township",
+        "COUNTY": "MIDDLESEX",
+        "ATIS_ID": "RAIL0038",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          507238.4820890799,
+          606076.5108400732
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.4456529738,
+        "LATITUDE": 40.4973205662,
+        "RAIL_LINE": "Northeast Corridor",
+        "STATION": "New Brunswick",
+        "MUN_LABEL": "New Brunswick City",
+        "COUNTY": "MIDDLESEX",
+        "ATIS_ID": "RAIL0103",
+        "AMTRAK": "Y"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          501213.2287196629,
+          598636.0559047386
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.4673292652,
+        "LATITUDE": 40.4769036538,
+        "RAIL_LINE": "Northeast Corridor",
+        "STATION": "Jersey Avenue",
+        "MUN_LABEL": "New Brunswick City",
+        "COUNTY": "MIDDLESEX",
+        "ATIS_ID": "RAIL0065",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          457618.4891376607,
+          540160.4044835716
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.6237510402,
+        "LATITUDE": 40.3163158469,
+        "RAIL_LINE": "Northeast Corridor",
+        "STATION": "Princeton Jct.",
+        "MUN_LABEL": "West Windsor Township",
+        "COUNTY": "MERCER",
+        "ATIS_ID": "RAIL0125",
+        "AMTRAK": "Y"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          447867.53466380585,
+          549580.2882615109
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.6587814603,
+        "LATITUDE": 40.3421326412,
+        "RAIL_LINE": "Northeast Corridor",
+        "STATION": "Princeton",
+        "MUN_LABEL": "Princeton",
+        "COUNTY": "MERCER",
+        "ATIS_ID": "RAIL0124",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          421220.8854238279,
+          504612.2593726516
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.7539180429,
+        "LATITUDE": 40.2185152616,
+        "RAIL_LINE": "Northeast Corridor",
+        "STATION": "Trenton",
+        "MUN_LABEL": "Trenton City",
+        "COUNTY": "MERCER",
+        "ATIS_ID": "RAIL0148",
+        "AMTRAK": "Y"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          435157.15938849375,
+          517978.64471331984
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.7041206898,
+        "LATITUDE": 40.2553079097,
+        "RAIL_LINE": "Northeast Corridor",
+        "STATION": "Hamilton",
+        "MUN_LABEL": "Hamilton Township",
+        "COUNTY": "MERCER",
+        "ATIS_ID": "RAIL0163",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          618622.8505272456,
+          469173.84566957504
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.0476435277,
+        "LATITUDE": 40.1206216819,
+        "RAIL_LINE": "North Jersey Coast Line",
+        "STATION": "Manasquan",
+        "MUN_LABEL": "Manasquan Borough",
+        "COUNTY": "MONMOUTH",
+        "ATIS_ID": "RAIL0079",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          598057.0471707471,
+          720243.9222685695
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.1172932181,
+        "LATITUDE": 40.8100948287,
+        "RAIL_LINE": "Main/Bergen Line",
+        "STATION": "Kingsland",
+        "MUN_LABEL": "Lyndhurst Township",
+        "COUNTY": "BERGEN",
+        "ATIS_ID": "RAIL0066",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          556922.7652662471,
+          668008.5139443204
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.2664019595,
+        "LATITUDE": 40.6671061169,
+        "RAIL_LINE": "Raritan Valley Line",
+        "STATION": "Roselle Park",
+        "MUN_LABEL": "Roselle Park Borough",
+        "COUNTY": "UNION",
+        "ATIS_ID": "RAIL0031",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          601282.3366519138,
+          948688.1159698218
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.1018696137,
+        "LATITUDE": 41.4370819305,
+        "RAIL_LINE": "Port Jervis Line",
+        "STATION": "Salisbury Mills-Cornwall",
+        "MUN_LABEL": "Corwall Town, NY",
+        "COUNTY": "ORANGE, NY",
+        "ATIS_ID": "RAIL0135",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          556159.6962543279,
+          953605.4447178245
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.2663955884,
+        "LATITUDE": 41.4510301295,
+        "RAIL_LINE": "Port Jervis Line",
+        "STATION": "Campbell Hall",
+        "MUN_LABEL": "Hamptonburgh Town, NY",
+        "COUNTY": "ORANGE, NY",
+        "ATIS_ID": "RAIL0026",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          527658.740132995,
+          955844.3277072385
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.3703570827,
+        "LATITUDE": 41.4573392677,
+        "RAIL_LINE": "Port Jervis Line",
+        "STATION": "Middletown",
+        "MUN_LABEL": "Wallkill Town, NY",
+        "COUNTY": "ORANGE, NY",
+        "ATIS_ID": "RAIL0086",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          484116.51160082966,
+          961073.692248486
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.5292250122,
+        "LATITUDE": 41.4717614904,
+        "RAIL_LINE": "Port Jervis Line",
+        "STATION": "Otisville",
+        "MUN_LABEL": "Mount Hope Town, NY",
+        "COUNTY": "ORANGE, NY",
+        "ATIS_ID": "RAIL0113",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          438579.1210484952,
+          925737.5841150731
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.6951114784,
+        "LATITUDE": 41.3746131179,
+        "RAIL_LINE": "Port Jervis Line",
+        "STATION": "Port Jervis",
+        "MUN_LABEL": "Port Jervis City, NY",
+        "COUNTY": "ORANGE, NY",
+        "ATIS_ID": "RAIL0123",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          577188.6774902456,
+          846600.9166013226
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.191070146,
+        "LATITUDE": 41.1571526437,
+        "RAIL_LINE": "Port Jervis Line",
+        "STATION": "Sloatsburg",
+        "MUN_LABEL": "Ramapo Town, NY",
+        "COUNTY": "ROCKLAND, NY",
+        "ATIS_ID": "RAIL0137",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          578782.3015995771,
+          860100.4765444025
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.1851051904,
+        "LATITUDE": 41.1941901299,
+        "RAIL_LINE": "Port Jervis Line",
+        "STATION": "Tuxedo",
+        "MUN_LABEL": "Tuxedo Town, NY",
+        "COUNTY": "ORANGE, NY",
+        "ATIS_ID": "RAIL0149",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          591039.7564153299,
+          896284.860540323
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.1400202893,
+        "LATITUDE": 41.2933758203,
+        "RAIL_LINE": "Port Jervis Line",
+        "STATION": "Harriman",
+        "MUN_LABEL": "Woodbury Town, NY",
+        "COUNTY": "ORANGE, NY",
+        "ATIS_ID": "RAIL0057",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          387091.5005987473,
+          660158.777019158
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.8785249258,
+        "LATITUDE": 40.6451740598,
+        "RAIL_LINE": "Raritan Valley Line",
+        "STATION": "Annandale",
+        "MUN_LABEL": "Clinton Township",
+        "COUNTY": "HUNTERDON",
+        "ATIS_ID": "RAIL0006",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          589862.2292428277,
+          816737.3867615685
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.145485072,
+        "LATITUDE": 41.0750510453,
+        "RAIL_LINE": "Main/Bergen Line",
+        "STATION": "Rte 17 Ramsey",
+        "MUN_LABEL": "Ramsey Borough",
+        "COUNTY": "BERGEN",
+        "ATIS_ID": "RAIL0170",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          564663.3888925798,
+          674100.7032034919
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.2384316735,
+        "LATITUDE": 40.6837694679,
+        "RAIL_LINE": "Raritan Valley Line",
+        "STATION": "Union",
+        "MUN_LABEL": "Union Township",
+        "COUNTY": "UNION",
+        "ATIS_ID": "RAIL0166",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          575799.0765949115,
+          741902.1496213228
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.1974344456,
+        "LATITUDE": 40.869783865,
+        "RAIL_LINE": "Montclair-Boonton Line/M&E",
+        "STATION": "Montclair St Univ",
+        "MUN_LABEL": "Little Falls Township",
+        "COUNTY": "ESSEX",
+        "ATIS_ID": "RAIL0165",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          609623.4124894105,
+          702480.934500657
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.0758181316,
+        "LATITUDE": 40.761190685,
+        "RAIL_LINE": "NEC / NJCL / M&E / Main/Bergen",
+        "STATION": "Secaucus Junction Upper Level",
+        "MUN_LABEL": "Secaucus",
+        "COUNTY": "HUDSON",
+        "ATIS_ID": "RAIL0168",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          618834.3989886604,
+          797208.7105959058
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.0407721801,
+        "LATITUDE": 41.0210778777,
+        "RAIL_LINE": "Pascack Valley Line",
+        "STATION": "Woodcliff Lake",
+        "MUN_LABEL": "Woodcliff Lake Borough",
+        "COUNTY": "BERGEN",
+        "ATIS_ID": "RAIL0159",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          622909.8839479126,
+          692950.811828658
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.0280390001,
+        "LATITUDE": 40.7348450034,
+        "RAIL_LINE": "Morris & Essex Line",
+        "STATION": "Hoboken Terminal",
+        "MUN_LABEL": "Hoboken City",
+        "COUNTY": "HUDSON",
+        "ATIS_ID": "RAIL0063",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          559302.5823569968,
+          752955.148512654
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.2569742504,
+        "LATITUDE": 40.9002645422,
+        "RAIL_LINE": "Montclair-Boonton Line/M&E",
+        "STATION": "Wayne Route 23 Transit Center",
+        "MUN_LABEL": "Wayne Township",
+        "COUNTY": "PASSAIC",
+        "ATIS_ID": "RAIL0172",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          455433.01122516394,
+          751550.9426596537
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.6327318878,
+        "LATITUDE": 40.8965897548,
+        "RAIL_LINE": "Montclair-Boonton Line/M&E",
+        "STATION": "Mt Arlington",
+        "MUN_LABEL": "Mount Arlington Borough",
+        "COUNTY": "MORRIS",
+        "ATIS_ID": "RAIL0171",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          610575.1097329967,
+          721367.7897714898
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.0720498136,
+        "LATITUDE": 40.8130208748,
+        "RAIL_LINE": "Meadowlands Rail Line",
+        "STATION": "Meadowlands Rail Station",
+        "MUN_LABEL": "East Rutherford Borough",
+        "COUNTY": "BERGEN",
+        "ATIS_ID": "RAIL0174",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          334695.83504907787,
+          417313.8588385731
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -75.0617923485,
+        "LATITUDE": 39.9777701096,
+        "RAIL_LINE": "Atlantic City Line",
+        "STATION": "Pennsauken Transit Center",
+        "MUN_LABEL": "Pennsauken Township",
+        "COUNTY": "CAMDEN",
+        "ATIS_ID": "RAIL0183",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          609623.4124894105,
+          702480.934500657
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.0758181316,
+        "LATITUDE": 40.761190685,
+        "RAIL_LINE": "NEC / NJCL / M&E / Main&Bergen",
+        "STATION": "Secaucus Junction Lower Level",
+        "MUN_LABEL": "Secaucus Town",
+        "COUNTY": "HUDSON",
+        "ATIS_ID": "RAIL0167",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          621076.3361058272,
+          690066.2382014915
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.0347106396,
+        "LATITUDE": 40.7269539133,
+        "RAIL_LINE": "PATH",
+        "STATION": "Pavonia/Newport",
+        "MUN_LABEL": "Jersey City",
+        "COUNTY": "HUDSON",
+        "ATIS_ID": "PATH01",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          622692.9342505783,
+          693169.6558791548
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.0288176392,
+        "LATITUDE": 40.7354489127,
+        "RAIL_LINE": "PATH",
+        "STATION": "Hoboken",
+        "MUN_LABEL": "Hoboken City",
+        "COUNTY": "HUDSON",
+        "ATIS_ID": "PATH02",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          633913.9118085802,
+          698216.6034624055
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -73.9882196397,
+        "LATITUDE": 40.7491299129,
+        "RAIL_LINE": "PATH",
+        "STATION": "33rd St.",
+        "MUN_LABEL": "New York City, NY",
+        "COUNTY": "NEW YORK CITY, NY",
+        "ATIS_ID": "PATH03",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          632658.1515248306,
+          695936.0125511587
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -73.992799639,
+        "LATITUDE": 40.7428899132,
+        "RAIL_LINE": "PATH",
+        "STATION": "23rd St.",
+        "MUN_LABEL": "New York City, NY",
+        "COUNTY": "NEW YORK CITY, NY",
+        "ATIS_ID": "PATH04",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          631553.055637911,
+          693918.6583181545
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -73.9968296395,
+        "LATITUDE": 40.7373699127,
+        "RAIL_LINE": "PATH",
+        "STATION": "14th St.",
+        "MUN_LABEL": "New York City, NY",
+        "COUNTY": "NEW YORK CITY, NY",
+        "ATIS_ID": "PATH05",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          630930.7166594937,
+          692793.0244145691
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -73.9990986399,
+        "LATITUDE": 40.734289913,
+        "RAIL_LINE": "PATH",
+        "STATION": "9th St.",
+        "MUN_LABEL": "New York City, NY",
+        "COUNTY": "NEW YORK CITY, NY",
+        "ATIS_ID": "PATH06",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          628766.2724975795,
+          692272.1963879913
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.0069196401,
+        "LATITUDE": 40.732893913,
+        "RAIL_LINE": "PATH",
+        "STATION": "Christopher St.",
+        "MUN_LABEL": "New York City, NY",
+        "COUNTY": "NEW YORK CITY, NY",
+        "ATIS_ID": "PATH07",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          627365.0984626636,
+          684393.4815024063
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.01213364,
+        "LATITUDE": 40.7112889126,
+        "RAIL_LINE": "PATH",
+        "STATION": "World Trade Center",
+        "MUN_LABEL": "New York City, NY",
+        "COUNTY": "NEW YORK CITY, NY",
+        "ATIS_ID": "PATH08",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          621453.166388914,
+          686432.4495373219
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.0334206392,
+        "LATITUDE": 40.7169739127,
+        "RAIL_LINE": "PATH",
+        "STATION": "Exchange Place",
+        "MUN_LABEL": "Jersey City",
+        "COUNTY": "HUDSON",
+        "ATIS_ID": "PATH09",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          618845.4271818288,
+          687321.4884416535
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.0428116396,
+        "LATITUDE": 40.719451913,
+        "RAIL_LINE": "PATH",
+        "STATION": "Grove St.",
+        "MUN_LABEL": "Jersey City",
+        "COUNTY": "HUDSON",
+        "ATIS_ID": "PATH10",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          613237.6595259942,
+          691855.8776668236
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.0629616397,
+        "LATITUDE": 40.7319769131,
+        "RAIL_LINE": "PATH",
+        "STATION": "Journal Square",
+        "MUN_LABEL": "Jersey City",
+        "COUNTY": "HUDSON",
+        "ATIS_ID": "PATH11",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          587473.5315924138,
+          694383.9326500744
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.1558946388,
+        "LATITUDE": 40.7392309135,
+        "RAIL_LINE": "PATH",
+        "STATION": "Harrison",
+        "MUN_LABEL": "Harrison Town",
+        "COUNTY": "HUDSON",
+        "ATIS_ID": "PATH12",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          585134.0470981635,
+          692490.3386682421
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.1643636392,
+        "LATITUDE": 40.7340579136,
+        "RAIL_LINE": "PATH",
+        "STATION": "Newark Penn Station",
+        "MUN_LABEL": "Newark City",
+        "COUNTY": "ESSEX",
+        "ATIS_ID": "PATH13",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          601002.7791401632,
+          669888.1716023237
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.1074646583,
+        "LATITUDE": 40.6718349225,
+        "RAIL_LINE": "Hudson-Bergen Light Rail",
+        "STATION": "E. 34th St.",
+        "MUN_LABEL": "Bayonne City",
+        "COUNTY": "HUDSON",
+        "ATIS_ID": "30844",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          602606.5000140779,
+          672394.4956579059
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.1016419739,
+        "LATITUDE": 40.6786949349,
+        "RAIL_LINE": "Hudson-Bergen Light Rail",
+        "STATION": "E. 45th St.",
+        "MUN_LABEL": "Bayonne City",
+        "COUNTY": "HUDSON",
+        "ATIS_ID": "30843",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          606569.4842140786,
+          677391.6060704887
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.0872685603,
+        "LATITUDE": 40.6923616779,
+        "RAIL_LINE": "Hudson-Bergen Light Rail",
+        "STATION": "Danforth Ave.",
+        "MUN_LABEL": "Jersey City",
+        "COUNTY": "HUDSON",
+        "ATIS_ID": "30842",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          608951.1405399963,
+          679875.0420484915
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.0786366506,
+        "LATITUDE": 40.699147595,
+        "RAIL_LINE": "Hudson-Bergen Light Rail",
+        "STATION": "Richard St.",
+        "MUN_LABEL": "Jersey City",
+        "COUNTY": "HUDSON",
+        "ATIS_ID": "30841",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          606444.0586119108,
+          685477.2162115723
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.0875840032,
+        "LATITUDE": 40.7145579973,
+        "RAIL_LINE": "Hudson-Bergen Light Rail",
+        "STATION": "West Side Ave.",
+        "MUN_LABEL": "Jersey City",
+        "COUNTY": "HUDSON",
+        "ATIS_ID": "30840",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          609289.5854011625,
+          684594.8436324894
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.0773340961,
+        "LATITUDE": 40.7120987937,
+        "RAIL_LINE": "Hudson-Bergen Light Rail",
+        "STATION": "Martin Luther King Dr.",
+        "MUN_LABEL": "Jersey City",
+        "COUNTY": "HUDSON",
+        "ATIS_ID": "30839",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          611021.2801004946,
+          684048.5763523206
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.0710968734,
+        "LATITUDE": 40.710576274,
+        "RAIL_LINE": "Hudson-Bergen Light Rail",
+        "STATION": "Garfield Ave.",
+        "MUN_LABEL": "Jersey City",
+        "COUNTY": "HUDSON",
+        "ATIS_ID": "30838",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          615258.5068622455,
+          683996.3074279875
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.0558130028,
+        "LATITUDE": 40.7103749972,
+        "RAIL_LINE": "Hudson-Bergen Light Rail",
+        "STATION": "Liberty State Park",
+        "MUN_LABEL": "Jersey City",
+        "COUNTY": "HUDSON",
+        "ATIS_ID": "30837",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          617281.7209916636,
+          685685.0524100736
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.0484834401,
+        "LATITUDE": 40.7149821959,
+        "RAIL_LINE": "Hudson-Bergen Light Rail",
+        "STATION": "Jersey Ave.",
+        "MUN_LABEL": "Jersey City",
+        "COUNTY": "HUDSON",
+        "ATIS_ID": "30836",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          618734.2581128292,
+          685493.5790397376
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.043247003,
+        "LATITUDE": 40.7144359978,
+        "RAIL_LINE": "Hudson-Bergen Light Rail",
+        "STATION": "Marin Blvd.",
+        "MUN_LABEL": "Jersey City",
+        "COUNTY": "HUDSON",
+        "ATIS_ID": "30835",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          620725.0927138291,
+          684922.9433699921
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.0360760033,
+        "LATITUDE": 40.7128409971,
+        "RAIL_LINE": "Hudson-Bergen Light Rail",
+        "STATION": "Essex St.",
+        "MUN_LABEL": "Jersey City",
+        "COUNTY": "HUDSON",
+        "ATIS_ID": "30834",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          621269.259604495,
+          686083.3547630683
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.0340907823,
+        "LATITUDE": 40.7160183492,
+        "RAIL_LINE": "Hudson-Bergen Light Rail",
+        "STATION": "Exchange Pl.",
+        "MUN_LABEL": "Jersey City",
+        "COUNTY": "HUDSON",
+        "ATIS_ID": "30833",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          621258.4607415795,
+          687136.6905829087
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.0341095832,
+        "LATITUDE": 40.7189098468,
+        "RAIL_LINE": "Hudson-Bergen Light Rail",
+        "STATION": "Harborside",
+        "MUN_LABEL": "Jersey City",
+        "COUNTY": "HUDSON",
+        "ATIS_ID": "30832",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          620370.6911916621,
+          688504.9998541549
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.0372863888,
+        "LATITUDE": 40.7226786511,
+        "RAIL_LINE": "Hudson-Bergen Light Rail",
+        "STATION": "Harismus Cove",
+        "MUN_LABEL": "Jersey City",
+        "COUNTY": "HUDSON",
+        "ATIS_ID": "30831",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          620654.60663433,
+          690014.8813488185
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.0362332784,
+        "LATITUDE": 40.7268190659,
+        "RAIL_LINE": "Hudson-Bergen Light Rail",
+        "STATION": "Newport",
+        "MUN_LABEL": "Jersey City",
+        "COUNTY": "HUDSON",
+        "ATIS_ID": "30830",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          622589.4046019949,
+          692659.6516498253
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.0292011046,
+        "LATITUDE": 40.7340505129,
+        "RAIL_LINE": "Hudson-Bergen Light Rail",
+        "STATION": "Hoboken Terminal",
+        "MUN_LABEL": "Hoboken City",
+        "COUNTY": "HUDSON",
+        "ATIS_ID": "30829",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          598525.5754331611,
+          666040.6615808234
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.1164559993,
+        "LATITUDE": 40.6613035606,
+        "RAIL_LINE": "Hudson-Bergen Light Rail",
+        "STATION": "E. 22nd St.",
+        "MUN_LABEL": "Bayonne City",
+        "COUNTY": "HUDSON",
+        "ATIS_ID": "30845",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          619980.5791109949,
+          698047.5696797371
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.0385129137,
+        "LATITUDE": 40.7488779701,
+        "RAIL_LINE": "Hudson-Bergen Light Rail",
+        "STATION": "9th St./Congress St.",
+        "MUN_LABEL": "Hoboken City",
+        "COUNTY": "HUDSON",
+        "ATIS_ID": "30827",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          618803.4256254137,
+          695440.7842109054
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.0428106531,
+        "LATITUDE": 40.7417394445,
+        "RAIL_LINE": "Hudson-Bergen Light Rail",
+        "STATION": "2nd St.",
+        "MUN_LABEL": "Jersey City",
+        "COUNTY": "HUDSON",
+        "ATIS_ID": "30828",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          623976.2610802464,
+          702631.6408921555
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.0240014683,
+        "LATITUDE": 40.76140229,
+        "RAIL_LINE": "Hudson-Bergen Light Rail",
+        "STATION": "Lincoln Harbor",
+        "MUN_LABEL": "Weehawken Township",
+        "COUNTY": "HUDSON",
+        "ATIS_ID": "30826",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          627050.2437774129,
+          707954.7841172367
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.0127977014,
+        "LATITUDE": 40.7759675042,
+        "RAIL_LINE": "Hudson-Bergen Light Rail",
+        "STATION": "Port Imperial",
+        "MUN_LABEL": "Weehawken Township",
+        "COUNTY": "HUDSON",
+        "ATIS_ID": "30825",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          624238.9984156638,
+          710353.7698048204
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.0229013914,
+        "LATITUDE": 40.7825948961,
+        "RAIL_LINE": "Hudson-Bergen Light Rail",
+        "STATION": "Bergenline Ave.",
+        "MUN_LABEL": "Union City",
+        "COUNTY": "HUDSON",
+        "ATIS_ID": "30824",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          621915.577209495,
+          712064.792301409
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.0312585899,
+        "LATITUDE": 40.7873258718,
+        "RAIL_LINE": "Hudson-Bergen Light Rail",
+        "STATION": "Tonnelle Ave.",
+        "MUN_LABEL": "North Bergen Township",
+        "COUNTY": "HUDSON",
+        "ATIS_ID": "30823",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          581251.996135246,
+          706421.2547039911
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.1781880325,
+        "LATITUDE": 40.7723377091,
+        "RAIL_LINE": "Newark Light Rail",
+        "STATION": "Davenport Ave.",
+        "MUN_LABEL": "Newark City",
+        "COUNTY": "ESSEX",
+        "ATIS_ID": "30763",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          585375.6227304973,
+          692807.3629685715
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.1634875089,
+        "LATITUDE": 40.7349255983,
+        "RAIL_LINE": "Newark Light Rail",
+        "STATION": "Newark Penn Station",
+        "MUN_LABEL": "Newark City",
+        "COUNTY": "ESSEX",
+        "ATIS_ID": "30771",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          583348.212743327,
+          693713.9507223219
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.1707914177,
+        "LATITUDE": 40.7374352555,
+        "RAIL_LINE": "Newark Light Rail",
+        "STATION": "Military Park",
+        "MUN_LABEL": "Newark City",
+        "COUNTY": "ESSEX",
+        "ATIS_ID": "30770",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          582448.5990569964,
+          694043.4566249922
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.1740335006,
+        "LATITUDE": 40.7383489544,
+        "RAIL_LINE": "Newark Light Rail",
+        "STATION": "Washington St.",
+        "MUN_LABEL": "Newark City",
+        "COUNTY": "ESSEX",
+        "ATIS_ID": "30769",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          580460.7611691616,
+          695515.2601118237
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.1811879618,
+        "LATITUDE": 40.7424090536,
+        "RAIL_LINE": "Newark Light Rail",
+        "STATION": "Warren St.",
+        "MUN_LABEL": "Newark City",
+        "COUNTY": "ESSEX",
+        "ATIS_ID": "30768",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          579952.7198624127,
+          696581.7753672376
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.1830076045,
+        "LATITUDE": 40.7453416594,
+        "RAIL_LINE": "Newark Light Rail",
+        "STATION": "Norfolk St.",
+        "MUN_LABEL": "Newark City",
+        "COUNTY": "ESSEX",
+        "ATIS_ID": "30767",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          582218.072287079,
+          709084.4075141549
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.1746642027,
+        "LATITUDE": 40.7796381656,
+        "RAIL_LINE": "Newark Light Rail",
+        "STATION": "Branch Brook Park",
+        "MUN_LABEL": "Newark City",
+        "COUNTY": "ESSEX",
+        "ATIS_ID": "30762",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          580792.0508609116,
+          703905.0182666555
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.1798818853,
+        "LATITUDE": 40.7654353588,
+        "RAIL_LINE": "Newark Light Rail",
+        "STATION": "Bloomfield Ave.",
+        "MUN_LABEL": "Newark City",
+        "COUNTY": "ESSEX",
+        "ATIS_ID": "30764",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          579410.2242282443,
+          698503.9837931544
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.1849406786,
+        "LATITUDE": 40.750623428,
+        "RAIL_LINE": "Newark Light Rail",
+        "STATION": "Orange St.",
+        "MUN_LABEL": "Newark City",
+        "COUNTY": "ESSEX",
+        "ATIS_ID": "30766",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          579388.5215157457,
+          701382.7792166546
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.1849817178,
+        "LATITUDE": 40.7585258448,
+        "RAIL_LINE": "Newark Light Rail",
+        "STATION": "Park Ave.",
+        "MUN_LABEL": "Newark City",
+        "COUNTY": "ESSEX",
+        "ATIS_ID": "30765",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          580565.2438998297,
+          709329.128481403
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.1806294377,
+        "LATITUDE": 40.7803265858,
+        "RAIL_LINE": "Newark Light Rail",
+        "STATION": "Silver Lake",
+        "MUN_LABEL": "Belleville Township",
+        "COUNTY": "ESSEX",
+        "ATIS_ID": "30761",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          578535.4726969115,
+          709366.1477643251
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.1879586559,
+        "LATITUDE": 40.7804482545,
+        "RAIL_LINE": "Newark Light Rail",
+        "STATION": "Grove St.",
+        "MUN_LABEL": "Bloomfield Township",
+        "COUNTY": "ESSEX",
+        "ATIS_ID": "30539",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          584789.4391915798,
+          694471.8225661516
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.1655799499,
+        "LATITUDE": 40.7395006403,
+        "RAIL_LINE": "Newark Light Rail",
+        "STATION": "NJPAC/Center St.",
+        "MUN_LABEL": "Newark City",
+        "COUNTY": "ESSEX",
+        "ATIS_ID": "30772",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          583976.861092329,
+          696166.7450293228
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.168489347,
+        "LATITUDE": 40.7441616111,
+        "RAIL_LINE": "Newark Light Rail",
+        "STATION": "Atlantic St.",
+        "MUN_LABEL": "Newark City",
+        "COUNTY": "ESSEX",
+        "ATIS_ID": "30773",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          583600.4474750794,
+          696085.8888918236
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.1698489706,
+        "LATITUDE": 40.7439435575,
+        "RAIL_LINE": "Newark Light Rail",
+        "STATION": "Washington Park",
+        "MUN_LABEL": "Newark City",
+        "COUNTY": "ESSEX",
+        "ATIS_ID": "30776",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          583649.9900269136,
+          696840.6885633245
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.1696599141,
+        "LATITUDE": 40.7460149476,
+        "RAIL_LINE": "Newark Light Rail",
+        "STATION": "Riverfront Stadium",
+        "MUN_LABEL": "Newark City",
+        "COUNTY": "ESSEX",
+        "ATIS_ID": "30774",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          583136.8906594105,
+          697272.5833688229
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.1715059752,
+        "LATITUDE": 40.7472057708,
+        "RAIL_LINE": "Newark Light Rail",
+        "STATION": "Broad St. Station",
+        "MUN_LABEL": "Newark City",
+        "COUNTY": "ESSEX",
+        "ATIS_ID": "30775",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          420895.3795131631,
+          504561.06065615267
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.7550831893,
+        "LATITUDE": 40.2183721459,
+        "RAIL_LINE": "River LINE",
+        "STATION": "Trenton",
+        "MUN_LABEL": "Trenton City",
+        "COUNTY": "MERCER",
+        "ATIS_ID": "30855",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          420698.1899469122,
+          502218.88391007483
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.7557651712,
+        "LATITUDE": 40.2119407509,
+        "RAIL_LINE": "River LINE",
+        "STATION": "Hamilton Ave.",
+        "MUN_LABEL": "Trenton City",
+        "COUNTY": "MERCER",
+        "ATIS_ID": "30856",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          421107.27049357817,
+          499845.1560459882
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.7542759968,
+        "LATITUDE": 40.205427518,
+        "RAIL_LINE": "River LINE",
+        "STATION": "Cass St.",
+        "MUN_LABEL": "Trenton City",
+        "COUNTY": "MERCER",
+        "ATIS_ID": "30857",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          431679.02330016345,
+          478967.27293307334
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.7162425445,
+        "LATITUDE": 40.148189135,
+        "RAIL_LINE": "River LINE",
+        "STATION": "Bordentown",
+        "MUN_LABEL": "Bordentown City",
+        "COUNTY": "BURLINGTON",
+        "ATIS_ID": "30858",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          416551.6421376616,
+          467608.2398769036
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.7702359666,
+        "LATITUDE": 40.1168917514,
+        "RAIL_LINE": "River LINE",
+        "STATION": "Roebling",
+        "MUN_LABEL": "Florence Township",
+        "COUNTY": "BURLINGTON",
+        "ATIS_ID": "30859",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          406778.29324607924,
+          461487.0687203184
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.8051080732,
+        "LATITUDE": 40.1000006158,
+        "RAIL_LINE": "River LINE",
+        "STATION": "Florence",
+        "MUN_LABEL": "Florence Township",
+        "COUNTY": "BURLINGTON",
+        "ATIS_ID": "30860",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          391550.0559860803,
+          453300.8078619018
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.8594287188,
+        "LATITUDE": 40.0773709033,
+        "RAIL_LINE": "River LINE",
+        "STATION": "Burlington Town Centre",
+        "MUN_LABEL": "Burlington City",
+        "COUNTY": "BURLINGTON",
+        "ATIS_ID": "30861",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          388865.54265432805,
+          452299.9210841581
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.8690074554,
+        "LATITUDE": 40.0745930298,
+        "RAIL_LINE": "River LINE",
+        "STATION": "Burlington South",
+        "MUN_LABEL": "Burlington City",
+        "COUNTY": "BURLINGTON",
+        "ATIS_ID": "30862",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          375912.0196769126,
+          447440.15783782303
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.9152160013,
+        "LATITUDE": 40.0610949981,
+        "RAIL_LINE": "River LINE",
+        "STATION": "Beverly/Edgewater Park",
+        "MUN_LABEL": "Beverly City",
+        "COUNTY": "BURLINGTON",
+        "ATIS_ID": "30863",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          366050.6499639973,
+          442755.43098682165
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.9503639218,
+        "LATITUDE": 40.0481025848,
+        "RAIL_LINE": "River LINE",
+        "STATION": "Delanco",
+        "MUN_LABEL": "Delanco Township",
+        "COUNTY": "BURLINGTON",
+        "ATIS_ID": "30864",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          363647.1452565789,
+          439546.73005515337
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.9588904229,
+        "LATITUDE": 40.039260175,
+        "RAIL_LINE": "River LINE",
+        "STATION": "Riverside",
+        "MUN_LABEL": "Riverside Township",
+        "COUNTY": "BURLINGTON",
+        "ATIS_ID": "30865",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          352096.6824651621,
+          431373.6676611528
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.9999804977,
+        "LATITUDE": 40.0166523395,
+        "RAIL_LINE": "River LINE",
+        "STATION": "Cinnaminson",
+        "MUN_LABEL": "Cinnaminson Township",
+        "COUNTY": "BURLINGTON",
+        "ATIS_ID": "30866",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          348411.9385223277,
+          428594.1646899879
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -75.0130794909,
+        "LATITUDE": 40.0089643927,
+        "RAIL_LINE": "River LINE",
+        "STATION": "Riverton",
+        "MUN_LABEL": "Riverton Borough",
+        "COUNTY": "BURLINGTON",
+        "ATIS_ID": "30867",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          346156.9016938284,
+          426894.5407926589
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -75.0210945572,
+        "LATITUDE": 40.0042625746,
+        "RAIL_LINE": "River LINE",
+        "STATION": "Palmyra",
+        "MUN_LABEL": "Palmyra Borough",
+        "COUNTY": "BURLINGTON",
+        "ATIS_ID": "30868",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          341097.6529540792,
+          422972.87737615407
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -75.039070268,
+        "LATITUDE": 39.9934140232,
+        "RAIL_LINE": "River LINE",
+        "STATION": "Pennsauken/Route 73",
+        "MUN_LABEL": "Pennsauken Township",
+        "COUNTY": "CAMDEN",
+        "ATIS_ID": "30869",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          329808.10105816275,
+          411336.4373944923
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -75.0790951074,
+        "LATITUDE": 39.9612747884,
+        "RAIL_LINE": "River LINE",
+        "STATION": "36th St.",
+        "MUN_LABEL": "Pennsauken Township",
+        "COUNTY": "CAMDEN",
+        "ATIS_ID": "30870",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          317145.77795766294,
+          406398.64051157236
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -75.1241445811,
+        "LATITUDE": 39.9474849501,
+        "RAIL_LINE": "River LINE",
+        "STATION": "Cooper St./Rutgers",
+        "MUN_LABEL": "Camden City",
+        "COUNTY": "CAMDEN",
+        "ATIS_ID": "30872",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          315872.4363442473,
+          405730.4371235743
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -75.1286694966,
+        "LATITUDE": 39.9456260387,
+        "RAIL_LINE": "River LINE",
+        "STATION": "Aquarium",
+        "MUN_LABEL": "Camden City",
+        "COUNTY": "CAMDEN",
+        "ATIS_ID": "30873",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          315910.68790816143,
+          404014.33524081856
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -75.1284899585,
+        "LATITUDE": 39.9409156825,
+        "RAIL_LINE": "River LINE",
+        "STATION": "Entertainment Ctr.",
+        "MUN_LABEL": "Camden City",
+        "COUNTY": "CAMDEN",
+        "ATIS_ID": "30874",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          595072.5219718292,
+          663471.7434903234
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.1289421018,
+        "LATITUDE": 40.6542925574,
+        "RAIL_LINE": "Hudson-Bergen Light Rail",
+        "STATION": "8th St.",
+        "MUN_LABEL": "Bayonne City",
+        "COUNTY": "HUDSON",
+        "ATIS_ID": "31145",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          334646.3663159944,
+          417506.3049759865
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -75.0619731993,
+        "LATITUDE": 39.9782975662,
+        "RAIL_LINE": "River LINE",
+        "STATION": "Pennsauken Transit Ctr.",
+        "MUN_LABEL": "Pennsauken Township",
+        "COUNTY": "CAMDEN",
+        "ATIS_ID": "31898",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          305043.9484868273,
+          406715.6369248256
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -75.1673171548,
+        "LATITUDE": 39.9481147546,
+        "RAIL_LINE": "PATCO Speedline",
+        "STATION": "15-16th & Locust St.",
+        "MUN_LABEL": "Philadelphia, PA",
+        "COUNTY": "PHILADELPHIA, PA",
+        "ATIS_ID": "PATCO01",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          306573.87259233,
+          406484.9513625726
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -75.161854165,
+        "LATITUDE": 39.9475127561,
+        "RAIL_LINE": "PATCO Speedline",
+        "STATION": "12-13th & Locust St.",
+        "MUN_LABEL": "Philadelphia, PA",
+        "COUNTY": "PHILADELPHIA, PA",
+        "ATIS_ID": "PATCO02",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          307927.22093549743,
+          406258.5735344887
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -75.1570211756,
+        "LATITUDE": 39.9469187574,
+        "RAIL_LINE": "PATCO Speedline",
+        "STATION": "9-10th & Locust St.",
+        "MUN_LABEL": "Philadelphia, PA",
+        "COUNTY": "PHILADELPHIA, PA",
+        "ATIS_ID": "PATCO03",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          308893.0004999973,
+          407623.68399323523
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -75.1536121825,
+        "LATITUDE": 39.9506857493,
+        "RAIL_LINE": "PATCO Speedline",
+        "STATION": "8Th & Market",
+        "MUN_LABEL": "Philadelphia, PA",
+        "COUNTY": "PHILADELPHIA, PA",
+        "ATIS_ID": "PATCO04",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          317990.98263207823,
+          405518.66490932554
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -75.1211080871,
+        "LATITUDE": 39.9450854024,
+        "RAIL_LINE": "PATCO Speedline",
+        "STATION": "City Hall",
+        "MUN_LABEL": "Camden City",
+        "COUNTY": "CAMDEN",
+        "ATIS_ID": "PATCO05",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          318334.15484599397,
+          404758.70875207335
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -75.1198652867,
+        "LATITUDE": 39.9430056949,
+        "RAIL_LINE": "PATCO Speedline",
+        "STATION": "Broadway",
+        "MUN_LABEL": "Camden City",
+        "COUNTY": "CAMDEN",
+        "ATIS_ID": "PATCO06",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          326166.2103760801,
+          397255.3540081531
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -75.0917544674,
+        "LATITUDE": 39.9225530592,
+        "RAIL_LINE": "PATCO Speedline",
+        "STATION": "Ferry Ave.",
+        "MUN_LABEL": "Camden City",
+        "COUNTY": "CAMDEN",
+        "ATIS_ID": "PATCO07",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          333737.27955149487,
+          393956.50561898947
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -75.0646854013,
+        "LATITUDE": 39.9136314381,
+        "RAIL_LINE": "PATCO Speedline",
+        "STATION": "Collingswood",
+        "MUN_LABEL": "Collingswood Borough",
+        "COUNTY": "CAMDEN",
+        "ATIS_ID": "PATCO08",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          338787.7569833286,
+          391512.9537475705
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -75.0466268522,
+        "LATITUDE": 39.9070094701,
+        "RAIL_LINE": "PATCO Speedline",
+        "STATION": "Westmont",
+        "MUN_LABEL": "Haddon Township",
+        "COUNTY": "CAMDEN",
+        "ATIS_ID": "PATCO09",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          341498.7682935782,
+          388019.58573432267
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -75.0368880055,
+        "LATITUDE": 39.8974642954,
+        "RAIL_LINE": "PATCO Speedline",
+        "STATION": "Haddonfield",
+        "MUN_LABEL": "Haddonfield Borough",
+        "COUNTY": "CAMDEN",
+        "ATIS_ID": "PATCO10",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          348630.0699758306,
+          378037.8721019849
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -75.0112667922,
+        "LATITUDE": 39.8701762332,
+        "RAIL_LINE": "PATCO Speedline",
+        "STATION": "Woodcrest",
+        "MUN_LABEL": "Cherry Hill Township",
+        "COUNTY": "CAMDEN",
+        "ATIS_ID": "PATCO11",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          349176.4635680802,
+          373852.61013132334
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -75.0092351357,
+        "LATITUDE": 39.8586948926,
+        "RAIL_LINE": "PATCO Speedline",
+        "STATION": "Ashland",
+        "MUN_LABEL": "Voorhees Township",
+        "COUNTY": "CAMDEN",
+        "ATIS_ID": "PATCO12",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          351629.8969814107,
+          364774.6939039901
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -75.0003144902,
+        "LATITUDE": 39.8338109866,
+        "RAIL_LINE": "PATCO Speedline",
+        "STATION": "Lindenwold",
+        "MUN_LABEL": "Lindenwold Borough",
+        "COUNTY": "CAMDEN",
+        "ATIS_ID": "PATCO13",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          318205.0753797442,
+          404814.4300973192
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -75.1203270345,
+        "LATITUDE": 39.9431562008,
+        "RAIL_LINE": "River LINE",
+        "STATION": "Walter Rand Transportation Center",
+        "MUN_LABEL": "Camden City",
+        "COUNTY": "CAMDEN",
+        "ATIS_ID": "30871",
+        "AMTRAK": "N"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          603612.2648908559,
+          736619.243567093
+        ]
+      },
+      "properties": {
+        "LONGITUDE": -74.0969519197,
+        "LATITUDE": 40.8549752164,
+        "RAIL_LINE": "Main/Bergen Line",
+        "STATION": "Wesmont (under construction)",
+        "MUN_LABEL": "Wallington Borough",
+        "COUNTY": "Bergen",
+        "ATIS_ID": "",
+        "AMTRAK": "N"
+      }
+    }
+  ]
+}

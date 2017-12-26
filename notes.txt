@@ -3,3 +3,8 @@ Things to Check Out Next
 - lot (acreage) vs square footage
 - year built
 - create github pages gsmls thing to view individual listings
+
+
+https://njgin.state.nj.us/NJ_NJGINExplorer/DataDownloads.jsp
+https://njgin.state.nj.us/oit/gis/download/NJ_Bus_shp.zip
+https://njgin.state.nj.us/oit/gis/download/NJ_Rail_shp.zip

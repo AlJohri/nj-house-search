@@ -1,0 +1,605 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <title>NJ TRANSIT Rail, Light Rail, and Subway Currently Operated Right-of-Way lines, with connecting PATH and PATCO Rail, 2016 (NAD83, NJSP feet)</title>
+  <link rel="schema.dc" href="http://purl.org/metadata/dublin_core"/>
+  <meta name="dc.title" content="NJ TRANSIT Rail, Light Rail, and Subway Currently Operated Right-of-Way lines, with connecting PATH and PATCO Rail, 2016 (NAD83, NJSP feet) "/>
+  <meta name="dc.creator" content="NJ Office of Information Technology (NJOIT), Office of Geographic Information Systems (OGIS) NJ TRANSIT - GIS-Transportation "/>
+  <meta name="dc.subject" content="njfw_transport "/>
+  <meta name="dc.description" content="Line data delineating right-of-way centerlines for rail, light rail, and subway service lines operated by NJ TRANSIT, and connecting commuter lines operated by Port Authority Trans Hudson (PATH) and Port Authority Transit Corporation (PATCO). Data set is in shapefile format (Esri). "/>
+  <meta name="dc.publisher" content="NJ Office of Information Technology (NJOIT), Office of Geographic Information Systems (OGIS)"/>
+  <meta name="dc.contributor" content="Source data in shapefile format are provided by Glenn D. Newman PLS, PP, Director of GIS-Transportation at NJ TRANSIT. Data are processed by NJ Office of Information Technology (NJOIT), Office of Geographic Information Systems (OGIS). Service pattern information was retrieved from public Web sites, including maps, for NJ TRANSIT Newark Light Rail and Port Authority Trans Hudson (PATH) service. "/>
+  <meta name="dc.date" content="20160309"/>
+  <meta name="dc.type" content="data.vector digital data"/>
+  <meta name="dc.format" content="GTFS"/>
+  <meta name="dc.identifier" content="https://njgin.state.nj.us/oit/gis/download/NJ_Rail_shp.zip"/>
+  <meta name="dc.source" content="Downloadable Data"/>
+  <meta name="dc.lang" content="en"/>
+  <meta name="dc.coverage.x.min" scheme="DD" content="-75.214212"/>
+  <meta name="dc.coverage.x.max" scheme="DD" content="-73.979072"/>
+  <meta name="dc.coverage.y.min" scheme="DD" content="39.361260"/>
+  <meta name="dc.coverage.y.max" scheme="DD" content="41.488687"/>
+  <meta name="dc.coverage.placeName" content="New Jersey"/>
+  <meta name="dc.coverage.placeName" content="NJ"/>
+  <meta name="dc.coverage.placeName" content="New York"/>
+  <meta name="dc.coverage.placeName" content="NY"/>
+  <meta name="dc.coverage.placeName" content="Pennsylvania"/>
+  <meta name="dc.coverage.placeName" content="PA"/>
+  <meta name="dc.coverage.placeName" content="New York County"/>
+  <meta name="dc.coverage.placeName" content="Essex County"/>
+  <meta name="dc.coverage.placeName" content="Orange County"/>
+  <meta name="dc.coverage.placeName" content="Rockland County"/>
+  <meta name="dc.coverage.placeName" content="Camden County"/>
+  <meta name="dc.coverage.placeName" content="Somerset County"/>
+  <meta name="dc.coverage.placeName" content="Mercer County"/>
+  <meta name="dc.coverage.placeName" content="Morris County"/>
+  <meta name="dc.coverage.placeName" content="Hunterdon County"/>
+  <meta name="dc.coverage.placeName" content="Atlantic County"/>
+  <meta name="dc.coverage.placeName" content="Hudson County"/>
+  <meta name="dc.coverage.placeName" content="Union County"/>
+  <meta name="dc.coverage.placeName" content="Passaic County"/>
+  <meta name="dc.coverage.placeName" content="Warren County"/>
+  <meta name="dc.coverage.placeName" content="Philadelphia"/>
+  <meta name="dc.coverage.placeName" content="Middlesex County"/>
+  <meta name="dc.coverage.placeName" content="Ocean County"/>
+  <meta name="dc.coverage.placeName" content="Bergen County"/>
+  <meta name="dc.coverage.placeName" content="Burlington County"/>
+  <meta name="dc.coverage.placeName" content="Monmouth County"/>
+  <meta name="dc.rights" content="Access constraints: None; Use constraints: See conditions and disclaimers on NJ TRANSIT developer Web site. See Purpose, Data Quality, and Distribution sections in this metadata record for conditions that limit appropriate uses. Acknowledgement of the data set providers, NJ TRANSIT, GIS-Transportation and NJ Office of Information Technology (NJOIT), Office of Geographic Information Systems (OGIS), would be appreciated for maps, data or other products derived from this data set."/>
+  <meta name="generated-from" content="C:\Data\NJTransit\MD_processing\Tran_railroad_passenger_FGDC.xml"/>
+</head>
+<body>
+<h1>NJ TRANSIT Rail, Light Rail, and Subway Currently Operated Right-of-Way lines, with connecting PATH and PATCO Rail, 2016 (NAD83, NJSP feet)</h1>
+<p>
+<h4>Frequently anticipated questions:</h4>
+<ul>
+  <li><a href="#what">What does this data set describe?</a>
+    <ol>
+      <li><a href="#what.1">How should this data set be cited?</a></li>
+      <li><a href="#what.2">What geographic area does the data set cover?</a></li>
+      <li><a href="#what.3">What does it look like?</a></li>
+      <li><a href="#what.4">Does the data set describe conditions during a particular time period?</a></li>
+      <li><a href="#what.5">What is the general form of this data set?</a></li>
+      <li><a href="#what.6">How does the data set represent geographic features?</a></li>
+      <li><a href="#what.7">How does the data set describe geographic features?</a></li>
+    </ol>
+  </li>
+  <li><a href="#who">Who produced the data set?</a>
+    <ol>
+      <li><a href="#who.1">Who are the originators of the data set?</a></li>
+      <li><a href="#who.2">Who also contributed to the data set?</a></li>
+      <li><a href="#who.3">To whom should users address questions about the data?</a></li>
+    </ol>
+  </li>
+  <li><a href="#why">Why was the data set created?</a></li>
+  <li><a href="#how">How was the data set created?</a>
+    <ol>
+      <li><a href="#how.1">From what previous works were the data drawn?</a></li>
+      <li><a href="#how.2">How were the data generated, processed, and modified?</a></li>
+      <li><a href="#how.3">What similar or related data should the user be aware of?</a></li>
+    </ol>
+  </li>
+  <li><a href="#quality">How reliable are the data; what problems remain in the data set?</a>
+    <ol>
+      <li><a href="#quality.1">How well have the observations been checked?</a></li>
+      <li><a href="#quality.2">How accurate are the geographic locations?</a></li>
+      <li><a href="#quality.3">How accurate are the heights or depths?</a></li>
+      <li><a href="#quality.4">Where are the gaps in the data?  What is missing?</a></li>
+      <li><a href="#quality.5">How consistent are the relationships among the data, including topology?</a></li>
+    </ol>
+  </li>
+  <li><a href="#getacopy">How can someone get a copy of the data set?</a>
+    <ol>
+      <li><a href="#getacopy.0">Are there legal restrictions on access or use of the data?</a></li>
+      <li><a href="#getacopy.1">Who distributes the data?</a></li>
+      <li><a href="#getacopy.2">What's the catalog number I need to order this data set?</a></li>
+      <li><a href="#getacopy.3">What legal disclaimers am I supposed to read?</a></li>
+      <li><a href="#getacopy.4">How can I download or order the data?</a></li>
+    </ol>
+  </li>
+  <li><a href="#metaref">Who wrote the metadata?</a></li>
+</ul>
+<hr/>
+<h3><a name="what">What does this data set describe?</a></h3>
+<div style="margin-left: 2em">
+<dl>
+<dt><em>Title:</em>  
+<dd>
+
+NJ TRANSIT Rail, Light Rail, and Subway Currently Operated Right-of-Way lines, with connecting PATH and PATCO Rail, 2016 (NAD83, NJSP feet)
+
+</dd>
+<dt><em>Abstract:</em>  
+<dd>
+
+Line data delineating right-of-way centerlines for rail, light rail, and subway service lines operated by NJ TRANSIT, and connecting commuter lines operated by Port Authority Trans Hudson (PATH) and Port Authority Transit Corporation (PATCO). Data set is in shapefile format (Esri).
+
+</dd>
+<dt><em>Supplemental_Information:</em>  
+<dd>
+
+This shapefile does not include linear referencing m values. Most of the lines were heads-up digitized from New Jersey 2007 High Resolution Orthophotography, which has a 1 foot pixel size and tested accuracy of +/- 4 feet. Some of the lines were derived from other sources. These data are re-published by NJ Office of Information Technology (NJOIT), Office of Geographic Information Systems (OGIS) under agreement with NJ TRANSIT - GIS-Transportation.
+<br/>
+The SEPTA Trenton Line is included (it connects with NJ TRANSIT Northeast Corridor line), but SEPTA West Trenton Line is not.
+
+</dd>
+</dl>
+</div>
+<ol>
+<li><a name="what.1"><b>How should this data set be cited?</b></a><p>
+<blockquote>
+NJ Office of Information Technology (NJOIT), Office of Geographic Information Systems (OGIS), and NJ TRANSIT - GIS-Transportation, 20160309, NJ TRANSIT Rail, Light Rail, and Subway Currently Operated Right-of-Way lines, with connecting PATH and PATCO Rail, 2016 (NAD83, NJSP feet): NJ Office of Information Technology (NJOIT), Office of Geographic Information Systems (OGIS), Trenton, NJ.<p>
+Online Links:
+<ul>
+<li>https://njgin.state.nj.us/oit/gis/download/NJ_Rail_shp.zip
+</ul>
+<p>
+</blockquote>
+<p>
+</li>
+<li><a name="what.2"><b>What geographic area does the data set cover?</b></a><p>
+<dl>
+<dt><em>West_Bounding_Coordinate:</em>  -75.214212</dt>
+<dt><em>East_Bounding_Coordinate:</em>  -73.979072</dt>
+<dt><em>North_Bounding_Coordinate:</em>  41.488687</dt>
+<dt><em>South_Bounding_Coordinate:</em>  39.361260</dt>
+</dl>
+<p>
+</li>
+<li><a name="what.3"><b>What does it look like?</b></a><p>
+<p>
+</li>
+<li><a name="what.4"><b>Does the data set describe conditions during a particular time period?</b></a><p>
+<dl>
+<dt>Calendar_Date: 01-Mar-2015<dt><em>Currentness_Reference:</em>  ground condition</dt>
+</dl>
+<p>
+</li>
+<li><a name="what.5"><b>What is the general form of this data set?</b></a><p>
+<dl>
+<dt><em>Geospatial_Data_Presentation_Form:</em>  vector digital data</dt>
+</dl>
+<p>
+</li>
+<li><a name="what.6"><b>How does the data set represent geographic features?</b></a><p>
+<ol type="a">
+<li><a name="what.6.a"><b>How are geographic features stored in the data set?</b></a><p>
+This is a Vector data set.
+It contains the following vector data types (SDTS terminology):
+<ul>
+<li>String (29)
+</ul>
+<p>
+</li>
+<li><a name="what.6.b"><b>What coordinate system is used to represent geographic features?</b></a><p>
+The map projection used is NAD 1983 StatePlane New Jersey FIPS 2900 Feet.<p>
+<dl>
+<dt>Projection parameters:
+<dd>
+<dl>
+<dt><em>Scale_Factor_at_Central_Meridian:</em>  0.9999</dt>
+<dt><em>Longitude_of_Central_Meridian:</em>  -74.5</dt>
+<dt><em>Latitude_of_Projection_Origin:</em>  38.83333333333334</dt>
+<dt><em>False_Easting:</em>  492125.0</dt>
+<dt><em>False_Northing:</em>  0.0</dt>
+</dl>
+</dl>
+<p>
+Planar coordinates are encoded using coordinate pair<br/>
+Abscissae (x-coordinates) are specified to the nearest 0.000000007285705372339636<br/>
+Ordinates (y-coordinates) are specified to the nearest 0.000000007285705372339636<br/>
+Planar coordinates are specified in foot_us<p>
+<p>
+The horizontal datum used is D North American 1983.<br/>
+The ellipsoid used is GRS 1980.<br/>
+The semi-major axis of the ellipsoid used is 6378137.0.<br/>
+The flattening of the ellipsoid used is 1/298.257222101.<br/>
+<p>
+</li>
+</ol>
+<p>
+</li>
+<li><a name="what.7"><b>How does the data set describe geographic features?</b></a><p>
+<dl>
+<dt><b><tt>Tran_railroad_passenger</tt></b><dd>Rail line right-of-way centerlines
+  (Source: NJ TRANSIT Corporation)
+<p>
+<dl>
+<dt><b><tt>FID</tt></b><dd>Internal feature number.
+  (Source: Esri)<p></p>
+<p>
+<em>
+Sequential unique whole numbers that are automatically generated.
+</em>
+<p>
+<dt><b><tt>Shape</tt></b><dd>Feature geometry.
+  (Source: ESRI)<p></p>
+<p>
+<em>
+Coordinates defining the features.
+</em>
+<p>
+<dt><b><tt>RAIL_LINE</tt></b><dd>Rail service line or sub-line (branch) name, as known to public via NJ TRANSIT publications; or connecting service name.
+  (Source: NJ TRANSIT Corporation)<p></p>
+<p>
+<table border="1" cellpadding="4" cellspacing="0">
+<tr><th>Value</th><th>Definition</th></tr>
+<tr><td valign="top">ATLANTIC CITY RAIL LINE</td><td>Rail service line across S. New Jersey, between Philadelphia and Atlantic City
+</td></tr>
+<tr><td valign="top">BERGEN COUNTY LINE</td><td>Service line between Hoboken, NJ and Suffern, NY, via East branch (Rutherford, Garfield, Plauderville, Fair Lawn, Glen Rock Boro Hall)
+</td></tr>
+<tr><td valign="top">HUDSON BERGEN LIGHT RAIL</td><td>Hudson-Bergen Light Rail, all branches
+</td></tr>
+<tr><td valign="top">MEADOWLANDS RAIL LINE</td><td>Hoboken via Secaucus to Meadowlands Sports Complex including MetLife Stadium
+</td></tr>
+<tr><td valign="top">MAIN LINE</td><td>Service line between Hoboken, NJ and Suffern, NY, via West branch (Secaucus Junction, Kingland, Lyndhurst, Delawanna, Passaic, Clifton, Paterson, Hawthorne, Glen Rock-Main)
+</td></tr>
+<tr><td valign="top">MONTCLAIR BOONTON LINE</td><td>Hoboken-Montclair-Hackettstown or New York-Montclair-Hackettstown
+</td></tr>
+<tr><td valign="top">MORRIS &amp; ESSEX LINE</td><td>Service line from New York or Hoboken, to Hackettstown via Summit and Morristown, or to Gladstone via Summit
+</td></tr>
+<tr><td valign="top">PASCACK VALLEY LINE</td><td>North-South line through central Hudson and Bergen counties
+</td></tr>
+<tr><td valign="top">NEWARK LIGHT RAIL</td><td>Light rail and subway line service in the Newark, Belleville, and Bloomfield
+</td></tr>
+<tr><td valign="top">NORTH JERSEY COAST LINE</td><td>Service line from New York or Hoboken to Long Branch and Bay Head. Coincident with Northeast Corridor line until split after Rahway.
+</td></tr>
+<tr><td valign="top">NORTHEAST CORRIDOR LINE</td><td>Service line from New York to Trenton. Separate branch service between Princeton Junction and Princeton.
+</td></tr>
+<tr><td valign="top">PATCO SPEEDLINE</td><td>Trans-Delaware line between Philadelphia and Lindenwold, NJ, aka Port Authority Transit Corporation, governed by Delaware River Port Authority
+</td></tr>
+<tr><td valign="top">PATH</td><td>Trans-Hudson line between Newark, NJ; Jersey City, NJ; Hoboken, NJ; and New York City. Aka Port Authority Trans Hudson, governed by Port Authority of New York and New Jersey (PANYNJ)
+</td></tr>
+<tr><td valign="top">PORT JERVIS LINE</td><td>Service lines from New York City to Port Jervis, NY, via either Clifton (Main Line) or Garfield (Bergen County Line.)
+</td></tr>
+<tr><td valign="top">RARITAN VALLEY LINE</td><td>Service line New York City to High Bridge, NJ.
+</td></tr>
+<tr><td valign="top">RIVER LINE</td><td>Light rail service from Camden, along Route 130 Corridor, and to Trenton
+</td></tr>
+<tr><td valign="top">SEPTA</td><td>Trenton Line connecting rail service
+</td></tr>
+</table>
+<p>
+<dt><b><tt>SERVICE</tt></b><dd>Specialized service of rail line, provided on particular trains
+  (Source: NJ TRANSIT Corporation)<p></p>
+<p>
+<em>
+Identifier for variant service (different service route and/or destination). Separate features are included for NJ Transit regional rail, Newark light rail, and PATH, but not for Hudson-Bergen light rail, RiverLINE, or SEPTA.
+</em>
+<p>
+<dt><b><tt>DATE_STAMP</tt></b><dd>Date of last update or edit.
+  (Source: NJ TRANSIT Corporation)<p></p>
+<p>
+<em>
+Date field with dates in mM/dD/YYYY format
+</em>
+<p>
+</dl>
+<p>
+</dl>
+<p>
+</li>
+</ol>
+<p>
+<hr/>
+<h3><a name="who">Who produced the data set?</a></h3>
+<ol>
+<li><a name="who.1"><b>Who are the originators of the data set?</b></a> (may include formal authors, digital compilers, and editors)<p>
+<ul>
+<li>NJ Office of Information Technology (NJOIT), Office of Geographic Information Systems (OGIS)
+<li>NJ TRANSIT - GIS-Transportation
+</ul>
+<p>
+</li>
+<li><a name="who.2"><b>Who also contributed to the data set?</b></a><p>
+<blockquote>
+Source data in shapefile format are provided by Glenn D. Newman PLS, PP, Director of GIS-Transportation at NJ TRANSIT. Data are processed by NJ Office of Information Technology (NJOIT), Office of Geographic Information Systems (OGIS).
+<br/>
+Service pattern information was retrieved from public Web sites, including maps, for NJ TRANSIT Newark Light Rail and Port Authority Trans Hudson (PATH) service.
+</blockquote>
+<p>
+</li>
+<li><a name="who.3"><b>To whom should users address questions about the data?</b></a><p>
+<div style="margin-left: 2em">
+NJ TRANSIT<br/>
+Attn: Glenn D. Newman<br/>
+Director, GIS-Transportation<br/>
+One Penn Plaza East<br/>
+Newark, New Jersey 07105<br/>
+US<br/>
+<p>
+973 491 7849 (voice)<br/>
+gnewman@njtransit.com<br/>
+</div>
+<p>
+</li>
+</ol>
+<hr/>
+<h3><a name="why">Why was the data set created?</a></h3>
+<blockquote>
+Provides location and attribute information for currently operated regional rail service. Data set is intended only for general planning and mapping use. Single lines represent approximate right-of-way centerlines, not track centerlines.
+</blockquote>
+<p>
+<hr/>
+<h3><a name="how">How was the data set created?</a></h3>
+<ol>
+<li><a name="how.1"><b>From what previous works were the data drawn?</b></a><p>
+</li>
+<li><a name="how.2"><b>How were the data generated, processed, and modified?</b></a><p>
+<dl>
+<dt>Date: 16-Mar-2015 (process 1 of 4)
+<dd>
+PATCO line feature class was modified according to high-resolution ortho photo image, to improve alignments with tracks.
+<p>
+Person who carried out this activity:<br/>
+<div style="margin-left: 2em">
+NJ Office of Information Technology (NJOIT), Office of Geographic Information Systems (OGIS)<br/>
+Attn: Yelena Pikovskaya<br/>
+GIS Specialist<br/>
+PO Box 212<br/>
+Trenton, NJ 08625-0212<br/>
+US<br/>
+<p>
+609.633.0420 (voice)<br/>
+yelena.pikovskaya@oit.nj.gov<br/>
+<dl>
+<dt><em>Hours_of_Service:</em>  9-4</dt>
+<dt><em>Contact_Instructions:</em>  e-mail is preferred</dt>
+</dl>
+</div>
+<dt>Date: 25-Feb-2016 (process 2 of 4)
+<dd>
+Data sources were gathered for a new release of rail line data by OGIS.
+NJ TRANSIT GIS supplied shapefile of rail lines (included SEPTA Trenton Line, but not RiverLINE nor PATCO, and did not follow service pattern format).
+Several previous releases of rail data by OGIS (most recent release was missing some lines).
+<p>
+Person who carried out this activity:<br/>
+<div style="margin-left: 2em">
+NJ Office of Information Technology (NJOIT), Office of Geographic Information Systems (OGIS)<br/>
+Attn: Edith Konopka<br/>
+GIS Specialist<br/>
+PO Box 212<br/>
+Trenton, NJ 08625-0212<br/>
+US<br/>
+<p>
+609-777-3774 (voice)<br/>
+edith.konopka@oit.nj.gov<br/>
+<dl>
+<dt><em>Hours_of_Service:</em>  9-4</dt>
+</dl>
+</div>
+<dt>Date: 29-Feb-2016 (process 3 of 4)
+<dd>
+Newark Light Rail and PATH lines were edited to reflect service patterns. Segments were duplicated, split, merged, and edited to correct topology problems.
+<p>
+Person who carried out this activity:<br/>
+<div style="margin-left: 2em">
+NJ Office of Information Technology (NJOIT), Office of Geographic Information Systems (OGIS)<br/>
+Attn: Edith Konopka<br/>
+GIS Specialist<br/>
+PO Box 212<br/>
+Trenton, NJ 08625-0212<br/>
+US<br/>
+<p>
+609-777-3774 (voice)<br/>
+edith.konopka@oit.nj.gov<br/>
+<dl>
+<dt><em>Hours_of_Service:</em>  9-4</dt>
+</dl>
+</div>
+<dt>Date: 29-Feb-2016 (process 4 of 4)
+<dd>
+Line work for a new publication of the NJ TRANSIT rail lines and connecting rail services was appended to a new shapefile from several sources:
+-NJ TRANSIT regional rail service lines were used from the release published by OGIS in 2015, after spot-checking locations against NJ TRANSIT February 2016 delivery. Glenn Newman had stated there were no changes to rail lines. 
+-NJ TRANSIT RiverLINE and Hudson-Bergen Light Rail lines were used from the release published by OGIS in 2015.
+-NJ TRANSIT Newark Light Rail lines from the February delivery by NJT were edited to reflect two main service routes.
+-PATH lines from the June 2014 publication by OGIS were edited to create a record for each main service pattern.
+-PATCO line was copied from the OGIS 2015 release.
+-SEPTA line was copied from NJT February 2016 delivery.
+<br/>
+The Princeton &quot;Dinky&quot; line was edited by OGIS to reflect changes apparent in 2015 orthoimagery.
+<p>
+Person who carried out this activity:<br/>
+<div style="margin-left: 2em">
+NJ Office of Information Technology (NJOIT), Office of Geographic Information Systems (OGIS)<br/>
+Attn: Edith Konopka<br/>
+GIS Specialist<br/>
+PO Box 212<br/>
+Trenton, NJ 08625-0212<br/>
+US<br/>
+<p>
+609-777-3774 (voice)<br/>
+edith.konopka@oit.nj.gov<br/>
+<dl>
+<dt><em>Hours_of_Service:</em>  9-4</dt>
+</dl>
+</div>
+</dl>
+</li>
+<li><a name="how.3"><b>What similar or related data should the user be aware of?</b></a><p>
+</li>
+</ol>
+<p>
+<hr/>
+<h3><a name="quality">How reliable are the data; what problems remain in the data set?</a></h3>
+<ol>
+<li><a name="quality.1"><b>How well have the observations been checked?</b></a><p>
+Status of attribute checks not provided.
+<p>
+</li>
+<li><a name="quality.2"><b>How accurate are the geographic locations?</b></a><p>
+Rail line data for most of the lines were digitized from New Jersey 2007 HIgh Resolution Orthophotography, which has a tested accuracy of +/- 4 feet, NSSDA, and a one foot pixel size. Source of line data for subsurface lines (e.g. PATH, PATCO, Newark City subway) not provided to metadata author.
+<p>
+</li>
+<li><a name="quality.3"><b>How accurate are the heights or depths?</b></a><p>
+<p>
+</li>
+<li><a name="quality.4"><b>Where are the gaps in the data?  What is missing?</b></a><p>
+Includes only portions of track currently used by passenger rail service.
+<p>
+</li>
+<li><a name="quality.5"><b>How consistent are the relationships among the observations, including topology?</b></a><p>
+The file contains duplicate lines on rights of way where more than one service operates. Topology has been checked for some lines, but error-free topology is not guaranteed. The ultimate source of line work varies by operator.
+</li>
+</ol>
+<p>
+<hr/>
+<h3><a name="getacopy">How can someone get a copy of the data set?</a></h3>
+<blockquote>
+<a name="getacopy.0"><b>Are there legal restrictions on access or use of the data?</b></a><p>
+<blockquote>
+<dl>
+<dt><em>Access_Constraints:</em>  None</dt>
+<dt><em>Use_Constraints:</em>  
+<dd>
+
+See conditions and disclaimers on NJ TRANSIT developer Web site. See Purpose, Data Quality, and Distribution sections in this metadata record for conditions that limit appropriate uses. Acknowledgement of the data set providers, NJ TRANSIT, GIS-Transportation and NJ Office of Information Technology (NJOIT), Office of Geographic Information Systems (OGIS), would be appreciated for maps, data or other products derived from this data set.
+
+</dd>
+</dl>
+</blockquote>
+</blockquote>
+<p>
+<ol>
+<li><a name="getacopy.1"><b>Who distributes the data set?</b></a> (Distributor 1 of 2)<p>
+<div style="margin-left: 2em">
+NJ TRANSIT, GIS-Transportation<br/>
+Attn: Glenn D. Newman PLS, PP<br/>
+Director<br/>
+One Penn Plaza East<br/>
+Newark, NJ 07105<br/>
+US<br/>
+<p>
+973 491 7849 (voice)<br/>
+gnewman@njtransit.com<br/>
+</div>
+</li>
+<li><a name="getacopy.2"><b>What's the catalog number I need to order this data set?</b></a><p>
+<tt>Downloadable Data</tt>
+<p>
+</li>
+<li><a name="getacopy.3"><b>What legal disclaimers am I supposed to read?</b></a><p>
+<blockquote>
+See conditions and disclaimers on NJ Transit developer Web site.
+</blockquote>
+<p>
+</li>
+<li><a name="getacopy.4"><b>How can I download or order the data?</b></a><p>
+<ul>
+<li><b>Availability in digital form:</b><p>
+<table border="0" cellpadding="2">
+<tr><th align="left" valign="top">Data&nbsp;format:</th>
+<td>
+GTFS
+
+</td>
+</tr>
+<tr><th align="left" valign="top">Network&nbsp;links:</th>
+<td>
+https://www.njtransit.com/mt/mt_servlet.srv?hdnPageAction=MTDevLoginTo<br/>
+</td>
+</tr>
+</table>
+<p>
+<li><b>Cost to order the data:</b> None<p>
+<li><b>Special instructions:</b><p>
+<blockquote>
+In order to access GTFS data, you must sign up for an account on the NJ TRANSIT site for developers at 
+https://www.njtransit.com/mt/mt_servlet.srv?hdnPageAction=MTDevLoginTo 
+<br/>
+After login the page provides access to downloads of zipped GTFS data for rail and bus, including schedule information; instructions for the DepartureVision Web Service; RSS Feeds of Travel Advisories for Rail, Bus, Light Rail; and RSS Feed of Customer Notices for All Modes.
+</blockquote>
+<p>
+</ul>
+<p>
+</li>
+<hr/>
+</ol>
+<ol>
+<li><a name="getacopy.1.1"><b>Who distributes the data set?</b></a> (Distributor 2 of 2)<p>
+<div style="margin-left: 2em">
+NJ Office of Information Technology (NJOIT), Office of Geographic Information Systems (OGIS)<br/>
+PO Box 212<br/>
+Trenton, NJ 08625-0212<br/>
+US<br/>
+<p>
+609.633.9103 (voice)<br/>
+609.633.0400 (FAX)<br/>
+njgin@oit.nj.gov<br/>
+</div>
+</li>
+<li><a name="getacopy.2.1"><b>What's the catalog number I need to order this data set?</b></a><p>
+<tt>Downloadable Data</tt>
+<p>
+</li>
+<li><a name="getacopy.3.1"><b>What legal disclaimers am I supposed to read?</b></a><p>
+<blockquote>
+See conditions and disclaimers on NJ Transit developer Web site.
+</blockquote>
+<p>
+</li>
+<li><a name="getacopy.4.1"><b>How can I download or order the data?</b></a><p>
+<ul>
+<li><b>Availability in digital form:</b><p>
+<table border="0" cellpadding="2">
+<tr><th align="left" valign="top">Data&nbsp;format:</th>
+<td>
+AVSHP
+ (version 10.3.1)
+</td>
+</tr>
+<tr><th align="left" valign="top">Network&nbsp;links:</th>
+<td>
+https://njgin.state.nj.us/oit/gis/download/NJ_Rail_shp.zip<br/>
+</td>
+</tr>
+</table>
+<p>
+<li><b>Cost to order the data:</b> None<p>
+<li><b>Special instructions:</b><p>
+<blockquote>
+Download from NJGIN Explorer data downloads page (NAD83 NJ State Plane feet version.)
+</blockquote>
+<p>
+</ul>
+<p>
+</li>
+<li><a name="getacopy.6.1"><b>What hardware or software do I need in order to use the data set?</b></a><p>
+<blockquote>
+A desktop mapping client is required for use, such as ArcMap.
+</blockquote>
+<p>
+</li>
+</ol>
+<p>
+<hr/>
+<h3><a name="metaref">Who wrote the metadata?</a></h3>
+<dl>
+<dt>Dates:
+<dd>Last modified: 01-Mar-2016<br/>
+</dd>
+<dt>Metadata author:
+<dd>
+<div style="margin-left: 2em">
+NJ Office of Information Technology (NJOIT), Office of Geographic Information Systems (OGIS)<br/>
+Attn: Edith Konopka<br/>
+GIS Specialist<br/>
+PO Box 212<br/>
+Trenton, NJ 08625-0212<br/>
+US<br/>
+<p>
+609-777-3774 (voice)<br/>
+edith.konopka@oit.nj.gov<br/>
+<dl>
+<dt><em>Hours_of_Service:</em>  9-4</dt>
+</dl>
+</div>
+</dd>
+<dt>Metadata standard: <dd>FGDC Content Standard for Digital Geospatial Metadata (FGDC-STD-001-1998)</dl>
+<p></p>
+<hr/>
+<span class="mp-generated">Generated by <a href="http://geology.usgs.gov/tools/metadata/tools/doc/mp.html"><tt>mp</tt></a> version 2.9.12 on Tue Mar 01 15:26:27 2016<br/></span>
+
+</body>
+</html>
