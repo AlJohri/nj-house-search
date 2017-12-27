@@ -5,17 +5,26 @@ import pyproj
 import shapefile
 from json import dumps
 
+# http://spatialreference.org/ref/esri/nad-1983-stateplane-new-jersey-fips-2900-feet/proj4/
+
+# http://proj4.org/parameters.html#false-easting-northing
+# Note that these values are always expressed in meters even
+# if the coordinate system is some other units.
+
 pnj = pyproj.Proj(
-    proj='lcc',
+    proj='tmerc',
     datum='NAD83',
     ellps='GRS80',
     units='us-ft',
     lon_0=-74.5, # longitude of the central meridian
     lat_0=38.83333333333334, # latitude of projection origin
-    x_0=492125.0, # false easting
+    x_0=150000, # false easting (492125.0 ft to m = 150000)
     y_0=0.0, # false northing
-    preserve_units=True, # do not force to be meters
+    k_0=0.9999, # scaling factor at central meridian
+    preserve_units=True, # do not force to be meters,
+    no_defs=True, # don't use defaults file
     )
+
 
 def shape2json(fname, outfile):
     reader = shapefile.Reader(fname)
