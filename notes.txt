@@ -8,3 +8,7 @@ Things to Check Out Next
 https://njgin.state.nj.us/NJ_NJGINExplorer/DataDownloads.jsp
 https://njgin.state.nj.us/oit/gis/download/NJ_Bus_shp.zip
 https://njgin.state.nj.us/oit/gis/download/NJ_Rail_shp.zip
+
+
+http://www.state.nj.us/njoem/pdf/mitigation/appendixi_union.pdf
+http://www.state.nj.us/njoem/pdf/mitigation/appendixi_passaic.pdf
