@@ -16,7 +16,7 @@ pipenv run jupyter nbextension enable --py widgetsnbextension --sys-prefix
 #### Usage
 
 ``` 
-pipenv run jupyter notebook analysis.ipynb
+pipenv run make
 ```
 
 #### Future Work?

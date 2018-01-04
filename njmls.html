@@ -11897,24 +11897,29 @@ div#notebook {
     
 <span class="n">listings</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">county</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="p">(</span><span class="n">counties</span><span class="p">):</span>
+    
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">current_listings1</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">get_listings</span><span class="p">(</span>
+                <span class="n">min_beds</span><span class="o">=</span><span class="n">MIN_BEDS</span><span class="p">,</span>
+                <span class="n">min_baths</span><span class="o">=</span><span class="n">MIN_BATHS</span><span class="p">,</span>
+                <span class="n">county_search</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                <span class="n">min_price</span><span class="o">=</span><span class="n">MIN_PRICE</span><span class="p">,</span>
+                <span class="n">max_price</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">floor</span><span class="p">((</span><span class="n">MAX_PRICE</span><span class="o">+</span><span class="n">MIN_PRICE</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)),</span>
+                <span class="n">counties</span><span class="o">=</span><span class="p">[</span><span class="n">county</span><span class="o">.</span><span class="n">upper</span><span class="p">()],</span>
+                <span class="n">proptypes</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;1&#39;</span><span class="p">]))</span>
 
-    <span class="n">current_listings1</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">get_listings</span><span class="p">(</span>
-            <span class="n">min_beds</span><span class="o">=</span><span class="n">MIN_BEDS</span><span class="p">,</span>
-            <span class="n">min_baths</span><span class="o">=</span><span class="n">MIN_BATHS</span><span class="p">,</span>
-            <span class="n">county_search</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-            <span class="n">min_price</span><span class="o">=</span><span class="n">MIN_PRICE</span><span class="p">,</span>
-            <span class="n">max_price</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">floor</span><span class="p">((</span><span class="n">MAX_PRICE</span><span class="o">+</span><span class="n">MIN_PRICE</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)),</span>
-            <span class="n">counties</span><span class="o">=</span><span class="p">[</span><span class="n">county</span><span class="o">.</span><span class="n">upper</span><span class="p">()],</span>
-            <span class="n">proptypes</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;1&#39;</span><span class="p">]))</span>
-
-    <span class="n">current_listings2</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">get_listings</span><span class="p">(</span>
-            <span class="n">min_beds</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
-            <span class="n">min_baths</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
-            <span class="n">county_search</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-            <span class="n">min_price</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">ceil</span><span class="p">((</span><span class="n">MAX_PRICE</span><span class="o">+</span><span class="n">MIN_PRICE</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)),</span>
-            <span class="n">max_price</span><span class="o">=</span><span class="n">MAX_PRICE</span><span class="p">,</span>
-            <span class="n">counties</span><span class="o">=</span><span class="p">[</span><span class="n">county</span><span class="o">.</span><span class="n">upper</span><span class="p">()],</span>
-            <span class="n">proptypes</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;1&#39;</span><span class="p">]))</span>
+        <span class="n">current_listings2</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">get_listings</span><span class="p">(</span>
+                <span class="n">min_beds</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+                <span class="n">min_baths</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+                <span class="n">county_search</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                <span class="n">min_price</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">ceil</span><span class="p">((</span><span class="n">MAX_PRICE</span><span class="o">+</span><span class="n">MIN_PRICE</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)),</span>
+                <span class="n">max_price</span><span class="o">=</span><span class="n">MAX_PRICE</span><span class="p">,</span>
+                <span class="n">counties</span><span class="o">=</span><span class="p">[</span><span class="n">county</span><span class="o">.</span><span class="n">upper</span><span class="p">()],</span>
+                <span class="n">proptypes</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;1&#39;</span><span class="p">]))</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="n">current_listings1</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">current_listings2</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">county</span><span class="p">,</span> <span class="n">e</span><span class="p">,)</span>
 
     <span class="n">current_listings</span> <span class="o">=</span> <span class="n">current_listings1</span> <span class="o">+</span> <span class="n">current_listings2</span>
 
@@ -11948,13 +11953,13 @@ div#notebook {
 
  
  
-<div id="06966418-b4c4-4d24-aea0-527b88fa6924"></div>
+<div id="5d6ac533-131a-4f78-8cd3-d64c44bf34ab"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#06966418-b4c4-4d24-aea0-527b88fa6924');
+var element = $('#5d6ac533-131a-4f78-8cd3-d64c44bf34ab');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "821732526c454880bc1a1b1fc65b6031", "version_major": 2, "version_minor": 0}
+{"model_id": "9ec1c28f893f4912853bc4ff784fc989", "version_major": 2, "version_minor": 0}
 </script>
 </div>
 
@@ -11970,13 +11975,13 @@ var element = $('#06966418-b4c4-4d24-aea0-527b88fa6924');
 
  
  
-<div id="0fa4fdb3-068c-4aa7-b25c-5e828498bff2"></div>
+<div id="3859f2ff-9c02-422f-b90e-8194bf3e002a"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#0fa4fdb3-068c-4aa7-b25c-5e828498bff2');
+var element = $('#3859f2ff-9c02-422f-b90e-8194bf3e002a');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "6979137ade6042f2b0d0dd9a53ffbd9f", "version_major": 2, "version_minor": 0}
+{"model_id": "653603d5630f4ae4aefc437175f6a2d0", "version_major": 2, "version_minor": 0}
 </script>
 </div>
 
@@ -11992,13 +11997,13 @@ var element = $('#0fa4fdb3-068c-4aa7-b25c-5e828498bff2');
 
  
  
-<div id="81d13b68-aeec-4c67-8d17-cd24c43af67e"></div>
+<div id="169f2337-b7df-48ca-8cb8-338970523c08"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#81d13b68-aeec-4c67-8d17-cd24c43af67e');
+var element = $('#169f2337-b7df-48ca-8cb8-338970523c08');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "d33143ad90cd495fb09497b5850145d0", "version_major": 2, "version_minor": 0}
+{"model_id": "6c906c55678c42508d64764b0a6494a9", "version_major": 2, "version_minor": 0}
 </script>
 </div>
 
@@ -12014,13 +12019,13 @@ var element = $('#81d13b68-aeec-4c67-8d17-cd24c43af67e');
 
  
  
-<div id="9d9b39e6-e9a7-4453-936f-6b1db0431b9c"></div>
+<div id="11a52f25-cc70-47e8-b57e-17913ab71d5f"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#9d9b39e6-e9a7-4453-936f-6b1db0431b9c');
+var element = $('#11a52f25-cc70-47e8-b57e-17913ab71d5f');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "a13f765388034023b7fbdc63673f1acc", "version_major": 2, "version_minor": 0}
+{"model_id": "4a62f836a9284dcdabbff4de52ea460f", "version_major": 2, "version_minor": 0}
 </script>
 </div>
 
@@ -12036,13 +12041,13 @@ var element = $('#9d9b39e6-e9a7-4453-936f-6b1db0431b9c');
 
  
  
-<div id="b3040d8f-0ea4-4c7a-96ee-24a34f230040"></div>
+<div id="fa9bbd32-47cb-4f46-bc9f-e55849a0b0ba"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#b3040d8f-0ea4-4c7a-96ee-24a34f230040');
+var element = $('#fa9bbd32-47cb-4f46-bc9f-e55849a0b0ba');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "94dfcb5dc5524442aa160e03f599a587", "version_major": 2, "version_minor": 0}
+{"model_id": "0709a652d6d44e108e6d364c62b2d7a2", "version_major": 2, "version_minor": 0}
 </script>
 </div>
 
@@ -12058,13 +12063,13 @@ var element = $('#b3040d8f-0ea4-4c7a-96ee-24a34f230040');
 
  
  
-<div id="e1551e2e-6d95-405b-929d-843fe40747e9"></div>
+<div id="fbbc53f8-7d92-43c3-92d7-d5a4b32e3ef7"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#e1551e2e-6d95-405b-929d-843fe40747e9');
+var element = $('#fbbc53f8-7d92-43c3-92d7-d5a4b32e3ef7');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "4b4d14b62bb44e478328eaf5880be785", "version_major": 2, "version_minor": 0}
+{"model_id": "5117e5e2b10e452685b423c21aabaa87", "version_major": 2, "version_minor": 0}
 </script>
 </div>
 
@@ -12080,13 +12085,13 @@ var element = $('#e1551e2e-6d95-405b-929d-843fe40747e9');
 
  
  
-<div id="a9c3f63a-02d3-42be-9de8-2ed7ee4aac21"></div>
+<div id="b73c8462-e534-4cc7-92b0-537d2b279f5c"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#a9c3f63a-02d3-42be-9de8-2ed7ee4aac21');
+var element = $('#b73c8462-e534-4cc7-92b0-537d2b279f5c');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "d29873602c324f73ac84f9f3e7dc232c", "version_major": 2, "version_minor": 0}
+{"model_id": "d4cd7333ab2b4993be88edf47e4ba344", "version_major": 2, "version_minor": 0}
 </script>
 </div>
 
@@ -12102,13 +12107,13 @@ var element = $('#a9c3f63a-02d3-42be-9de8-2ed7ee4aac21');
 
  
  
-<div id="3da7e2e5-17ba-4d53-a729-7e5ca5095969"></div>
+<div id="6357d097-bdd9-46bc-8e05-bac4df3bed85"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#3da7e2e5-17ba-4d53-a729-7e5ca5095969');
+var element = $('#6357d097-bdd9-46bc-8e05-bac4df3bed85');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "15dc6f6696894ad4ab27c065cf768bd0", "version_major": 2, "version_minor": 0}
+{"model_id": "5c68098da465423b9d220b7c88bbbec5", "version_major": 2, "version_minor": 0}
 </script>
 </div>
 
@@ -12124,13 +12129,46 @@ var element = $('#3da7e2e5-17ba-4d53-a729-7e5ca5095969');
 
  
  
-<div id="c82040b0-4038-442e-a88c-d170697a0df0"></div>
+<div id="8b6f29a9-c2eb-409d-ac14-b17dbc94aab6"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#c82040b0-4038-442e-a88c-d170697a0df0');
+var element = $('#8b6f29a9-c2eb-409d-ac14-b17dbc94aab6');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "2c360d47a9314c9baacc91c443a15f01", "version_major": 2, "version_minor": 0}
+{"model_id": "fae889ca2fe84dc2884abfc2162eb730", "version_major": 2, "version_minor": 0}
+</script>
+</div>
+
+</div>
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Somerset No listings found.
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+
+
+ 
+ 
+<div id="0f5d14e2-eedc-4e5f-845c-e3618e5759a6"></div>
+<div class="output_subarea output_widget_view ">
+<script type="text/javascript">
+var element = $('#0f5d14e2-eedc-4e5f-845c-e3618e5759a6');
+</script>
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id": "eaafef536751430099c5746a0abb1422", "version_major": 2, "version_minor": 0}
 </script>
 </div>
 
@@ -12143,8 +12181,8 @@ var element = $('#c82040b0-4038-442e-a88c-d170697a0df0');
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
-Downloaded 719 listings from NJMLS.
-Filtered down to 696 listings due to null address.
+Downloaded 700 listings from NJMLS.
+Filtered down to 682 listings due to null address.
 </pre>
 </div>
 </div>
@@ -12191,13 +12229,13 @@ Filtered down to 696 listings due to null address.
 
  
  
-<div id="1325ad98-ce49-4e73-8243-ba4232c4d7bd"></div>
+<div id="6c6113f1-4618-4453-9290-0ceb01797d68"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#1325ad98-ce49-4e73-8243-ba4232c4d7bd');
+var element = $('#6c6113f1-4618-4453-9290-0ceb01797d68');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "fcc707674ff84401bdf4dea8fa3ed1b7", "version_major": 2, "version_minor": 0}
+{"model_id": "2d9ab94789654d18841132d7f997dc76", "version_major": 2, "version_minor": 0}
 </script>
 </div>
 
@@ -12260,13 +12298,13 @@ could not geocode: 66 Mcdougall Lane Bogota, NJ or 66 Mcdougall Lane Bogota, NJ
 
  
  
-<div id="c9fc34df-4da8-45d2-8175-06cce8995aac"></div>
+<div id="22f37eea-e3f7-43a7-8f48-95378b76364e"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#c9fc34df-4da8-45d2-8175-06cce8995aac');
+var element = $('#22f37eea-e3f7-43a7-8f48-95378b76364e');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "43f291099a3a45c493bcb21d41b8830c", "version_major": 2, "version_minor": 0}
+{"model_id": "5ebf03c5d30a47908fbf8e72609e499b", "version_major": 2, "version_minor": 0}
 </script>
 </div>
 
@@ -12332,13 +12370,13 @@ var element = $('#c9fc34df-4da8-45d2-8175-06cce8995aac');
 
  
  
-<div id="3916b3a5-d57e-4935-bbeb-fc6a2377df1d"></div>
+<div id="cb87cd47-68c0-45dd-adc7-dfed123ef3cd"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#3916b3a5-d57e-4935-bbeb-fc6a2377df1d');
+var element = $('#cb87cd47-68c0-45dd-adc7-dfed123ef3cd');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "278e6089d80842b9b3b8c92ebdf6d206", "version_major": 2, "version_minor": 0}
+{"model_id": "4f8dc9505dc147f586dae0cd7b6dbadc", "version_major": 2, "version_minor": 0}
 </script>
 </div>
 
@@ -12351,8 +12389,8 @@ var element = $('#3916b3a5-d57e-4935-bbeb-fc6a2377df1d');
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
-695 out of 696 have park and ride commute times.
-629 out of 696 have walking commute times.
+681 out of 682 have park and ride commute times.
+614 out of 682 have walking commute times.
 </pre>
 </div>
 </div>
@@ -12396,7 +12434,7 @@ var element = $('#3916b3a5-d57e-4935-bbeb-fc6a2377df1d');
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>202 listings after filtering
+<pre>207 listings after filtering
 </pre>
 </div>
 </div>
@@ -12459,73 +12497,50 @@ var element = $('#3916b3a5-d57e-4935-bbeb-fc6a2377df1d');
   </thead>
   <tbody>
     <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1746287">1746287</a></th>
-      <td>175 Jerome Place</td>
-      <td>Bloomfield</td>
-      <td>Essex</td>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1800349">1800349</a></th>
+      <td>39-41 East 44th Street</td>
+      <td>Bayonne</td>
+      <td>Hudson</td>
       <td>4</td>
-      <td>3</td>
-      <td>0</td>
-      <td>459000</td>
-      <td>8715.0</td>
-      <td>Colonial</td>
-      <td>8</td>
-      <td>11/28/2017</td>
-      <td>Bloomfield</td>
-      <td>5 mins, 36 mins</td>
-      <td>rail</td>
-      <td>0.632988</td>
-      <td>Clifton Commons</td>
-      <td>3.454818</td>
-      <td>21 mins</td>
-      <td>40.7919</td>
-      <td>-74.188</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1730541">1730541</a></th>
-      <td>41 Clark Avenue</td>
-      <td>Bloomfield</td>
-      <td>Essex</td>
-      <td>3</td>
       <td>2</td>
-      <td>0</td>
-      <td>309000</td>
-      <td>9927.0</td>
+      <td>1</td>
+      <td>349900</td>
+      <td>10191.0</td>
       <td>Colonial</td>
       <td>7</td>
-      <td>07/26/2017</td>
-      <td>Walnut Street</td>
-      <td>5 mins, 42 mins</td>
-      <td>rail</td>
-      <td>0.927320</td>
-      <td>Clifton Commons</td>
-      <td>2.847465</td>
-      <td>23 mins</td>
-      <td>40.8138</td>
-      <td>-74.1925</td>
+      <td>01/03/2018</td>
+      <td>45th Street (Bayonne)</td>
+      <td>2 mins, 1 hour 5 mins</td>
+      <td>light_rail</td>
+      <td>0.054898</td>
+      <td>Journal Square Transportation Center</td>
+      <td>4.294652</td>
+      <td>32 mins</td>
+      <td>40.6784</td>
+      <td>-74.1035</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1742512">1742512</a></th>
-      <td>10 Claremont Avenue</td>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1748219">1748219</a></th>
+      <td>151 Sadler Road</td>
       <td>Bloomfield</td>
       <td>Essex</td>
-      <td>4</td>
+      <td>3</td>
       <td>2</td>
-      <td>2</td>
-      <td>479800</td>
-      <td>16663.0</td>
+      <td>0</td>
+      <td>370000</td>
+      <td>11603.0</td>
       <td>Colonial</td>
-      <td>11</td>
-      <td>10/18/2017</td>
-      <td>Watchung Avenue</td>
-      <td>6 mins, 45 mins</td>
-      <td>rail</td>
-      <td>1.176241</td>
-      <td>Allwood Road</td>
-      <td>1.444312</td>
-      <td>25 mins</td>
-      <td>40.8344</td>
-      <td>-74.1854</td>
+      <td>7</td>
+      <td>12/17/2017</td>
+      <td>Clifton Commons</td>
+      <td>8 mins, 47 mins</td>
+      <td>bus</td>
+      <td>1.672280</td>
+      <td>Clifton Commons</td>
+      <td>1.672280</td>
+      <td>23 mins</td>
+      <td>40.8262</td>
+      <td>-74.173</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1742472">1742472</a></th>
@@ -12551,27 +12566,119 @@ var element = $('#3916b3a5-d57e-4935-bbeb-fc6a2377df1d');
       <td>-74.1805</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1736975">1736975</a></th>
-      <td>15 George Street</td>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1748481">1748481</a></th>
+      <td>89 Mountain Avenue</td>
+      <td>Bloomfield</td>
+      <td>Essex</td>
+      <td>3</td>
+      <td>2</td>
+      <td>0</td>
+      <td>399000</td>
+      <td>13884.0</td>
+      <td>Colonial</td>
+      <td>6</td>
+      <td>12/21/2017</td>
+      <td>Watchung Avenue</td>
+      <td>6 mins, 45 mins</td>
+      <td>rail</td>
+      <td>1.141127</td>
+      <td>Allwood Road</td>
+      <td>1.494435</td>
+      <td>25 mins</td>
+      <td>40.8337</td>
+      <td>-74.1859</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1730541">1730541</a></th>
+      <td>41 Clark Avenue</td>
+      <td>Bloomfield</td>
+      <td>Essex</td>
+      <td>3</td>
+      <td>2</td>
+      <td>0</td>
+      <td>309000</td>
+      <td>9927.0</td>
+      <td>Colonial</td>
+      <td>7</td>
+      <td>07/26/2017</td>
+      <td>Walnut Street</td>
+      <td>5 mins, 42 mins</td>
+      <td>rail</td>
+      <td>0.927320</td>
+      <td>Clifton Commons</td>
+      <td>2.847465</td>
+      <td>23 mins</td>
+      <td>40.8138</td>
+      <td>-74.1925</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1800167">1800167</a></th>
+      <td>70 Mountain Avenue</td>
+      <td>Bloomfield</td>
+      <td>Essex</td>
+      <td>3</td>
+      <td>2</td>
+      <td>0</td>
+      <td>375000</td>
+      <td>13463.0</td>
+      <td>Colonial</td>
+      <td>7</td>
+      <td>01/02/2018</td>
+      <td>Watchung Avenue</td>
+      <td>6 mins, 45 mins</td>
+      <td>rail</td>
+      <td>1.195641</td>
+      <td>Allwood Road</td>
+      <td>1.462014</td>
+      <td>24 mins</td>
+      <td>40.834</td>
+      <td>-74.1849</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1735422">1735422</a></th>
+      <td>338 Essex Avenue</td>
+      <td>Bloomfield</td>
+      <td>Essex</td>
+      <td>5</td>
+      <td>2</td>
+      <td>1</td>
+      <td>439900</td>
+      <td>16232.0</td>
+      <td>Colonial</td>
+      <td>9</td>
+      <td>09/01/2017</td>
+      <td>Walnut Street</td>
+      <td>5 mins, 42 mins</td>
+      <td>rail</td>
+      <td>0.751703</td>
+      <td>Allwood Road</td>
+      <td>2.776278</td>
+      <td>24 mins</td>
+      <td>40.8166</td>
+      <td>-74.1953</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1742512">1742512</a></th>
+      <td>10 Claremont Avenue</td>
       <td>Bloomfield</td>
       <td>Essex</td>
       <td>4</td>
       <td>2</td>
-      <td>1</td>
-      <td>439000</td>
-      <td>14719.0</td>
+      <td>2</td>
+      <td>479800</td>
+      <td>16663.0</td>
       <td>Colonial</td>
-      <td>8</td>
-      <td>09/12/2017</td>
+      <td>11</td>
+      <td>10/18/2017</td>
       <td>Watchung Avenue</td>
       <td>6 mins, 45 mins</td>
       <td>rail</td>
-      <td>1.390126</td>
+      <td>1.176241</td>
       <td>Allwood Road</td>
-      <td>1.715707</td>
-      <td>22 mins</td>
-      <td>40.8293</td>
-      <td>-74.1804</td>
+      <td>1.444312</td>
+      <td>25 mins</td>
+      <td>40.8344</td>
+      <td>-74.1854</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1742305">1742305</a></th>
@@ -12620,73 +12727,73 @@ var element = $('#3916b3a5-d57e-4935-bbeb-fc6a2377df1d');
       <td>-74.186</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1748219">1748219</a></th>
-      <td>151 Sadler Road</td>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1736975">1736975</a></th>
+      <td>15 George Street</td>
       <td>Bloomfield</td>
       <td>Essex</td>
-      <td>3</td>
+      <td>4</td>
       <td>2</td>
-      <td>0</td>
-      <td>370000</td>
-      <td>11603.0</td>
+      <td>1</td>
+      <td>439000</td>
+      <td>14719.0</td>
       <td>Colonial</td>
-      <td>7</td>
-      <td>12/17/2017</td>
-      <td>Clifton Commons</td>
-      <td>8 mins, 47 mins</td>
-      <td>bus</td>
-      <td>1.672280</td>
-      <td>Clifton Commons</td>
-      <td>1.672280</td>
-      <td>23 mins</td>
-      <td>40.8262</td>
-      <td>-74.173</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1748481">1748481</a></th>
-      <td>89 Mountain Avenue</td>
-      <td>Bloomfield</td>
-      <td>Essex</td>
-      <td>3</td>
-      <td>2</td>
-      <td>0</td>
-      <td>399000</td>
-      <td>13884.0</td>
-      <td>Colonial</td>
-      <td>6</td>
-      <td>12/21/2017</td>
+      <td>8</td>
+      <td>09/12/2017</td>
       <td>Watchung Avenue</td>
       <td>6 mins, 45 mins</td>
       <td>rail</td>
-      <td>1.141127</td>
+      <td>1.390126</td>
       <td>Allwood Road</td>
-      <td>1.494435</td>
-      <td>25 mins</td>
-      <td>40.8337</td>
-      <td>-74.1859</td>
+      <td>1.715707</td>
+      <td>22 mins</td>
+      <td>40.8293</td>
+      <td>-74.1804</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1735422">1735422</a></th>
-      <td>338 Essex Avenue</td>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1746287">1746287</a></th>
+      <td>175 Jerome Place</td>
       <td>Bloomfield</td>
       <td>Essex</td>
-      <td>5</td>
+      <td>4</td>
+      <td>3</td>
+      <td>0</td>
+      <td>459000</td>
+      <td>8715.0</td>
+      <td>Colonial</td>
+      <td>8</td>
+      <td>11/28/2017</td>
+      <td>Bloomfield</td>
+      <td>5 mins, 36 mins</td>
+      <td>rail</td>
+      <td>0.632988</td>
+      <td>Clifton Commons</td>
+      <td>3.454818</td>
+      <td>21 mins</td>
+      <td>40.7919</td>
+      <td>-74.188</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1732295">1732295</a></th>
+      <td>146 Cypress Avenue</td>
+      <td>Bogota</td>
+      <td>Bergen</td>
+      <td>4</td>
       <td>2</td>
       <td>1</td>
-      <td>439900</td>
-      <td>16232.0</td>
+      <td>464900</td>
+      <td>10032.0</td>
       <td>Colonial</td>
       <td>9</td>
-      <td>09/01/2017</td>
-      <td>Walnut Street</td>
-      <td>5 mins, 42 mins</td>
-      <td>rail</td>
-      <td>0.751703</td>
-      <td>Allwood Road</td>
-      <td>2.776278</td>
-      <td>24 mins</td>
-      <td>40.8166</td>
-      <td>-74.1953</td>
+      <td>08/07/2017</td>
+      <td>Hackensack Terminal</td>
+      <td>5 mins, 45 mins</td>
+      <td>bus</td>
+      <td>1.226966</td>
+      <td>Hackensack Terminal</td>
+      <td>1.226966</td>
+      <td>35 mins</td>
+      <td>40.868</td>
+      <td>-74.0273</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1747631">1747631</a></th>
@@ -12758,27 +12865,27 @@ var element = $('#3916b3a5-d57e-4935-bbeb-fc6a2377df1d');
       <td>-74.0276</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1732295">1732295</a></th>
-      <td>146 Cypress Avenue</td>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1743484">1743484</a></th>
+      <td>459 River Road</td>
       <td>Bogota</td>
       <td>Bergen</td>
       <td>4</td>
       <td>2</td>
-      <td>1</td>
-      <td>464900</td>
-      <td>10032.0</td>
+      <td>0</td>
+      <td>369999</td>
+      <td>8905.0</td>
       <td>Colonial</td>
-      <td>9</td>
-      <td>08/07/2017</td>
+      <td>7</td>
+      <td>11/01/2017</td>
       <td>Hackensack Terminal</td>
-      <td>5 mins, 45 mins</td>
+      <td>4 mins, 45 mins</td>
       <td>bus</td>
-      <td>1.226966</td>
+      <td>0.537489</td>
       <td>Hackensack Terminal</td>
-      <td>1.226966</td>
-      <td>35 mins</td>
-      <td>40.868</td>
-      <td>-74.0273</td>
+      <td>0.537489</td>
+      <td>38 mins</td>
+      <td>40.882</td>
+      <td>-74.0318</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1744849">1744849</a></th>
@@ -12804,29 +12911,6 @@ var element = $('#3916b3a5-d57e-4935-bbeb-fc6a2377df1d');
       <td>-74.2513</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1735749">1735749</a></th>
-      <td>521 Hackensack Street</td>
-      <td>Carlstadt</td>
-      <td>Bergen</td>
-      <td>4</td>
-      <td>3</td>
-      <td>0</td>
-      <td>499000</td>
-      <td>7955.0</td>
-      <td>Colonial</td>
-      <td>8</td>
-      <td>09/04/2017</td>
-      <td>Wood Ridge</td>
-      <td>5 mins, 28 mins</td>
-      <td>rail</td>
-      <td>0.671821</td>
-      <td>Passaic Bus Terminal</td>
-      <td>2.553566</td>
-      <td>32 mins</td>
-      <td>40.8393</td>
-      <td>-74.09</td>
-    </tr>
-    <tr>
       <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1709262">1709262</a></th>
       <td>754 Garden Street</td>
       <td>Carlstadt</td>
@@ -12850,27 +12934,27 @@ var element = $('#3916b3a5-d57e-4935-bbeb-fc6a2377df1d');
       <td>-74.0952</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1701438">1701438</a></th>
-      <td>70 Devonshire Road</td>
-      <td>Cedar Grove</td>
-      <td>Essex</td>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1735749">1735749</a></th>
+      <td>521 Hackensack Street</td>
+      <td>Carlstadt</td>
+      <td>Bergen</td>
       <td>4</td>
-      <td>2</td>
-      <td>1</td>
-      <td>399000</td>
-      <td>9420.0</td>
-      <td>Split Level</td>
+      <td>3</td>
+      <td>0</td>
+      <td>499000</td>
+      <td>7955.0</td>
+      <td>Colonial</td>
       <td>8</td>
-      <td>01/12/2017</td>
-      <td>Upper Montclair</td>
-      <td>4 mins, 48 mins</td>
+      <td>09/04/2017</td>
+      <td>Wood Ridge</td>
+      <td>5 mins, 28 mins</td>
       <td>rail</td>
-      <td>0.849114</td>
-      <td>Allwood Road</td>
-      <td>2.706911</td>
-      <td>22 mins</td>
-      <td>40.8442</td>
-      <td>-74.2253</td>
+      <td>0.671821</td>
+      <td>Passaic Bus Terminal</td>
+      <td>2.553566</td>
+      <td>32 mins</td>
+      <td>40.8393</td>
+      <td>-74.09</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1742482">1742482</a></th>
@@ -12896,73 +12980,27 @@ var element = $('#3916b3a5-d57e-4935-bbeb-fc6a2377df1d');
       <td>-73.9908</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1744349">1744349</a></th>
-      <td>9 Lynn Drive</td>
-      <td>Clifton</td>
-      <td>Passaic</td>
-      <td>4</td>
-      <td>3</td>
-      <td>1</td>
-      <td>519900</td>
-      <td>14975.0</td>
-      <td>Split Level</td>
-      <td>10</td>
-      <td>11/08/2017</td>
-      <td>Allwood Road</td>
-      <td>3 mins, 33 mins</td>
-      <td>bus</td>
-      <td>0.608936</td>
-      <td>Allwood Road</td>
-      <td>0.608936</td>
-      <td>27 mins</td>
-      <td>40.861</td>
-      <td>-74.1684</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1741251">1741251</a></th>
-      <td>3 Trella Terrace</td>
-      <td>Clifton</td>
-      <td>Passaic</td>
-      <td>4</td>
-      <td>3</td>
-      <td>0</td>
-      <td>499000</td>
-      <td>13539.0</td>
-      <td>Ranch</td>
-      <td>10</td>
-      <td>10/13/2017</td>
-      <td>Clifton</td>
-      <td>8 mins, 44 mins</td>
-      <td>rail</td>
-      <td>1.260493</td>
-      <td>Allwood Road</td>
-      <td>1.546734</td>
-      <td>28 mins</td>
-      <td>40.8762</td>
-      <td>-74.1747</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1733998">1733998</a></th>
-      <td>44 Barkley Avenue</td>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1743731">1743731</a></th>
+      <td>9 Kennedy Court</td>
       <td>Clifton</td>
       <td>Passaic</td>
       <td>3</td>
       <td>2</td>
       <td>1</td>
-      <td>419000</td>
-      <td>10973.0</td>
-      <td>Duplex</td>
-      <td>7</td>
-      <td>08/20/2017</td>
-      <td>Clifton</td>
-      <td>5 mins, 44 mins</td>
+      <td>443000</td>
+      <td>15716.0</td>
+      <td>Split Level</td>
+      <td>8</td>
+      <td>11/02/2017</td>
+      <td>Montclair Heights</td>
+      <td>4 mins, 52 mins</td>
       <td>rail</td>
-      <td>0.878032</td>
-      <td>Passaic Bus Terminal</td>
-      <td>1.504168</td>
-      <td>29 mins</td>
-      <td>40.8795</td>
-      <td>-74.1461</td>
+      <td>0.601613</td>
+      <td>Allwood Road</td>
+      <td>0.857479</td>
+      <td>27 mins</td>
+      <td>40.857</td>
+      <td>-74.191</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1746762">1746762</a></th>
@@ -12988,6 +13026,29 @@ var element = $('#3916b3a5-d57e-4935-bbeb-fc6a2377df1d');
       <td>-74.1672</td>
     </tr>
     <tr>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1733998">1733998</a></th>
+      <td>44 Barkley Avenue</td>
+      <td>Clifton</td>
+      <td>Passaic</td>
+      <td>3</td>
+      <td>2</td>
+      <td>1</td>
+      <td>419000</td>
+      <td>10973.0</td>
+      <td>Duplex</td>
+      <td>7</td>
+      <td>08/20/2017</td>
+      <td>Clifton</td>
+      <td>5 mins, 44 mins</td>
+      <td>rail</td>
+      <td>0.878032</td>
+      <td>Passaic Bus Terminal</td>
+      <td>1.504168</td>
+      <td>29 mins</td>
+      <td>40.8795</td>
+      <td>-74.1461</td>
+    </tr>
+    <tr>
       <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1728111">1728111</a></th>
       <td>130 Sycamore Road</td>
       <td>Clifton</td>
@@ -13009,6 +13070,52 @@ var element = $('#3916b3a5-d57e-4935-bbeb-fc6a2377df1d');
       <td>26 mins</td>
       <td>40.8505</td>
       <td>-74.1678</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1741251">1741251</a></th>
+      <td>3 Trella Terrace</td>
+      <td>Clifton</td>
+      <td>Passaic</td>
+      <td>4</td>
+      <td>3</td>
+      <td>0</td>
+      <td>499000</td>
+      <td>13539.0</td>
+      <td>Ranch</td>
+      <td>10</td>
+      <td>10/13/2017</td>
+      <td>Clifton</td>
+      <td>8 mins, 44 mins</td>
+      <td>rail</td>
+      <td>1.260493</td>
+      <td>Allwood Road</td>
+      <td>1.546734</td>
+      <td>28 mins</td>
+      <td>40.8762</td>
+      <td>-74.1747</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1744349">1744349</a></th>
+      <td>9 Lynn Drive</td>
+      <td>Clifton</td>
+      <td>Passaic</td>
+      <td>4</td>
+      <td>3</td>
+      <td>1</td>
+      <td>519900</td>
+      <td>14975.0</td>
+      <td>Split Level</td>
+      <td>10</td>
+      <td>11/08/2017</td>
+      <td>Allwood Road</td>
+      <td>3 mins, 33 mins</td>
+      <td>bus</td>
+      <td>0.608936</td>
+      <td>Allwood Road</td>
+      <td>0.608936</td>
+      <td>27 mins</td>
+      <td>40.861</td>
+      <td>-74.1684</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1744820">1744820</a></th>
@@ -13034,211 +13141,27 @@ var element = $('#3916b3a5-d57e-4935-bbeb-fc6a2377df1d');
       <td>-74.1531</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1745791">1745791</a></th>
-      <td>150 Clinton Avenue</td>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1745962">1745962</a></th>
+      <td>790 Grove Street</td>
       <td>Clifton</td>
-      <td>Passaic</td>
-      <td>4</td>
-      <td>2</td>
-      <td>0</td>
-      <td>339000</td>
-      <td>8610.0</td>
-      <td>Colonial</td>
-      <td>7</td>
-      <td>11/20/2017</td>
-      <td>Clifton</td>
-      <td>4 mins, 44 mins</td>
-      <td>rail</td>
-      <td>0.536066</td>
-      <td>Passaic Bus Terminal</td>
-      <td>1.097687</td>
-      <td>30 mins</td>
-      <td>40.8721</td>
-      <td>-74.1445</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1747236">1747236</a></th>
-      <td>103 Arlington Avenue</td>
-      <td>Clifton</td>
-      <td>Passaic</td>
+      <td>NaN</td>
       <td>3</td>
       <td>2</td>
       <td>0</td>
-      <td>329000</td>
-      <td>7506.0</td>
-      <td>Colonial</td>
-      <td>7</td>
-      <td>12/06/2017</td>
-      <td>Clifton</td>
-      <td>8 mins, 44 mins</td>
-      <td>rail</td>
-      <td>1.257149</td>
-      <td>Passaic Bus Terminal</td>
-      <td>1.278926</td>
-      <td>30 mins</td>
-      <td>40.8805</td>
-      <td>-74.1357</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1747763">1747763</a></th>
-      <td>44 Van Orden Place</td>
-      <td>Clifton</td>
-      <td>Passaic</td>
-      <td>3</td>
-      <td>2</td>
-      <td>0</td>
-      <td>379000</td>
-      <td>7845.0</td>
-      <td>Colonial</td>
-      <td>8</td>
-      <td>12/12/2017</td>
-      <td>Clifton</td>
-      <td>4 mins, 44 mins</td>
-      <td>rail</td>
-      <td>1.063455</td>
-      <td>Passaic Bus Terminal</td>
-      <td>2.134943</td>
-      <td>26 mins</td>
-      <td>40.8828</td>
-      <td>-74.1586</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1748060">1748060</a></th>
-      <td>48 Godwin Place</td>
-      <td>Clifton</td>
-      <td>Passaic</td>
-      <td>3</td>
-      <td>2</td>
-      <td>1</td>
-      <td>399000</td>
-      <td>13426.0</td>
-      <td>Split Level</td>
-      <td>8</td>
-      <td>12/15/2017</td>
-      <td>Allwood Road</td>
-      <td>3 mins, 33 mins</td>
-      <td>bus</td>
-      <td>0.553667</td>
-      <td>Allwood Road</td>
-      <td>0.553667</td>
-      <td>27 mins</td>
-      <td>40.8606</td>
-      <td>-74.1696</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1743731">1743731</a></th>
-      <td>9 Kennedy Court</td>
-      <td>Clifton</td>
-      <td>Passaic</td>
-      <td>3</td>
-      <td>2</td>
-      <td>1</td>
-      <td>443000</td>
-      <td>15716.0</td>
-      <td>Split Level</td>
-      <td>8</td>
-      <td>11/02/2017</td>
+      <td>499000</td>
+      <td>12971.0</td>
+      <td>Ranch</td>
+      <td>6</td>
+      <td>11/24/2017</td>
       <td>Montclair Heights</td>
       <td>4 mins, 52 mins</td>
       <td>rail</td>
-      <td>0.601613</td>
+      <td>0.542873</td>
       <td>Allwood Road</td>
-      <td>0.857479</td>
-      <td>27 mins</td>
-      <td>40.857</td>
-      <td>-74.191</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1745626">1745626</a></th>
-      <td>9 Grant Avenue</td>
-      <td>Clifton</td>
-      <td>Passaic</td>
-      <td>4</td>
-      <td>2</td>
-      <td>1</td>
-      <td>379900</td>
-      <td>9194.0</td>
-      <td>Colonial</td>
-      <td>8</td>
-      <td>11/20/2017</td>
-      <td>Clifton</td>
-      <td>4 mins, 44 mins</td>
-      <td>rail</td>
-      <td>0.827897</td>
-      <td>Passaic Bus Terminal</td>
-      <td>1.924638</td>
-      <td>27 mins</td>
-      <td>40.8797</td>
-      <td>-74.1568</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1748584">1748584</a></th>
-      <td>118 Dumont Avenue</td>
-      <td>Clifton</td>
-      <td>Passaic</td>
-      <td>3</td>
-      <td>2</td>
-      <td>0</td>
-      <td>339900</td>
-      <td>8610.0</td>
-      <td>Colonial</td>
-      <td>7</td>
-      <td>12/21/2017</td>
-      <td>Paterson</td>
-      <td>5 mins, 48 mins</td>
-      <td>rail</td>
-      <td>1.301801</td>
-      <td>Broadway Bus Terminal - Paterson</td>
-      <td>1.536289</td>
-      <td>28 mins</td>
-      <td>40.8964</td>
-      <td>-74.1724</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1739171">1739171</a></th>
-      <td>16 Clair Street</td>
-      <td>Clifton</td>
-      <td>Passaic</td>
-      <td>4</td>
-      <td>2</td>
-      <td>0</td>
-      <td>399000</td>
-      <td>9778.0</td>
-      <td>Colonial</td>
-      <td>8</td>
-      <td>09/28/2017</td>
-      <td>Clifton</td>
-      <td>5 mins, 44 mins</td>
-      <td>rail</td>
-      <td>0.725681</td>
-      <td>Allwood Road</td>
-      <td>1.122186</td>
-      <td>27 mins</td>
-      <td>40.8689</td>
-      <td>-74.167</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1743558">1743558</a></th>
-      <td>1025 Broad Street</td>
-      <td>Clifton</td>
-      <td>Passaic</td>
-      <td>3</td>
-      <td>2</td>
-      <td>0</td>
-      <td>379900</td>
-      <td>9757.0</td>
-      <td>Ranch</td>
-      <td>9</td>
-      <td>10/31/2017</td>
-      <td>Allwood Road</td>
-      <td>2 mins, 33 mins</td>
-      <td>bus</td>
-      <td>0.541461</td>
-      <td>Allwood Road</td>
-      <td>0.541461</td>
+      <td>0.916582</td>
       <td>25 mins</td>
-      <td>40.8616</td>
-      <td>-74.1738</td>
+      <td>40.8552</td>
+      <td>-74.1926</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1746560">1746560</a></th>
@@ -13264,27 +13187,50 @@ var element = $('#3916b3a5-d57e-4935-bbeb-fc6a2377df1d');
       <td>-74.1798</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1739478">1739478</a></th>
-      <td>21 Barrington Avenue</td>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1800247">1800247</a></th>
+      <td>43 Ward Avenue</td>
       <td>Clifton</td>
       <td>Passaic</td>
       <td>3</td>
       <td>2</td>
       <td>0</td>
-      <td>338500</td>
-      <td>7350.0</td>
+      <td>389000</td>
+      <td>10116.0</td>
+      <td>Ranch</td>
+      <td>7</td>
+      <td>01/03/2018</td>
+      <td>Clifton Commons</td>
+      <td>3 mins, 47 mins</td>
+      <td>bus</td>
+      <td>0.544419</td>
+      <td>Clifton Commons</td>
+      <td>0.544419</td>
+      <td>27 mins</td>
+      <td>40.8329</td>
+      <td>-74.148</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1747236">1747236</a></th>
+      <td>103 Arlington Avenue</td>
+      <td>Clifton</td>
+      <td>Passaic</td>
+      <td>3</td>
+      <td>2</td>
+      <td>0</td>
+      <td>329000</td>
+      <td>7506.0</td>
       <td>Colonial</td>
       <td>7</td>
-      <td>10/01/2017</td>
+      <td>12/06/2017</td>
       <td>Clifton</td>
-      <td>7 mins, 44 mins</td>
+      <td>8 mins, 44 mins</td>
       <td>rail</td>
-      <td>0.947348</td>
+      <td>1.257149</td>
       <td>Passaic Bus Terminal</td>
-      <td>1.201411</td>
+      <td>1.278926</td>
       <td>30 mins</td>
-      <td>40.8775</td>
-      <td>-74.1401</td>
+      <td>40.8805</td>
+      <td>-74.1357</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1730324">1730324</a></th>
@@ -13310,96 +13256,27 @@ var element = $('#3916b3a5-d57e-4935-bbeb-fc6a2377df1d');
       <td>-74.1698</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1745962">1745962</a></th>
-      <td>790 Grove Street</td>
-      <td>Clifton</td>
-      <td>NaN</td>
-      <td>3</td>
-      <td>2</td>
-      <td>0</td>
-      <td>499000</td>
-      <td>12971.0</td>
-      <td>Ranch</td>
-      <td>6</td>
-      <td>11/24/2017</td>
-      <td>Montclair Heights</td>
-      <td>4 mins, 52 mins</td>
-      <td>rail</td>
-      <td>0.542873</td>
-      <td>Allwood Road</td>
-      <td>0.916582</td>
-      <td>25 mins</td>
-      <td>40.8552</td>
-      <td>-74.1926</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1748136">1748136</a></th>
-      <td>153 Rutgers Place</td>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1747763">1747763</a></th>
+      <td>44 Van Orden Place</td>
       <td>Clifton</td>
       <td>Passaic</td>
       <td>3</td>
       <td>2</td>
       <td>0</td>
-      <td>350000</td>
-      <td>11104.0</td>
-      <td>Split Level</td>
-      <td>6</td>
-      <td>12/16/2017</td>
-      <td>Clifton</td>
-      <td>7 mins, 44 mins</td>
-      <td>rail</td>
-      <td>1.186576</td>
-      <td>Allwood Road</td>
-      <td>1.653504</td>
-      <td>27 mins</td>
-      <td>40.8777</td>
-      <td>-74.1719</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1727597">1727597</a></th>
-      <td>41 Ridgewood Road</td>
-      <td>Clifton</td>
-      <td>Passaic</td>
-      <td>4</td>
-      <td>3</td>
-      <td>0</td>
-      <td>399900</td>
-      <td>11114.0</td>
+      <td>379000</td>
+      <td>7845.0</td>
       <td>Colonial</td>
-      <td>9</td>
-      <td>07/06/2017</td>
-      <td>Allwood Road</td>
-      <td>4 mins, 33 mins</td>
-      <td>bus</td>
-      <td>0.702121</td>
-      <td>Allwood Road</td>
-      <td>0.702121</td>
-      <td>28 mins</td>
-      <td>40.8519</td>
-      <td>-74.1621</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1742651">1742651</a></th>
-      <td>112 Wesley Street</td>
+      <td>8</td>
+      <td>12/12/2017</td>
       <td>Clifton</td>
-      <td>Passaic</td>
-      <td>4</td>
-      <td>2</td>
-      <td>0</td>
-      <td>369999</td>
-      <td>10893.0</td>
-      <td>Ranch</td>
-      <td>10</td>
-      <td>10/25/2017</td>
-      <td>Passaic</td>
-      <td>5 mins, 40 mins</td>
+      <td>4 mins, 44 mins</td>
       <td>rail</td>
-      <td>0.775477</td>
+      <td>1.063455</td>
       <td>Passaic Bus Terminal</td>
-      <td>1.280547</td>
-      <td>31 mins</td>
-      <td>40.8531</td>
-      <td>-74.1479</td>
+      <td>2.134943</td>
+      <td>26 mins</td>
+      <td>40.8828</td>
+      <td>-74.1586</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1730965">1730965</a></th>
@@ -13448,6 +13325,236 @@ var element = $('#3916b3a5-d57e-4935-bbeb-fc6a2377df1d');
       <td>-74.1477</td>
     </tr>
     <tr>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1742651">1742651</a></th>
+      <td>112 Wesley Street</td>
+      <td>Clifton</td>
+      <td>Passaic</td>
+      <td>4</td>
+      <td>2</td>
+      <td>0</td>
+      <td>369999</td>
+      <td>10893.0</td>
+      <td>Ranch</td>
+      <td>10</td>
+      <td>10/25/2017</td>
+      <td>Passaic</td>
+      <td>5 mins, 40 mins</td>
+      <td>rail</td>
+      <td>0.775477</td>
+      <td>Passaic Bus Terminal</td>
+      <td>1.280547</td>
+      <td>31 mins</td>
+      <td>40.8531</td>
+      <td>-74.1479</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1748584">1748584</a></th>
+      <td>118 Dumont Avenue</td>
+      <td>Clifton</td>
+      <td>Passaic</td>
+      <td>3</td>
+      <td>2</td>
+      <td>0</td>
+      <td>339900</td>
+      <td>8610.0</td>
+      <td>Colonial</td>
+      <td>7</td>
+      <td>12/21/2017</td>
+      <td>Paterson</td>
+      <td>5 mins, 48 mins</td>
+      <td>rail</td>
+      <td>1.301801</td>
+      <td>Broadway Bus Terminal - Paterson</td>
+      <td>1.536289</td>
+      <td>28 mins</td>
+      <td>40.8964</td>
+      <td>-74.1724</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1727597">1727597</a></th>
+      <td>41 Ridgewood Road</td>
+      <td>Clifton</td>
+      <td>Passaic</td>
+      <td>4</td>
+      <td>3</td>
+      <td>0</td>
+      <td>399900</td>
+      <td>11114.0</td>
+      <td>Colonial</td>
+      <td>9</td>
+      <td>07/06/2017</td>
+      <td>Allwood Road</td>
+      <td>4 mins, 33 mins</td>
+      <td>bus</td>
+      <td>0.702121</td>
+      <td>Allwood Road</td>
+      <td>0.702121</td>
+      <td>28 mins</td>
+      <td>40.8519</td>
+      <td>-74.1621</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1743558">1743558</a></th>
+      <td>1025 Broad Street</td>
+      <td>Clifton</td>
+      <td>Passaic</td>
+      <td>3</td>
+      <td>2</td>
+      <td>0</td>
+      <td>379900</td>
+      <td>9757.0</td>
+      <td>Ranch</td>
+      <td>9</td>
+      <td>10/31/2017</td>
+      <td>Allwood Road</td>
+      <td>2 mins, 33 mins</td>
+      <td>bus</td>
+      <td>0.541461</td>
+      <td>Allwood Road</td>
+      <td>0.541461</td>
+      <td>25 mins</td>
+      <td>40.8616</td>
+      <td>-74.1738</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1748136">1748136</a></th>
+      <td>153 Rutgers Place</td>
+      <td>Clifton</td>
+      <td>Passaic</td>
+      <td>3</td>
+      <td>2</td>
+      <td>0</td>
+      <td>350000</td>
+      <td>11104.0</td>
+      <td>Split Level</td>
+      <td>6</td>
+      <td>12/16/2017</td>
+      <td>Clifton</td>
+      <td>7 mins, 44 mins</td>
+      <td>rail</td>
+      <td>1.186576</td>
+      <td>Allwood Road</td>
+      <td>1.653504</td>
+      <td>27 mins</td>
+      <td>40.8777</td>
+      <td>-74.1719</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1745626">1745626</a></th>
+      <td>9 Grant Avenue</td>
+      <td>Clifton</td>
+      <td>Passaic</td>
+      <td>4</td>
+      <td>2</td>
+      <td>1</td>
+      <td>379900</td>
+      <td>9194.0</td>
+      <td>Colonial</td>
+      <td>8</td>
+      <td>11/20/2017</td>
+      <td>Clifton</td>
+      <td>4 mins, 44 mins</td>
+      <td>rail</td>
+      <td>0.827897</td>
+      <td>Passaic Bus Terminal</td>
+      <td>1.924638</td>
+      <td>27 mins</td>
+      <td>40.8797</td>
+      <td>-74.1568</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1748060">1748060</a></th>
+      <td>48 Godwin Place</td>
+      <td>Clifton</td>
+      <td>Passaic</td>
+      <td>3</td>
+      <td>2</td>
+      <td>1</td>
+      <td>399000</td>
+      <td>13426.0</td>
+      <td>Split Level</td>
+      <td>8</td>
+      <td>12/15/2017</td>
+      <td>Allwood Road</td>
+      <td>3 mins, 33 mins</td>
+      <td>bus</td>
+      <td>0.553667</td>
+      <td>Allwood Road</td>
+      <td>0.553667</td>
+      <td>27 mins</td>
+      <td>40.8606</td>
+      <td>-74.1696</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1745791">1745791</a></th>
+      <td>150 Clinton Avenue</td>
+      <td>Clifton</td>
+      <td>Passaic</td>
+      <td>4</td>
+      <td>2</td>
+      <td>0</td>
+      <td>339000</td>
+      <td>8610.0</td>
+      <td>Colonial</td>
+      <td>7</td>
+      <td>11/20/2017</td>
+      <td>Clifton</td>
+      <td>4 mins, 44 mins</td>
+      <td>rail</td>
+      <td>0.536066</td>
+      <td>Passaic Bus Terminal</td>
+      <td>1.097687</td>
+      <td>30 mins</td>
+      <td>40.8721</td>
+      <td>-74.1445</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1748956">1748956</a></th>
+      <td>227 Rowland Avenue</td>
+      <td>Clifton</td>
+      <td>Passaic</td>
+      <td>4</td>
+      <td>2</td>
+      <td>1</td>
+      <td>481500</td>
+      <td>10030.0</td>
+      <td>Ranch</td>
+      <td>9</td>
+      <td>12/30/2017</td>
+      <td>Clifton</td>
+      <td>5 mins, 44 mins</td>
+      <td>rail</td>
+      <td>0.983392</td>
+      <td>Allwood Road</td>
+      <td>1.065391</td>
+      <td>30 mins</td>
+      <td>40.8538</td>
+      <td>-74.1549</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1739478">1739478</a></th>
+      <td>21 Barrington Avenue</td>
+      <td>Clifton</td>
+      <td>Passaic</td>
+      <td>3</td>
+      <td>2</td>
+      <td>0</td>
+      <td>338500</td>
+      <td>7350.0</td>
+      <td>Colonial</td>
+      <td>7</td>
+      <td>10/01/2017</td>
+      <td>Clifton</td>
+      <td>7 mins, 44 mins</td>
+      <td>rail</td>
+      <td>0.947348</td>
+      <td>Passaic Bus Terminal</td>
+      <td>1.201411</td>
+      <td>30 mins</td>
+      <td>40.8775</td>
+      <td>-74.1401</td>
+    </tr>
+    <tr>
       <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1735083">1735083</a></th>
       <td>388 Whittier Avenue</td>
       <td>Dunellen</td>
@@ -13494,30 +13601,30 @@ var element = $('#3916b3a5-d57e-4935-bbeb-fc6a2377df1d');
       <td>-74.091</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1748016">1748016</a></th>
-      <td>191 Franklin Street</td>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1741810">1741810</a></th>
+      <td>29 Cadmus Avenue</td>
       <td>Elmwood Park</td>
       <td>Bergen</td>
-      <td>3</td>
-      <td>3</td>
+      <td>4</td>
+      <td>2</td>
       <td>0</td>
-      <td>389000</td>
-      <td>11692.0</td>
-      <td>Colonial</td>
-      <td>7</td>
-      <td>12/15/2017</td>
-      <td>Broadway</td>
-      <td>8 mins, 41 mins</td>
+      <td>475000</td>
+      <td>10161.0</td>
+      <td>Ranch</td>
+      <td>6</td>
+      <td>10/18/2017</td>
+      <td>Plauderville</td>
+      <td>5 mins, 36 mins</td>
       <td>rail</td>
-      <td>1.096152</td>
-      <td>Fairlawn DPW</td>
-      <td>3.007080</td>
-      <td>33 mins</td>
-      <td>40.9066</td>
-      <td>-74.1142</td>
+      <td>0.840940</td>
+      <td>Passaic Bus Terminal</td>
+      <td>2.320759</td>
+      <td>29 mins</td>
+      <td>40.8947</td>
+      <td>-74.1123</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1741557">1741557</a></th>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1800291">1800291</a></th>
       <td>243 East 54th Street</td>
       <td>Elmwood Park</td>
       <td>Bergen</td>
@@ -13528,7 +13635,7 @@ var element = $('#3916b3a5-d57e-4935-bbeb-fc6a2377df1d');
       <td>6402.0</td>
       <td>Colonial</td>
       <td>6</td>
-      <td>10/16/2017</td>
+      <td>01/03/2018</td>
       <td>Broadway</td>
       <td>7 mins, 41 mins</td>
       <td>rail</td>
@@ -13538,6 +13645,29 @@ var element = $('#3916b3a5-d57e-4935-bbeb-fc6a2377df1d');
       <td>33 mins</td>
       <td>40.9123</td>
       <td>-74.1145</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1800103">1800103</a></th>
+      <td>38 Hillman Drive</td>
+      <td>Elmwood Park</td>
+      <td>Bergen</td>
+      <td>3</td>
+      <td>2</td>
+      <td>1</td>
+      <td>500000</td>
+      <td>9177.0</td>
+      <td>Colonial</td>
+      <td>6</td>
+      <td>01/02/2018</td>
+      <td>Plauderville</td>
+      <td>7 mins, 36 mins</td>
+      <td>rail</td>
+      <td>1.365767</td>
+      <td>Passaic Bus Terminal</td>
+      <td>2.310516</td>
+      <td>29 mins</td>
+      <td>40.8964</td>
+      <td>-74.1239</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1718404">1718404</a></th>
@@ -13563,29 +13693,6 @@ var element = $('#3916b3a5-d57e-4935-bbeb-fc6a2377df1d');
       <td>-74.1104</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1741810">1741810</a></th>
-      <td>29 Cadmus Avenue</td>
-      <td>Elmwood Park</td>
-      <td>Bergen</td>
-      <td>4</td>
-      <td>2</td>
-      <td>0</td>
-      <td>475000</td>
-      <td>10161.0</td>
-      <td>Ranch</td>
-      <td>6</td>
-      <td>10/18/2017</td>
-      <td>Plauderville</td>
-      <td>5 mins, 36 mins</td>
-      <td>rail</td>
-      <td>0.840940</td>
-      <td>Passaic Bus Terminal</td>
-      <td>2.320759</td>
-      <td>29 mins</td>
-      <td>40.8947</td>
-      <td>-74.1123</td>
-    </tr>
-    <tr>
       <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1731102">1731102</a></th>
       <td>84 Florence Place</td>
       <td>Elmwood Park</td>
@@ -13609,18 +13716,18 @@ var element = $('#3916b3a5-d57e-4935-bbeb-fc6a2377df1d');
       <td>-74.1228</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1742006">1742006</a></th>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1800209">1800209</a></th>
       <td>23 Elmhurst Street</td>
       <td>Elmwood Park</td>
       <td>Bergen</td>
       <td>3</td>
       <td>2</td>
       <td>0</td>
-      <td>464900</td>
+      <td>459000</td>
       <td>11200.0</td>
       <td>Bi-Level</td>
       <td>8</td>
-      <td>10/20/2017</td>
+      <td>01/02/2018</td>
       <td>Plauderville</td>
       <td>8 mins, 36 mins</td>
       <td>rail</td>
@@ -13630,6 +13737,29 @@ var element = $('#3916b3a5-d57e-4935-bbeb-fc6a2377df1d');
       <td>32 mins</td>
       <td>40.8999</td>
       <td>-74.1234</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1748016">1748016</a></th>
+      <td>191 Franklin Street</td>
+      <td>Elmwood Park</td>
+      <td>Bergen</td>
+      <td>3</td>
+      <td>3</td>
+      <td>0</td>
+      <td>389000</td>
+      <td>11692.0</td>
+      <td>Colonial</td>
+      <td>7</td>
+      <td>12/15/2017</td>
+      <td>Broadway</td>
+      <td>8 mins, 41 mins</td>
+      <td>rail</td>
+      <td>1.096152</td>
+      <td>Fairlawn DPW</td>
+      <td>3.007080</td>
+      <td>33 mins</td>
+      <td>40.9066</td>
+      <td>-74.1142</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1737186">1737186</a></th>
@@ -13678,29 +13808,6 @@ var element = $('#3916b3a5-d57e-4935-bbeb-fc6a2377df1d');
       <td>-73.9878</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1632549">1632549</a></th>
-      <td>41-17 Christine Court</td>
-      <td>Fair Lawn</td>
-      <td>Bergen</td>
-      <td>4</td>
-      <td>3</td>
-      <td>0</td>
-      <td>499950</td>
-      <td>14836.0</td>
-      <td>Bi-Level</td>
-      <td>8</td>
-      <td>08/03/2016</td>
-      <td>Fairlawn DPW</td>
-      <td>4 mins, 45 mins</td>
-      <td>bus</td>
-      <td>0.798312</td>
-      <td>Fairlawn DPW</td>
-      <td>0.798312</td>
-      <td>37 mins</td>
-      <td>40.9399</td>
-      <td>-74.0972</td>
-    </tr>
-    <tr>
       <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1747852">1747852</a></th>
       <td>13-19 Emerson Drive</td>
       <td>Fair Lawn</td>
@@ -13724,27 +13831,27 @@ var element = $('#3916b3a5-d57e-4935-bbeb-fc6a2377df1d');
       <td>-74.1287</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1741245">1741245</a></th>
-      <td>12-17 Morlot Avenue</td>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1632549">1632549</a></th>
+      <td>41-17 Christine Court</td>
       <td>Fair Lawn</td>
       <td>Bergen</td>
-      <td>5</td>
+      <td>4</td>
       <td>3</td>
-      <td>1</td>
-      <td>475000</td>
-      <td>12928.0</td>
-      <td>Colonial</td>
-      <td>11</td>
-      <td>10/13/2017</td>
-      <td>Broadway</td>
-      <td>3 mins, 41 mins</td>
-      <td>rail</td>
-      <td>0.629128</td>
+      <td>0</td>
+      <td>499950</td>
+      <td>14836.0</td>
+      <td>Bi-Level</td>
+      <td>8</td>
+      <td>08/03/2016</td>
       <td>Fairlawn DPW</td>
-      <td>1.781715</td>
-      <td>35 mins</td>
-      <td>40.9284</td>
-      <td>-74.1245</td>
+      <td>4 mins, 45 mins</td>
+      <td>bus</td>
+      <td>0.798312</td>
+      <td>Fairlawn DPW</td>
+      <td>0.798312</td>
+      <td>37 mins</td>
+      <td>40.9399</td>
+      <td>-74.0972</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1745006">1745006</a></th>
@@ -13770,6 +13877,29 @@ var element = $('#3916b3a5-d57e-4935-bbeb-fc6a2377df1d');
       <td>-74.137</td>
     </tr>
     <tr>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1741245">1741245</a></th>
+      <td>12-17 Morlot Avenue</td>
+      <td>Fair Lawn</td>
+      <td>Bergen</td>
+      <td>5</td>
+      <td>3</td>
+      <td>1</td>
+      <td>475000</td>
+      <td>12928.0</td>
+      <td>Colonial</td>
+      <td>11</td>
+      <td>10/13/2017</td>
+      <td>Broadway</td>
+      <td>3 mins, 41 mins</td>
+      <td>rail</td>
+      <td>0.629128</td>
+      <td>Fairlawn DPW</td>
+      <td>1.781715</td>
+      <td>35 mins</td>
+      <td>40.9284</td>
+      <td>-74.1245</td>
+    </tr>
+    <tr>
       <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1747923">1747923</a></th>
       <td>9-11 Arnot Place</td>
       <td>Fair Lawn</td>
@@ -13791,29 +13921,6 @@ var element = $('#3916b3a5-d57e-4935-bbeb-fc6a2377df1d');
       <td>35 mins</td>
       <td>40.9264</td>
       <td>-74.1404</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1745899">1745899</a></th>
-      <td>13-40 Edward Street</td>
-      <td>Fair Lawn</td>
-      <td>Bergen</td>
-      <td>4</td>
-      <td>3</td>
-      <td>0</td>
-      <td>521000</td>
-      <td>11776.0</td>
-      <td>Colonial</td>
-      <td>9</td>
-      <td>11/22/2017</td>
-      <td>Radburn</td>
-      <td>4 mins, 45 mins</td>
-      <td>rail</td>
-      <td>0.621854</td>
-      <td>Fairlawn DPW</td>
-      <td>1.705084</td>
-      <td>35 mins</td>
-      <td>40.9356</td>
-      <td>-74.132</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1745623">1745623</a></th>
@@ -13862,27 +13969,27 @@ var element = $('#3916b3a5-d57e-4935-bbeb-fc6a2377df1d');
       <td>-74.1203</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1726952">1726952</a></th>
-      <td>869 Lincoln Avenue</td>
-      <td>Glen Rock</td>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1745899">1745899</a></th>
+      <td>13-40 Edward Street</td>
+      <td>Fair Lawn</td>
       <td>Bergen</td>
       <td>4</td>
-      <td>2</td>
+      <td>3</td>
       <td>0</td>
-      <td>359900</td>
-      <td>12178.0</td>
+      <td>521000</td>
+      <td>11776.0</td>
       <td>Colonial</td>
-      <td>7</td>
-      <td>06/30/2017</td>
-      <td>Hawthorne</td>
-      <td>4 mins, 53 mins</td>
+      <td>9</td>
+      <td>11/22/2017</td>
+      <td>Radburn</td>
+      <td>4 mins, 45 mins</td>
       <td>rail</td>
-      <td>0.828804</td>
+      <td>0.621854</td>
       <td>Fairlawn DPW</td>
-      <td>2.089365</td>
-      <td>37 mins</td>
-      <td>40.9531</td>
-      <td>-74.145</td>
+      <td>1.705084</td>
+      <td>35 mins</td>
+      <td>40.9356</td>
+      <td>-74.132</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1734819">1734819</a></th>
@@ -13908,6 +14015,75 @@ var element = $('#3916b3a5-d57e-4935-bbeb-fc6a2377df1d');
       <td>-74.1408</td>
     </tr>
     <tr>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1720822">1720822</a></th>
+      <td>266 Herman Street</td>
+      <td>Hackensack</td>
+      <td>Bergen</td>
+      <td>3</td>
+      <td>2</td>
+      <td>0</td>
+      <td>350000</td>
+      <td>9836.0</td>
+      <td>Colonial</td>
+      <td>6</td>
+      <td>05/23/2017</td>
+      <td>New Bridge Landing</td>
+      <td>3 mins, 49 mins</td>
+      <td>rail</td>
+      <td>0.363919</td>
+      <td>Hackensack Terminal</td>
+      <td>1.910138</td>
+      <td>37 mins</td>
+      <td>40.9095</td>
+      <td>-74.0418</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1748377">1748377</a></th>
+      <td>317 Chestnut Avenue</td>
+      <td>Hackensack</td>
+      <td>Bergen</td>
+      <td>5</td>
+      <td>2</td>
+      <td>0</td>
+      <td>399000</td>
+      <td>8192.0</td>
+      <td>Ranch</td>
+      <td>10</td>
+      <td>12/20/2017</td>
+      <td>Essex Street</td>
+      <td>6 mins, 50 mins</td>
+      <td>rail</td>
+      <td>0.867602</td>
+      <td>Hackensack Terminal</td>
+      <td>0.984289</td>
+      <td>33 mins</td>
+      <td>40.8677</td>
+      <td>-74.0446</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1741306">1741306</a></th>
+      <td>802 Main Street</td>
+      <td>Hackensack</td>
+      <td>Bergen</td>
+      <td>4</td>
+      <td>2</td>
+      <td>0</td>
+      <td>375000</td>
+      <td>9096.0</td>
+      <td>Colonial</td>
+      <td>8</td>
+      <td>10/13/2017</td>
+      <td>New Bridge Landing</td>
+      <td>3 mins, 49 mins</td>
+      <td>rail</td>
+      <td>0.571548</td>
+      <td>Hackensack Terminal</td>
+      <td>1.567549</td>
+      <td>37 mins</td>
+      <td>40.9045</td>
+      <td>-74.0421</td>
+    </tr>
+    <tr>
       <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1732131">1732131</a></th>
       <td>380 Maple Hill Drive</td>
       <td>Hackensack</td>
@@ -13931,27 +14107,50 @@ var element = $('#3916b3a5-d57e-4935-bbeb-fc6a2377df1d');
       <td>-74.0547</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1720822">1720822</a></th>
-      <td>266 Herman Street</td>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1738707">1738707</a></th>
+      <td>297 Hamilton Place</td>
       <td>Hackensack</td>
       <td>Bergen</td>
+      <td>4</td>
       <td>3</td>
+      <td>0</td>
+      <td>419999</td>
+      <td>10144.0</td>
+      <td>Colonial</td>
+      <td>10</td>
+      <td>09/25/2017</td>
+      <td>Anderson Street</td>
+      <td>3 mins, 41 mins</td>
+      <td>rail</td>
+      <td>0.350283</td>
+      <td>Hackensack Terminal</td>
+      <td>1.092671</td>
+      <td>39 mins</td>
+      <td>40.8964</td>
+      <td>-74.0499</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1800107">1800107</a></th>
+      <td>232 Stanley Place</td>
+      <td>Hackensack</td>
+      <td>Bergen</td>
+      <td>4</td>
       <td>2</td>
       <td>0</td>
-      <td>350000</td>
-      <td>9836.0</td>
+      <td>320000</td>
+      <td>7634.0</td>
       <td>Colonial</td>
-      <td>6</td>
-      <td>05/23/2017</td>
-      <td>New Bridge Landing</td>
-      <td>3 mins, 49 mins</td>
+      <td>10</td>
+      <td>01/02/2018</td>
+      <td>Anderson Street</td>
+      <td>3 mins, 41 mins</td>
       <td>rail</td>
-      <td>0.363919</td>
+      <td>0.225075</td>
       <td>Hackensack Terminal</td>
-      <td>1.910138</td>
-      <td>37 mins</td>
-      <td>40.9095</td>
-      <td>-74.0418</td>
+      <td>0.861028</td>
+      <td>39 mins</td>
+      <td>40.8935</td>
+      <td>-74.0479</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1738194">1738194</a></th>
@@ -14000,98 +14199,6 @@ var element = $('#3916b3a5-d57e-4935-bbeb-fc6a2377df1d');
       <td>-74.0497</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1741306">1741306</a></th>
-      <td>802 Main Street</td>
-      <td>Hackensack</td>
-      <td>Bergen</td>
-      <td>4</td>
-      <td>2</td>
-      <td>0</td>
-      <td>375000</td>
-      <td>9096.0</td>
-      <td>Colonial</td>
-      <td>8</td>
-      <td>10/13/2017</td>
-      <td>New Bridge Landing</td>
-      <td>3 mins, 49 mins</td>
-      <td>rail</td>
-      <td>0.571548</td>
-      <td>Hackensack Terminal</td>
-      <td>1.567549</td>
-      <td>37 mins</td>
-      <td>40.9045</td>
-      <td>-74.0421</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1748377">1748377</a></th>
-      <td>317 Chestnut Avenue</td>
-      <td>Hackensack</td>
-      <td>Bergen</td>
-      <td>5</td>
-      <td>2</td>
-      <td>0</td>
-      <td>399000</td>
-      <td>8192.0</td>
-      <td>Ranch</td>
-      <td>10</td>
-      <td>12/20/2017</td>
-      <td>Essex Street</td>
-      <td>6 mins, 50 mins</td>
-      <td>rail</td>
-      <td>0.867602</td>
-      <td>Hackensack Terminal</td>
-      <td>0.984289</td>
-      <td>33 mins</td>
-      <td>40.8677</td>
-      <td>-74.0446</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1738707">1738707</a></th>
-      <td>297 Hamilton Place</td>
-      <td>Hackensack</td>
-      <td>Bergen</td>
-      <td>4</td>
-      <td>3</td>
-      <td>0</td>
-      <td>419999</td>
-      <td>10144.0</td>
-      <td>Colonial</td>
-      <td>10</td>
-      <td>09/25/2017</td>
-      <td>Anderson Street</td>
-      <td>3 mins, 41 mins</td>
-      <td>rail</td>
-      <td>0.350283</td>
-      <td>Hackensack Terminal</td>
-      <td>1.092671</td>
-      <td>39 mins</td>
-      <td>40.8964</td>
-      <td>-74.0499</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1743044">1743044</a></th>
-      <td>158 Pine Street</td>
-      <td>Hackensack</td>
-      <td>Bergen</td>
-      <td>3</td>
-      <td>2</td>
-      <td>1</td>
-      <td>439000</td>
-      <td>7897.0</td>
-      <td>Colonial</td>
-      <td>8</td>
-      <td>10/27/2017</td>
-      <td>New Bridge Landing</td>
-      <td>3 mins, 49 mins</td>
-      <td>rail</td>
-      <td>0.566726</td>
-      <td>Hackensack Terminal</td>
-      <td>1.613949</td>
-      <td>38 mins</td>
-      <td>40.9052</td>
-      <td>-74.0429</td>
-    </tr>
-    <tr>
       <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1747450">1747450</a></th>
       <td>122 Harrison Avenue</td>
       <td>Hasbrouck Heights</td>
@@ -14138,50 +14245,27 @@ var element = $('#3916b3a5-d57e-4935-bbeb-fc6a2377df1d');
       <td>-74.0776</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1742302">1742302</a></th>
-      <td>13 North 15th Street</td>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1747349">1747349</a></th>
+      <td>53 8th Avenue</td>
       <td>Hawthorne</td>
       <td>Passaic</td>
       <td>3</td>
-      <td>2</td>
+      <td>3</td>
       <td>0</td>
-      <td>350000</td>
-      <td>10672.0</td>
-      <td>Bi-Level</td>
-      <td>8</td>
-      <td>10/23/2017</td>
-      <td>Hawthorne</td>
-      <td>6 mins, 53 mins</td>
-      <td>rail</td>
-      <td>0.937500</td>
-      <td>Broadway Bus Terminal - Paterson</td>
-      <td>1.570658</td>
-      <td>38 mins</td>
-      <td>40.9412</td>
-      <td>-74.1702</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1712345">1712345</a></th>
-      <td>20 Brook Hollow Court</td>
-      <td>Hawthorne</td>
-      <td>Passaic</td>
-      <td>5</td>
-      <td>3</td>
-      <td>1</td>
-      <td>499900</td>
-      <td>16287.0</td>
+      <td>389000</td>
+      <td>10706.0</td>
       <td>Colonial</td>
-      <td>11</td>
-      <td>04/01/2017</td>
+      <td>6</td>
+      <td>12/07/2017</td>
       <td>Glen Rock Main Line</td>
-      <td>7 mins, 48 mins</td>
+      <td>5 mins, 48 mins</td>
       <td>rail</td>
-      <td>1.471029</td>
-      <td>Midland Park</td>
-      <td>2.066184</td>
-      <td>39 mins</td>
-      <td>40.9683</td>
-      <td>-74.1604</td>
+      <td>0.829581</td>
+      <td>Ridgewood Bus Terminal</td>
+      <td>2.057485</td>
+      <td>37 mins</td>
+      <td>40.9598</td>
+      <td>-74.149</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1743205">1743205</a></th>
@@ -14207,29 +14291,6 @@ var element = $('#3916b3a5-d57e-4935-bbeb-fc6a2377df1d');
       <td>-74.1443</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1747349">1747349</a></th>
-      <td>53 8th Avenue</td>
-      <td>Hawthorne</td>
-      <td>Passaic</td>
-      <td>3</td>
-      <td>3</td>
-      <td>0</td>
-      <td>389000</td>
-      <td>10706.0</td>
-      <td>Colonial</td>
-      <td>6</td>
-      <td>12/07/2017</td>
-      <td>Glen Rock Main Line</td>
-      <td>5 mins, 48 mins</td>
-      <td>rail</td>
-      <td>0.829581</td>
-      <td>Ridgewood Bus Terminal</td>
-      <td>2.057485</td>
-      <td>37 mins</td>
-      <td>40.9598</td>
-      <td>-74.149</td>
-    </tr>
-    <tr>
       <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1740263">1740263</a></th>
       <td>1 Prospect Street</td>
       <td>Hawthorne</td>
@@ -14253,27 +14314,27 @@ var element = $('#3916b3a5-d57e-4935-bbeb-fc6a2377df1d');
       <td>-74.1685</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1745465">1745465</a></th>
-      <td>66 Ridge Road</td>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1712345">1712345</a></th>
+      <td>20 Brook Hollow Court</td>
       <td>Hawthorne</td>
       <td>Passaic</td>
+      <td>5</td>
       <td>3</td>
-      <td>2</td>
       <td>1</td>
-      <td>499000</td>
-      <td>15311.0</td>
-      <td>Split Level</td>
-      <td>10</td>
-      <td>11/17/2017</td>
+      <td>499900</td>
+      <td>16287.0</td>
+      <td>Colonial</td>
+      <td>11</td>
+      <td>04/01/2017</td>
       <td>Glen Rock Main Line</td>
       <td>7 mins, 48 mins</td>
       <td>rail</td>
-      <td>1.599822</td>
+      <td>1.471029</td>
       <td>Midland Park</td>
-      <td>2.191494</td>
+      <td>2.066184</td>
       <td>39 mins</td>
-      <td>40.967</td>
-      <td>-74.1634</td>
+      <td>40.9683</td>
+      <td>-74.1604</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1739842">1739842</a></th>
@@ -14299,50 +14360,50 @@ var element = $('#3916b3a5-d57e-4935-bbeb-fc6a2377df1d');
       <td>-74.1548</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1733436">1733436</a></th>
-      <td>1045 East Saddle River Road</td>
-      <td>Ho-Ho-Kus</td>
-      <td>Bergen</td>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1742302">1742302</a></th>
+      <td>13 North 15th Street</td>
+      <td>Hawthorne</td>
+      <td>Passaic</td>
       <td>3</td>
       <td>2</td>
       <td>0</td>
-      <td>458200</td>
-      <td>13715.0</td>
-      <td>Colonial</td>
-      <td>6</td>
-      <td>08/16/2017</td>
-      <td>Ho-Ho-Kus</td>
-      <td>5 mins, 49 mins</td>
+      <td>350000</td>
+      <td>10672.0</td>
+      <td>Bi-Level</td>
+      <td>8</td>
+      <td>10/23/2017</td>
+      <td>Hawthorne</td>
+      <td>6 mins, 53 mins</td>
       <td>rail</td>
-      <td>1.219072</td>
-      <td>Ridgewood Bus Terminal</td>
-      <td>2.280717</td>
-      <td>39 mins</td>
-      <td>41.0051</td>
-      <td>-74.0926</td>
+      <td>0.937500</td>
+      <td>Broadway Bus Terminal - Paterson</td>
+      <td>1.570658</td>
+      <td>38 mins</td>
+      <td>40.9412</td>
+      <td>-74.1702</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1748787">1748787</a></th>
-      <td>108 Oak Street</td>
-      <td>Jersey City</td>
-      <td>Hudson</td>
-      <td>5</td>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1745465">1745465</a></th>
+      <td>66 Ridge Road</td>
+      <td>Hawthorne</td>
+      <td>Passaic</td>
+      <td>3</td>
       <td>2</td>
-      <td>0</td>
-      <td>455000</td>
-      <td>3611.0</td>
-      <td>Colonial</td>
-      <td>8</td>
-      <td>12/28/2017</td>
-      <td>Martin Luther King Drive</td>
-      <td>2 mins, 56 mins</td>
-      <td>light_rail</td>
-      <td>0.188569</td>
-      <td>Journal Square Transportation Center</td>
-      <td>1.468222</td>
-      <td>36 mins</td>
-      <td>40.7149</td>
-      <td>-74.0786</td>
+      <td>1</td>
+      <td>499000</td>
+      <td>15311.0</td>
+      <td>Split Level</td>
+      <td>10</td>
+      <td>11/17/2017</td>
+      <td>Glen Rock Main Line</td>
+      <td>7 mins, 48 mins</td>
+      <td>rail</td>
+      <td>1.599822</td>
+      <td>Midland Park</td>
+      <td>2.191494</td>
+      <td>39 mins</td>
+      <td>40.967</td>
+      <td>-74.1634</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1743260">1743260</a></th>
@@ -14368,27 +14429,27 @@ var element = $('#3916b3a5-d57e-4935-bbeb-fc6a2377df1d');
       <td>-74.0805</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1715292">1715292</a></th>
-      <td>428 Christie Lane</td>
-      <td>Leonia</td>
-      <td>Bergen</td>
-      <td>3</td>
-      <td>3</td>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1748787">1748787</a></th>
+      <td>108 Oak Street</td>
+      <td>Jersey City</td>
+      <td>Hudson</td>
+      <td>5</td>
+      <td>2</td>
       <td>0</td>
-      <td>469900</td>
-      <td>9564.0</td>
+      <td>455000</td>
+      <td>3611.0</td>
       <td>Colonial</td>
-      <td>6</td>
-      <td>04/20/2017</td>
-      <td>Fort Lee</td>
-      <td>5 mins, 50 mins</td>
-      <td>bus</td>
-      <td>0.691893</td>
-      <td>Fort Lee</td>
-      <td>0.691893</td>
-      <td>33 mins</td>
-      <td>40.8567</td>
-      <td>-73.983</td>
+      <td>8</td>
+      <td>12/28/2017</td>
+      <td>Martin Luther King Drive</td>
+      <td>2 mins, 56 mins</td>
+      <td>light_rail</td>
+      <td>0.188569</td>
+      <td>Journal Square Transportation Center</td>
+      <td>1.468222</td>
+      <td>36 mins</td>
+      <td>40.7149</td>
+      <td>-74.0786</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1747109">1747109</a></th>
@@ -14437,6 +14498,29 @@ var element = $('#3916b3a5-d57e-4935-bbeb-fc6a2377df1d');
       <td>-73.9821</td>
     </tr>
     <tr>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1715292">1715292</a></th>
+      <td>428 Christie Lane</td>
+      <td>Leonia</td>
+      <td>Bergen</td>
+      <td>3</td>
+      <td>3</td>
+      <td>0</td>
+      <td>469900</td>
+      <td>9564.0</td>
+      <td>Colonial</td>
+      <td>6</td>
+      <td>04/20/2017</td>
+      <td>Fort Lee</td>
+      <td>5 mins, 50 mins</td>
+      <td>bus</td>
+      <td>0.691893</td>
+      <td>Fort Lee</td>
+      <td>0.691893</td>
+      <td>33 mins</td>
+      <td>40.8567</td>
+      <td>-73.983</td>
+    </tr>
+    <tr>
       <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1733685">1733685</a></th>
       <td>72 Foothill Drive</td>
       <td>Lincoln Park</td>
@@ -14458,6 +14542,75 @@ var element = $('#3916b3a5-d57e-4935-bbeb-fc6a2377df1d');
       <td>33 mins</td>
       <td>40.9183</td>
       <td>-74.3002</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1744460">1744460</a></th>
+      <td>7 Robinwood Drive</td>
+      <td>Little Falls</td>
+      <td>Passaic</td>
+      <td>5</td>
+      <td>3</td>
+      <td>1</td>
+      <td>499900</td>
+      <td>12758.0</td>
+      <td>Colonial</td>
+      <td>9</td>
+      <td>11/09/2017</td>
+      <td>Montclair State University</td>
+      <td>6 mins, 57 mins</td>
+      <td>rail</td>
+      <td>1.020244</td>
+      <td>Allwood Road</td>
+      <td>2.453861</td>
+      <td>25 mins</td>
+      <td>40.87</td>
+      <td>-74.2169</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1746696">1746696</a></th>
+      <td>72 Dewey Avenue</td>
+      <td>Little Falls</td>
+      <td>Passaic</td>
+      <td>5</td>
+      <td>2</td>
+      <td>0</td>
+      <td>359999</td>
+      <td>11000.0</td>
+      <td>Colonial</td>
+      <td>13</td>
+      <td>11/14/2017</td>
+      <td>Little Falls</td>
+      <td>4 mins, 1 hour 4 mins</td>
+      <td>rail</td>
+      <td>0.396433</td>
+      <td>Willowbrook Mall</td>
+      <td>1.050831</td>
+      <td>25 mins</td>
+      <td>40.884</td>
+      <td>-74.2416</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1746159">1746159</a></th>
+      <td>47 Lower Notch Road</td>
+      <td>Little Falls</td>
+      <td>Passaic</td>
+      <td>4</td>
+      <td>2</td>
+      <td>0</td>
+      <td>379900</td>
+      <td>8947.0</td>
+      <td>Ranch</td>
+      <td>9</td>
+      <td>11/27/2017</td>
+      <td>Montclair State University</td>
+      <td>3 mins, 57 mins</td>
+      <td>rail</td>
+      <td>1.001221</td>
+      <td>Willowbrook Mall</td>
+      <td>2.580588</td>
+      <td>26 mins</td>
+      <td>40.8776</td>
+      <td>-74.2136</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1732823">1732823</a></th>
@@ -14506,52 +14659,6 @@ var element = $('#3916b3a5-d57e-4935-bbeb-fc6a2377df1d');
       <td>-74.2266</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1746159">1746159</a></th>
-      <td>47 Lower Notch Road</td>
-      <td>Little Falls</td>
-      <td>Passaic</td>
-      <td>4</td>
-      <td>2</td>
-      <td>0</td>
-      <td>379900</td>
-      <td>8947.0</td>
-      <td>Ranch</td>
-      <td>9</td>
-      <td>11/27/2017</td>
-      <td>Montclair State University</td>
-      <td>3 mins, 57 mins</td>
-      <td>rail</td>
-      <td>1.001221</td>
-      <td>Willowbrook Mall</td>
-      <td>2.580588</td>
-      <td>26 mins</td>
-      <td>40.8776</td>
-      <td>-74.2136</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1746696">1746696</a></th>
-      <td>72 Dewey Avenue</td>
-      <td>Little Falls</td>
-      <td>Passaic</td>
-      <td>5</td>
-      <td>2</td>
-      <td>0</td>
-      <td>359999</td>
-      <td>11000.0</td>
-      <td>Colonial</td>
-      <td>13</td>
-      <td>11/14/2017</td>
-      <td>Little Falls</td>
-      <td>4 mins, 1 hour 4 mins</td>
-      <td>rail</td>
-      <td>0.396433</td>
-      <td>Willowbrook Mall</td>
-      <td>1.050831</td>
-      <td>25 mins</td>
-      <td>40.884</td>
-      <td>-74.2416</td>
-    </tr>
-    <tr>
       <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1744163">1744163</a></th>
       <td>17 Mozart Avenue</td>
       <td>Little Falls</td>
@@ -14575,27 +14682,73 @@ var element = $('#3916b3a5-d57e-4935-bbeb-fc6a2377df1d');
       <td>-74.2513</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1744460">1744460</a></th>
-      <td>7 Robinwood Drive</td>
-      <td>Little Falls</td>
-      <td>Passaic</td>
-      <td>5</td>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1744477">1744477</a></th>
+      <td>13 Christina Street</td>
+      <td>Little Ferry</td>
+      <td>Bergen</td>
       <td>3</td>
-      <td>1</td>
-      <td>499900</td>
-      <td>12758.0</td>
+      <td>2</td>
+      <td>0</td>
+      <td>365000</td>
+      <td>9110.0</td>
       <td>Colonial</td>
-      <td>9</td>
+      <td>6</td>
       <td>11/09/2017</td>
-      <td>Montclair State University</td>
-      <td>6 mins, 57 mins</td>
+      <td>Teterboro</td>
+      <td>8 mins, 35 mins</td>
       <td>rail</td>
-      <td>1.020244</td>
-      <td>Allwood Road</td>
-      <td>2.453861</td>
-      <td>25 mins</td>
-      <td>40.87</td>
-      <td>-74.2169</td>
+      <td>1.484216</td>
+      <td>Vince Lombardi</td>
+      <td>1.694366</td>
+      <td>35 mins</td>
+      <td>40.8477</td>
+      <td>-74.0456</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1736545">1736545</a></th>
+      <td>104 Poplar Avenue</td>
+      <td>Little Ferry</td>
+      <td>Bergen</td>
+      <td>4</td>
+      <td>2</td>
+      <td>0</td>
+      <td>435000</td>
+      <td>10790.0</td>
+      <td>Split Level</td>
+      <td>10</td>
+      <td>09/09/2017</td>
+      <td>Teterboro</td>
+      <td>9 mins, 35 mins</td>
+      <td>rail</td>
+      <td>1.567780</td>
+      <td>Vince Lombardi</td>
+      <td>1.790355</td>
+      <td>32 mins</td>
+      <td>40.8518</td>
+      <td>-74.0382</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1747593">1747593</a></th>
+      <td>17 Larosa Drive</td>
+      <td>Little Ferry</td>
+      <td>Bergen</td>
+      <td>4</td>
+      <td>3</td>
+      <td>0</td>
+      <td>459000</td>
+      <td>11125.0</td>
+      <td>Bi-Level</td>
+      <td>9</td>
+      <td>12/11/2017</td>
+      <td>Teterboro</td>
+      <td>8 mins, 35 mins</td>
+      <td>rail</td>
+      <td>1.301152</td>
+      <td>Vince Lombardi</td>
+      <td>1.875247</td>
+      <td>37 mins</td>
+      <td>40.8495</td>
+      <td>-74.0483</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1743966">1743966</a></th>
@@ -14619,29 +14772,6 @@ var element = $('#3916b3a5-d57e-4935-bbeb-fc6a2377df1d');
       <td>35 mins</td>
       <td>40.8898</td>
       <td>-74.0739</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1747885">1747885</a></th>
-      <td>151 Hunter Street</td>
-      <td>Lodi</td>
-      <td>Bergen</td>
-      <td>3</td>
-      <td>3</td>
-      <td>0</td>
-      <td>349900</td>
-      <td>9845.0</td>
-      <td>Ranch</td>
-      <td>5</td>
-      <td>12/13/2017</td>
-      <td>Teterboro</td>
-      <td>5 mins, 35 mins</td>
-      <td>rail</td>
-      <td>1.069734</td>
-      <td>Hackensack Terminal</td>
-      <td>2.239205</td>
-      <td>37 mins</td>
-      <td>40.8701</td>
-      <td>-74.0819</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1743224">1743224</a></th>
@@ -14690,73 +14820,27 @@ var element = $('#3916b3a5-d57e-4935-bbeb-fc6a2377df1d');
       <td>-74.0771</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1737928">1737928</a></th>
-      <td>104 Jay Avenue</td>
-      <td>Lyndhurst</td>
-      <td>Bergen</td>
-      <td>4</td>
-      <td>2</td>
-      <td>0</td>
-      <td>325000</td>
-      <td>6965.0</td>
-      <td>Colonial</td>
-      <td>7</td>
-      <td>09/18/2017</td>
-      <td>Lyndhurst</td>
-      <td>1 min, 34 mins</td>
-      <td>rail</td>
-      <td>0.146087</td>
-      <td>Clifton Commons</td>
-      <td>1.097853</td>
-      <td>29 mins</td>
-      <td>40.8185</td>
-      <td>-74.1234</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1716455">1716455</a></th>
-      <td>531 Forest Avenue</td>
-      <td>Lyndhurst</td>
-      <td>Bergen</td>
-      <td>4</td>
-      <td>3</td>
-      <td>1</td>
-      <td>520000</td>
-      <td>11845.0</td>
-      <td>Colonial</td>
-      <td>10</td>
-      <td>04/27/2017</td>
-      <td>Kingsland</td>
-      <td>2 mins, 31 mins</td>
-      <td>rail</td>
-      <td>0.387373</td>
-      <td>Clifton Commons</td>
-      <td>1.763036</td>
-      <td>32 mins</td>
-      <td>40.8059</td>
-      <td>-74.1222</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1742538">1742538</a></th>
-      <td>249 Fern Avenue</td>
-      <td>Lyndhurst</td>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1747885">1747885</a></th>
+      <td>151 Hunter Street</td>
+      <td>Lodi</td>
       <td>Bergen</td>
       <td>3</td>
-      <td>2</td>
+      <td>3</td>
       <td>0</td>
-      <td>355000</td>
-      <td>7177.0</td>
-      <td>Colonial</td>
-      <td>6</td>
-      <td>10/24/2017</td>
-      <td>Lyndhurst</td>
-      <td>2 mins, 34 mins</td>
+      <td>349900</td>
+      <td>9845.0</td>
+      <td>Ranch</td>
+      <td>5</td>
+      <td>12/13/2017</td>
+      <td>Teterboro</td>
+      <td>5 mins, 35 mins</td>
       <td>rail</td>
-      <td>0.384431</td>
-      <td>Clifton Commons</td>
-      <td>1.224131</td>
-      <td>31 mins</td>
-      <td>40.8121</td>
-      <td>-74.1286</td>
+      <td>1.069734</td>
+      <td>Hackensack Terminal</td>
+      <td>2.239205</td>
+      <td>37 mins</td>
+      <td>40.8701</td>
+      <td>-74.0819</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1748849">1748849</a></th>
@@ -14782,27 +14866,50 @@ var element = $('#3916b3a5-d57e-4935-bbeb-fc6a2377df1d');
       <td>-74.1124</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1738525">1738525</a></th>
-      <td>447 Forest Avenue</td>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1737928">1737928</a></th>
+      <td>104 Jay Avenue</td>
+      <td>Lyndhurst</td>
+      <td>Bergen</td>
+      <td>4</td>
+      <td>2</td>
+      <td>0</td>
+      <td>325000</td>
+      <td>6965.0</td>
+      <td>Colonial</td>
+      <td>7</td>
+      <td>09/18/2017</td>
+      <td>Lyndhurst</td>
+      <td>1 min, 34 mins</td>
+      <td>rail</td>
+      <td>0.146087</td>
+      <td>Clifton Commons</td>
+      <td>1.097853</td>
+      <td>29 mins</td>
+      <td>40.8185</td>
+      <td>-74.1234</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1800119">1800119</a></th>
+      <td>402 Forest Avenue</td>
       <td>Lyndhurst</td>
       <td>Bergen</td>
       <td>3</td>
       <td>2</td>
-      <td>1</td>
-      <td>519900</td>
-      <td>10620.0</td>
+      <td>0</td>
+      <td>425000</td>
+      <td>7983.0</td>
       <td>Colonial</td>
-      <td>6</td>
-      <td>09/22/2017</td>
+      <td>8</td>
+      <td>01/02/2018</td>
       <td>Kingsland</td>
-      <td>2 mins, 31 mins</td>
+      <td>3 mins, 31 mins</td>
       <td>rail</td>
-      <td>0.415527</td>
+      <td>0.492594</td>
       <td>Clifton Commons</td>
-      <td>1.654937</td>
+      <td>1.552585</td>
       <td>32 mins</td>
-      <td>40.8069</td>
-      <td>-74.124</td>
+      <td>40.8076</td>
+      <td>-74.1261</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1726347">1726347</a></th>
@@ -14826,6 +14933,75 @@ var element = $('#3916b3a5-d57e-4935-bbeb-fc6a2377df1d');
       <td>28 mins</td>
       <td>40.8206</td>
       <td>-74.1253</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1742538">1742538</a></th>
+      <td>249 Fern Avenue</td>
+      <td>Lyndhurst</td>
+      <td>Bergen</td>
+      <td>3</td>
+      <td>2</td>
+      <td>0</td>
+      <td>355000</td>
+      <td>7177.0</td>
+      <td>Colonial</td>
+      <td>6</td>
+      <td>10/24/2017</td>
+      <td>Lyndhurst</td>
+      <td>2 mins, 34 mins</td>
+      <td>rail</td>
+      <td>0.384431</td>
+      <td>Clifton Commons</td>
+      <td>1.224131</td>
+      <td>31 mins</td>
+      <td>40.8121</td>
+      <td>-74.1286</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1716455">1716455</a></th>
+      <td>531 Forest Avenue</td>
+      <td>Lyndhurst</td>
+      <td>Bergen</td>
+      <td>4</td>
+      <td>3</td>
+      <td>1</td>
+      <td>520000</td>
+      <td>11845.0</td>
+      <td>Colonial</td>
+      <td>10</td>
+      <td>04/27/2017</td>
+      <td>Kingsland</td>
+      <td>2 mins, 31 mins</td>
+      <td>rail</td>
+      <td>0.387373</td>
+      <td>Clifton Commons</td>
+      <td>1.763036</td>
+      <td>32 mins</td>
+      <td>40.8059</td>
+      <td>-74.1222</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1738525">1738525</a></th>
+      <td>447 Forest Avenue</td>
+      <td>Lyndhurst</td>
+      <td>Bergen</td>
+      <td>3</td>
+      <td>2</td>
+      <td>1</td>
+      <td>519900</td>
+      <td>10620.0</td>
+      <td>Colonial</td>
+      <td>6</td>
+      <td>09/22/2017</td>
+      <td>Kingsland</td>
+      <td>2 mins, 31 mins</td>
+      <td>rail</td>
+      <td>0.415527</td>
+      <td>Clifton Commons</td>
+      <td>1.654937</td>
+      <td>32 mins</td>
+      <td>40.8069</td>
+      <td>-74.124</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1720568">1720568</a></th>
@@ -14989,27 +15165,27 @@ var element = $('#3916b3a5-d57e-4935-bbeb-fc6a2377df1d');
       <td>-74.1305</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1718512">1718512</a></th>
-      <td>184 Arlington Boulevard</td>
-      <td>North Arlington</td>
-      <td>Bergen</td>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1743086">1743086</a></th>
+      <td>1603 78th Street</td>
+      <td>North Bergen</td>
+      <td>Hudson</td>
       <td>4</td>
       <td>2</td>
-      <td>1</td>
-      <td>428000</td>
-      <td>8522.0</td>
-      <td>Colonial</td>
-      <td>7</td>
-      <td>04/13/2017</td>
-      <td>Kingsland</td>
-      <td>7 mins, 31 mins</td>
-      <td>rail</td>
-      <td>1.659676</td>
-      <td>Clifton Commons</td>
-      <td>2.328772</td>
-      <td>30 mins</td>
-      <td>40.7933</td>
-      <td>-74.14</td>
+      <td>0</td>
+      <td>424000</td>
+      <td>9026.0</td>
+      <td>Bi-Level</td>
+      <td>8</td>
+      <td>10/28/2017</td>
+      <td>Tonnelle Avenue</td>
+      <td>5 mins, 26 mins</td>
+      <td>light_rail</td>
+      <td>1.442345</td>
+      <td>Vince Lombardi</td>
+      <td>1.649741</td>
+      <td>35 mins</td>
+      <td>40.8049</td>
+      <td>-74.0162</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1735172">1735172</a></th>
@@ -15033,29 +15209,6 @@ var element = $('#3916b3a5-d57e-4935-bbeb-fc6a2377df1d');
       <td>36 mins</td>
       <td>40.8062</td>
       <td>-74.0108</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1743086">1743086</a></th>
-      <td>1603 78th Street</td>
-      <td>North Bergen</td>
-      <td>Hudson</td>
-      <td>4</td>
-      <td>2</td>
-      <td>0</td>
-      <td>424000</td>
-      <td>9026.0</td>
-      <td>Bi-Level</td>
-      <td>8</td>
-      <td>10/28/2017</td>
-      <td>Tonnelle Avenue</td>
-      <td>5 mins, 26 mins</td>
-      <td>light_rail</td>
-      <td>1.442345</td>
-      <td>Vince Lombardi</td>
-      <td>1.649741</td>
-      <td>35 mins</td>
-      <td>40.8049</td>
-      <td>-74.0162</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1742511">1742511</a></th>
@@ -15104,27 +15257,27 @@ var element = $('#3916b3a5-d57e-4935-bbeb-fc6a2377df1d');
       <td>-74.0508</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1736231">1736231</a></th>
-      <td>1148 Cushing Road</td>
-      <td>Plainfield</td>
-      <td>Union</td>
-      <td>5</td>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1800196">1800196</a></th>
+      <td>10 South Farview Avenue</td>
+      <td>Paramus</td>
+      <td>Bergen</td>
       <td>3</td>
-      <td>0</td>
-      <td>359900</td>
-      <td>12500.0</td>
-      <td>Ranch</td>
-      <td>13</td>
-      <td>09/05/2017</td>
-      <td>Netherwood</td>
-      <td>4 mins, 1 hour 2 mins</td>
+      <td>2</td>
+      <td>1</td>
+      <td>374900</td>
+      <td>5200.0</td>
+      <td>Colonial</td>
+      <td>7</td>
+      <td>01/02/2018</td>
+      <td>New Bridge Landing</td>
+      <td>7 mins, 49 mins</td>
       <td>rail</td>
-      <td>0.843661</td>
-      <td>Watchung Park & Ride</td>
-      <td>1.859063</td>
-      <td>35 mins</td>
-      <td>40.6225</td>
-      <td>-74.39</td>
+      <td>1.853153</td>
+      <td>Fairlawn DPW</td>
+      <td>2.846762</td>
+      <td>33 mins</td>
+      <td>40.9191</td>
+      <td>-74.0687</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1748261">1748261</a></th>
@@ -15150,6 +15303,29 @@ var element = $('#3916b3a5-d57e-4935-bbeb-fc6a2377df1d');
       <td>-73.9969</td>
     </tr>
     <tr>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1741569">1741569</a></th>
+      <td>780 Oakwood Lane</td>
+      <td>Ridgefield</td>
+      <td>Bergen</td>
+      <td>3</td>
+      <td>2</td>
+      <td>0</td>
+      <td>425000</td>
+      <td>7703.0</td>
+      <td>Ranch</td>
+      <td>8</td>
+      <td>10/16/2017</td>
+      <td>Fort Lee</td>
+      <td>9 mins, 50 mins</td>
+      <td>bus</td>
+      <td>1.592985</td>
+      <td>Fort Lee</td>
+      <td>1.592985</td>
+      <td>35 mins</td>
+      <td>40.8355</td>
+      <td>-73.9924</td>
+    </tr>
+    <tr>
       <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1719515">1719515</a></th>
       <td>657 Oak Street</td>
       <td>Ridgefield</td>
@@ -15173,27 +15349,27 @@ var element = $('#3916b3a5-d57e-4935-bbeb-fc6a2377df1d');
       <td>-73.9963</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1741569">1741569</a></th>
-      <td>780 Oakwood Lane</td>
-      <td>Ridgefield</td>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1728516">1728516</a></th>
+      <td>35 Teaneck Road</td>
+      <td>Ridgefield Park</td>
       <td>Bergen</td>
       <td>3</td>
       <td>2</td>
       <td>0</td>
-      <td>425000</td>
-      <td>7703.0</td>
-      <td>Ranch</td>
+      <td>330000</td>
+      <td>10150.0</td>
+      <td>Colonial</td>
       <td>8</td>
-      <td>10/16/2017</td>
-      <td>Fort Lee</td>
-      <td>9 mins, 50 mins</td>
+      <td>07/12/2017</td>
+      <td>Vince Lombardi</td>
+      <td>6 mins, 25 mins</td>
       <td>bus</td>
-      <td>1.592985</td>
-      <td>Fort Lee</td>
-      <td>1.592985</td>
-      <td>35 mins</td>
-      <td>40.8355</td>
-      <td>-73.9924</td>
+      <td>1.215624</td>
+      <td>Vince Lombardi</td>
+      <td>1.215624</td>
+      <td>31 mins</td>
+      <td>40.8439</td>
+      <td>-74.022</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1745396">1745396</a></th>
@@ -15311,27 +15487,27 @@ var element = $('#3916b3a5-d57e-4935-bbeb-fc6a2377df1d');
       <td>-74.0163</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1728516">1728516</a></th>
-      <td>35 Teaneck Road</td>
-      <td>Ridgefield Park</td>
-      <td>Bergen</td>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1743089">1743089</a></th>
+      <td>26 Lenape Road</td>
+      <td>Ringwood</td>
+      <td>Passaic</td>
+      <td>4</td>
       <td>3</td>
-      <td>2</td>
       <td>0</td>
-      <td>330000</td>
-      <td>10150.0</td>
-      <td>Colonial</td>
-      <td>8</td>
-      <td>07/12/2017</td>
-      <td>Vince Lombardi</td>
-      <td>6 mins, 25 mins</td>
+      <td>365000</td>
+      <td>11248.0</td>
+      <td>Ranch</td>
+      <td>9</td>
+      <td>10/28/2017</td>
+      <td>Ringwood</td>
+      <td>4 mins, 1 hour 4 mins</td>
       <td>bus</td>
-      <td>1.215624</td>
-      <td>Vince Lombardi</td>
-      <td>1.215624</td>
-      <td>31 mins</td>
-      <td>40.8439</td>
-      <td>-74.022</td>
+      <td>1.164121</td>
+      <td>Ringwood</td>
+      <td>1.164121</td>
+      <td>36 mins</td>
+      <td>41.0725</td>
+      <td>-74.2593</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1740722">1740722</a></th>
@@ -15357,27 +15533,27 @@ var element = $('#3916b3a5-d57e-4935-bbeb-fc6a2377df1d');
       <td>-74.2688</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1743089">1743089</a></th>
-      <td>26 Lenape Road</td>
-      <td>Ringwood</td>
-      <td>Passaic</td>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1730298">1730298</a></th>
+      <td>327 Wales Avenue</td>
+      <td>River Edge</td>
+      <td>Bergen</td>
       <td>4</td>
-      <td>3</td>
-      <td>0</td>
-      <td>365000</td>
-      <td>11248.0</td>
-      <td>Ranch</td>
-      <td>9</td>
-      <td>10/28/2017</td>
-      <td>Ringwood</td>
-      <td>4 mins, 1 hour 4 mins</td>
-      <td>bus</td>
-      <td>1.164121</td>
-      <td>Ringwood</td>
-      <td>1.164121</td>
-      <td>36 mins</td>
-      <td>41.0725</td>
-      <td>-74.2593</td>
+      <td>2</td>
+      <td>1</td>
+      <td>500000</td>
+      <td>16101.0</td>
+      <td>Colonial</td>
+      <td>8</td>
+      <td>07/24/2017</td>
+      <td>River Edge</td>
+      <td>4 mins, 49 mins</td>
+      <td>rail</td>
+      <td>0.696616</td>
+      <td>Garden State Parkway Exit 165 - Paramus</td>
+      <td>2.084287</td>
+      <td>39 mins</td>
+      <td>40.9393</td>
+      <td>-74.0413</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1745359">1745359</a></th>
@@ -15426,29 +15602,6 @@ var element = $('#3916b3a5-d57e-4935-bbeb-fc6a2377df1d');
       <td>-74.0417</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1730298">1730298</a></th>
-      <td>327 Wales Avenue</td>
-      <td>River Edge</td>
-      <td>Bergen</td>
-      <td>4</td>
-      <td>2</td>
-      <td>1</td>
-      <td>500000</td>
-      <td>16101.0</td>
-      <td>Colonial</td>
-      <td>8</td>
-      <td>07/24/2017</td>
-      <td>River Edge</td>
-      <td>4 mins, 49 mins</td>
-      <td>rail</td>
-      <td>0.696616</td>
-      <td>Garden State Parkway Exit 165 - Paramus</td>
-      <td>2.084287</td>
-      <td>39 mins</td>
-      <td>40.9393</td>
-      <td>-74.0413</td>
-    </tr>
-    <tr>
       <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1631294">1631294</a></th>
       <td>25 Crescent Street</td>
       <td>Rochelle Park</td>
@@ -15495,50 +15648,27 @@ var element = $('#3916b3a5-d57e-4935-bbeb-fc6a2377df1d');
       <td>-74.0767</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1748168">1748168</a></th>
-      <td>323 West Passaic Avenue</td>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1739375">1739375</a></th>
+      <td>38 Elm Street</td>
       <td>Rutherford</td>
       <td>Bergen</td>
       <td>4</td>
       <td>2</td>
       <td>0</td>
-      <td>469000</td>
-      <td>9345.0</td>
+      <td>427500</td>
+      <td>9900.0</td>
       <td>Colonial</td>
       <td>8</td>
-      <td>12/18/2017</td>
-      <td>Delawanna</td>
-      <td>6 mins, 37 mins</td>
-      <td>rail</td>
-      <td>0.619481</td>
-      <td>Clifton Commons</td>
-      <td>1.200940</td>
-      <td>30 mins</td>
-      <td>40.8333</td>
-      <td>-74.1197</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1744445">1744445</a></th>
-      <td>222 West Newell Avenue</td>
+      <td>09/29/2017</td>
       <td>Rutherford</td>
-      <td>Bergen</td>
-      <td>3</td>
-      <td>2</td>
-      <td>0</td>
-      <td>419000</td>
-      <td>11371.0</td>
-      <td>Colonial</td>
-      <td>12</td>
-      <td>11/08/2017</td>
-      <td>Delawanna</td>
-      <td>6 mins, 37 mins</td>
+      <td>3 mins, 40 mins</td>
       <td>rail</td>
-      <td>0.620810</td>
+      <td>0.478493</td>
       <td>Clifton Commons</td>
-      <td>1.139657</td>
-      <td>29 mins</td>
-      <td>40.8297</td>
-      <td>-74.1196</td>
+      <td>1.917128</td>
+      <td>32 mins</td>
+      <td>40.834</td>
+      <td>-74.1057</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1717984">1717984</a></th>
@@ -15564,27 +15694,50 @@ var element = $('#3916b3a5-d57e-4935-bbeb-fc6a2377df1d');
       <td>-74.1049</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1739375">1739375</a></th>
-      <td>38 Elm Street</td>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1744445">1744445</a></th>
+      <td>222 West Newell Avenue</td>
+      <td>Rutherford</td>
+      <td>Bergen</td>
+      <td>3</td>
+      <td>2</td>
+      <td>0</td>
+      <td>419000</td>
+      <td>11371.0</td>
+      <td>Colonial</td>
+      <td>12</td>
+      <td>11/08/2017</td>
+      <td>Delawanna</td>
+      <td>6 mins, 37 mins</td>
+      <td>rail</td>
+      <td>0.620810</td>
+      <td>Clifton Commons</td>
+      <td>1.139657</td>
+      <td>29 mins</td>
+      <td>40.8297</td>
+      <td>-74.1196</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1748168">1748168</a></th>
+      <td>323 West Passaic Avenue</td>
       <td>Rutherford</td>
       <td>Bergen</td>
       <td>4</td>
       <td>2</td>
       <td>0</td>
-      <td>427500</td>
-      <td>9900.0</td>
+      <td>469000</td>
+      <td>9345.0</td>
       <td>Colonial</td>
       <td>8</td>
-      <td>09/29/2017</td>
-      <td>Rutherford</td>
-      <td>3 mins, 40 mins</td>
+      <td>12/18/2017</td>
+      <td>Delawanna</td>
+      <td>6 mins, 37 mins</td>
       <td>rail</td>
-      <td>0.478493</td>
+      <td>0.619481</td>
       <td>Clifton Commons</td>
-      <td>1.917128</td>
-      <td>32 mins</td>
-      <td>40.834</td>
-      <td>-74.1057</td>
+      <td>1.200940</td>
+      <td>30 mins</td>
+      <td>40.8333</td>
+      <td>-74.1197</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1727496">1727496</a></th>
@@ -15633,29 +15786,6 @@ var element = $('#3916b3a5-d57e-4935-bbeb-fc6a2377df1d');
       <td>-74.1053</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1733881">1733881</a></th>
-      <td>277 Adriana Street</td>
-      <td>Saddle Brook</td>
-      <td>Bergen</td>
-      <td>3</td>
-      <td>2</td>
-      <td>0</td>
-      <td>325000</td>
-      <td>7174.0</td>
-      <td>Ranch</td>
-      <td>7</td>
-      <td>08/18/2017</td>
-      <td>Plauderville</td>
-      <td>5 mins, 36 mins</td>
-      <td>rail</td>
-      <td>0.841435</td>
-      <td>Hackensack Terminal</td>
-      <td>2.704836</td>
-      <td>34 mins</td>
-      <td>40.8935</td>
-      <td>-74.0913</td>
-    </tr>
-    <tr>
       <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1743321">1743321</a></th>
       <td>23 Chelsea Drive</td>
       <td>Saddle Brook</td>
@@ -15679,27 +15809,27 @@ var element = $('#3916b3a5-d57e-4935-bbeb-fc6a2377df1d');
       <td>-74.0834</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1744762">1744762</a></th>
-      <td>21 Harley Place</td>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1733881">1733881</a></th>
+      <td>277 Adriana Street</td>
       <td>Saddle Brook</td>
       <td>Bergen</td>
       <td>3</td>
       <td>2</td>
       <td>0</td>
-      <td>489900</td>
-      <td>8036.0</td>
-      <td>Colonial</td>
-      <td>6</td>
-      <td>11/13/2017</td>
-      <td>Broadway</td>
-      <td>6 mins, 41 mins</td>
+      <td>325000</td>
+      <td>7174.0</td>
+      <td>Ranch</td>
+      <td>7</td>
+      <td>08/18/2017</td>
+      <td>Plauderville</td>
+      <td>5 mins, 36 mins</td>
       <td>rail</td>
-      <td>0.966296</td>
-      <td>Fairlawn DPW</td>
-      <td>2.325566</td>
+      <td>0.841435</td>
+      <td>Hackensack Terminal</td>
+      <td>2.704836</td>
       <td>34 mins</td>
-      <td>40.9164</td>
-      <td>-74.0986</td>
+      <td>40.8935</td>
+      <td>-74.0913</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1744160">1744160</a></th>
@@ -15725,52 +15855,6 @@ var element = $('#3916b3a5-d57e-4935-bbeb-fc6a2377df1d');
       <td>-74.0942</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1745334">1745334</a></th>
-      <td>294 John Ochs Drive</td>
-      <td>Saddle Brook</td>
-      <td>Bergen</td>
-      <td>3</td>
-      <td>2</td>
-      <td>0</td>
-      <td>399900</td>
-      <td>7916.0</td>
-      <td>Ranch</td>
-      <td>6</td>
-      <td>11/16/2017</td>
-      <td>Broadway</td>
-      <td>5 mins, 41 mins</td>
-      <td>rail</td>
-      <td>0.813473</td>
-      <td>Fairlawn DPW</td>
-      <td>2.503617</td>
-      <td>34 mins</td>
-      <td>40.9134</td>
-      <td>-74.1054</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1748178">1748178</a></th>
-      <td>29 Jamros Terrace</td>
-      <td>Saddle Brook</td>
-      <td>Bergen</td>
-      <td>4</td>
-      <td>2</td>
-      <td>0</td>
-      <td>489000</td>
-      <td>8729.0</td>
-      <td>Split Level</td>
-      <td>9</td>
-      <td>12/18/2017</td>
-      <td>Broadway</td>
-      <td>8 mins, 41 mins</td>
-      <td>rail</td>
-      <td>1.286752</td>
-      <td>Fairlawn DPW</td>
-      <td>2.696227</td>
-      <td>33 mins</td>
-      <td>40.9113</td>
-      <td>-74.0956</td>
-    </tr>
-    <tr>
       <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1731587">1731587</a></th>
       <td>37 Rochelle Parkway</td>
       <td>Saddle Brook</td>
@@ -15792,6 +15876,52 @@ var element = $('#3916b3a5-d57e-4935-bbeb-fc6a2377df1d');
       <td>31 mins</td>
       <td>40.9045</td>
       <td>-74.0868</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1744762">1744762</a></th>
+      <td>21 Harley Place</td>
+      <td>Saddle Brook</td>
+      <td>Bergen</td>
+      <td>3</td>
+      <td>2</td>
+      <td>0</td>
+      <td>489900</td>
+      <td>8036.0</td>
+      <td>Colonial</td>
+      <td>6</td>
+      <td>11/13/2017</td>
+      <td>Broadway</td>
+      <td>6 mins, 41 mins</td>
+      <td>rail</td>
+      <td>0.966296</td>
+      <td>Fairlawn DPW</td>
+      <td>2.325566</td>
+      <td>34 mins</td>
+      <td>40.9164</td>
+      <td>-74.0986</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1745334">1745334</a></th>
+      <td>294 John Ochs Drive</td>
+      <td>Saddle Brook</td>
+      <td>Bergen</td>
+      <td>3</td>
+      <td>2</td>
+      <td>0</td>
+      <td>399900</td>
+      <td>7916.0</td>
+      <td>Ranch</td>
+      <td>6</td>
+      <td>11/16/2017</td>
+      <td>Broadway</td>
+      <td>5 mins, 41 mins</td>
+      <td>rail</td>
+      <td>0.813473</td>
+      <td>Fairlawn DPW</td>
+      <td>2.503617</td>
+      <td>34 mins</td>
+      <td>40.9134</td>
+      <td>-74.1054</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1742908">1742908</a></th>
@@ -15840,6 +15970,29 @@ var element = $('#3916b3a5-d57e-4935-bbeb-fc6a2377df1d');
       <td>-74.097</td>
     </tr>
     <tr>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1748178">1748178</a></th>
+      <td>29 Jamros Terrace</td>
+      <td>Saddle Brook</td>
+      <td>Bergen</td>
+      <td>4</td>
+      <td>2</td>
+      <td>0</td>
+      <td>489000</td>
+      <td>8729.0</td>
+      <td>Split Level</td>
+      <td>9</td>
+      <td>12/18/2017</td>
+      <td>Broadway</td>
+      <td>8 mins, 41 mins</td>
+      <td>rail</td>
+      <td>1.286752</td>
+      <td>Fairlawn DPW</td>
+      <td>2.696227</td>
+      <td>33 mins</td>
+      <td>40.9113</td>
+      <td>-74.0956</td>
+    </tr>
+    <tr>
       <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1748683">1748683</a></th>
       <td>220 Harding Road</td>
       <td>Scotch Plains</td>
@@ -15861,6 +16014,29 @@ var element = $('#3916b3a5-d57e-4935-bbeb-fc6a2377df1d');
       <td>26 mins</td>
       <td>40.6619</td>
       <td>-74.3909</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1727807">1727807</a></th>
+      <td>814 8th Street</td>
+      <td>Secaucus</td>
+      <td>Hudson</td>
+      <td>4</td>
+      <td>2</td>
+      <td>0</td>
+      <td>439000</td>
+      <td>4849.0</td>
+      <td>Colonial</td>
+      <td>8</td>
+      <td>07/06/2017</td>
+      <td>North Bergen</td>
+      <td>10 mins, 24 mins</td>
+      <td>bus</td>
+      <td>1.632613</td>
+      <td>North Bergen</td>
+      <td>1.632613</td>
+      <td>32 mins</td>
+      <td>40.7952</td>
+      <td>-74.065</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1747178">1747178</a></th>
@@ -15893,7 +16069,7 @@ var element = $('#3916b3a5-d57e-4935-bbeb-fc6a2377df1d');
       <td>3</td>
       <td>2</td>
       <td>1</td>
-      <td>465000</td>
+      <td>455000</td>
       <td>12138.0</td>
       <td>Ranch</td>
       <td>7</td>
@@ -15907,29 +16083,6 @@ var element = $('#3916b3a5-d57e-4935-bbeb-fc6a2377df1d');
       <td>13 mins</td>
       <td>40.7558</td>
       <td>-74.2504</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1611093">1611093</a></th>
-      <td>7 North Wyoming Avenue</td>
-      <td>South Orange</td>
-      <td>Essex</td>
-      <td>5</td>
-      <td>2</td>
-      <td>1</td>
-      <td>399900</td>
-      <td>24299.0</td>
-      <td>Colonial</td>
-      <td>12</td>
-      <td>03/14/2016</td>
-      <td>South Orange</td>
-      <td>4 mins, 36 mins</td>
-      <td>rail</td>
-      <td>0.635098</td>
-      <td>Irvington Bus Terminal</td>
-      <td>2.797018</td>
-      <td>8 mins</td>
-      <td>40.7482</td>
-      <td>-74.2723</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1748592">1748592</a></th>
@@ -15955,418 +16108,27 @@ var element = $('#3916b3a5-d57e-4935-bbeb-fc6a2377df1d');
       <td>-74.2497</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1738354">1738354</a></th>
-      <td>87 Hirliman Road</td>
-      <td>Teaneck</td>
-      <td>Bergen</td>
-      <td>4</td>
-      <td>2</td>
-      <td>1</td>
-      <td>475000</td>
-      <td>11697.0</td>
-      <td>Split Level</td>
-      <td>10</td>
-      <td>09/22/2017</td>
-      <td>New Bridge Landing</td>
-      <td>8 mins, 49 mins</td>
-      <td>rail</td>
-      <td>2.167687</td>
-      <td>Hackensack Terminal</td>
-      <td>2.618347</td>
-      <td>40 mins</td>
-      <td>40.8984</td>
-      <td>-73.997</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1727103">1727103</a></th>
-      <td>806 Washburn Street</td>
-      <td>Teaneck</td>
-      <td>Bergen</td>
-      <td>4</td>
-      <td>3</td>
-      <td>0</td>
-      <td>499000</td>
-      <td>14552.0</td>
-      <td>Split Level</td>
-      <td>9</td>
-      <td>07/03/2017</td>
-      <td>New Bridge Landing</td>
-      <td>4 mins, 49 mins</td>
-      <td>rail</td>
-      <td>0.586439</td>
-      <td>Hackensack Terminal</td>
-      <td>2.272765</td>
-      <td>38 mins</td>
-      <td>40.9117</td>
-      <td>-74.0239</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1722590">1722590</a></th>
-      <td>288 Beech Street</td>
-      <td>Teaneck</td>
-      <td>Bergen</td>
-      <td>4</td>
-      <td>2</td>
-      <td>0</td>
-      <td>485000</td>
-      <td>9328.0</td>
-      <td>Colonial</td>
-      <td>7</td>
-      <td>06/02/2017</td>
-      <td>Hackensack Terminal</td>
-      <td>7 mins, 45 mins</td>
-      <td>bus</td>
-      <td>1.325647</td>
-      <td>Hackensack Terminal</td>
-      <td>1.325647</td>
-      <td>34 mins</td>
-      <td>40.873</td>
-      <td>-74.0195</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1712294">1712294</a></th>
-      <td>447 Queen Anne Road</td>
-      <td>Teaneck</td>
-      <td>Bergen</td>
-      <td>4</td>
-      <td>3</td>
-      <td>1</td>
-      <td>489900</td>
-      <td>15981.0</td>
-      <td>Colonial</td>
-      <td>8</td>
-      <td>04/01/2017</td>
-      <td>Hackensack Terminal</td>
-      <td>7 mins, 45 mins</td>
-      <td>bus</td>
-      <td>1.220644</td>
-      <td>Hackensack Terminal</td>
-      <td>1.220644</td>
-      <td>35 mins</td>
-      <td>40.8778</td>
-      <td>-74.0193</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1734324">1734324</a></th>
-      <td>17 Minell Place</td>
-      <td>Teaneck</td>
-      <td>Bergen</td>
-      <td>3</td>
-      <td>2</td>
-      <td>2</td>
-      <td>479000</td>
-      <td>10585.0</td>
-      <td>Colonial</td>
-      <td>8</td>
-      <td>08/21/2017</td>
-      <td>Hackensack Terminal</td>
-      <td>10 mins, 45 mins</td>
-      <td>bus</td>
-      <td>2.011555</td>
-      <td>Hackensack Terminal</td>
-      <td>2.011555</td>
-      <td>37 mins</td>
-      <td>40.888</td>
-      <td>-74.0045</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1639231">1639231</a></th>
-      <td>1403 Milford Terrace</td>
-      <td>Teaneck</td>
-      <td>Bergen</td>
-      <td>3</td>
-      <td>3</td>
-      <td>1</td>
-      <td>450000</td>
-      <td>12471.0</td>
-      <td>Colonial</td>
-      <td>7</td>
-      <td>09/25/2016</td>
-      <td>New Bridge Landing</td>
-      <td>5 mins, 49 mins</td>
-      <td>rail</td>
-      <td>0.728935</td>
-      <td>Hackensack Terminal</td>
-      <td>1.978392</td>
-      <td>37 mins</td>
-      <td>40.9063</td>
-      <td>-74.0225</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1739455">1739455</a></th>
-      <td>1532 Jefferson Street</td>
-      <td>Teaneck</td>
-      <td>Bergen</td>
-      <td>3</td>
-      <td>2</td>
-      <td>1</td>
-      <td>497500</td>
-      <td>15792.0</td>
-      <td>Colonial</td>
-      <td>7</td>
-      <td>10/01/2017</td>
-      <td>New Bridge Landing</td>
-      <td>5 mins, 49 mins</td>
-      <td>rail</td>
-      <td>0.869439</td>
-      <td>Hackensack Terminal</td>
-      <td>2.267705</td>
-      <td>38 mins</td>
-      <td>40.9094</td>
-      <td>-74.0185</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1747762">1747762</a></th>
-      <td>145 Selvage Avenue</td>
-      <td>Teaneck</td>
-      <td>Bergen</td>
-      <td>3</td>
-      <td>2</td>
-      <td>1</td>
-      <td>399000</td>
-      <td>9458.0</td>
-      <td>Colonial</td>
-      <td>6</td>
-      <td>12/12/2017</td>
-      <td>New Bridge Landing</td>
-      <td>5 mins, 49 mins</td>
-      <td>rail</td>
-      <td>1.861059</td>
-      <td>Hackensack Terminal</td>
-      <td>2.007097</td>
-      <td>37 mins</td>
-      <td>40.894</td>
-      <td>-74.0072</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1744338">1744338</a></th>
-      <td>363 Johnson Avenue</td>
-      <td>Teaneck</td>
-      <td>Bergen</td>
-      <td>3</td>
-      <td>2</td>
-      <td>0</td>
-      <td>349000</td>
-      <td>11500.0</td>
-      <td>Colonial</td>
-      <td>7</td>
-      <td>11/08/2017</td>
-      <td>Hackensack Terminal</td>
-      <td>7 mins, 45 mins</td>
-      <td>bus</td>
-      <td>1.104670</td>
-      <td>Hackensack Terminal</td>
-      <td>1.104670</td>
-      <td>36 mins</td>
-      <td>40.8842</td>
-      <td>-74.0212</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1746956">1746956</a></th>
-      <td>76 Genesee Avenue</td>
-      <td>Teaneck</td>
-      <td>Bergen</td>
-      <td>3</td>
-      <td>2</td>
-      <td>0</td>
-      <td>369000</td>
-      <td>8947.0</td>
-      <td>Colonial</td>
-      <td>8</td>
-      <td>12/04/2017</td>
-      <td>New Bridge Landing</td>
-      <td>7 mins, 49 mins</td>
-      <td>rail</td>
-      <td>2.190798</td>
-      <td>Hackensack Terminal</td>
-      <td>2.482602</td>
-      <td>39 mins</td>
-      <td>40.8957</td>
-      <td>-73.9983</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1730268">1730268</a></th>
-      <td>78 Hirliman Road</td>
-      <td>Teaneck</td>
-      <td>Bergen</td>
-      <td>4</td>
-      <td>2</td>
-      <td>0</td>
-      <td>479000</td>
-      <td>9959.0</td>
-      <td>Split Level</td>
-      <td>9</td>
-      <td>07/24/2017</td>
-      <td>New Bridge Landing</td>
-      <td>8 mins, 49 mins</td>
-      <td>rail</td>
-      <td>2.152397</td>
-      <td>Hackensack Terminal</td>
-      <td>2.586445</td>
-      <td>40 mins</td>
-      <td>40.8981</td>
-      <td>-73.9975</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1748181">1748181</a></th>
-      <td>1321 Taft Road</td>
-      <td>Teaneck</td>
-      <td>Bergen</td>
-      <td>6</td>
-      <td>3</td>
-      <td>1</td>
-      <td>450000</td>
-      <td>12852.0</td>
-      <td>Colonial</td>
-      <td>9</td>
-      <td>12/18/2017</td>
-      <td>New Bridge Landing</td>
-      <td>6 mins, 49 mins</td>
-      <td>rail</td>
-      <td>1.463453</td>
-      <td>Hackensack Terminal</td>
-      <td>2.107685</td>
-      <td>38 mins</td>
-      <td>40.9008</td>
-      <td>-74.0105</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1743939">1743939</a></th>
-      <td>436 Billington Road</td>
-      <td>Teaneck</td>
-      <td>Bergen</td>
-      <td>4</td>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1611093">1611093</a></th>
+      <td>7 North Wyoming Avenue</td>
+      <td>South Orange</td>
+      <td>Essex</td>
+      <td>5</td>
       <td>2</td>
       <td>1</td>
       <td>399900</td>
-      <td>10700.0</td>
+      <td>24299.0</td>
       <td>Colonial</td>
-      <td>8</td>
-      <td>11/04/2017</td>
-      <td>Anderson Street</td>
-      <td>6 mins, 41 mins</td>
+      <td>12</td>
+      <td>03/14/2016</td>
+      <td>South Orange</td>
+      <td>4 mins, 36 mins</td>
       <td>rail</td>
-      <td>1.378561</td>
-      <td>Hackensack Terminal</td>
-      <td>1.606151</td>
-      <td>36 mins</td>
-      <td>40.8958</td>
-      <td>-74.0175</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1737275">1737275</a></th>
-      <td>1236 Lorraine Avenue</td>
-      <td>Teaneck</td>
-      <td>Bergen</td>
-      <td>3</td>
-      <td>3</td>
-      <td>0</td>
-      <td>454900</td>
-      <td>11152.0</td>
-      <td>Ranch</td>
-      <td>8</td>
-      <td>09/14/2017</td>
-      <td>New Bridge Landing</td>
-      <td>6 mins, 49 mins</td>
-      <td>rail</td>
-      <td>2.515624</td>
-      <td>Hackensack Terminal</td>
-      <td>2.624682</td>
-      <td>37 mins</td>
-      <td>40.8922</td>
-      <td>-73.9938</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1739132">1739132</a></th>
-      <td>755 River Road</td>
-      <td>Teaneck</td>
-      <td>Bergen</td>
-      <td>4</td>
-      <td>3</td>
-      <td>2</td>
-      <td>399000</td>
-      <td>10266.0</td>
-      <td>Colonial</td>
-      <td>9</td>
-      <td>09/28/2017</td>
-      <td>Anderson Street</td>
-      <td>4 mins, 41 mins</td>
-      <td>rail</td>
-      <td>0.712226</td>
-      <td>Hackensack Terminal</td>
-      <td>0.851038</td>
-      <td>38 mins</td>
-      <td>40.8909</td>
-      <td>-74.031</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1714061">1714061</a></th>
-      <td>65 Franklin Road</td>
-      <td>Teaneck</td>
-      <td>Bergen</td>
-      <td>3</td>
-      <td>2</td>
-      <td>0</td>
-      <td>379000</td>
-      <td>8907.0</td>
-      <td>Colonial</td>
-      <td>7</td>
-      <td>04/13/2017</td>
-      <td>New Bridge Landing</td>
-      <td>8 mins, 49 mins</td>
-      <td>rail</td>
-      <td>2.158362</td>
-      <td>Hackensack Terminal</td>
-      <td>2.522352</td>
-      <td>39 mins</td>
-      <td>40.8969</td>
-      <td>-73.9981</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1730244">1730244</a></th>
-      <td>1165 Sussex Road</td>
-      <td>Teaneck</td>
-      <td>Bergen</td>
-      <td>4</td>
-      <td>2</td>
-      <td>1</td>
-      <td>449000</td>
-      <td>12038.0</td>
-      <td>Colonial</td>
-      <td>8</td>
-      <td>07/24/2017</td>
-      <td>New Bridge Landing</td>
-      <td>5 mins, 49 mins</td>
-      <td>rail</td>
-      <td>1.286556</td>
-      <td>Hackensack Terminal</td>
-      <td>1.752489</td>
-      <td>37 mins</td>
-      <td>40.8984</td>
-      <td>-74.0167</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1748648">1748648</a></th>
-      <td>287 Woodbine Street</td>
-      <td>Teaneck</td>
-      <td>Bergen</td>
-      <td>3</td>
-      <td>2</td>
-      <td>0</td>
-      <td>389000</td>
-      <td>9675.0</td>
-      <td>Colonial</td>
-      <td>7</td>
-      <td>12/25/2017</td>
-      <td>Hackensack Terminal</td>
-      <td>8 mins, 45 mins</td>
-      <td>bus</td>
-      <td>1.415679</td>
-      <td>Hackensack Terminal</td>
-      <td>1.415679</td>
-      <td>34 mins</td>
-      <td>40.8724</td>
-      <td>-74.018</td>
+      <td>0.635098</td>
+      <td>Irvington Bus Terminal</td>
+      <td>2.797018</td>
+      <td>8 mins</td>
+      <td>40.7482</td>
+      <td>-74.2723</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1730940">1730940</a></th>
@@ -16392,6 +16154,420 @@ var element = $('#3916b3a5-d57e-4935-bbeb-fc6a2377df1d');
       <td>-74.0074</td>
     </tr>
     <tr>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1714061">1714061</a></th>
+      <td>65 Franklin Road</td>
+      <td>Teaneck</td>
+      <td>Bergen</td>
+      <td>3</td>
+      <td>2</td>
+      <td>0</td>
+      <td>379000</td>
+      <td>8907.0</td>
+      <td>Colonial</td>
+      <td>7</td>
+      <td>04/13/2017</td>
+      <td>New Bridge Landing</td>
+      <td>8 mins, 49 mins</td>
+      <td>rail</td>
+      <td>2.158362</td>
+      <td>Hackensack Terminal</td>
+      <td>2.522352</td>
+      <td>39 mins</td>
+      <td>40.8969</td>
+      <td>-73.9981</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1639231">1639231</a></th>
+      <td>1403 Milford Terrace</td>
+      <td>Teaneck</td>
+      <td>Bergen</td>
+      <td>3</td>
+      <td>3</td>
+      <td>1</td>
+      <td>450000</td>
+      <td>12471.0</td>
+      <td>Colonial</td>
+      <td>7</td>
+      <td>09/25/2016</td>
+      <td>New Bridge Landing</td>
+      <td>5 mins, 49 mins</td>
+      <td>rail</td>
+      <td>0.728935</td>
+      <td>Hackensack Terminal</td>
+      <td>1.978392</td>
+      <td>37 mins</td>
+      <td>40.9063</td>
+      <td>-74.0225</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1722590">1722590</a></th>
+      <td>288 Beech Street</td>
+      <td>Teaneck</td>
+      <td>Bergen</td>
+      <td>4</td>
+      <td>2</td>
+      <td>0</td>
+      <td>485000</td>
+      <td>9328.0</td>
+      <td>Colonial</td>
+      <td>7</td>
+      <td>06/02/2017</td>
+      <td>Hackensack Terminal</td>
+      <td>7 mins, 45 mins</td>
+      <td>bus</td>
+      <td>1.325647</td>
+      <td>Hackensack Terminal</td>
+      <td>1.325647</td>
+      <td>34 mins</td>
+      <td>40.873</td>
+      <td>-74.0195</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1730268">1730268</a></th>
+      <td>78 Hirliman Road</td>
+      <td>Teaneck</td>
+      <td>Bergen</td>
+      <td>4</td>
+      <td>2</td>
+      <td>0</td>
+      <td>479000</td>
+      <td>9959.0</td>
+      <td>Split Level</td>
+      <td>9</td>
+      <td>07/24/2017</td>
+      <td>New Bridge Landing</td>
+      <td>8 mins, 49 mins</td>
+      <td>rail</td>
+      <td>2.152397</td>
+      <td>Hackensack Terminal</td>
+      <td>2.586445</td>
+      <td>40 mins</td>
+      <td>40.8981</td>
+      <td>-73.9975</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1737275">1737275</a></th>
+      <td>1236 Lorraine Avenue</td>
+      <td>Teaneck</td>
+      <td>Bergen</td>
+      <td>3</td>
+      <td>3</td>
+      <td>0</td>
+      <td>454900</td>
+      <td>11152.0</td>
+      <td>Ranch</td>
+      <td>8</td>
+      <td>09/14/2017</td>
+      <td>New Bridge Landing</td>
+      <td>6 mins, 49 mins</td>
+      <td>rail</td>
+      <td>2.515624</td>
+      <td>Hackensack Terminal</td>
+      <td>2.624682</td>
+      <td>37 mins</td>
+      <td>40.8922</td>
+      <td>-73.9938</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1746956">1746956</a></th>
+      <td>76 Genesee Avenue</td>
+      <td>Teaneck</td>
+      <td>Bergen</td>
+      <td>3</td>
+      <td>2</td>
+      <td>0</td>
+      <td>369000</td>
+      <td>8947.0</td>
+      <td>Colonial</td>
+      <td>8</td>
+      <td>12/04/2017</td>
+      <td>New Bridge Landing</td>
+      <td>7 mins, 49 mins</td>
+      <td>rail</td>
+      <td>2.190798</td>
+      <td>Hackensack Terminal</td>
+      <td>2.482602</td>
+      <td>39 mins</td>
+      <td>40.8957</td>
+      <td>-73.9983</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1734324">1734324</a></th>
+      <td>17 Minell Place</td>
+      <td>Teaneck</td>
+      <td>Bergen</td>
+      <td>3</td>
+      <td>2</td>
+      <td>2</td>
+      <td>479000</td>
+      <td>10585.0</td>
+      <td>Colonial</td>
+      <td>8</td>
+      <td>08/21/2017</td>
+      <td>Hackensack Terminal</td>
+      <td>10 mins, 45 mins</td>
+      <td>bus</td>
+      <td>2.011555</td>
+      <td>Hackensack Terminal</td>
+      <td>2.011555</td>
+      <td>37 mins</td>
+      <td>40.888</td>
+      <td>-74.0045</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1727103">1727103</a></th>
+      <td>806 Washburn Street</td>
+      <td>Teaneck</td>
+      <td>Bergen</td>
+      <td>4</td>
+      <td>3</td>
+      <td>0</td>
+      <td>499000</td>
+      <td>14552.0</td>
+      <td>Split Level</td>
+      <td>9</td>
+      <td>07/03/2017</td>
+      <td>New Bridge Landing</td>
+      <td>4 mins, 49 mins</td>
+      <td>rail</td>
+      <td>0.586439</td>
+      <td>Hackensack Terminal</td>
+      <td>2.272765</td>
+      <td>38 mins</td>
+      <td>40.9117</td>
+      <td>-74.0239</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1738354">1738354</a></th>
+      <td>87 Hirliman Road</td>
+      <td>Teaneck</td>
+      <td>Bergen</td>
+      <td>4</td>
+      <td>2</td>
+      <td>1</td>
+      <td>475000</td>
+      <td>11697.0</td>
+      <td>Split Level</td>
+      <td>10</td>
+      <td>09/22/2017</td>
+      <td>New Bridge Landing</td>
+      <td>8 mins, 49 mins</td>
+      <td>rail</td>
+      <td>2.167687</td>
+      <td>Hackensack Terminal</td>
+      <td>2.618347</td>
+      <td>40 mins</td>
+      <td>40.8984</td>
+      <td>-73.997</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1739132">1739132</a></th>
+      <td>755 River Road</td>
+      <td>Teaneck</td>
+      <td>Bergen</td>
+      <td>4</td>
+      <td>3</td>
+      <td>2</td>
+      <td>399000</td>
+      <td>10266.0</td>
+      <td>Colonial</td>
+      <td>9</td>
+      <td>09/28/2017</td>
+      <td>Anderson Street</td>
+      <td>4 mins, 41 mins</td>
+      <td>rail</td>
+      <td>0.712226</td>
+      <td>Hackensack Terminal</td>
+      <td>0.851038</td>
+      <td>38 mins</td>
+      <td>40.8909</td>
+      <td>-74.031</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1730244">1730244</a></th>
+      <td>1165 Sussex Road</td>
+      <td>Teaneck</td>
+      <td>Bergen</td>
+      <td>4</td>
+      <td>2</td>
+      <td>1</td>
+      <td>449000</td>
+      <td>12038.0</td>
+      <td>Colonial</td>
+      <td>8</td>
+      <td>07/24/2017</td>
+      <td>New Bridge Landing</td>
+      <td>5 mins, 49 mins</td>
+      <td>rail</td>
+      <td>1.286556</td>
+      <td>Hackensack Terminal</td>
+      <td>1.752489</td>
+      <td>37 mins</td>
+      <td>40.8984</td>
+      <td>-74.0167</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1743939">1743939</a></th>
+      <td>436 Billington Road</td>
+      <td>Teaneck</td>
+      <td>Bergen</td>
+      <td>4</td>
+      <td>2</td>
+      <td>1</td>
+      <td>399900</td>
+      <td>10700.0</td>
+      <td>Colonial</td>
+      <td>8</td>
+      <td>11/04/2017</td>
+      <td>Anderson Street</td>
+      <td>6 mins, 41 mins</td>
+      <td>rail</td>
+      <td>1.378561</td>
+      <td>Hackensack Terminal</td>
+      <td>1.606151</td>
+      <td>36 mins</td>
+      <td>40.8958</td>
+      <td>-74.0175</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1739455">1739455</a></th>
+      <td>1532 Jefferson Street</td>
+      <td>Teaneck</td>
+      <td>Bergen</td>
+      <td>3</td>
+      <td>2</td>
+      <td>1</td>
+      <td>495000</td>
+      <td>15792.0</td>
+      <td>Colonial</td>
+      <td>7</td>
+      <td>10/01/2017</td>
+      <td>New Bridge Landing</td>
+      <td>5 mins, 49 mins</td>
+      <td>rail</td>
+      <td>0.869439</td>
+      <td>Hackensack Terminal</td>
+      <td>2.267705</td>
+      <td>38 mins</td>
+      <td>40.9094</td>
+      <td>-74.0185</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1712294">1712294</a></th>
+      <td>447 Queen Anne Road</td>
+      <td>Teaneck</td>
+      <td>Bergen</td>
+      <td>4</td>
+      <td>3</td>
+      <td>1</td>
+      <td>489900</td>
+      <td>15981.0</td>
+      <td>Colonial</td>
+      <td>8</td>
+      <td>04/01/2017</td>
+      <td>Hackensack Terminal</td>
+      <td>7 mins, 45 mins</td>
+      <td>bus</td>
+      <td>1.220644</td>
+      <td>Hackensack Terminal</td>
+      <td>1.220644</td>
+      <td>35 mins</td>
+      <td>40.8778</td>
+      <td>-74.0193</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1748181">1748181</a></th>
+      <td>1321 Taft Road</td>
+      <td>Teaneck</td>
+      <td>Bergen</td>
+      <td>6</td>
+      <td>3</td>
+      <td>1</td>
+      <td>450000</td>
+      <td>12852.0</td>
+      <td>Colonial</td>
+      <td>9</td>
+      <td>12/18/2017</td>
+      <td>New Bridge Landing</td>
+      <td>6 mins, 49 mins</td>
+      <td>rail</td>
+      <td>1.463453</td>
+      <td>Hackensack Terminal</td>
+      <td>2.107685</td>
+      <td>38 mins</td>
+      <td>40.9008</td>
+      <td>-74.0105</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1744338">1744338</a></th>
+      <td>363 Johnson Avenue</td>
+      <td>Teaneck</td>
+      <td>Bergen</td>
+      <td>3</td>
+      <td>2</td>
+      <td>0</td>
+      <td>349000</td>
+      <td>11500.0</td>
+      <td>Colonial</td>
+      <td>7</td>
+      <td>11/08/2017</td>
+      <td>Hackensack Terminal</td>
+      <td>7 mins, 45 mins</td>
+      <td>bus</td>
+      <td>1.104670</td>
+      <td>Hackensack Terminal</td>
+      <td>1.104670</td>
+      <td>36 mins</td>
+      <td>40.8842</td>
+      <td>-74.0212</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1747762">1747762</a></th>
+      <td>145 Selvage Avenue</td>
+      <td>Teaneck</td>
+      <td>Bergen</td>
+      <td>3</td>
+      <td>2</td>
+      <td>1</td>
+      <td>399000</td>
+      <td>9458.0</td>
+      <td>Colonial</td>
+      <td>6</td>
+      <td>12/12/2017</td>
+      <td>New Bridge Landing</td>
+      <td>5 mins, 49 mins</td>
+      <td>rail</td>
+      <td>1.861059</td>
+      <td>Hackensack Terminal</td>
+      <td>2.007097</td>
+      <td>37 mins</td>
+      <td>40.894</td>
+      <td>-74.0072</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1748648">1748648</a></th>
+      <td>287 Woodbine Street</td>
+      <td>Teaneck</td>
+      <td>Bergen</td>
+      <td>3</td>
+      <td>2</td>
+      <td>0</td>
+      <td>389000</td>
+      <td>9675.0</td>
+      <td>Colonial</td>
+      <td>7</td>
+      <td>12/25/2017</td>
+      <td>Hackensack Terminal</td>
+      <td>8 mins, 45 mins</td>
+      <td>bus</td>
+      <td>1.415679</td>
+      <td>Hackensack Terminal</td>
+      <td>1.415679</td>
+      <td>34 mins</td>
+      <td>40.8724</td>
+      <td>-74.018</td>
+    </tr>
+    <tr>
       <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1747967">1747967</a></th>
       <td>194 President Road</td>
       <td>Township of Washington</td>
@@ -16413,29 +16589,6 @@ var element = $('#3916b3a5-d57e-4935-bbeb-fc6a2377df1d');
       <td>40 mins</td>
       <td>40.9806</td>
       <td>-74.0589</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1741481">1741481</a></th>
-      <td>1848 Portsmouth Way</td>
-      <td>Union</td>
-      <td>Union</td>
-      <td>3</td>
-      <td>2</td>
-      <td>0</td>
-      <td>349900</td>
-      <td>8818.0</td>
-      <td>Colonial</td>
-      <td>6</td>
-      <td>10/16/2017</td>
-      <td>Union Center - Union Twp</td>
-      <td>4 mins, 47 mins</td>
-      <td>bus</td>
-      <td>0.460175</td>
-      <td>Union Center - Union Twp</td>
-      <td>0.460175</td>
-      <td>23 mins</td>
-      <td>40.6991</td>
-      <td>-74.2586</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1732175">1732175</a></th>
@@ -16461,7 +16614,7 @@ var element = $('#3916b3a5-d57e-4935-bbeb-fc6a2377df1d');
       <td>-74.2727</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1737891">1737891</a></th>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1800278">1800278</a></th>
       <td>2570 Allen Avenue</td>
       <td>Union</td>
       <td>Union</td>
@@ -16472,7 +16625,7 @@ var element = $('#3916b3a5-d57e-4935-bbeb-fc6a2377df1d');
       <td>11652.0</td>
       <td>Split Level</td>
       <td>12</td>
-      <td>09/19/2017</td>
+      <td>01/03/2018</td>
       <td>Pine Avenue - Union Twp</td>
       <td>6 mins, 55 mins</td>
       <td>bus</td>
@@ -16482,6 +16635,29 @@ var element = $('#3916b3a5-d57e-4935-bbeb-fc6a2377df1d');
       <td>18 mins</td>
       <td>40.7103</td>
       <td>-74.2867</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1741481">1741481</a></th>
+      <td>1848 Portsmouth Way</td>
+      <td>Union</td>
+      <td>Union</td>
+      <td>3</td>
+      <td>2</td>
+      <td>0</td>
+      <td>349900</td>
+      <td>8818.0</td>
+      <td>Colonial</td>
+      <td>6</td>
+      <td>10/16/2017</td>
+      <td>Union Center - Union Twp</td>
+      <td>4 mins, 47 mins</td>
+      <td>bus</td>
+      <td>0.460175</td>
+      <td>Union Center - Union Twp</td>
+      <td>0.460175</td>
+      <td>23 mins</td>
+      <td>40.6991</td>
+      <td>-74.2586</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1738315">1738315</a></th>
@@ -16551,29 +16727,6 @@ var element = $('#3916b3a5-d57e-4935-bbeb-fc6a2377df1d');
       <td>39 mins</td>
       <td>41.0097</td>
       <td>-74.108</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1726995">1726995</a></th>
-      <td>102 Sheridan Avenue</td>
-      <td>Waldwick</td>
-      <td>Bergen</td>
-      <td>4</td>
-      <td>3</td>
-      <td>0</td>
-      <td>479900</td>
-      <td>10983.0</td>
-      <td>Colonial</td>
-      <td>9</td>
-      <td>07/01/2017</td>
-      <td>Waldwick</td>
-      <td>5 mins, 53 mins</td>
-      <td>rail</td>
-      <td>0.968444</td>
-      <td>Ridgewood Bus Terminal</td>
-      <td>2.593801</td>
-      <td>39 mins</td>
-      <td>41.0147</td>
-      <td>-74.1051</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1748589">1748589</a></th>
@@ -16691,6 +16844,29 @@ var element = $('#3916b3a5-d57e-4935-bbeb-fc6a2377df1d');
       <td>-74.272</td>
     </tr>
     <tr>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1741628">1741628</a></th>
+      <td>12 Rose Terrace</td>
+      <td>Wayne</td>
+      <td>Passaic</td>
+      <td>3</td>
+      <td>2</td>
+      <td>1</td>
+      <td>424900</td>
+      <td>12669.0</td>
+      <td>Split Level</td>
+      <td>7</td>
+      <td>10/17/2017</td>
+      <td>Mothers Park & Ride</td>
+      <td>8 mins, 55 mins</td>
+      <td>bus</td>
+      <td>2.517390</td>
+      <td>Mothers Park & Ride</td>
+      <td>2.517390</td>
+      <td>33 mins</td>
+      <td>40.9433</td>
+      <td>-74.2283</td>
+    </tr>
+    <tr>
       <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1707902">1707902</a></th>
       <td>331 Black Oak Ridge Road</td>
       <td>Wayne</td>
@@ -16737,27 +16913,27 @@ var element = $('#3916b3a5-d57e-4935-bbeb-fc6a2377df1d');
       <td>-74.2412</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1740695">1740695</a></th>
-      <td>32 Veteri Place</td>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1730706">1730706</a></th>
+      <td>70 Clifford Drive</td>
       <td>Wayne</td>
       <td>Passaic</td>
-      <td>3</td>
+      <td>4</td>
       <td>2</td>
       <td>1</td>
-      <td>525000</td>
-      <td>14233.0</td>
+      <td>499900</td>
+      <td>12824.0</td>
       <td>Split Level</td>
       <td>8</td>
-      <td>10/10/2017</td>
+      <td>07/27/2017</td>
       <td>Mothers Park & Ride</td>
-      <td>8 mins, 55 mins</td>
+      <td>6 mins, 55 mins</td>
       <td>bus</td>
-      <td>2.117232</td>
+      <td>1.780209</td>
       <td>Mothers Park & Ride</td>
-      <td>2.117232</td>
-      <td>38 mins</td>
-      <td>40.9397</td>
-      <td>-74.2344</td>
+      <td>1.780209</td>
+      <td>33 mins</td>
+      <td>40.9328</td>
+      <td>-74.2366</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1728221">1728221</a></th>
@@ -16783,50 +16959,27 @@ var element = $('#3916b3a5-d57e-4935-bbeb-fc6a2377df1d');
       <td>-74.2419</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1730706">1730706</a></th>
-      <td>70 Clifford Drive</td>
-      <td>Wayne</td>
-      <td>Passaic</td>
-      <td>4</td>
-      <td>2</td>
-      <td>1</td>
-      <td>499900</td>
-      <td>12824.0</td>
-      <td>Split Level</td>
-      <td>8</td>
-      <td>07/27/2017</td>
-      <td>Mothers Park & Ride</td>
-      <td>6 mins, 55 mins</td>
-      <td>bus</td>
-      <td>1.780209</td>
-      <td>Mothers Park & Ride</td>
-      <td>1.780209</td>
-      <td>33 mins</td>
-      <td>40.9328</td>
-      <td>-74.2366</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1741628">1741628</a></th>
-      <td>12 Rose Terrace</td>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1740695">1740695</a></th>
+      <td>32 Veteri Place</td>
       <td>Wayne</td>
       <td>Passaic</td>
       <td>3</td>
       <td>2</td>
       <td>1</td>
-      <td>424900</td>
-      <td>12669.0</td>
+      <td>525000</td>
+      <td>14233.0</td>
       <td>Split Level</td>
-      <td>7</td>
-      <td>10/17/2017</td>
+      <td>8</td>
+      <td>10/10/2017</td>
       <td>Mothers Park & Ride</td>
       <td>8 mins, 55 mins</td>
       <td>bus</td>
-      <td>2.517390</td>
+      <td>2.117232</td>
       <td>Mothers Park & Ride</td>
-      <td>2.517390</td>
-      <td>33 mins</td>
-      <td>40.9433</td>
-      <td>-74.2283</td>
+      <td>2.117232</td>
+      <td>38 mins</td>
+      <td>40.9397</td>
+      <td>-74.2344</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1746703">1746703</a></th>
@@ -16852,29 +17005,6 @@ var element = $('#3916b3a5-d57e-4935-bbeb-fc6a2377df1d');
       <td>-74.3072</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1747272">1747272</a></th>
-      <td>1 Rock Spring Road</td>
-      <td>West Orange</td>
-      <td>Essex</td>
-      <td>3</td>
-      <td>2</td>
-      <td>1</td>
-      <td>395000</td>
-      <td>12059.0</td>
-      <td>Ranch</td>
-      <td>7</td>
-      <td>12/07/2017</td>
-      <td>Highland Avenue</td>
-      <td>6 mins, 46 mins</td>
-      <td>rail</td>
-      <td>1.012693</td>
-      <td>Irvington Bus Terminal</td>
-      <td>3.733854</td>
-      <td>8 mins</td>
-      <td>40.7743</td>
-      <td>-74.2604</td>
-    </tr>
-    <tr>
       <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1746763">1746763</a></th>
       <td>214 South Valley Road</td>
       <td>West Orange</td>
@@ -16896,6 +17026,29 @@ var element = $('#3916b3a5-d57e-4935-bbeb-fc6a2377df1d');
       <td>11 mins</td>
       <td>40.7601</td>
       <td>-74.2555</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1747272">1747272</a></th>
+      <td>1 Rock Spring Road</td>
+      <td>West Orange</td>
+      <td>Essex</td>
+      <td>3</td>
+      <td>2</td>
+      <td>1</td>
+      <td>395000</td>
+      <td>12059.0</td>
+      <td>Ranch</td>
+      <td>7</td>
+      <td>12/07/2017</td>
+      <td>Highland Avenue</td>
+      <td>6 mins, 46 mins</td>
+      <td>rail</td>
+      <td>1.012693</td>
+      <td>Irvington Bus Terminal</td>
+      <td>3.733854</td>
+      <td>8 mins</td>
+      <td>40.7743</td>
+      <td>-74.2604</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1705081">1705081</a></th>
@@ -16921,29 +17074,6 @@ var element = $('#3916b3a5-d57e-4935-bbeb-fc6a2377df1d');
       <td>-74.2299</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1744083">1744083</a></th>
-      <td>328 Marlboro Road</td>
-      <td>Wood-Ridge</td>
-      <td>Bergen</td>
-      <td>3</td>
-      <td>2</td>
-      <td>1</td>
-      <td>379900</td>
-      <td>8265.0</td>
-      <td>Colonial</td>
-      <td>7</td>
-      <td>11/06/2017</td>
-      <td>Wesmont</td>
-      <td>3 mins, 31 mins</td>
-      <td>rail</td>
-      <td>0.499754</td>
-      <td>Passaic Bus Terminal</td>
-      <td>2.184520</td>
-      <td>36 mins</td>
-      <td>40.8521</td>
-      <td>-74.0882</td>
-    </tr>
-    <tr>
       <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1746482">1746482</a></th>
       <td>501 Innes Road</td>
       <td>Wood-Ridge</td>
@@ -16965,6 +17095,29 @@ var element = $('#3916b3a5-d57e-4935-bbeb-fc6a2377df1d');
       <td>34 mins</td>
       <td>40.8501</td>
       <td>-74.08</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1738635">1738635</a></th>
+      <td>482 Columbia Boulevard</td>
+      <td>Wood-Ridge</td>
+      <td>Bergen</td>
+      <td>3</td>
+      <td>3</td>
+      <td>0</td>
+      <td>369000</td>
+      <td>10710.0</td>
+      <td>Colonial</td>
+      <td>9</td>
+      <td>09/25/2017</td>
+      <td>Wood Ridge</td>
+      <td>5 mins, 28 mins</td>
+      <td>rail</td>
+      <td>0.373883</td>
+      <td>Passaic Bus Terminal</td>
+      <td>2.508140</td>
+      <td>34 mins</td>
+      <td>40.8477</td>
+      <td>-74.084</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1748437">1748437</a></th>
@@ -17013,27 +17166,50 @@ var element = $('#3916b3a5-d57e-4935-bbeb-fc6a2377df1d');
       <td>-74.0825</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1738635">1738635</a></th>
-      <td>482 Columbia Boulevard</td>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1744083">1744083</a></th>
+      <td>328 Marlboro Road</td>
       <td>Wood-Ridge</td>
       <td>Bergen</td>
       <td>3</td>
+      <td>2</td>
+      <td>1</td>
+      <td>379900</td>
+      <td>8265.0</td>
+      <td>Colonial</td>
+      <td>7</td>
+      <td>11/06/2017</td>
+      <td>Wesmont</td>
+      <td>3 mins, 31 mins</td>
+      <td>rail</td>
+      <td>0.499754</td>
+      <td>Passaic Bus Terminal</td>
+      <td>2.184520</td>
+      <td>36 mins</td>
+      <td>40.8521</td>
+      <td>-74.0882</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1735854">1735854</a></th>
+      <td>10 Hugo Avenue</td>
+      <td>Woodland Park</td>
+      <td>Passaic</td>
+      <td>3</td>
       <td>3</td>
       <td>0</td>
-      <td>369000</td>
-      <td>10710.0</td>
+      <td>349000</td>
+      <td>8429.0</td>
       <td>Colonial</td>
-      <td>9</td>
-      <td>09/25/2017</td>
-      <td>Wood Ridge</td>
-      <td>5 mins, 28 mins</td>
-      <td>rail</td>
-      <td>0.373883</td>
-      <td>Passaic Bus Terminal</td>
-      <td>2.508140</td>
-      <td>34 mins</td>
-      <td>40.8477</td>
-      <td>-74.084</td>
+      <td>8</td>
+      <td>09/05/2017</td>
+      <td>Broadway Bus Terminal - Paterson</td>
+      <td>8 mins, 59 mins</td>
+      <td>bus</td>
+      <td>1.340360</td>
+      <td>Broadway Bus Terminal - Paterson</td>
+      <td>1.340360</td>
+      <td>29 mins</td>
+      <td>40.9018</td>
+      <td>-74.1872</td>
     </tr>
     <tr>
       <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1727661">1727661</a></th>
@@ -17080,29 +17256,6 @@ var element = $('#3916b3a5-d57e-4935-bbeb-fc6a2377df1d');
       <td>30 mins</td>
       <td>40.8976</td>
       <td>-74.1923</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="https://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1735854">1735854</a></th>
-      <td>10 Hugo Avenue</td>
-      <td>Woodland Park</td>
-      <td>Passaic</td>
-      <td>3</td>
-      <td>3</td>
-      <td>0</td>
-      <td>349000</td>
-      <td>8429.0</td>
-      <td>Colonial</td>
-      <td>8</td>
-      <td>09/05/2017</td>
-      <td>Broadway Bus Terminal - Paterson</td>
-      <td>8 mins, 59 mins</td>
-      <td>bus</td>
-      <td>1.340360</td>
-      <td>Broadway Bus Terminal - Paterson</td>
-      <td>1.340360</td>
-      <td>29 mins</td>
-      <td>40.9018</td>
-      <td>-74.1872</td>
     </tr>
   </tbody>
 </table>
