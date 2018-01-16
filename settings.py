@@ -15,4 +15,4 @@ blacklist_cities = [
     'Irvington', 'Carteret', 'Rahway', 'Totowa',]
 
 counties = ['Passaic', 'Hudson','Essex', 'Middlesex', 'Morris', 'Bergen',
-            'Union', 'Sussex', 'Somerset']
+            'Union', 'Sussex', 'Somerset', 'Mercer',]

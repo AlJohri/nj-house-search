@@ -11813,7 +11813,7 @@ div#notebook {
                <span class="s1">&#39;park_and_ride_name&#39;</span><span class="p">,</span>
                <span class="s1">&#39;park_and_ride_duration_text&#39;</span><span class="p">,</span> <span class="s1">&#39;park_and_ride_type&#39;</span><span class="p">,</span> <span class="s1">&#39;park_and_ride_distance&#39;</span><span class="p">,</span>
                <span class="s1">&#39;park_and_ride_bus_name&#39;</span><span class="p">,</span> <span class="s1">&#39;park_and_ride_bus_distance&#39;</span><span class="p">,</span>
-               <span class="s1">&#39;barnabas_duration_text&#39;</span><span class="p">,</span> <span class="s1">&#39;lat&#39;</span><span class="p">,</span> <span class="s1">&#39;lng&#39;</span><span class="p">,]</span>
+               <span class="s1">&#39;barnabas_duration_text&#39;</span><span class="p">,</span> <span class="s1">&#39;nyc_duration_text&#39;</span><span class="p">,</span> <span class="s1">&#39;lat&#39;</span><span class="p">,</span> <span class="s1">&#39;lng&#39;</span><span class="p">,]</span>
     <span class="k">if</span> <span class="n">save</span><span class="p">:</span>
         <span class="n">mydf</span><span class="p">[</span><span class="n">columns</span><span class="p">]</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;cjmls.csv&#39;</span><span class="p">)</span>
     <span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span>
@@ -11907,7 +11907,7 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Downloaded 136 listings from CJMLS.
+<pre>Downloaded 139 listings from CJMLS.
 </pre>
 </div>
 </div>
@@ -11954,13 +11954,13 @@ div#notebook {
 
  
  
-<div id="628d142c-643a-4f78-8e2e-376f6e7cee98"></div>
+<div id="fceb334b-82ca-4856-b81d-616075c96f00"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#628d142c-643a-4f78-8e2e-376f6e7cee98');
+var element = $('#fceb334b-82ca-4856-b81d-616075c96f00');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "c5d07d7da14c460caa774173544403de", "version_major": 2, "version_minor": 0}
+{"model_id": "bbeddcb2372d4838b602a49feefe8f30", "version_major": 2, "version_minor": 0}
 </script>
 </div>
 
@@ -12025,13 +12025,13 @@ could not geocode: 223 Clinton Street Woodbridge Proper, NJ or 223 Clinton Stree
 
  
  
-<div id="556e9677-f8b6-4685-9e3b-cfce372f6c9e"></div>
+<div id="ecc8580c-69b0-40c9-99c5-ceb56c8ece87"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#556e9677-f8b6-4685-9e3b-cfce372f6c9e');
+var element = $('#ecc8580c-69b0-40c9-99c5-ceb56c8ece87');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "fdac56de349a4a61baa43262a1502235", "version_major": 2, "version_minor": 0}
+{"model_id": "66f3a5bfdbb0481cba21551a13a7c448", "version_major": 2, "version_minor": 0}
 </script>
 </div>
 
@@ -12097,13 +12097,13 @@ var element = $('#556e9677-f8b6-4685-9e3b-cfce372f6c9e');
 
  
  
-<div id="e806f675-78f7-45c9-aa2e-8ac1aa6944e3"></div>
+<div id="617eed7e-085d-44bd-9a62-a27fd9daf4c7"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#e806f675-78f7-45c9-aa2e-8ac1aa6944e3');
+var element = $('#617eed7e-085d-44bd-9a62-a27fd9daf4c7');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "da557d9b08bf4994b38c763db1696504", "version_major": 2, "version_minor": 0}
+{"model_id": "6795bba5165f4103af06e0f4628733fa", "version_major": 2, "version_minor": 0}
 </script>
 </div>
 
@@ -12116,8 +12116,8 @@ var element = $('#e806f675-78f7-45c9-aa2e-8ac1aa6944e3');
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
-131 out of 136 have park and ride commute times.
-118 out of 136 have walking commute times.
+134 out of 139 have park and ride commute times.
+121 out of 139 have walking commute times.
 </pre>
 </div>
 </div>
@@ -12140,7 +12140,7 @@ var element = $('#e806f675-78f7-45c9-aa2e-8ac1aa6944e3');
     <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">park_and_ride_duration</span> <span class="o">&lt;</span> <span class="n">ONE_HOUR</span> <span class="o">+</span> <span class="n">TEN_MINUTES</span><span class="p">)</span> <span class="o">&amp;</span>
     <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">price</span> <span class="o">&gt;</span> <span class="n">MIN_PRICE</span><span class="p">)</span>
 <span class="p">]</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;sqft&#39;</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="p">[</span><span class="kc">False</span><span class="p">])</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;city&#39;</span><span class="p">,</span> <span class="s1">&#39;price&#39;</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="p">[</span><span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">])</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">),</span> <span class="s2">&quot;listings after filtering&quot;</span><span class="p">)</span>
 <span class="n">preview_cjmls_df</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
 </pre></div>
@@ -12159,7 +12159,7 @@ var element = $('#e806f675-78f7-45c9-aa2e-8ac1aa6944e3');
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>18 listings after filtering
+<pre>19 listings after filtering
 </pre>
 </div>
 </div>
@@ -12190,6 +12190,7 @@ var element = $('#e806f675-78f7-45c9-aa2e-8ac1aa6944e3');
       <th>park_and_ride_bus_name</th>
       <th>park_and_ride_bus_distance</th>
       <th>barnabas_duration_text</th>
+      <th>nyc_duration_text</th>
       <th>lat</th>
       <th>lng</th>
     </tr>
@@ -12212,69 +12213,10 @@ var element = $('#e806f675-78f7-45c9-aa2e-8ac1aa6944e3');
       <th></th>
       <th></th>
       <th></th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th><a target="_blank" href="http://mcmls.demo.idx.rewidx.com/listing/1802582-x/">1802582</a></th>
-      <td>47 Normandy Drive</td>
-      <td>Woodbridge Township</td>
-      <td>Middlesex</td>
-      <td>5</td>
-      <td>3</td>
-      <td>1</td>
-      <td>499900</td>
-      <td>3705.0</td>
-      <td>Metropark</td>
-      <td>10 mins, 38 mins</td>
-      <td>rail</td>
-      <td>2.482587</td>
-      <td>Watchung Park & Ride</td>
-      <td>4.909467</td>
-      <td>36 mins</td>
-      <td>40.6045</td>
-      <td>-74.3331</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="http://mcmls.demo.idx.rewidx.com/listing/1805837-x/">1805837</a></th>
-      <td>751 Drake Avenue</td>
-      <td>Middlesex</td>
-      <td>Middlesex</td>
-      <td>4</td>
-      <td>3</td>
-      <td>0</td>
-      <td>479999</td>
-      <td>2000.0</td>
-      <td>Dunellen</td>
-      <td>8 mins, 1 hour 0 mins</td>
-      <td>rail</td>
-      <td>1.887035</td>
-      <td>Watchung Park & Ride</td>
-      <td>6.441236</td>
-      <td>40 mins</td>
-      <td>40.5754</td>
-      <td>-74.4926</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="http://mcmls.demo.idx.rewidx.com/listing/1804285-x/">1804285</a></th>
-      <td>48 S McKinley Avenue</td>
-      <td>Woodbridge Township</td>
-      <td>Middlesex</td>
-      <td>4</td>
-      <td>3</td>
-      <td>0</td>
-      <td>359000</td>
-      <td>1711.0</td>
-      <td>Avenel</td>
-      <td>6 mins, 36 mins</td>
-      <td>rail</td>
-      <td>1.048479</td>
-      <td>Carteret</td>
-      <td>3.781581</td>
-      <td>37 mins</td>
-      <td>40.5743</td>
-      <td>-74.297</td>
-    </tr>
     <tr>
       <th><a target="_blank" href="http://mcmls.demo.idx.rewidx.com/listing/1815616-x/">1815616</a></th>
       <td>114 W Woodbridge Avenue</td>
@@ -12292,28 +12234,9 @@ var element = $('#e806f675-78f7-45c9-aa2e-8ac1aa6944e3');
       <td>Carteret</td>
       <td>3.939655</td>
       <td>36 mins</td>
+      <td>1 hour 28 mins</td>
       <td>40.5648</td>
       <td>-74.2951</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="http://mcmls.demo.idx.rewidx.com/listing/1811162-x/">1811162</a></th>
-      <td>247 wood Avenue</td>
-      <td>Edison</td>
-      <td>Middlesex</td>
-      <td>4</td>
-      <td>3</td>
-      <td>0</td>
-      <td>510000</td>
-      <td>NaN</td>
-      <td>Metropark</td>
-      <td>3 mins, 38 mins</td>
-      <td>rail</td>
-      <td>0.554186</td>
-      <td>Carteret</td>
-      <td>5.795187</td>
-      <td>34 mins</td>
-      <td>40.5746</td>
-      <td>-74.3365</td>
     </tr>
     <tr>
       <th><a target="_blank" href="http://mcmls.demo.idx.rewidx.com/listing/1808336-x/">1808336</a></th>
@@ -12332,8 +12255,30 @@ var element = $('#e806f675-78f7-45c9-aa2e-8ac1aa6944e3');
       <td>Sayreville</td>
       <td>4.259026</td>
       <td>37 mins</td>
+      <td>1 hour 37 mins</td>
       <td>40.5386</td>
       <td>-74.311</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="http://mcmls.demo.idx.rewidx.com/listing/1802582-x/">1802582</a></th>
+      <td>47 Normandy Drive</td>
+      <td>Woodbridge Township</td>
+      <td>Middlesex</td>
+      <td>5</td>
+      <td>3</td>
+      <td>1</td>
+      <td>499900</td>
+      <td>3705.0</td>
+      <td>Metropark</td>
+      <td>10 mins, 38 mins</td>
+      <td>rail</td>
+      <td>2.482587</td>
+      <td>Watchung Park & Ride</td>
+      <td>4.909467</td>
+      <td>36 mins</td>
+      <td>1 hour 34 mins</td>
+      <td>40.6045</td>
+      <td>-74.3331</td>
     </tr>
     <tr>
       <th><a target="_blank" href="http://mcmls.demo.idx.rewidx.com/listing/1811123-x/">1811123</a></th>
@@ -12352,6 +12297,7 @@ var element = $('#e806f675-78f7-45c9-aa2e-8ac1aa6944e3');
       <td>Carteret</td>
       <td>4.526865</td>
       <td>35 mins</td>
+      <td>1 hour 44 mins</td>
       <td>40.6046</td>
       <td>-74.3126</td>
     </tr>
@@ -12372,6 +12318,7 @@ var element = $('#e806f675-78f7-45c9-aa2e-8ac1aa6944e3');
       <td>Carteret</td>
       <td>3.902292</td>
       <td>34 mins</td>
+      <td>1 hour 20 mins</td>
       <td>40.5834</td>
       <td>-74.302</td>
     </tr>
@@ -12392,28 +12339,9 @@ var element = $('#e806f675-78f7-45c9-aa2e-8ac1aa6944e3');
       <td>Carteret</td>
       <td>5.056894</td>
       <td>33 mins</td>
+      <td>1 hour 20 mins</td>
       <td>40.5699</td>
       <td>-74.3206</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="http://mcmls.demo.idx.rewidx.com/listing/1811311-x/">1811311</a></th>
-      <td>121 Wilson Avenue</td>
-      <td>Sayreville</td>
-      <td>Middlesex</td>
-      <td>4</td>
-      <td>3</td>
-      <td>0</td>
-      <td>450000</td>
-      <td>NaN</td>
-      <td>Sayreville</td>
-      <td>5 mins, 55 mins</td>
-      <td>bus</td>
-      <td>0.595296</td>
-      <td>Sayreville</td>
-      <td>0.595296</td>
-      <td>40 mins</td>
-      <td>40.4728</td>
-      <td>-74.3077</td>
     </tr>
     <tr>
       <th><a target="_blank" href="http://mcmls.demo.idx.rewidx.com/listing/1720661-x/">1720661</a></th>
@@ -12432,8 +12360,114 @@ var element = $('#e806f675-78f7-45c9-aa2e-8ac1aa6944e3');
       <td>Carteret</td>
       <td>5.693175</td>
       <td>36 mins</td>
+      <td>1 hour 26 mins</td>
       <td>40.5818</td>
       <td>-74.336</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="http://mcmls.demo.idx.rewidx.com/listing/1810560-x/">1810560</a></th>
+      <td>53 Berkley Avenue</td>
+      <td>Woodbridge Township</td>
+      <td>Middlesex</td>
+      <td>4</td>
+      <td>3</td>
+      <td>0</td>
+      <td>379000</td>
+      <td>2396.0</td>
+      <td>Metropark</td>
+      <td>7 mins, 38 mins</td>
+      <td>rail</td>
+      <td>1.773022</td>
+      <td>Carteret</td>
+      <td>4.400212</td>
+      <td>36 mins</td>
+      <td>1 hour 32 mins</td>
+      <td>40.5907</td>
+      <td>-74.3121</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="http://mcmls.demo.idx.rewidx.com/listing/1802670-x/">1802670</a></th>
+      <td>213 E Louis Place</td>
+      <td>Woodbridge Township</td>
+      <td>Middlesex</td>
+      <td>4</td>
+      <td>3</td>
+      <td>0</td>
+      <td>370000</td>
+      <td>NaN</td>
+      <td>Metropark</td>
+      <td>4 mins, 38 mins</td>
+      <td>rail</td>
+      <td>0.921079</td>
+      <td>Carteret</td>
+      <td>5.290570</td>
+      <td>34 mins</td>
+      <td>1 hour 15 mins</td>
+      <td>40.582</td>
+      <td>-74.3283</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="http://mcmls.demo.idx.rewidx.com/listing/1804285-x/">1804285</a></th>
+      <td>48 S McKinley Avenue</td>
+      <td>Woodbridge Township</td>
+      <td>Middlesex</td>
+      <td>4</td>
+      <td>3</td>
+      <td>0</td>
+      <td>359000</td>
+      <td>1711.0</td>
+      <td>Avenel</td>
+      <td>6 mins, 36 mins</td>
+      <td>rail</td>
+      <td>1.048479</td>
+      <td>Carteret</td>
+      <td>3.781581</td>
+      <td>37 mins</td>
+      <td>1 hour 53 mins</td>
+      <td>40.5743</td>
+      <td>-74.297</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="http://mcmls.demo.idx.rewidx.com/listing/1808514-x/">1808514</a></th>
+      <td>33 Livingston Street</td>
+      <td>Woodbridge Township</td>
+      <td>Middlesex</td>
+      <td>5</td>
+      <td>3</td>
+      <td>1</td>
+      <td>329900</td>
+      <td>NaN</td>
+      <td>Avenel</td>
+      <td>1 min, 36 mins</td>
+      <td>rail</td>
+      <td>0.219237</td>
+      <td>Carteret</td>
+      <td>2.935125</td>
+      <td>38 mins</td>
+      <td>57 mins</td>
+      <td>40.5753</td>
+      <td>-74.2804</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="http://mcmls.demo.idx.rewidx.com/listing/1808159-x/">1808159</a></th>
+      <td>56 Washington Avenue</td>
+      <td>Woodbridge Township</td>
+      <td>Middlesex</td>
+      <td>4</td>
+      <td>3</td>
+      <td>0</td>
+      <td>324500</td>
+      <td>NaN</td>
+      <td>Metropark</td>
+      <td>5 mins, 38 mins</td>
+      <td>rail</td>
+      <td>1.200896</td>
+      <td>Carteret</td>
+      <td>4.329288</td>
+      <td>34 mins</td>
+      <td>1 hour 32 mins</td>
+      <td>40.5744</td>
+      <td>-74.3079</td>
     </tr>
     <tr>
       <th><a target="_blank" href="http://mcmls.demo.idx.rewidx.com/listing/1801822-x/">1801822</a></th>
@@ -12452,8 +12486,30 @@ var element = $('#e806f675-78f7-45c9-aa2e-8ac1aa6944e3');
       <td>Irvington Bus Terminal</td>
       <td>3.488462</td>
       <td>10 mins</td>
+      <td>1 hour 33 mins</td>
       <td>40.7726</td>
       <td>-74.2542</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="http://mcmls.demo.idx.rewidx.com/listing/1811311-x/">1811311</a></th>
+      <td>121 Wilson Avenue</td>
+      <td>Sayreville</td>
+      <td>Middlesex</td>
+      <td>4</td>
+      <td>3</td>
+      <td>0</td>
+      <td>450000</td>
+      <td>NaN</td>
+      <td>Sayreville</td>
+      <td>5 mins, 55 mins</td>
+      <td>bus</td>
+      <td>0.595296</td>
+      <td>Sayreville</td>
+      <td>0.595296</td>
+      <td>40 mins</td>
+      <td>1 hour 2 mins</td>
+      <td>40.4728</td>
+      <td>-74.3077</td>
     </tr>
     <tr>
       <th><a target="_blank" href="http://mcmls.demo.idx.rewidx.com/listing/1815379-x/">1815379</a></th>
@@ -12472,6 +12528,7 @@ var element = $('#e806f675-78f7-45c9-aa2e-8ac1aa6944e3');
       <td>Sayreville</td>
       <td>0.785873</td>
       <td>39 mins</td>
+      <td>55 mins</td>
       <td>40.4678</td>
       <td>-74.3058</td>
     </tr>
@@ -12492,48 +12549,9 @@ var element = $('#e806f675-78f7-45c9-aa2e-8ac1aa6944e3');
       <td>Watchung Park & Ride</td>
       <td>5.672943</td>
       <td>39 mins</td>
+      <td>1 hour 42 mins</td>
       <td>40.5727</td>
       <td>-74.4629</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="http://mcmls.demo.idx.rewidx.com/listing/1802670-x/">1802670</a></th>
-      <td>213 E Louis Place</td>
-      <td>Woodbridge Township</td>
-      <td>Middlesex</td>
-      <td>4</td>
-      <td>3</td>
-      <td>0</td>
-      <td>370000</td>
-      <td>NaN</td>
-      <td>Metropark</td>
-      <td>4 mins, 38 mins</td>
-      <td>rail</td>
-      <td>0.921079</td>
-      <td>Carteret</td>
-      <td>5.290570</td>
-      <td>34 mins</td>
-      <td>40.582</td>
-      <td>-74.3283</td>
-    </tr>
-    <tr>
-      <th><a target="_blank" href="http://mcmls.demo.idx.rewidx.com/listing/1808514-x/">1808514</a></th>
-      <td>33 Livingston Street</td>
-      <td>Woodbridge Township</td>
-      <td>Middlesex</td>
-      <td>5</td>
-      <td>3</td>
-      <td>1</td>
-      <td>329900</td>
-      <td>NaN</td>
-      <td>Avenel</td>
-      <td>1 min, 36 mins</td>
-      <td>rail</td>
-      <td>0.219237</td>
-      <td>Carteret</td>
-      <td>2.935125</td>
-      <td>38 mins</td>
-      <td>40.5753</td>
-      <td>-74.2804</td>
     </tr>
     <tr>
       <th><a target="_blank" href="http://mcmls.demo.idx.rewidx.com/listing/1806219-x/">1806219</a></th>
@@ -12552,28 +12570,51 @@ var element = $('#e806f675-78f7-45c9-aa2e-8ac1aa6944e3');
       <td>Watchung Park & Ride</td>
       <td>5.623814</td>
       <td>39 mins</td>
+      <td>1 hour 45 mins</td>
       <td>40.5709</td>
       <td>-74.4562</td>
     </tr>
     <tr>
-      <th><a target="_blank" href="http://mcmls.demo.idx.rewidx.com/listing/1808159-x/">1808159</a></th>
-      <td>56 Washington Avenue</td>
-      <td>Woodbridge Township</td>
+      <th><a target="_blank" href="http://mcmls.demo.idx.rewidx.com/listing/1805837-x/">1805837</a></th>
+      <td>751 Drake Avenue</td>
+      <td>Middlesex</td>
       <td>Middlesex</td>
       <td>4</td>
       <td>3</td>
       <td>0</td>
-      <td>324500</td>
+      <td>479999</td>
+      <td>2000.0</td>
+      <td>Dunellen</td>
+      <td>8 mins, 1 hour 0 mins</td>
+      <td>rail</td>
+      <td>1.887035</td>
+      <td>Watchung Park & Ride</td>
+      <td>6.441236</td>
+      <td>40 mins</td>
+      <td>1 hour 49 mins</td>
+      <td>40.5754</td>
+      <td>-74.4926</td>
+    </tr>
+    <tr>
+      <th><a target="_blank" href="http://mcmls.demo.idx.rewidx.com/listing/1811162-x/">1811162</a></th>
+      <td>247 wood Avenue</td>
+      <td>Edison</td>
+      <td>Middlesex</td>
+      <td>4</td>
+      <td>3</td>
+      <td>0</td>
+      <td>510000</td>
       <td>NaN</td>
       <td>Metropark</td>
-      <td>5 mins, 38 mins</td>
+      <td>3 mins, 38 mins</td>
       <td>rail</td>
-      <td>1.200896</td>
+      <td>0.554186</td>
       <td>Carteret</td>
-      <td>4.329288</td>
+      <td>5.795187</td>
       <td>34 mins</td>
-      <td>40.5744</td>
-      <td>-74.3079</td>
+      <td>1 hour 17 mins</td>
+      <td>40.5746</td>
+      <td>-74.3365</td>
     </tr>
   </tbody>
 </table>
